@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+scraper/
+.claude/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoadReady</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+<h1 class="sr-only">RoadReady — αρχική οθόνη με ρυθμίσεις, μενού ενοτήτων κουίζ και έξοδο από την εφαρμογή.</h1>
+
+<div class="app">
+    <div class="topbar">
+      <button class="brand" id="brandLogo" type="button" aria-label="RoadReady — αρχική">
+        <img class="brand-logo brand-logo-light" src="assets/brand/logo-light.png" alt="RoadReady">
+        <img class="brand-logo brand-logo-dark" src="assets/brand/logo-dark.png" alt="RoadReady">
+      </button>
+      <div class="topbar-actions">
+        <button class="pill-btn" id="progressBtn" type="button" aria-haspopup="true">
+          <svg viewBox="0 0 16 16" fill="none">
+            <path d="M2.5 13.5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M7 13.5V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M11.5 13.5V6.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M2 2.5L6 6.2L8.6 4L13.5 8.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Πρόοδος
+        </button>
+        <button class="pill-btn" id="settingsBtn" type="button" aria-haspopup="true">
+          <svg viewBox="0 0 16 16" fill="none">
+            <path d="M8 10.2C9.2 10.2 10.2 9.2 10.2 8C10.2 6.8 9.2 5.8 8 5.8C6.8 5.8 5.8 6.8 5.8 8C5.8 9.2 6.8 10.2 8 10.2Z" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M12.9 9.3L13.9 10.1C14.1 10.3 14.2 10.6 14 10.9L13.2 12.3C13.1 12.5 12.8 12.6 12.6 12.5L11.4 12.1C11 12.4 10.6 12.6 10.2 12.8L10 14.1C10 14.4 9.7 14.6 9.4 14.6H6.8C6.5 14.6 6.2 14.4 6.2 14.1L6 12.8C5.6 12.6 5.2 12.4 4.8 12.1L3.6 12.5C3.4 12.6 3.1 12.5 3 12.3L2.2 10.9C2 10.6 2.1 10.3 2.3 10.1L3.3 9.3C3.3 9.1 3.2 8.9 3.2 8.7C3.2 8.5 3.3 8.3 3.3 8.1L2.3 7.3C2.1 7.1 2 6.8 2.2 6.5L3 5.1C3.1 4.9 3.4 4.8 3.6 4.9L4.8 5.3C5.2 5 5.6 4.8 6 4.6L6.2 3.3C6.2 3 6.5 2.8 6.8 2.8H9.4C9.7 2.8 10 3 10 3.3L10.2 4.6C10.6 4.8 11 5 11.4 5.3L12.6 4.9C12.8 4.8 13.1 4.9 13.2 5.1L14 6.5C14.2 6.8 14.1 7.1 13.9 7.3L12.9 8.1C13 8.3 13 8.5 13 8.7C13 8.9 13 9.1 12.9 9.3Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+          </svg>
+          Ρυθμίσεις
+        </button>
+        <button class="pill-btn danger" id="closeBtn" type="button">
+          <svg viewBox="0 0 16 16" fill="none">
+            <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          Έξοδος
+        </button>
+      </div>
+    </div>
+
+    <div class="section-banner" id="sectionBanner">
+      <span id="sectionBannerLabel"></span>
+    </div>
+
+    <!-- VEHICLE SELECT SCREEN (first page) -->
+    <div class="screen show" id="screen-vehicles">
+      <div class="hero-road">
+        <div class="hero-bus-icon">
+          <img src="assets/icons/vehicles/bus.png" alt="">
+        </div>
+        <div class="hero-car-icon">
+          <img src="assets/icons/vehicles/car.png" alt="">
+        </div>
+        <div class="hero-bike-icon">
+          <img src="assets/icons/vehicles/bicycle.png" alt="">
+        </div>
+        <div class="hero-motorbike-icon">
+          <img src="assets/icons/vehicles/motorbike.png" alt="">
+        </div>
+      </div>
+      <div class="home-content">
+        <p class="home-title">Έτοιμοι για τον δρόμο;</p>
+        <p class="home-sub">Διάλεξε κατηγορία διπλώματος για να ξεκινήσεις.</p>
+
+        <div class="vehicle-list">
+          <button class="menu-item" id="vehicleAutoBtn" type="button">
+            <div class="menu-badge">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 16L4.5 11.5C4.9 10.1 6.2 9.2 7.6 9.2H16.4C17.8 9.2 19.1 10.1 19.5 11.5L21 16" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><rect x="2" y="15" width="20" height="4.5" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="19.7" r="1.6" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="19.7" r="1.6" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <div class="menu-text">
+              <p class="menu-label">Αυτοκίνητο</p>
+              <p class="menu-count">Κατηγορία Β</p>
+            </div>
+            <span class="menu-chev"><svg viewBox="0 0 8 13" fill="none"><path d="M1 1L6 6.5L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+
+          <button class="menu-item" id="vehicleMotoBtn" type="button">
+            <div class="menu-badge">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="18" r="2.3" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="18" r="2.3" stroke="currentColor" stroke-width="1.6"/><path d="M6 18L10 11H15L18 18" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 11L8 8H11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 11L17 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="14" cy="9.5" r="1.3" fill="currentColor"/></svg>
+            </div>
+            <div class="menu-text">
+              <p class="menu-label">Μοτοσικλέτα</p>
+              <p class="menu-count">Κατηγορία Α, Α1, Α2</p>
+            </div>
+            <span class="menu-chev"><svg viewBox="0 0 8 13" fill="none"><path d="M1 1L6 6.5L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+
+          <button class="menu-item" id="vehicleTruckBtn" type="button">
+            <div class="menu-badge">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M2 7.5H13.5V16H2V7.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13.5 10.2H17.7L21 13.4V16H13.5V10.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="1.9" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="18" r="1.9" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <div class="menu-text">
+              <p class="menu-label">Φορτηγό</p>
+              <p class="menu-count">Κατηγορία C, C1</p>
+            </div>
+            <span class="menu-chev"><svg viewBox="0 0 8 13" fill="none"><path d="M1 1L6 6.5L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+
+          <button class="menu-item" id="vehicleBusBtn" type="button">
+            <div class="menu-badge">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13.5" rx="2.2" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 10H21" stroke="currentColor" stroke-width="1.6"/><path d="M7 4V10" stroke="currentColor" stroke-width="1.6"/><path d="M13 4V10" stroke="currentColor" stroke-width="1.6"/><circle cx="7.5" cy="19.7" r="1.7" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="19.7" r="1.7" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <div class="menu-text">
+              <p class="menu-label">Λεωφορείο</p>
+              <p class="menu-count">Κατηγορία D, D1</p>
+            </div>
+            <span class="menu-chev"><svg viewBox="0 0 8 13" fill="none"><path d="M1 1L6 6.5L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+
+          <button class="menu-item" id="vehiclePeiforthgoBtn" type="button">
+            <div class="menu-badge">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M2 7.5H12.5V16H2V7.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12.5 10.2H16.7L20 13.4V16H12.5V10.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6" cy="18" r="1.9" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="18" r="1.9" stroke="currentColor" stroke-width="1.6"/><circle cx="19.5" cy="5" r="3.3" stroke="currentColor" stroke-width="1.5"/><path d="M18.2 5L19.1 5.9L21 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="menu-text">
+              <p class="menu-label">ΠΕΙ Φορτηγό</p>
+              <p class="menu-count">Πιστοποιητικό Επαγγελματικής Ικανότητας</p>
+            </div>
+            <span class="menu-chev"><svg viewBox="0 0 8 13" fill="none"><path d="M1 1L6 6.5L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOME / MENU SCREEN (sections for the chosen vehicle) -->
+    <div class="screen" id="screen-home">
+      <div class="hero-road">
+        <div class="hero-bus-icon">
+          <img src="assets/icons/vehicles/bus.png" alt="">
+        </div>
+        <div class="hero-car-icon">
+          <img src="assets/icons/vehicles/car.png" alt="">
+        </div>
+        <div class="hero-bike-icon">
+          <img src="assets/icons/vehicles/bicycle.png" alt="">
+        </div>
+        <div class="hero-motorbike-icon">
+          <img src="assets/icons/vehicles/motorbike.png" alt="">
+        </div>
+      </div>
+      <div class="home-content">
+        <p class="home-title">Έτοιμοι για τον δρόμο;</p>
+        <p class="home-sub">Διάλεξε μια ενότητα για εξάσκηση, ή δοκίμασε την προσομοίωση εξέτασης με 60 τυχαίες ερωτήσεις.</p>
+
+        <button class="pill-btn saved-questions-btn" id="savedQuestionsBtn" type="button">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 14V2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4 2.6L12 3.8L9 7L12 10.2L4 9" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          Αποθηκευμένες Ερωτήσεις
+          <span class="saved-questions-count" id="savedQuestionsCount">0</span>
+        </button>
+
+        <div class="menu-pinned" id="menuPinned"></div>
+
+        <div class="menu-list" id="menuList"></div>
+
+        <div class="menu-pagination" id="menuPagination">
+          <button class="page-nav" id="pagePrevBtn" type="button" aria-label="Προηγούμενη σελίδα">
+            <svg viewBox="0 0 8 13" fill="none"><path d="M7 1L2 6.5L7 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="page-indicator" id="pageIndicator">1 / 1</span>
+          <button class="page-nav" id="pageNextBtn" type="button" aria-label="Επόμενη σελίδα">
+            <svg viewBox="0 0 8 13" fill="none"><path d="M1 1L6 6.5L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUIZ SCREEN -->
+    <div class="screen" id="screen-quiz">
+      <div class="quiz-content">
+        <div class="quiz-progress">
+          <p class="quiz-progress-label">Ερώτηση <span id="qIndex">1</span> από <span id="qTotal">10</span></p>
+          <p class="quiz-timer" id="quizTimer" hidden></p>
+          <div class="road">
+            <div class="road-fill" id="progressFill"></div>
+            <div class="road-car" id="roadCar">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 15L4.6 9.5C5 8.1 6.3 7.2 7.7 7.2H16.3C17.7 7.2 19 8.1 19.4 9.5L21 15" stroke="var(--lane)" stroke-width="1.6" stroke-linejoin="round"/>
+                <rect x="2.5" y="14.5" width="19" height="4.5" rx="2" fill="var(--lane)"/>
+                <circle cx="7" cy="19.5" r="2" fill="var(--ink)"/>
+                <circle cx="17" cy="19.5" r="2" fill="var(--ink)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-card">
+          <button class="flag-btn" id="quizFlagBtn" type="button" aria-pressed="false" aria-label="Αποθήκευση ερώτησης">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M4 14V2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="flag-btn-flag" d="M4 2.6L12 3.8L9 7L12 10.2L4 9" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="quiz-image-frame" id="quizImageFrame">
+            <img class="quiz-image" id="quizImage" alt="Εικόνα ερώτησης">
+          </div>
+
+          <p class="quiz-question" id="quizQuestionText"></p>
+
+          <div class="quiz-answers" id="quizAnswers"></div>
+
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>
+
+        <div class="quiz-nav-row" id="quizNavRow">
+          <button class="nav-btn prev" id="prevBtn" type="button">
+            <svg viewBox="0 0 8 13" fill="none"><path d="M7 1L2 6.5L7 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Προηγούμενη
+          </button>
+
+          <button class="nav-btn next" id="nextBtn" type="button">
+            Επόμενη
+            <svg viewBox="0 0 8 13" fill="none"><path d="M1 1L6 6.5L1 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <button class="nav-btn submit" id="submitBtn" type="button">
+            Υποβολή
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div class="screen" id="screen-results">
+      <div class="results-wrap">
+        <div class="results-content">
+          <p class="results-percent" id="resultsPercent">0%</p>
+          <p class="results-fraction" id="resultsFraction"></p>
+          <p class="results-message" id="resultsMessage"></p>
+          <button class="btn primary" id="resultsHomeBtn" type="button">Επιστροφή στην αρχική</button>
+        </div>
+        <div class="results-review" id="resultsReview" hidden></div>
+      </div>
+    </div>
+
+    <!-- QUESTION DETAIL (review a single question again) -->
+    <div class="overlay" id="questionDetailOverlay">
+      <div class="overlay-panel">
+        <div class="overlay-header">
+          <p class="overlay-title" id="questionDetailTitle">Ερώτηση</p>
+          <button class="icon-btn" id="closeQuestionDetailBtn" type="button" aria-label="Κλείσιμο">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="quiz-image-frame" id="questionDetailImageFrame" hidden>
+          <img class="quiz-image" id="questionDetailImage" alt="Εικόνα ερώτησης">
+        </div>
+
+        <p class="question-detail-meta" id="questionDetailMeta"></p>
+        <p class="quiz-question" id="questionDetailText"></p>
+
+        <div class="quiz-answers" id="questionDetailAnswers"></div>
+      </div>
+    </div>
+
+    <!-- SAVED QUESTIONS -->
+    <div class="overlay" id="savedQuestionsOverlay">
+      <div class="overlay-panel">
+        <div class="overlay-header">
+          <p class="overlay-title">Αποθηκευμένες Ερωτήσεις</p>
+          <button class="icon-btn" id="closeSavedQuestionsBtn" type="button" aria-label="Κλείσιμο">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <p class="setting-value" id="savedQuestionsEmpty">Δεν έχεις αποθηκεύσει ερωτήσεις ακόμα. Πάτα το σημαιάκι σε μια ερώτηση για να την αποθηκεύσεις εδώ.</p>
+        <div id="savedQuestionsList"></div>
+      </div>
+    </div>
+
+    <!-- PROGRESS / HISTORY -->
+    <div class="overlay" id="progressOverlay">
+      <div class="overlay-panel">
+        <div class="overlay-header">
+          <p class="overlay-title">Πρόοδος</p>
+          <button class="icon-btn" id="closeProgressBtn" type="button" aria-label="Κλείσιμο">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="setting-row" id="progressSummaryRow">
+          <p class="progress-summary-percent" id="progressSummaryPercent">—</p>
+          <p class="progress-summary-sub" id="progressSummarySub">Δεν έχεις κάνει ακόμα κανένα τεστ.</p>
+        </div>
+
+        <div id="progressByVehicle"></div>
+
+        <p class="setting-label" id="progressHistoryLabel" hidden>Πρόσφατα τεστ</p>
+        <div id="progressHistoryList"></div>
+      </div>
+    </div>
+
+    <!-- SIMULATION SETTINGS -->
+    <div class="overlay" id="simSettingsOverlay">
+      <div class="overlay-panel">
+        <div class="overlay-header">
+          <p class="overlay-title">Ρυθμίσεις Προσομοίωσης</p>
+          <button class="icon-btn" id="closeSimSettingsBtn" type="button" aria-label="Κλείσιμο">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="setting-row">
+          <p class="setting-label">Αριθμός ερωτήσεων</p>
+          <div class="segmented" id="simQuestionCount">
+            <button class="segment" data-value="20" type="button">20</button>
+            <button class="segment" data-value="30" type="button">30</button>
+            <button class="segment" data-value="40" type="button">40</button>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <p class="setting-label">Χρονόμετρο</p>
+          <div class="segmented" id="simTimerToggle">
+            <button class="segment" data-value="off" type="button">Ανενεργό</button>
+            <button class="segment" data-value="on" type="button">Ενεργό</button>
+          </div>
+        </div>
+
+        <div class="setting-row" id="simTimerDurationRow" hidden>
+          <p class="setting-label">Διάρκεια</p>
+          <div class="segmented" id="simTimerDuration">
+            <button class="segment" data-value="10" type="button">10'</button>
+            <button class="segment" data-value="20" type="button">20'</button>
+            <button class="segment" data-value="30" type="button">30'</button>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <p class="setting-label">Εμφάνιση απαντήσεων</p>
+          <div class="segmented" id="simFeedbackMode">
+            <button class="segment" data-value="immediate" type="button">Άμεσα</button>
+            <button class="segment" data-value="hidden" type="button">Στο τέλος</button>
+          </div>
+        </div>
+
+        <div class="confirm-actions">
+          <button class="btn ghost" id="simSettingsCancelBtn" type="button">Άκυρο</button>
+          <button class="btn primary" id="simSettingsStartBtn" type="button">Έναρξη</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS OVERLAY -->
+    <div class="overlay" id="settingsOverlay">
+      <div class="overlay-panel">
+        <div class="overlay-header">
+          <p class="overlay-title">Ρυθμίσεις</p>
+          <button class="icon-btn" id="closeSettingsBtn" type="button" aria-label="Κλείσιμο ρυθμίσεων">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="setting-row">
+          <p class="setting-label">Εμφάνιση</p>
+          <div class="segmented" id="themeSegmented">
+            <button class="segment" data-theme="system" type="button">Σύστημα</button>
+            <button class="segment" data-theme="light" type="button">Φωτεινό</button>
+            <button class="segment" data-theme="dark" type="button">Σκοτεινό</button>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <p class="setting-label">Μέγεθος κειμένου</p>
+          <div class="zoom-control">
+            <input type="range" class="zoom-slider" id="zoomSlider" min="90" max="140" step="10" value="100">
+            <span class="zoom-value" id="zoomValue">100%</span>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <p class="setting-label">Παράθυρο</p>
+          <button class="pill-btn" id="fullscreenBtn" type="button"></button>
+        </div>
+
+        <div class="setting-row">
+          <p class="setting-label">Σχετικά</p>
+          <p class="setting-value">RoadReady v0.1.0 — έκδοση υπολογιστή χωρίς σύνδεση στο διαδίκτυο. Όλο το περιεχόμενο και η πρόοδος παραμένουν σε αυτόν τον υπολογιστή.</p>
+        </div>
+
+        <button class="btn ghost danger" id="closeAppFromSettingsBtn" type="button">Έξοδος</button>
+      </div>
+    </div>
+
+    <!-- EXIT CONFIRMATION -->
+    <div class="overlay" id="exitOverlay">
+      <div class="overlay-panel confirm-panel">
+        <p class="overlay-title">Έξοδος από το RoadReady;</p>
+        <p class="confirm-sub">Η εφαρμογή θα κλείσει εντελώς.</p>
+        <div class="confirm-actions">
+          <button class="btn ghost" id="exitCancelBtn" type="button">Όχι</button>
+          <button class="btn danger" id="exitConfirmBtn" type="button">Ναι, έξοδος</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEAVE QUIZ CONFIRMATION -->
+    <div class="overlay" id="leaveQuizOverlay">
+      <div class="overlay-panel confirm-panel">
+        <p class="overlay-title">Έξοδος από το κουίζ;</p>
+        <p class="confirm-sub">Θα χάσεις την πρόοδό σου σε αυτό το κουίζ.</p>
+        <div class="confirm-actions">
+          <button class="btn ghost" id="leaveQuizCancelBtn" type="button">Όχι</button>
+          <button class="btn danger" id="leaveQuizConfirmBtn" type="button">Ναι, έξοδος</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- INCOMPLETE QUIZ WARNING -->
+    <div class="overlay" id="incompleteOverlay">
+      <div class="overlay-panel confirm-panel">
+        <p class="overlay-title">Λείπουν απαντήσεις</p>
+        <p class="confirm-sub" id="incompleteMessage"></p>
+        <button class="btn primary" id="incompleteOkBtn" type="button">Κατάλαβα</button>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <div class="app-footer">© 2026 RoadReady · Developed by George Varatis</div>
+</div>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
