@@ -1,16 +1,47 @@
 """Desktop entry point — boots a pywebview window around the frontend/ HTML/CSS/JS app."""
 import ctypes
 import json
-import os
 import random
-import sqlite3
 import sys
 import winreg
 from ctypes import wintypes
-from datetime import datetime, timezone
 from pathlib import Path
 
 import webview
+from supabase import create_client
+
+SUPABASE_URL = "https://nzuobxttcvdqqzsmcgmv.supabase.co"
+SUPABASE_ANON_KEY = (
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6"
+    "Im56dW9ieHR0Y3ZkcXF6c21jZ212Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA2MjI0"
+    "MTUsImV4cCI6MjEwNjE5ODQxNX0.o8MnYYpa4y5fWxBOGc6hC6yDbmxu5IIO4MlErXuiuA4"
+)
+# Safe to embed: Row Level Security on every table (auth.uid() = user_id) is what
+# actually protects data, not secrecy of this key. Never embed the service_role key here.
+supabase = create_client(SUPABASE_URL, SUPABASE_ANON_KEY)
+
+# Supabase Auth is email-based; we want username+password instead. Each username
+# maps to a synthetic, never-emailed address in this fixed fake domain, so no
+# real mailbox is ever involved. Requires "Confirm email" to be OFF in the
+# Supabase project (Authentication -> Providers -> Email), since a confirmation
+# link sent to a synthetic address can never be received.
+USERNAME_EMAIL_DOMAIN = "roadready.local"
+
+
+def _username_to_email(username):
+    normalized = (username or "").strip().lower()
+    return f"{normalized}@{USERNAME_EMAIL_DOMAIN}"
+
+
+def _fetch_own_profile():
+    try:
+        user = supabase.auth.get_user()
+        if not user or not user.user:
+            return None
+        res = supabase.table("profiles").select("*").eq("id", user.user.id).single().execute()
+        return res.data
+    except Exception:
+        return None
 
 _dwmapi = ctypes.windll.dwmapi
 _dwmapi.DwmSetWindowAttribute.argtypes = [wintypes.HWND, wintypes.DWORD, ctypes.c_void_p, wintypes.DWORD]
@@ -55,50 +86,6 @@ else:
 
 FRONTEND_DIR = ROOT_DIR / "frontend"
 DATA_DIR = ROOT_DIR / "app" / "data"
-
-# Progress history lives outside the bundled app (ROOT_DIR points at a temp
-# extraction folder when frozen, wiped on exit) so it survives closing the
-# app, rebooting, or replacing the .exe with a newer build.
-APP_DATA_DIR = Path(os.environ.get("LOCALAPPDATA") or Path.home()) / "RoadReady"
-APP_DATA_DIR.mkdir(parents=True, exist_ok=True)
-DB_PATH = APP_DATA_DIR / "roadready.db"
-
-
-def _db_connect():
-    conn = sqlite3.connect(DB_PATH)
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS attempts (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            vehicle TEXT NOT NULL,
-            section_id TEXT NOT NULL,
-            section_label TEXT NOT NULL,
-            correct INTEGER NOT NULL,
-            total INTEGER NOT NULL,
-            completed_at TEXT NOT NULL
-        )
-    """)
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS wrong_questions (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            vehicle TEXT NOT NULL,
-            question_id TEXT NOT NULL,
-            category TEXT NOT NULL,
-            created_at TEXT NOT NULL,
-            UNIQUE(vehicle, question_id)
-        )
-    """)
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS saved_questions (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            vehicle TEXT NOT NULL,
-            question_id TEXT NOT NULL,
-            category TEXT NOT NULL,
-            created_at TEXT NOT NULL,
-            UNIQUE(vehicle, question_id)
-        )
-    """)
-    return conn
-
 
 SIMULATION_SIZE = 30
 
@@ -259,6 +246,92 @@ class Api:
         if self._window:
             self._window.toggle_fullscreen()
 
+    def sign_in(self, username, password):
+        try:
+            res = supabase.auth.sign_in_with_password({
+                "email": _username_to_email(username),
+                "password": password,
+            })
+            profile = _fetch_own_profile()
+            return {
+                "ok": True,
+                "username": res.user.user_metadata.get("username", username),
+                "role": profile.get("role") if profile else "user",
+            }
+        except Exception as e:
+            return {"ok": False, "error": str(e)}
+
+    def sign_out(self):
+        try:
+            supabase.auth.sign_out()
+        except Exception:
+            pass
+        return True
+
+    def change_password(self, new_password):
+        try:
+            supabase.auth.update_user({"password": new_password})
+            return {"ok": True}
+        except Exception as e:
+            return {"ok": False, "error": str(e)}
+
+    def list_users(self):
+        # RLS scopes this automatically: admins see everyone, supervisors see
+        # their own team plus themselves, regular users see only themselves.
+        res = supabase.table("profiles").select("id, username, role, supervisor_id").execute()
+        by_id = {p["id"]: p["username"] for p in res.data}
+        return [
+            {
+                "id": p["id"],
+                "username": p["username"],
+                "role": p["role"],
+                "supervisorId": p["supervisor_id"],
+                "supervisorUsername": by_id.get(p["supervisor_id"]),
+            }
+            for p in res.data
+        ]
+
+    def create_user(self, username, password, role=None, supervisor_id=None):
+        try:
+            res = supabase.functions.invoke("manage-users", {
+                "responseType": "json",
+                "body": {
+                    "action": "create",
+                    "username": username,
+                    "password": password,
+                    "role": role,
+                    "supervisorId": supervisor_id,
+                },
+            })
+            return res
+        except Exception as e:
+            return {"ok": False, "error": str(e)}
+
+    def delete_user(self, user_id):
+        try:
+            res = supabase.functions.invoke("manage-users", {
+                "responseType": "json",
+                "body": {"action": "delete", "userId": user_id},
+            })
+            return res
+        except Exception as e:
+            return {"ok": False, "error": str(e)}
+
+    def update_user(self, user_id, username, password=None):
+        try:
+            res = supabase.functions.invoke("manage-users", {
+                "responseType": "json",
+                "body": {
+                    "action": "update",
+                    "userId": user_id,
+                    "username": username,
+                    "password": password,
+                },
+            })
+            return res
+        except Exception as e:
+            return {"ok": False, "error": str(e)}
+
     def set_titlebar_theme(self, is_dark):
         if self._titlebar_is_dark == is_dark:
             return
@@ -322,58 +395,58 @@ class Api:
         return json.loads(path.read_text(encoding="utf-8"))
 
     def save_attempt(self, vehicle, section_id, section_label, correct, total):
-        conn = _db_connect()
-        with conn:
-            conn.execute(
-                "INSERT INTO attempts (vehicle, section_id, section_label, correct, total, completed_at) "
-                "VALUES (?, ?, ?, ?, ?, ?)",
-                (vehicle, section_id, section_label, correct, total, datetime.now(timezone.utc).isoformat()),
-            )
-        conn.close()
+        supabase.table("attempts").insert({
+            "vehicle": vehicle,
+            "section_id": section_id,
+            "section_label": section_label,
+            "correct": correct,
+            "total": total,
+        }).execute()
 
     def get_history(self, limit=20):
-        conn = _db_connect()
-        rows = conn.execute(
-            "SELECT vehicle, section_id, section_label, correct, total, completed_at "
-            "FROM attempts ORDER BY id DESC LIMIT ?",
-            (limit,),
-        ).fetchall()
-        conn.close()
+        res = (
+            supabase.table("attempts")
+            .select("vehicle, section_id, section_label, correct, total, completed_at")
+            .order("id", desc=True)
+            .limit(limit)
+            .execute()
+        )
         return [
             {
-                "vehicle": r[0],
-                "sectionId": r[1],
-                "sectionLabel": r[2],
-                "correct": r[3],
-                "total": r[4],
-                "completedAt": r[5],
+                "vehicle": r["vehicle"],
+                "sectionId": r["section_id"],
+                "sectionLabel": r["section_label"],
+                "correct": r["correct"],
+                "total": r["total"],
+                "completedAt": r["completed_at"],
             }
-            for r in rows
+            for r in res.data
         ]
 
     def get_stats(self):
-        conn = _db_connect()
-        overall = conn.execute("SELECT COUNT(*), SUM(correct), SUM(total) FROM attempts").fetchone()
-        per_vehicle_rows = conn.execute(
-            "SELECT vehicle, COUNT(*), SUM(correct), SUM(total) FROM attempts GROUP BY vehicle"
-        ).fetchall()
-        conn.close()
+        res = supabase.table("attempts").select("vehicle, correct, total").execute()
+        rows = res.data
 
-        attempt_count, correct_sum, total_sum = overall
-        attempt_count = attempt_count or 0
-        correct_sum = correct_sum or 0
-        total_sum = total_sum or 0
+        attempt_count = len(rows)
+        correct_sum = sum(r["correct"] for r in rows)
+        total_sum = sum(r["total"] for r in rows)
         avg_percent = round((correct_sum / total_sum) * 100) if total_sum else None
 
-        per_vehicle = []
-        for vehicle, count, v_correct, v_total in per_vehicle_rows:
-            v_correct = v_correct or 0
-            v_total = v_total or 0
-            per_vehicle.append({
+        per_vehicle_totals = {}
+        for r in rows:
+            agg = per_vehicle_totals.setdefault(r["vehicle"], {"count": 0, "correct": 0, "total": 0})
+            agg["count"] += 1
+            agg["correct"] += r["correct"]
+            agg["total"] += r["total"]
+
+        per_vehicle = [
+            {
                 "vehicle": vehicle,
-                "attemptCount": count,
-                "avgPercent": round((v_correct / v_total) * 100) if v_total else None,
-            })
+                "attemptCount": agg["count"],
+                "avgPercent": round((agg["correct"] / agg["total"]) * 100) if agg["total"] else None,
+            }
+            for vehicle, agg in per_vehicle_totals.items()
+        ]
 
         return {
             "attemptCount": attempt_count,
@@ -382,66 +455,63 @@ class Api:
         }
 
     def record_quiz_results(self, vehicle, results):
-        conn = _db_connect()
-        with conn:
-            for r in results:
-                if r.get("correct"):
-                    conn.execute(
-                        "DELETE FROM wrong_questions WHERE vehicle = ? AND question_id = ?",
-                        (vehicle, r["id"]),
-                    )
-                else:
-                    conn.execute(
-                        "INSERT OR IGNORE INTO wrong_questions (vehicle, question_id, category, created_at) "
-                        "VALUES (?, ?, ?, ?)",
-                        (vehicle, r["id"], r.get("category", ""), datetime.now(timezone.utc).isoformat()),
-                    )
-        conn.close()
+        for r in results:
+            if r.get("correct"):
+                (
+                    supabase.table("wrong_questions")
+                    .delete()
+                    .eq("vehicle", vehicle)
+                    .eq("question_id", r["id"])
+                    .execute()
+                )
+            else:
+                supabase.table("wrong_questions").upsert(
+                    {"vehicle": vehicle, "question_id": r["id"], "category": r.get("category", "")},
+                    on_conflict="user_id,vehicle,question_id",
+                    ignore_duplicates=True,
+                ).execute()
 
     def get_wrong_count(self, vehicle):
-        conn = _db_connect()
-        count = conn.execute(
-            "SELECT COUNT(*) FROM wrong_questions WHERE vehicle = ?", (vehicle,)
-        ).fetchone()[0]
-        conn.close()
-        return count
+        res = supabase.table("wrong_questions").select("id", count="exact").eq("vehicle", vehicle).execute()
+        return res.count or 0
 
     def get_wrong_questions(self, vehicle):
-        conn = _db_connect()
-        rows = conn.execute(
-            "SELECT question_id FROM wrong_questions WHERE vehicle = ? ORDER BY id DESC", (vehicle,)
-        ).fetchall()
-        conn.close()
+        res = (
+            supabase.table("wrong_questions")
+            .select("question_id")
+            .eq("vehicle", vehicle)
+            .order("id", desc=True)
+            .execute()
+        )
         by_id = {q["id"]: q for q in self._load_questions(vehicle)}
-        return [by_id[r[0]] for r in rows if r[0] in by_id]
+        return [by_id[r["question_id"]] for r in res.data if r["question_id"] in by_id]
 
     def save_question(self, vehicle, question_id, category):
-        conn = _db_connect()
-        with conn:
-            conn.execute(
-                "INSERT OR IGNORE INTO saved_questions (vehicle, question_id, category, created_at) "
-                "VALUES (?, ?, ?, ?)",
-                (vehicle, question_id, category, datetime.now(timezone.utc).isoformat()),
-            )
-        conn.close()
+        supabase.table("saved_questions").upsert(
+            {"vehicle": vehicle, "question_id": question_id, "category": category},
+            on_conflict="user_id,vehicle,question_id",
+            ignore_duplicates=True,
+        ).execute()
 
     def unsave_question(self, vehicle, question_id):
-        conn = _db_connect()
-        with conn:
-            conn.execute(
-                "DELETE FROM saved_questions WHERE vehicle = ? AND question_id = ?",
-                (vehicle, question_id),
-            )
-        conn.close()
+        (
+            supabase.table("saved_questions")
+            .delete()
+            .eq("vehicle", vehicle)
+            .eq("question_id", question_id)
+            .execute()
+        )
 
     def get_saved_questions(self, vehicle):
-        conn = _db_connect()
-        rows = conn.execute(
-            "SELECT question_id FROM saved_questions WHERE vehicle = ? ORDER BY id DESC", (vehicle,)
-        ).fetchall()
-        conn.close()
+        res = (
+            supabase.table("saved_questions")
+            .select("question_id")
+            .eq("vehicle", vehicle)
+            .order("id", desc=True)
+            .execute()
+        )
         by_id = {q["id"]: q for q in self._load_questions(vehicle)}
-        return [by_id[r[0]] for r in rows if r[0] in by_id]
+        return [by_id[r["question_id"]] for r in res.data if r["question_id"] in by_id]
 
 
 def _close_splash():

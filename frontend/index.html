@@ -20,6 +20,15 @@
         <img class="brand-logo brand-logo-dark" src="assets/brand/logo-dark.png" alt="RoadReady">
       </button>
       <div class="topbar-actions">
+        <button class="pill-btn" id="manageUsersBtn" type="button" aria-haspopup="true" hidden>
+          <svg viewBox="0 0 16 16" fill="none">
+            <circle cx="6" cy="5" r="2.4" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M1.8 13.2C2.2 10.8 3.9 9.2 6 9.2C8.1 9.2 9.8 10.8 10.2 13.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="12" cy="5.5" r="1.8" stroke="currentColor" stroke-width="1.3"/>
+            <path d="M10.5 9.6C12.2 9.9 13.5 11.2 13.8 13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Χρήστες
+        </button>
         <button class="pill-btn" id="progressBtn" type="button" aria-haspopup="true">
           <svg viewBox="0 0 16 16" fill="none">
             <path d="M2.5 13.5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -36,11 +45,12 @@
           </svg>
           Ρυθμίσεις
         </button>
-        <button class="pill-btn danger" id="closeBtn" type="button">
+        <button class="pill-btn" id="profileBtn" type="button" aria-haspopup="true">
           <svg viewBox="0 0 16 16" fill="none">
-            <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="8" cy="5.2" r="2.6" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M2.6 13.6C3.1 10.8 5.2 9 8 9C10.8 9 12.9 10.8 13.4 13.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
           </svg>
-          Έξοδος
+          Προφίλ
         </button>
       </div>
     </div>
@@ -49,8 +59,38 @@
       <span id="sectionBannerLabel"></span>
     </div>
 
+    <!-- LOGIN SCREEN (accounts are created by an admin/supervisor, not self-signup) -->
+    <div class="screen show" id="screen-login">
+      <div class="home-content">
+        <p class="home-title">Καλωσόρισες</p>
+        <p class="home-sub" id="authSubtitle">Συνδέσου για να συνεχίσεις την εξάσκησή σου.</p>
+
+        <form class="auth-form" id="authForm">
+          <label class="auth-field">
+            <span class="auth-label">Όνομα χρήστη</span>
+            <input type="text" id="authUsername" class="auth-input" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+          </label>
+          <label class="auth-field">
+            <span class="auth-label">Κωδικός</span>
+            <input type="password" id="authPassword" class="auth-input" autocomplete="current-password" required minlength="6">
+          </label>
+
+          <label class="switch-field">
+            <input type="checkbox" id="rememberUsernameCheckbox" class="switch-input">
+            <span class="switch-track"><span class="switch-thumb"></span></span>
+            <span class="switch-label">Να θυμάσαι το όνομα χρήστη</span>
+          </label>
+
+          <p class="auth-error" id="authError" hidden></p>
+          <p class="auth-notice" id="authNotice" hidden></p>
+
+          <button class="btn primary" type="submit" id="authSubmitBtn">Σύνδεση</button>
+        </form>
+      </div>
+    </div>
+
     <!-- VEHICLE SELECT SCREEN (first page) -->
-    <div class="screen show" id="screen-vehicles">
+    <div class="screen" id="screen-vehicles">
       <div class="hero-road">
         <div class="hero-bus-icon">
           <img src="assets/icons/vehicles/bus.png" alt="">
@@ -300,6 +340,65 @@
       </div>
     </div>
 
+    <!-- MANAGE USERS (admin / supervisor only) -->
+    <div class="overlay" id="manageUsersOverlay">
+      <div class="overlay-panel">
+        <div class="overlay-header">
+          <p class="overlay-title">Διαχείριση Χρηστών</p>
+          <button class="icon-btn" id="closeManageUsersBtn" type="button" aria-label="Κλείσιμο">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div id="usersListView">
+          <p class="setting-label" id="usersListLabel">Χρήστες</p>
+          <div id="usersList"></div>
+          <button class="btn primary" id="showCreateUserBtn" type="button">Δημιουργία χρήστη</button>
+        </div>
+
+        <form class="auth-form" id="createUserForm" hidden>
+          <p class="setting-label" id="userFormTitle">Νέος χρήστης</p>
+
+          <label class="auth-field">
+            <span class="auth-label">Όνομα χρήστη</span>
+            <input type="text" id="newUserUsername" class="auth-input" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+          </label>
+          <label class="auth-field">
+            <span class="auth-label" id="newUserPasswordLabel">Κωδικός</span>
+            <input type="password" id="newUserPassword" class="auth-input" autocomplete="new-password" minlength="6">
+          </label>
+
+          <div class="setting-row" id="newUserRoleRow" hidden>
+            <p class="setting-label">Ρόλος</p>
+            <div class="checkbox-group">
+              <label class="checkbox-field">
+                <input type="checkbox" id="newUserRoleUser" checked>
+                <span>Απλός χρήστης (υπό Admin)</span>
+              </label>
+              <label class="checkbox-field">
+                <input type="checkbox" id="newUserRoleSupervisor">
+                <span>Επόπτης</span>
+              </label>
+            </div>
+          </div>
+
+          <label class="auth-field" id="newUserSupervisorField" hidden>
+            <span class="auth-label">Επόπτης</span>
+            <select id="newUserSupervisor" class="auth-input"></select>
+          </label>
+
+          <p class="auth-error" id="createUserError" hidden></p>
+
+          <div class="confirm-actions">
+            <button class="btn ghost" type="button" id="cancelUserFormBtn">Άκυρο</button>
+            <button class="btn primary" type="submit" id="createUserSubmitBtn">Δημιουργία χρήστη</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- SIMULATION SETTINGS -->
     <div class="overlay" id="simSettingsOverlay">
       <div class="overlay-panel">
@@ -389,10 +488,60 @@
 
         <div class="setting-row">
           <p class="setting-label">Σχετικά</p>
-          <p class="setting-value">RoadReady v0.1.0 — έκδοση υπολογιστή χωρίς σύνδεση στο διαδίκτυο. Όλο το περιεχόμενο και η πρόοδος παραμένουν σε αυτόν τον υπολογιστή.</p>
+          <p class="setting-value">RoadReady v0.2.0 — η πρόοδος και οι αποθηκευμένες ερωτήσεις συγχρονίζονται στον λογαριασμό σου και χρειάζονται σύνδεση στο διαδίκτυο.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILE OVERLAY -->
+    <div class="overlay" id="profileOverlay">
+      <div class="overlay-panel">
+        <div class="overlay-header">
+          <p class="overlay-title">Προφίλ</p>
+          <button class="icon-btn" id="closeProfileBtn" type="button" aria-label="Κλείσιμο προφίλ">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
         </div>
 
-        <button class="btn ghost danger" id="closeAppFromSettingsBtn" type="button">Έξοδος</button>
+        <div class="setting-row">
+          <p class="setting-label">Λογαριασμός</p>
+          <p class="setting-value" id="accountUsername">—</p>
+        </div>
+
+        <button class="btn ghost" id="showChangePasswordBtn" type="button">Αλλαγή κωδικού</button>
+
+        <form class="auth-form" id="changePasswordForm" hidden>
+          <label class="auth-field">
+            <span class="auth-label">Νέος κωδικός</span>
+            <input type="password" id="newPasswordInput" class="auth-input" autocomplete="new-password" required minlength="6">
+          </label>
+          <label class="auth-field">
+            <span class="auth-label">Επιβεβαίωση κωδικού</span>
+            <input type="password" id="newPasswordConfirmInput" class="auth-input" autocomplete="new-password" required minlength="6">
+          </label>
+          <p class="auth-error" id="changePasswordError" hidden></p>
+          <div class="confirm-actions">
+            <button class="btn ghost" type="button" id="cancelChangePasswordBtn">Άκυρο</button>
+            <button class="btn primary" type="submit" id="changePasswordSubmitBtn">Αλλαγή κωδικού</button>
+          </div>
+        </form>
+
+        <button class="btn ghost danger" id="signOutBtn" type="button">Αποσύνδεση</button>
+        <button class="btn ghost danger" id="closeAppFromProfileBtn" type="button">Έξοδος από την εφαρμογή</button>
+      </div>
+    </div>
+
+    <!-- DELETE USER CONFIRMATION -->
+    <div class="overlay" id="deleteUserOverlay">
+      <div class="overlay-panel confirm-panel">
+        <p class="overlay-title">Διαγραφή χρήστη <span id="deleteUserName"></span>;</p>
+        <p class="confirm-sub">Ο λογαριασμός και όλα τα δεδομένα του (ιστορικό, λάθη, αποθηκευμένες ερωτήσεις) θα διαγραφούν οριστικά. Αυτή η ενέργεια δεν αναιρείται.</p>
+        <div class="confirm-actions">
+          <button class="btn ghost" id="deleteUserCancelBtn" type="button">Όχι</button>
+          <button class="btn danger" id="deleteUserConfirmBtn" type="button">Ναι, διαγραφή</button>
+        </div>
       </div>
     </div>
 

@@ -1,9 +1,10 @@
 # RoadReady
 
-An offline, Greek-language driving theory quiz app for Windows, covering both
-car (Category B) and motorcycle/truck/bus/professional-certificate licenses.
-Built as a single self-contained `.exe` — no internet connection, no
-installer, nothing to configure.
+A Greek-language driving theory quiz app for Windows, covering both car
+(Category B) and motorcycle/truck/bus/professional-certificate licenses.
+Built as a single self-contained `.exe` — no installer, nothing to configure.
+Requires an internet connection and a signed-in account, since progress,
+mistakes, and saved questions sync to a Supabase backend.
 
 ## Features
 
@@ -14,9 +15,21 @@ installer, nothing to configure.
 - **Exam simulation** with configurable question count (20/30/40), an
   optional countdown timer, and a choice between immediate answer feedback
   or a full review at the end.
-- **Progress tracking** — every completed quiz is saved to a local SQLite
-  database, with a summary screen showing your overall average, per-vehicle
-  breakdown, and recent attempt history. Persists across restarts.
+- **Account sign-in** — username/password authentication via Supabase Auth
+  (each username maps to a synthetic, never-emailed address under the hood).
+  There's no self-signup: accounts are created by an admin or supervisor from
+  the in-app "Χρήστες" (Users) screen. Three roles: **admin** (sees and manages
+  everyone), **supervisor** (driving school — manages up to 10 of their own
+  users), and **user** (regular quiz-taker, under a supervisor or directly
+  under the admin). Each account's data is isolated with Row Level Security.
+- **Progress tracking** — every completed quiz is saved to your account, with
+  a summary screen showing your overall average, per-vehicle breakdown, and
+  recent attempt history. Syncs across installs/machines under the same login.
+- **Mistakes practice** — a per-vehicle "Εξάσκηση σε Λάθη" mode unlocks once
+  you've missed 5+ questions, quizzing you on exactly those until you get them
+  right again.
+- **Saved questions** — flag any question during a quiz and revisit it later
+  from a per-vehicle saved list.
 - **Light/dark theme** (or follow the system setting), with the native
   Windows title bar recoloring to match.
 - **Adjustable text size** via a zoom slider in Settings.
@@ -28,7 +41,8 @@ installer, nothing to configure.
 - **Python** + [pywebview](https://pywebview.flowrl.com/) (Windows backend:
   WinForms + WebView2) for the desktop shell.
 - Plain **HTML / CSS / JavaScript** for the UI — no framework, no build step.
-- **SQLite** (stdlib `sqlite3`) for local progress history.
+- **[Supabase](https://supabase.com)** (Postgres + Auth) for accounts and all
+  progress/mistakes/saved-question data, via the `supabase-py` client.
 - **PyInstaller** to package everything into a single `.exe`.
 
 ## Project structure
@@ -81,10 +95,38 @@ from a Greek driving-theory practice website. The tooling used to gather that
 content isn't part of this repo — only the resulting `app/data/*.seed.json`
 question banks are included.
 
+## Backend setup
+
+Progress, mistakes, and saved questions live in Supabase, not on disk. To run
+this against your own project:
+
+1. Create a project at [supabase.com](https://supabase.com).
+2. Run [`supabase/schema.sql`](supabase/schema.sql) in its SQL Editor — this
+   creates the three tables and their Row Level Security policies.
+3. Copy the project's URL and `anon` public key (Settings -> API) into the
+   `SUPABASE_URL` / `SUPABASE_ANON_KEY` constants near the top of
+   `app/main.py`. Never use the `service_role` key here — RLS is what makes
+   the anon key safe to embed in a distributed `.exe`.
+4. **Disable "Confirm email"** under Authentication -> Providers -> Email.
+   This is required, not optional: usernames map to synthetic addresses at
+   `{username}@roadready.local` that never receive real mail, so a
+   confirmation link can never arrive if this is left on.
+5. Deploy the `manage-users` Edge Function — this is what lets admins and
+   supervisors create/delete accounts without ever exposing the
+   `service_role` key to the client. With the
+   [Supabase CLI](https://supabase.com/docs/guides/cli): `supabase link` then
+   `supabase functions deploy manage-users`. Without the CLI: create a new
+   Edge Function named `manage-users` in the Dashboard and paste in the
+   contents of
+   [`supabase/functions/manage-users/index.ts`](supabase/functions/manage-users/index.ts).
+   No secrets need to be configured manually — Supabase injects the
+   project's URL and keys into the function automatically.
+
 ## Notes
 
 - Windows-only: the title-bar theming and window chrome use Windows-specific
   APIs (DWM, WinForms), so this won't run as-is on macOS/Linux.
+- Requires an internet connection — there's no offline/local-only mode.
 - No license file is included yet — add one if you plan to publish this
   publicly, and double-check the terms around the scraped question content
   before distributing it further.

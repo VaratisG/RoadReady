@@ -1,6 +1,7 @@
 (function () {
   var THEME_KEY = 'drivequiz.theme';
   var ZOOM_KEY = 'drivequiz.zoom';
+  var REMEMBER_USERNAME_KEY = 'drivequiz.rememberedUsername';
 
   var HERO_ANIM_EPOCH = performance.now();
   var HERO_BASE_DELAYS = { car: 0, bike: -6, motorbike: -11, bus: -3 };
@@ -160,10 +161,57 @@
   var ICON_MISTAKES = '<svg viewBox="0 0 22 22" fill="none"><path d="M11 3L20 18H2L11 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M11 9V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="11" cy="15.6" r="1" fill="currentColor"/></svg>';
   var ICON_LOCK = '<svg viewBox="0 0 16 16" fill="none"><rect x="3.5" y="7" width="9" height="7" rx="1.6" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7V5C5.5 3.34 6.84 2 8.5 2C10.16 2 11.5 3.34 11.5 5V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
   var ICON_TRASH = '<svg viewBox="0 0 16 16" fill="none"><path d="M3 4.5H13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 4.5V3.2C6 2.6 6.5 2 7.2 2H8.8C9.5 2 10 2.6 10 3.2V4.5" stroke="currentColor" stroke-width="1.4"/><path d="M4.5 4.5L5 13C5 13.6 5.5 14 6 14H10C10.5 14 11 13.6 11 13L11.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>';
+  var ICON_EDIT = '<svg viewBox="0 0 16 16" fill="none"><path d="M11.3 2.3a1.6 1.6 0 0 1 2.4 2.4L5.4 13 2 14l1-3.4 8.3-8.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/></svg>';
 
   var PAGE_SIZE = 10;
 
   var el = {
+    screenLogin: document.getElementById('screen-login'),
+    authForm: document.getElementById('authForm'),
+    authUsername: document.getElementById('authUsername'),
+    authPassword: document.getElementById('authPassword'),
+    authError: document.getElementById('authError'),
+    authNotice: document.getElementById('authNotice'),
+    authSubmitBtn: document.getElementById('authSubmitBtn'),
+    authSubtitle: document.getElementById('authSubtitle'),
+    rememberUsernameCheckbox: document.getElementById('rememberUsernameCheckbox'),
+    accountUsername: document.getElementById('accountUsername'),
+    signOutBtn: document.getElementById('signOutBtn'),
+    profileBtn: document.getElementById('profileBtn'),
+    profileOverlay: document.getElementById('profileOverlay'),
+    closeProfileBtn: document.getElementById('closeProfileBtn'),
+    showChangePasswordBtn: document.getElementById('showChangePasswordBtn'),
+    changePasswordForm: document.getElementById('changePasswordForm'),
+    newPasswordInput: document.getElementById('newPasswordInput'),
+    newPasswordConfirmInput: document.getElementById('newPasswordConfirmInput'),
+    changePasswordError: document.getElementById('changePasswordError'),
+    cancelChangePasswordBtn: document.getElementById('cancelChangePasswordBtn'),
+    changePasswordSubmitBtn: document.getElementById('changePasswordSubmitBtn'),
+    closeAppFromProfileBtn: document.getElementById('closeAppFromProfileBtn'),
+    manageUsersBtn: document.getElementById('manageUsersBtn'),
+    manageUsersOverlay: document.getElementById('manageUsersOverlay'),
+    closeManageUsersBtn: document.getElementById('closeManageUsersBtn'),
+    usersListView: document.getElementById('usersListView'),
+    showCreateUserBtn: document.getElementById('showCreateUserBtn'),
+    createUserForm: document.getElementById('createUserForm'),
+    userFormTitle: document.getElementById('userFormTitle'),
+    newUserUsername: document.getElementById('newUserUsername'),
+    newUserPasswordLabel: document.getElementById('newUserPasswordLabel'),
+    newUserPassword: document.getElementById('newUserPassword'),
+    newUserRoleRow: document.getElementById('newUserRoleRow'),
+    newUserRoleUser: document.getElementById('newUserRoleUser'),
+    newUserRoleSupervisor: document.getElementById('newUserRoleSupervisor'),
+    newUserSupervisorField: document.getElementById('newUserSupervisorField'),
+    newUserSupervisor: document.getElementById('newUserSupervisor'),
+    createUserError: document.getElementById('createUserError'),
+    cancelUserFormBtn: document.getElementById('cancelUserFormBtn'),
+    createUserSubmitBtn: document.getElementById('createUserSubmitBtn'),
+    usersListLabel: document.getElementById('usersListLabel'),
+    usersList: document.getElementById('usersList'),
+    deleteUserOverlay: document.getElementById('deleteUserOverlay'),
+    deleteUserName: document.getElementById('deleteUserName'),
+    deleteUserCancelBtn: document.getElementById('deleteUserCancelBtn'),
+    deleteUserConfirmBtn: document.getElementById('deleteUserConfirmBtn'),
     menuPinned: document.getElementById('menuPinned'),
     menuList: document.getElementById('menuList'),
     menuPagination: document.getElementById('menuPagination'),
@@ -211,8 +259,6 @@
     zoomSlider: document.getElementById('zoomSlider'),
     zoomValue: document.getElementById('zoomValue'),
     fullscreenBtn: document.getElementById('fullscreenBtn'),
-    closeBtn: document.getElementById('closeBtn'),
-    closeAppFromSettingsBtn: document.getElementById('closeAppFromSettingsBtn'),
     exitOverlay: document.getElementById('exitOverlay'),
     exitCancelBtn: document.getElementById('exitCancelBtn'),
     exitConfirmBtn: document.getElementById('exitConfirmBtn'),
@@ -255,7 +301,9 @@
   };
 
   var state = {
-    screen: 'vehicles',
+    screen: 'login',
+    username: null,
+    role: null,
     vehicle: null,
     sectionId: '',
     sectionLabel: '',
@@ -284,11 +332,15 @@
 
   function showScreen(name) {
     state.screen = name;
+    el.screenLogin.classList.toggle('show', name === 'login');
     el.screenVehicles.classList.toggle('show', name === 'vehicles');
     el.screenHome.classList.toggle('show', name === 'home');
     el.screenQuiz.classList.toggle('show', name === 'quiz');
     el.screenResults.classList.toggle('show', name === 'results');
     el.sectionBanner.classList.toggle('show', name === 'quiz');
+    el.progressBtn.style.display = name === 'login' ? 'none' : 'flex';
+    el.settingsBtn.style.display = name === 'login' ? 'none' : 'flex';
+    el.profileBtn.style.display = name === 'login' ? 'none' : 'flex';
     if (name === 'vehicles' || name === 'home') {
       syncHeroRoadAnimations();
     }
@@ -297,6 +349,377 @@
       updateSavedQuestionsButton();
     }
   }
+
+  // ---- Auth ----
+  // Accounts are created by an admin or supervisor from the Manage Users
+  // screen — there is no self-signup, so this login form only ever signs in.
+
+  function updateManageUsersAccess() {
+    el.manageUsersBtn.hidden = !(state.role === 'admin' || state.role === 'supervisor');
+  }
+
+  function prefillRememberedUsername() {
+    var remembered = null;
+    try {
+      remembered = localStorage.getItem(REMEMBER_USERNAME_KEY);
+    } catch (e) {}
+    if (remembered) {
+      el.authUsername.value = remembered;
+      el.rememberUsernameCheckbox.checked = true;
+    } else {
+      el.rememberUsernameCheckbox.checked = false;
+    }
+  }
+
+  function onAuthSuccess(username, role, remember) {
+    state.username = username;
+    state.role = role;
+    el.accountUsername.textContent = username;
+    updateManageUsersAccess();
+    el.authForm.reset();
+    try {
+      if (remember) {
+        localStorage.setItem(REMEMBER_USERNAME_KEY, username);
+      } else {
+        localStorage.removeItem(REMEMBER_USERNAME_KEY);
+      }
+    } catch (e) {}
+    showScreen('vehicles');
+  }
+
+  function handleAuthSubmit(e) {
+    e.preventDefault();
+    el.authError.hidden = true;
+    el.authNotice.hidden = true;
+
+    var username = el.authUsername.value.trim();
+    var password = el.authPassword.value;
+    var remember = el.rememberUsernameCheckbox.checked;
+    if (!username || !password) return;
+
+    if (!(window.pywebview && window.pywebview.api)) {
+      el.authError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
+      el.authError.hidden = false;
+      return;
+    }
+
+    el.authSubmitBtn.disabled = true;
+    window.pywebview.api.sign_in(username, password).then(function (res) {
+      el.authSubmitBtn.disabled = false;
+      if (!res.ok) {
+        el.authError.textContent = res.error || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+        el.authError.hidden = false;
+        return;
+      }
+      onAuthSuccess(res.username || username, res.role || 'user', remember);
+    }).catch(function () {
+      el.authSubmitBtn.disabled = false;
+      el.authError.textContent = 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+      el.authError.hidden = false;
+    });
+  }
+
+  el.authForm.addEventListener('submit', handleAuthSubmit);
+
+  function signOut() {
+    if (window.pywebview && window.pywebview.api && window.pywebview.api.sign_out) {
+      window.pywebview.api.sign_out();
+    }
+    state.username = null;
+    state.role = null;
+    state.vehicle = null;
+    el.accountUsername.textContent = '—';
+    updateManageUsersAccess();
+    closeProfile();
+    prefillRememberedUsername();
+    showScreen('login');
+  }
+
+  el.signOutBtn.addEventListener('click', signOut);
+
+  // ---- Manage Users (admin / supervisor only) ----
+  var userFormMode = 'create';
+  var editingUserId = null;
+
+  function getNewUserRole() {
+    return el.newUserRoleSupervisor.checked ? 'supervisor' : 'user';
+  }
+
+  function showUsersListView() {
+    el.usersListView.hidden = false;
+    el.createUserForm.hidden = true;
+  }
+
+  function openManageUsers() {
+    el.manageUsersOverlay.classList.add('show');
+    showUsersListView();
+    loadUsersList();
+  }
+  function closeManageUsers() {
+    el.manageUsersOverlay.classList.remove('show');
+  }
+
+  function openCreateUserForm() {
+    userFormMode = 'create';
+    editingUserId = null;
+    el.createUserForm.reset();
+    el.createUserError.hidden = true;
+    el.userFormTitle.textContent = 'Νέος χρήστης';
+    el.newUserPasswordLabel.textContent = 'Κωδικός';
+    el.newUserPassword.required = true;
+
+    var isAdmin = state.role === 'admin';
+    el.newUserRoleRow.hidden = !isAdmin;
+    el.newUserRoleUser.checked = true;
+    el.newUserRoleSupervisor.checked = false;
+    el.newUserSupervisorField.hidden = !isAdmin;
+
+    el.createUserSubmitBtn.textContent = 'Δημιουργία χρήστη';
+    el.usersListView.hidden = true;
+    el.createUserForm.hidden = false;
+    el.newUserUsername.focus();
+  }
+
+  function openEditUserForm(u) {
+    userFormMode = 'edit';
+    editingUserId = u.id;
+    el.createUserForm.reset();
+    el.createUserError.hidden = true;
+    el.userFormTitle.textContent = 'Επεξεργασία χρήστη';
+    el.newUserPasswordLabel.textContent = 'Νέος κωδικός (προαιρετικό)';
+    el.newUserPassword.required = false;
+    el.newUserUsername.value = u.username;
+
+    el.newUserRoleRow.hidden = true;
+    el.newUserSupervisorField.hidden = true;
+
+    el.createUserSubmitBtn.textContent = 'Αποθήκευση';
+    el.usersListView.hidden = true;
+    el.createUserForm.hidden = false;
+    el.newUserUsername.focus();
+  }
+
+  function loadUsersList() {
+    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.list_users)) {
+      renderUsersList([]);
+      return;
+    }
+    window.pywebview.api.list_users().then(function (users) {
+      renderUsersList(users);
+      if (state.role === 'admin') renderSupervisorOptions(users);
+    }).catch(function () {
+      renderUsersList([]);
+    });
+  }
+
+  function renderSupervisorOptions(users) {
+    var supervisors = users.filter(function (u) { return u.role === 'supervisor'; });
+    var current = el.newUserSupervisor.value;
+    el.newUserSupervisor.innerHTML = '';
+    var noneOpt = document.createElement('option');
+    noneOpt.value = '';
+    noneOpt.textContent = 'Απευθείας υπό Admin';
+    el.newUserSupervisor.appendChild(noneOpt);
+    supervisors.forEach(function (s) {
+      var opt = document.createElement('option');
+      opt.value = s.id;
+      opt.textContent = s.username;
+      el.newUserSupervisor.appendChild(opt);
+    });
+    el.newUserSupervisor.value = current || '';
+  }
+
+  function roleLabel(role) {
+    return role === 'admin' ? 'Admin' : role === 'supervisor' ? 'Επόπτης' : 'Χρήστης';
+  }
+
+  function buildUserRow(u, indented) {
+    var row = document.createElement('div');
+    row.className = 'user-row' + (indented ? ' indented' : '');
+
+    var info = document.createElement('div');
+    info.className = 'user-row-info';
+    var name = document.createElement('p');
+    name.className = 'user-row-name';
+    name.textContent = u.username;
+    var meta = document.createElement('p');
+    meta.className = 'user-row-meta';
+    meta.textContent = u.supervisorUsername ? ('Υπό: ' + u.supervisorUsername) : (u.role === 'user' ? 'Απευθείας υπό Admin' : '—');
+    info.appendChild(name);
+    info.appendChild(meta);
+
+    var badge = document.createElement('span');
+    badge.className = 'user-row-badge';
+    badge.textContent = roleLabel(u.role);
+
+    row.appendChild(info);
+    row.appendChild(badge);
+
+    var canManage = state.role === 'admin' || (state.role === 'supervisor' && u.role === 'user' && u.supervisorId);
+    if (canManage) {
+      var editBtn = document.createElement('button');
+      editBtn.type = 'button';
+      editBtn.className = 'icon-btn user-row-edit';
+      editBtn.setAttribute('aria-label', 'Επεξεργασία χρήστη');
+      editBtn.innerHTML = ICON_EDIT;
+      editBtn.addEventListener('click', function () { openEditUserForm(u); });
+      row.appendChild(editBtn);
+    }
+
+    var isSelf = u.username === state.username;
+    var canDelete = !isSelf && (state.role === 'admin' || (state.role === 'supervisor' && u.role === 'user' && u.supervisorId));
+    if (canDelete) {
+      var removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.className = 'icon-btn user-row-remove';
+      removeBtn.setAttribute('aria-label', 'Διαγραφή χρήστη');
+      removeBtn.innerHTML = ICON_TRASH;
+      removeBtn.addEventListener('click', function () { openDeleteUserConfirm(u); });
+      row.appendChild(removeBtn);
+    }
+    return row;
+  }
+
+  function buildGroupHeader(label) {
+    var header = document.createElement('p');
+    header.className = 'user-group-header';
+    header.textContent = label;
+    return header;
+  }
+
+  function renderUsersList(users) {
+    el.usersList.innerHTML = '';
+    var others = users.filter(function (u) { return u.username !== state.username; });
+
+    if (state.role !== 'admin') {
+      // Supervisors only ever see their own team anyway (RLS-scoped), flat is fine.
+      el.usersListLabel.textContent = 'Οι χρήστες σου (' + others.length + '/10)';
+      others.forEach(function (u) { el.usersList.appendChild(buildUserRow(u)); });
+      return;
+    }
+
+    el.usersListLabel.textContent = 'Χρήστες (' + others.length + ')';
+    var supervisors = others.filter(function (u) { return u.role === 'supervisor'; });
+    var directUsers = others.filter(function (u) { return u.role === 'user' && !u.supervisorId; });
+
+    supervisors.forEach(function (sup) {
+      var team = others.filter(function (u) { return u.supervisorId === sup.id; });
+      var headerRow = buildUserRow(sup);
+      var headerMeta = headerRow.querySelector('.user-row-meta');
+      headerMeta.textContent = team.length + '/10 χρήστες';
+      el.usersList.appendChild(headerRow);
+      team.forEach(function (u) { el.usersList.appendChild(buildUserRow(u, true)); });
+    });
+
+    if (directUsers.length > 0) {
+      el.usersList.appendChild(buildGroupHeader('Απευθείας υπό Admin'));
+      directUsers.forEach(function (u) { el.usersList.appendChild(buildUserRow(u, true)); });
+    }
+  }
+
+  var pendingDeleteUser = null;
+
+  function openDeleteUserConfirm(u) {
+    pendingDeleteUser = u;
+    el.deleteUserName.textContent = u.username;
+    el.deleteUserOverlay.classList.add('show');
+  }
+  function closeDeleteUserConfirm() {
+    pendingDeleteUser = null;
+    el.deleteUserOverlay.classList.remove('show');
+  }
+
+  function confirmDeleteUser() {
+    var userId = pendingDeleteUser && pendingDeleteUser.id;
+    closeDeleteUserConfirm();
+    if (!userId || !(window.pywebview && window.pywebview.api && window.pywebview.api.delete_user)) return;
+    window.pywebview.api.delete_user(userId).then(function (res) {
+      if (res && res.ok) {
+        loadUsersList();
+      } else {
+        showToast((res && res.error) || 'Δεν ήταν δυνατή η διαγραφή.');
+      }
+    }).catch(function () {
+      showToast('Δεν ήταν δυνατή η διαγραφή.');
+    });
+  }
+
+  el.deleteUserCancelBtn.addEventListener('click', closeDeleteUserConfirm);
+  el.deleteUserConfirmBtn.addEventListener('click', confirmDeleteUser);
+  el.deleteUserOverlay.addEventListener('click', function (e) {
+    if (e.target === el.deleteUserOverlay) closeDeleteUserConfirm();
+  });
+
+  function handleUserFormSubmit(e) {
+    e.preventDefault();
+    el.createUserError.hidden = true;
+
+    var username = el.newUserUsername.value.trim();
+    var password = el.newUserPassword.value;
+    if (!username) return;
+    if (userFormMode === 'create' && !password) return;
+
+    if (!(window.pywebview && window.pywebview.api)) {
+      el.createUserError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
+      el.createUserError.hidden = false;
+      return;
+    }
+
+    el.createUserSubmitBtn.disabled = true;
+
+    function onDone(res) {
+      el.createUserSubmitBtn.disabled = false;
+      if (!res || !res.ok) {
+        el.createUserError.textContent = (res && res.error) || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+        el.createUserError.hidden = false;
+        return;
+      }
+      showUsersListView();
+      loadUsersList();
+    }
+    function onFail() {
+      el.createUserSubmitBtn.disabled = false;
+      el.createUserError.textContent = 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+      el.createUserError.hidden = false;
+    }
+
+    if (userFormMode === 'edit') {
+      if (!window.pywebview.api.update_user) { onFail(); return; }
+      window.pywebview.api.update_user(editingUserId, username, password || null).then(onDone).catch(onFail);
+      return;
+    }
+
+    var role = state.role === 'admin' ? getNewUserRole() : 'user';
+    var supervisorId = (state.role === 'admin' && role === 'user') ? (el.newUserSupervisor.value || null) : null;
+
+    if (!window.pywebview.api.create_user) { onFail(); return; }
+    window.pywebview.api.create_user(username, password, role, supervisorId).then(onDone).catch(onFail);
+  }
+
+  el.manageUsersBtn.addEventListener('click', openManageUsers);
+  el.closeManageUsersBtn.addEventListener('click', closeManageUsers);
+  el.manageUsersOverlay.addEventListener('click', function (e) {
+    if (e.target === el.manageUsersOverlay) closeManageUsers();
+  });
+  el.showCreateUserBtn.addEventListener('click', openCreateUserForm);
+  el.cancelUserFormBtn.addEventListener('click', showUsersListView);
+  el.createUserForm.addEventListener('submit', handleUserFormSubmit);
+  el.newUserRoleUser.addEventListener('change', function () {
+    if (!el.newUserRoleUser.checked && !el.newUserRoleSupervisor.checked) {
+      el.newUserRoleUser.checked = true;
+    } else if (el.newUserRoleUser.checked) {
+      el.newUserRoleSupervisor.checked = false;
+    }
+    el.newUserSupervisorField.hidden = getNewUserRole() !== 'user';
+  });
+  el.newUserRoleSupervisor.addEventListener('change', function () {
+    if (!el.newUserRoleUser.checked && !el.newUserRoleSupervisor.checked) {
+      el.newUserRoleSupervisor.checked = true;
+    } else if (el.newUserRoleSupervisor.checked) {
+      el.newUserRoleUser.checked = false;
+    }
+    el.newUserSupervisorField.hidden = getNewUserRole() !== 'user';
+  });
 
   // ---- Home screen: section menu ----
 
@@ -1232,6 +1655,74 @@
     if (e.target === el.settingsOverlay) closeSettings();
   });
 
+  // ---- Profile (change password / sign out / exit) ----
+
+  function hideChangePasswordForm() {
+    el.showChangePasswordBtn.hidden = false;
+    el.changePasswordForm.hidden = true;
+  }
+  function showChangePasswordForm() {
+    el.changePasswordForm.reset();
+    el.changePasswordError.hidden = true;
+    el.showChangePasswordBtn.hidden = true;
+    el.changePasswordForm.hidden = false;
+    el.newPasswordInput.focus();
+  }
+
+  function openProfile() {
+    hideChangePasswordForm();
+    el.profileOverlay.classList.add('show');
+  }
+  function closeProfile() {
+    el.profileOverlay.classList.remove('show');
+  }
+
+  function handleChangePasswordSubmit(e) {
+    e.preventDefault();
+    el.changePasswordError.hidden = true;
+
+    var newPassword = el.newPasswordInput.value;
+    var confirmPassword = el.newPasswordConfirmInput.value;
+    if (!newPassword) return;
+
+    if (newPassword !== confirmPassword) {
+      el.changePasswordError.textContent = 'Οι κωδικοί δεν ταιριάζουν.';
+      el.changePasswordError.hidden = false;
+      return;
+    }
+
+    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.change_password)) {
+      el.changePasswordError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
+      el.changePasswordError.hidden = false;
+      return;
+    }
+
+    el.changePasswordSubmitBtn.disabled = true;
+    window.pywebview.api.change_password(newPassword).then(function (res) {
+      el.changePasswordSubmitBtn.disabled = false;
+      if (!res || !res.ok) {
+        el.changePasswordError.textContent = (res && res.error) || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+        el.changePasswordError.hidden = false;
+        return;
+      }
+      hideChangePasswordForm();
+      showToast('Ο κωδικός άλλαξε επιτυχώς.');
+    }).catch(function () {
+      el.changePasswordSubmitBtn.disabled = false;
+      el.changePasswordError.textContent = 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+      el.changePasswordError.hidden = false;
+    });
+  }
+
+  el.profileBtn.addEventListener('click', openProfile);
+  el.closeProfileBtn.addEventListener('click', closeProfile);
+  el.showChangePasswordBtn.addEventListener('click', showChangePasswordForm);
+  el.cancelChangePasswordBtn.addEventListener('click', hideChangePasswordForm);
+  el.profileOverlay.addEventListener('click', function (e) {
+    if (e.target === el.profileOverlay) closeProfile();
+  });
+  el.changePasswordForm.addEventListener('submit', handleChangePasswordSubmit);
+
   // ---- Fullscreen toggle ----
 
   var isFullscreen = false;
@@ -1255,7 +1746,7 @@
   // ---- Exit app confirmation ----
 
   function openExitConfirm() {
-    closeSettings();
+    closeProfile();
     el.exitOverlay.classList.add('show');
   }
   function closeExitConfirm() {
@@ -1269,8 +1760,7 @@
     }
   }
 
-  el.closeBtn.addEventListener('click', openExitConfirm);
-  el.closeAppFromSettingsBtn.addEventListener('click', openExitConfirm);
+  el.closeAppFromProfileBtn.addEventListener('click', openExitConfirm);
   el.exitCancelBtn.addEventListener('click', closeExitConfirm);
   el.exitConfirmBtn.addEventListener('click', confirmExit);
   el.exitOverlay.addEventListener('click', function (e) {
@@ -1310,9 +1800,10 @@
 
   initTheme();
   initZoom();
+  prefillRememberedUsername();
+  showScreen('login');
 
   window.addEventListener('pywebviewready', function () {
     syncTitlebarTheme();
-    if (state.vehicle) loadSections();
   });
 })();
