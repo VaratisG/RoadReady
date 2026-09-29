@@ -188,6 +188,18 @@
     cancelChangePasswordBtn: document.getElementById('cancelChangePasswordBtn'),
     changePasswordSubmitBtn: document.getElementById('changePasswordSubmitBtn'),
     closeAppFromProfileBtn: document.getElementById('closeAppFromProfileBtn'),
+    analyticsBtn: document.getElementById('analyticsBtn'),
+    analyticsOverlay: document.getElementById('analyticsOverlay'),
+    closeAnalyticsBtn: document.getElementById('closeAnalyticsBtn'),
+    analyticsOverallPercent: document.getElementById('analyticsOverallPercent'),
+    analyticsOverallSub: document.getElementById('analyticsOverallSub'),
+    analyticsUserCounts: document.getElementById('analyticsUserCounts'),
+    analyticsVehicleLabel: document.getElementById('analyticsVehicleLabel'),
+    analyticsByVehicle: document.getElementById('analyticsByVehicle'),
+    analyticsSupervisorLabel: document.getElementById('analyticsSupervisorLabel'),
+    analyticsBySupervisor: document.getElementById('analyticsBySupervisor'),
+    analyticsRecentLabel: document.getElementById('analyticsRecentLabel'),
+    analyticsRecentList: document.getElementById('analyticsRecentList'),
     manageUsersBtn: document.getElementById('manageUsersBtn'),
     manageUsersOverlay: document.getElementById('manageUsersOverlay'),
     closeManageUsersBtn: document.getElementById('closeManageUsersBtn'),
@@ -288,10 +300,11 @@
     simSettingsOverlay: document.getElementById('simSettingsOverlay'),
     closeSimSettingsBtn: document.getElementById('closeSimSettingsBtn'),
     simQuestionCount: document.getElementById('simQuestionCount'),
-    simTimerToggle: document.getElementById('simTimerToggle'),
+    simTimerMode: document.getElementById('simTimerMode'),
     simTimerDurationRow: document.getElementById('simTimerDurationRow'),
     simTimerDuration: document.getElementById('simTimerDuration'),
-    simFeedbackMode: document.getElementById('simFeedbackMode'),
+    simTimerPerQuestionRow: document.getElementById('simTimerPerQuestionRow'),
+    simTimerPerQuestion: document.getElementById('simTimerPerQuestion'),
     simSettingsCancelBtn: document.getElementById('simSettingsCancelBtn'),
     simSettingsStartBtn: document.getElementById('simSettingsStartBtn'),
     incompleteOverlay: document.getElementById('incompleteOverlay'),
@@ -379,6 +392,7 @@
 
   function updateManageUsersAccess() {
     el.manageUsersBtn.hidden = !(state.role === 'admin' || state.role === 'supervisor');
+    el.analyticsBtn.hidden = state.role !== 'admin';
   }
 
   function prefillRememberedUsername() {
@@ -424,7 +438,9 @@
     callApi('sign_in', username, password).then(function (res) {
       el.authSubmitBtn.disabled = false;
       if (!res.ok) {
-        el.authError.textContent = res.error || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+        el.authError.textContent = res.error === 'invalid_credentials'
+          ? 'Λάθος όνομα χρήστη ή κωδικός. Αν το πρόβλημα συνεχίζεται, επικοινώνησε με τον εκπαιδευτή σου.'
+          : (res.error || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.');
         el.authError.hidden = false;
         return;
       }
@@ -562,7 +578,7 @@
     info.appendChild(meta);
 
     var badge = document.createElement('span');
-    badge.className = 'user-row-badge';
+    badge.className = 'user-row-badge user-row-badge-' + u.role;
     badge.textContent = roleLabel(u.role);
 
     row.appendChild(info);
@@ -973,12 +989,13 @@
   }
 
   var simQuestionCountCtl = wireSegmented(el.simQuestionCount, '30');
-  var simTimerToggleCtl = wireSegmented(el.simTimerToggle, 'off');
+  var simTimerModeCtl = wireSegmented(el.simTimerMode, 'off');
   var simTimerDurationCtl = wireSegmented(el.simTimerDuration, '20');
-  var simFeedbackModeCtl = wireSegmented(el.simFeedbackMode, 'immediate');
+  var simTimerPerQuestionCtl = wireSegmented(el.simTimerPerQuestion, '30');
 
-  el.simTimerToggle.addEventListener('segmentchange', function (e) {
-    el.simTimerDurationRow.hidden = e.detail !== 'on';
+  el.simTimerMode.addEventListener('segmentchange', function (e) {
+    el.simTimerDurationRow.hidden = e.detail !== 'exam';
+    el.simTimerPerQuestionRow.hidden = e.detail !== 'question';
   });
 
   function openSimSettings(section) {
@@ -998,12 +1015,13 @@
   el.simSettingsStartBtn.addEventListener('click', function () {
     var section = state.pendingSimSection;
     if (!section) return;
-    var timerOn = simTimerToggleCtl.get() === 'on';
+    var timerMode = simTimerModeCtl.get();
     var settings = {
       questionCount: parseInt(simQuestionCountCtl.get(), 10),
-      timerEnabled: timerOn,
-      timerMinutes: timerOn ? parseInt(simTimerDurationCtl.get(), 10) : null,
-      feedbackMode: simFeedbackModeCtl.get()
+      timerMode: timerMode,
+      timerMinutes: timerMode === 'exam' ? parseInt(simTimerDurationCtl.get(), 10) : null,
+      timerSecondsPerQuestion: timerMode === 'question' ? parseInt(simTimerPerQuestionCtl.get(), 10) : null,
+      feedbackMode: 'hidden'
     };
     closeSimSettings();
     startQuiz(section, settings);
@@ -1045,7 +1063,15 @@
     var vehicleLabel = VEHICLE_LABELS[state.vehicle];
     el.sectionBannerLabel.textContent = vehicleLabel ? (vehicleLabel + ' - ' + section.label) : section.label;
     showScreen('quiz');
-    setupTimer();
+    stopTimer();
+    var settings = state.simSettings;
+    if (settings && settings.timerMode === 'exam') {
+      setupExamTimer(settings.timerMinutes * 60);
+    } else if (settings && settings.timerMode === 'question') {
+      setupExamTimer(settings.timerSecondsPerQuestion * questions.length);
+    } else {
+      el.quizTimer.hidden = true;
+    }
     renderQuizQuestion();
   }
 
@@ -1073,14 +1099,9 @@
     return m + ':' + (s < 10 ? '0' : '') + s;
   }
 
-  function setupTimer() {
+  function setupExamTimer(totalSeconds) {
     stopTimer();
-    var settings = state.simSettings;
-    if (!settings || !settings.timerEnabled) {
-      el.quizTimer.hidden = true;
-      return;
-    }
-    state.timerSecondsLeft = settings.timerMinutes * 60;
+    state.timerSecondsLeft = totalSeconds;
     el.quizTimer.hidden = false;
     el.quizTimer.classList.remove('warning');
     el.quizTimer.textContent = formatTime(state.timerSecondsLeft);
@@ -1643,6 +1664,106 @@
   el.closeSettingsBtn.addEventListener('click', closeSettings);
   el.settingsOverlay.addEventListener('click', function (e) {
     if (e.target === el.settingsOverlay) closeSettings();
+  });
+
+  // ---- Admin analytics ----
+
+  function openAnalytics() {
+    el.analyticsOverlay.classList.add('show');
+    loadAnalytics();
+  }
+  function closeAnalytics() {
+    el.analyticsOverlay.classList.remove('show');
+  }
+
+  function loadAnalytics() {
+    callApi('get_admin_analytics').then(renderAnalytics).catch(function () {
+      el.analyticsOverallPercent.textContent = '—';
+      el.analyticsOverallSub.textContent = 'Δεν ήταν δυνατή η φόρτωση.';
+      el.analyticsUserCounts.textContent = '—';
+      el.analyticsByVehicle.innerHTML = '';
+      el.analyticsVehicleLabel.hidden = true;
+      el.analyticsBySupervisor.innerHTML = '';
+      el.analyticsSupervisorLabel.hidden = true;
+      el.analyticsRecentList.innerHTML = '';
+      el.analyticsRecentLabel.hidden = true;
+    });
+  }
+
+  function buildStatRow(label, stats) {
+    var row = document.createElement('div');
+    row.className = 'progress-vehicle-row';
+    var labelEl = document.createElement('span');
+    labelEl.className = 'progress-vehicle-label';
+    labelEl.textContent = label;
+    var valueEl = document.createElement('span');
+    valueEl.className = 'progress-vehicle-value';
+    valueEl.textContent = (stats.avgPercent !== null ? stats.avgPercent + '%' : '—') + ' · ' + stats.attemptCount + ' τεστ';
+    row.appendChild(labelEl);
+    row.appendChild(valueEl);
+    return row;
+  }
+
+  function renderAnalytics(data) {
+    if (!data.attemptCount) {
+      el.analyticsOverallPercent.textContent = '—';
+      el.analyticsOverallSub.textContent = 'Δεν υπάρχουν ακόμα τεστ.';
+    } else {
+      el.analyticsOverallPercent.textContent = data.overallPercent + '%';
+      el.analyticsOverallSub.textContent = 'Μέσος όρος σε ' + data.attemptCount + ' τεστ, όλων των χρηστών';
+    }
+
+    var counts = data.userCounts;
+    el.analyticsUserCounts.textContent =
+      (counts.admin || 0) + ' admin, ' + (counts.supervisor || 0) + ' επόπτες, ' + (counts.user || 0) + ' χρήστες';
+
+    el.analyticsByVehicle.innerHTML = '';
+    el.analyticsVehicleLabel.hidden = data.byVehicle.length === 0;
+    data.byVehicle.forEach(function (v) {
+      el.analyticsByVehicle.appendChild(buildStatRow(v.label, v));
+    });
+
+    el.analyticsBySupervisor.innerHTML = '';
+    el.analyticsSupervisorLabel.hidden = data.bySupervisor.length === 0 && data.directUsers.userCount === 0;
+    data.bySupervisor.forEach(function (sup) {
+      el.analyticsBySupervisor.appendChild(buildStatRow(sup.username + ' (' + sup.userCount + '/10)', sup));
+    });
+    if (data.directUsers.userCount > 0) {
+      el.analyticsBySupervisor.appendChild(buildStatRow('Απευθείας υπό Admin (' + data.directUsers.userCount + ')', data.directUsers));
+    }
+
+    el.analyticsRecentList.innerHTML = '';
+    el.analyticsRecentLabel.hidden = data.recent.length === 0;
+    data.recent.forEach(function (a) {
+      var pct = Math.round((a.correct / a.total) * 100);
+      var item = document.createElement('div');
+      item.className = 'history-item';
+
+      var top = document.createElement('div');
+      top.className = 'history-item-top';
+      var label = document.createElement('span');
+      label.className = 'history-item-label';
+      label.textContent = a.username + ' · ' + a.vehicle;
+      var pctEl = document.createElement('span');
+      pctEl.className = 'history-item-pct ' + (pct >= 70 ? 'good' : pct >= 40 ? 'mid' : 'low');
+      pctEl.textContent = pct + '%';
+      top.appendChild(label);
+      top.appendChild(pctEl);
+
+      var bottom = document.createElement('div');
+      bottom.className = 'history-item-bottom';
+      bottom.textContent = a.correct + '/' + a.total + ' · ' + formatAttemptDate(a.completedAt);
+
+      item.appendChild(top);
+      item.appendChild(bottom);
+      el.analyticsRecentList.appendChild(item);
+    });
+  }
+
+  el.analyticsBtn.addEventListener('click', openAnalytics);
+  el.closeAnalyticsBtn.addEventListener('click', closeAnalytics);
+  el.analyticsOverlay.addEventListener('click', function (e) {
+    if (e.target === el.analyticsOverlay) closeAnalytics();
   });
 
   // ---- Profile (change password / sign out / exit) ----

@@ -121,6 +121,11 @@ this against your own project:
    [`supabase/functions/manage-users/index.ts`](supabase/functions/manage-users/index.ts).
    No secrets need to be configured manually — Supabase injects the
    project's URL and keys into the function automatically.
+6. *(Optional)* Enable data retention — enable the **pg_cron** extension
+   under Database -> Extensions, then run the `cron.schedule(...)` command
+   left as a comment at the bottom of `schema.sql` to automatically prune
+   `attempts` (quiz history) older than a month. Accounts, wrong questions,
+   and saved questions are never affected by this.
 
 ## Notes
 

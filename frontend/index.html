@@ -20,6 +20,15 @@
         <img class="brand-logo brand-logo-dark" src="assets/brand/logo-dark.png" alt="RoadReady">
       </button>
       <div class="topbar-actions">
+        <button class="pill-btn" id="analyticsBtn" type="button" aria-haspopup="true" hidden>
+          <svg viewBox="0 0 16 16" fill="none">
+            <path d="M2.5 2.5V13.5H13.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.8 11V8.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M8 11V5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M11.2 11V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          Στατιστικά
+        </button>
         <button class="pill-btn" id="manageUsersBtn" type="button" aria-haspopup="true" hidden>
           <svg viewBox="0 0 16 16" fill="none">
             <circle cx="6" cy="5" r="2.4" stroke="currentColor" stroke-width="1.4"/>
@@ -399,6 +408,39 @@
       </div>
     </div>
 
+    <!-- ADMIN ANALYTICS (admin only) -->
+    <div class="overlay" id="analyticsOverlay">
+      <div class="overlay-panel">
+        <div class="overlay-header">
+          <p class="overlay-title">Στατιστικά</p>
+          <button class="icon-btn" id="closeAnalyticsBtn" type="button" aria-label="Κλείσιμο">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="setting-row">
+          <p class="progress-summary-percent" id="analyticsOverallPercent">—</p>
+          <p class="progress-summary-sub" id="analyticsOverallSub">Δεν υπάρχουν ακόμα τεστ.</p>
+        </div>
+
+        <div class="setting-row">
+          <p class="setting-label">Χρήστες</p>
+          <p class="setting-value" id="analyticsUserCounts">—</p>
+        </div>
+
+        <p class="setting-label" id="analyticsVehicleLabel" hidden>Ανά κατηγορία</p>
+        <div id="analyticsByVehicle"></div>
+
+        <p class="setting-label" id="analyticsSupervisorLabel" hidden>Ανά επόπτη</p>
+        <div id="analyticsBySupervisor"></div>
+
+        <p class="setting-label" id="analyticsRecentLabel" hidden>Πρόσφατη δραστηριότητα</p>
+        <div id="analyticsRecentList"></div>
+      </div>
+    </div>
+
     <!-- SIMULATION SETTINGS -->
     <div class="overlay" id="simSettingsOverlay">
       <div class="overlay-panel">
@@ -422,9 +464,10 @@
 
         <div class="setting-row">
           <p class="setting-label">Χρονόμετρο</p>
-          <div class="segmented" id="simTimerToggle">
+          <div class="segmented" id="simTimerMode">
             <button class="segment" data-value="off" type="button">Ανενεργό</button>
-            <button class="segment" data-value="on" type="button">Ενεργό</button>
+            <button class="segment" data-value="exam" type="button">Ανά εξέταση</button>
+            <button class="segment" data-value="question" type="button">Ανά ερώτηση</button>
           </div>
         </div>
 
@@ -437,11 +480,13 @@
           </div>
         </div>
 
-        <div class="setting-row">
-          <p class="setting-label">Εμφάνιση απαντήσεων</p>
-          <div class="segmented" id="simFeedbackMode">
-            <button class="segment" data-value="immediate" type="button">Άμεσα</button>
-            <button class="segment" data-value="hidden" type="button">Στο τέλος</button>
+        <div class="setting-row" id="simTimerPerQuestionRow" hidden>
+          <p class="setting-label">Χρόνος ανά ερώτηση</p>
+          <div class="segmented" id="simTimerPerQuestion">
+            <button class="segment" data-value="30" type="button">30s</button>
+            <button class="segment" data-value="60" type="button">60s</button>
+            <button class="segment" data-value="90" type="button">90s</button>
+            <button class="segment" data-value="120" type="button">120s</button>
           </div>
         </div>
 
@@ -510,7 +555,7 @@
           <p class="setting-value" id="accountUsername">—</p>
         </div>
 
-        <button class="btn ghost" id="showChangePasswordBtn" type="button">Αλλαγή κωδικού</button>
+        <button class="btn primary" id="showChangePasswordBtn" type="button">Αλλαγή κωδικού</button>
 
         <form class="auth-form" id="changePasswordForm" hidden>
           <label class="auth-field">
@@ -528,8 +573,8 @@
           </div>
         </form>
 
-        <button class="btn ghost danger" id="signOutBtn" type="button">Αποσύνδεση</button>
-        <button class="btn ghost danger" id="closeAppFromProfileBtn" type="button">Έξοδος από την εφαρμογή</button>
+        <button class="btn danger" id="signOutBtn" type="button">Αποσύνδεση</button>
+        <button class="btn danger" id="closeAppFromProfileBtn" type="button">Έξοδος από την εφαρμογή</button>
       </div>
     </div>
 

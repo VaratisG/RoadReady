@@ -102,3 +102,36 @@ create policy "user sees self" on profiles
 -- All inserts/deletes go through the Edge Function using the service_role key
 -- (which bypasses RLS entirely), so no insert/update/delete policies exist
 -- here for regular callers on purpose.
+
+-- Lets the admin analytics screen aggregate quiz history across everyone,
+-- on top of the "own rows only" policy every user already has on attempts.
+create policy "admin sees all attempts" on attempts
+  for select using (public.current_role() = 'admin');
+
+-- ---------------------------------------------------------------------------
+-- Data retention: keep only the last month of quiz history. Accounts
+-- (profiles / auth.users) are never touched by this — a user can exist
+-- indefinitely. wrong_questions and saved_questions are left alone too,
+-- since they're the current "still wrong" / "bookmarked" sets the app shows
+-- a user, not a log — only attempts (the completed-quiz history) ages out.
+-- ---------------------------------------------------------------------------
+
+create or replace function public.enforce_data_retention()
+returns void language plpgsql security definer as $$
+begin
+  delete from attempts where completed_at < now() - interval '1 month';
+end;
+$$;
+
+-- Requires the pg_cron extension. Enable it once via Dashboard -> Database ->
+-- Extensions (search "pg_cron"), then run this to schedule the daily cleanup:
+--
+--   select cron.schedule(
+--     'roadready-data-retention',
+--     '0 3 * * *',  -- daily at 03:00 UTC
+--     $$select public.enforce_data_retention();$$
+--   );
+--
+-- To change the schedule later: select cron.alter_job(job_id, schedule => '...');
+-- (find job_id via `select * from cron.job;`). To remove it entirely:
+-- `select cron.unschedule('roadready-data-retention');`

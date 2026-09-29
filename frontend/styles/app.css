@@ -762,7 +762,7 @@ body {
   background: transparent; color: var(--ink-soft);
   border: 1.5px solid var(--border);
 }
-.btn.ghost.danger { color: var(--stop-ink); }
+.btn.ghost.danger { background: transparent; color: var(--stop-ink); border-color: var(--border); }
 .btn.ghost.danger:hover { border-color: var(--stop); }
 .btn.danger { background: var(--stop); color: #FFFFFF; }
 
@@ -801,7 +801,8 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
-#manageUsersOverlay .overlay-panel {
+#manageUsersOverlay .overlay-panel,
+#analyticsOverlay .overlay-panel {
   max-width: 640px;
 }
 
@@ -1085,11 +1086,12 @@ body {
   font-size: 10.5px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--lane);
-  background: var(--lane-bg);
   border-radius: 8px;
   padding: 3px 8px;
 }
+.user-row-badge-user { color: var(--go); background: var(--go-bg); }
+.user-row-badge-supervisor { color: var(--warn); background: var(--warn-bg); }
+.user-row-badge-admin { color: var(--stop); background: var(--stop-bg); }
 .user-row-edit { flex-shrink: 0; }
 .user-row-remove { flex-shrink: 0; color: var(--stop-ink); }
 .user-row-remove:hover { border-color: var(--stop); }

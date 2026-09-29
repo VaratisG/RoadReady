@@ -8,7 +8,7 @@ from ctypes import wintypes
 from pathlib import Path
 
 import webview
-from supabase import create_client
+from supabase import AuthApiError, create_client
 
 SUPABASE_URL = "https://nzuobxttcvdqqzsmcgmv.supabase.co"
 SUPABASE_ANON_KEY = (
@@ -258,6 +258,10 @@ class Api:
                 "username": res.user.user_metadata.get("username", username),
                 "role": profile.get("role") if profile else "user",
             }
+        except AuthApiError as e:
+            if e.code == "invalid_credentials":
+                return {"ok": False, "error": "invalid_credentials"}
+            return {"ok": False, "error": str(e)}
         except Exception as e:
             return {"ok": False, "error": str(e)}
 
@@ -290,6 +294,86 @@ class Api:
             }
             for p in res.data
         ]
+
+    def get_admin_analytics(self):
+        # RLS-gated: only an admin caller actually gets everyone's rows here
+        # (profiles + the extra "admin sees all attempts" policy); anyone
+        # else just gets their own, same as list_users.
+        profiles = supabase.table("profiles").select("id, username, role, supervisor_id").execute().data
+        attempts = (
+            supabase.table("attempts")
+            .select("user_id, vehicle, correct, total, completed_at")
+            .order("completed_at", desc=True)
+            .execute()
+            .data
+        )
+
+        profile_by_id = {p["id"]: p for p in profiles}
+        role_counts = {"admin": 0, "supervisor": 0, "user": 0}
+        for p in profiles:
+            role_counts[p["role"]] = role_counts.get(p["role"], 0) + 1
+
+        total_correct = sum(a["correct"] for a in attempts)
+        total_questions = sum(a["total"] for a in attempts)
+        overall_percent = round((total_correct / total_questions) * 100) if total_questions else None
+
+        per_vehicle_totals = {}
+        for a in attempts:
+            agg = per_vehicle_totals.setdefault(a["vehicle"], {"count": 0, "correct": 0, "total": 0})
+            agg["count"] += 1
+            agg["correct"] += a["correct"]
+            agg["total"] += a["total"]
+        by_vehicle = [
+            {
+                "vehicle": vehicle,
+                "label": VEHICLE_LABELS.get(vehicle, vehicle),
+                "attemptCount": agg["count"],
+                "avgPercent": round((agg["correct"] / agg["total"]) * 100) if agg["total"] else None,
+            }
+            for vehicle, agg in per_vehicle_totals.items()
+        ]
+
+        def team_stats(user_ids):
+            team_attempts = [a for a in attempts if a["user_id"] in user_ids]
+            correct = sum(a["correct"] for a in team_attempts)
+            total = sum(a["total"] for a in team_attempts)
+            return {
+                "userCount": len(user_ids),
+                "attemptCount": len(team_attempts),
+                "avgPercent": round((correct / total) * 100) if total else None,
+            }
+
+        by_supervisor = []
+        for sup in [p for p in profiles if p["role"] == "supervisor"]:
+            team_ids = {p["id"] for p in profiles if p["supervisor_id"] == sup["id"]}
+            stats = team_stats(team_ids)
+            stats["id"] = sup["id"]
+            stats["username"] = sup["username"]
+            by_supervisor.append(stats)
+
+        direct_user_ids = {p["id"] for p in profiles if p["role"] == "user" and not p["supervisor_id"]}
+        direct_users = team_stats(direct_user_ids)
+
+        recent = []
+        for a in attempts[:20]:
+            p = profile_by_id.get(a["user_id"])
+            recent.append({
+                "username": p["username"] if p else "—",
+                "vehicle": VEHICLE_LABELS.get(a["vehicle"], a["vehicle"]),
+                "correct": a["correct"],
+                "total": a["total"],
+                "completedAt": a["completed_at"],
+            })
+
+        return {
+            "userCounts": role_counts,
+            "attemptCount": len(attempts),
+            "overallPercent": overall_percent,
+            "byVehicle": by_vehicle,
+            "bySupervisor": by_supervisor,
+            "directUsers": direct_users,
+            "recent": recent,
+        }
 
     def create_user(self, username, password, role=None, supervisor_id=None):
         try:
