@@ -297,7 +297,8 @@
     incompleteOverlay: document.getElementById('incompleteOverlay'),
     incompleteMessage: document.getElementById('incompleteMessage'),
     incompleteOkBtn: document.getElementById('incompleteOkBtn'),
-    toast: document.getElementById('toast')
+    toast: document.getElementById('toast'),
+    loadingIndicator: document.getElementById('loadingIndicator')
   };
 
   var state = {
@@ -328,6 +329,28 @@
     toastTimer = setTimeout(function () {
       el.toast.classList.remove('show');
     }, 2200);
+  }
+
+  // ---- Loading indicator ----
+  // Shown for the duration of any backend call made through callApi() below.
+  // A counter (rather than a single flag) means overlapping calls don't hide
+  // it early when the first of several in-flight requests finishes.
+  var pendingApiCalls = 0;
+  function showLoading() {
+    pendingApiCalls++;
+    el.loadingIndicator.hidden = false;
+  }
+  function hideLoading() {
+    pendingApiCalls = Math.max(0, pendingApiCalls - 1);
+    if (pendingApiCalls === 0) el.loadingIndicator.hidden = true;
+  }
+  function callApi(name) {
+    var args = Array.prototype.slice.call(arguments, 1);
+    if (!(window.pywebview && window.pywebview.api && window.pywebview.api[name])) {
+      return Promise.reject(new Error('API not available: ' + name));
+    }
+    showLoading();
+    return window.pywebview.api[name].apply(window.pywebview.api, args).finally(hideLoading);
   }
 
   function showScreen(name) {
@@ -397,14 +420,8 @@
     var remember = el.rememberUsernameCheckbox.checked;
     if (!username || !password) return;
 
-    if (!(window.pywebview && window.pywebview.api)) {
-      el.authError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
-      el.authError.hidden = false;
-      return;
-    }
-
     el.authSubmitBtn.disabled = true;
-    window.pywebview.api.sign_in(username, password).then(function (res) {
+    callApi('sign_in', username, password).then(function (res) {
       el.authSubmitBtn.disabled = false;
       if (!res.ok) {
         el.authError.textContent = res.error || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
@@ -414,7 +431,7 @@
       onAuthSuccess(res.username || username, res.role || 'user', remember);
     }).catch(function () {
       el.authSubmitBtn.disabled = false;
-      el.authError.textContent = 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+      el.authError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
       el.authError.hidden = false;
     });
   }
@@ -500,11 +517,7 @@
   }
 
   function loadUsersList() {
-    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.list_users)) {
-      renderUsersList([]);
-      return;
-    }
-    window.pywebview.api.list_users().then(function (users) {
+    callApi('list_users').then(function (users) {
       renderUsersList(users);
       if (state.role === 'admin') renderSupervisorOptions(users);
     }).catch(function () {
@@ -632,8 +645,8 @@
   function confirmDeleteUser() {
     var userId = pendingDeleteUser && pendingDeleteUser.id;
     closeDeleteUserConfirm();
-    if (!userId || !(window.pywebview && window.pywebview.api && window.pywebview.api.delete_user)) return;
-    window.pywebview.api.delete_user(userId).then(function (res) {
+    if (!userId) return;
+    callApi('delete_user', userId).then(function (res) {
       if (res && res.ok) {
         loadUsersList();
       } else {
@@ -659,12 +672,6 @@
     if (!username) return;
     if (userFormMode === 'create' && !password) return;
 
-    if (!(window.pywebview && window.pywebview.api)) {
-      el.createUserError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
-      el.createUserError.hidden = false;
-      return;
-    }
-
     el.createUserSubmitBtn.disabled = true;
 
     function onDone(res) {
@@ -679,21 +686,19 @@
     }
     function onFail() {
       el.createUserSubmitBtn.disabled = false;
-      el.createUserError.textContent = 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+      el.createUserError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
       el.createUserError.hidden = false;
     }
 
     if (userFormMode === 'edit') {
-      if (!window.pywebview.api.update_user) { onFail(); return; }
-      window.pywebview.api.update_user(editingUserId, username, password || null).then(onDone).catch(onFail);
+      callApi('update_user', editingUserId, username, password || null).then(onDone).catch(onFail);
       return;
     }
 
     var role = state.role === 'admin' ? getNewUserRole() : 'user';
     var supervisorId = (state.role === 'admin' && role === 'user') ? (el.newUserSupervisor.value || null) : null;
 
-    if (!window.pywebview.api.create_user) { onFail(); return; }
-    window.pywebview.api.create_user(username, password, role, supervisorId).then(onDone).catch(onFail);
+    callApi('create_user', username, password, role, supervisorId).then(onDone).catch(onFail);
   }
 
   el.manageUsersBtn.addEventListener('click', openManageUsers);
@@ -912,13 +917,9 @@
       : state.vehicle === 'bus' ? FALLBACK_SECTIONS_BUS
       : state.vehicle === 'peiforthgo' ? FALLBACK_SECTIONS_PEIFORTHGO
       : FALLBACK_SECTIONS_AUTO;
-    if (window.pywebview && window.pywebview.api && window.pywebview.api.get_sections) {
-      window.pywebview.api.get_sections(state.vehicle).then(renderSections).catch(function () {
-        renderSections(fallback);
-      });
-    } else {
+    callApi('get_sections', state.vehicle).then(renderSections).catch(function () {
       renderSections(fallback);
-    }
+    });
     loadWrongCount();
     updateSavedQuestionsButton();
   }
@@ -1012,27 +1013,21 @@
     state.simSettings = simSettings || null;
 
     if (section.id === 'wrong') {
-      if (window.pywebview && window.pywebview.api && window.pywebview.api.get_wrong_questions) {
-        window.pywebview.api.get_wrong_questions(state.vehicle).then(function (questions) {
-          beginQuiz(section, questions);
-        }).catch(function () {
-          showToast('Δεν ήταν δυνατή η φόρτωση των λαθών.');
-        });
-      }
+      callApi('get_wrong_questions', state.vehicle).then(function (questions) {
+        beginQuiz(section, questions);
+      }).catch(function () {
+        showToast('Δεν ήταν δυνατή η φόρτωση των λαθών.');
+      });
       return;
     }
 
     var count = (simSettings && section.id === 'all') ? simSettings.questionCount : null;
     var fallbackSection = count ? Object.assign({}, section, { count: count }) : section;
-    if (window.pywebview && window.pywebview.api && window.pywebview.api.get_questions) {
-      window.pywebview.api.get_questions(state.vehicle, section.id, count).then(function (questions) {
-        beginQuiz(section, questions);
-      }).catch(function () {
-        beginQuiz(section, buildFallbackQuestions(fallbackSection));
-      });
-    } else {
+    callApi('get_questions', state.vehicle, section.id, count).then(function (questions) {
+      beginQuiz(section, questions);
+    }).catch(function () {
       beginQuiz(section, buildFallbackQuestions(fallbackSection));
-    }
+    });
   }
 
   function beginQuiz(section, questions) {
@@ -1369,11 +1364,7 @@
   }
 
   function loadSavedQuestionsList() {
-    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.get_saved_questions)) {
-      renderSavedQuestionsList([]);
-      return;
-    }
-    window.pywebview.api.get_saved_questions(state.vehicle).then(renderSavedQuestionsList).catch(function () {
+    callApi('get_saved_questions', state.vehicle).then(renderSavedQuestionsList).catch(function () {
       renderSavedQuestionsList([]);
     });
   }
@@ -1565,16 +1556,15 @@
   }
 
   function loadProgress() {
-    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.get_stats)) {
+    callApi('get_stats').then(renderProgressSummary).catch(function () {
       el.progressSummaryPercent.textContent = '—';
       el.progressSummarySub.textContent = 'Διαθέσιμο μόνο μέσα στην εφαρμογή.';
       el.progressByVehicle.innerHTML = '';
+    });
+    callApi('get_history', 20).then(renderProgressHistory).catch(function () {
       el.progressHistoryLabel.hidden = true;
       el.progressHistoryList.innerHTML = '';
-      return;
-    }
-    window.pywebview.api.get_stats().then(renderProgressSummary);
-    window.pywebview.api.get_history(20).then(renderProgressHistory);
+    });
   }
 
   function renderProgressSummary(stats) {
@@ -1691,14 +1681,8 @@
       return;
     }
 
-    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.change_password)) {
-      el.changePasswordError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
-      el.changePasswordError.hidden = false;
-      return;
-    }
-
     el.changePasswordSubmitBtn.disabled = true;
-    window.pywebview.api.change_password(newPassword).then(function (res) {
+    callApi('change_password', newPassword).then(function (res) {
       el.changePasswordSubmitBtn.disabled = false;
       if (!res || !res.ok) {
         el.changePasswordError.textContent = (res && res.error) || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
@@ -1709,7 +1693,7 @@
       showToast('Ο κωδικός άλλαξε επιτυχώς.');
     }).catch(function () {
       el.changePasswordSubmitBtn.disabled = false;
-      el.changePasswordError.textContent = 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+      el.changePasswordError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
       el.changePasswordError.hidden = false;
     });
   }
