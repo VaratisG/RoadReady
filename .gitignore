@@ -6,6 +6,7 @@ dist/
 installer/Output/
 scraper/
 .claude/
+RELEASE_WORKFLOW.md
 
 # OS / editor cruft
 .DS_Store
