@@ -2,9 +2,11 @@
 
 A Greek-language driving theory quiz app for Windows, covering both car
 (Category B) and motorcycle/truck/bus/professional-certificate licenses.
-Built as a single self-contained `.exe` — no installer, nothing to configure.
-Requires an internet connection and a signed-in account, since progress,
-mistakes, and saved questions sync to a Supabase backend.
+Ships as a Windows installer with in-app auto-update checking. Requires an
+internet connection and a signed-in account, since progress, mistakes, and
+saved questions sync to a Supabase backend.
+
+**[Download the latest version](https://varatisg.github.io/RoadReady/)**
 
 ## Features
 
