@@ -10,7 +10,7 @@
 ; new release.
 
 #define MyAppName "RoadReady"
-#define MyAppVersion "1.0.1"
+#define MyAppVersion "1.0.2"
 #define MyAppPublisher "George Varatis"
 #define MyAppExeName "RoadReady.exe"
 
@@ -22,6 +22,10 @@ AppPublisher={#MyAppPublisher}
 DefaultDirName={localappdata}\Programs\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
+; Skip the "choose install folder" page entirely when updating an existing
+; install (same AppId found) — reuses its folder and just replaces the exe.
+; First-time installs still show the page normally.
+DisableDirPage=auto
 PrivilegesRequired=lowest
 OutputDir=Output
 OutputBaseFilename=RoadReadySetup

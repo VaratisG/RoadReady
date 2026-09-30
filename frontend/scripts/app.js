@@ -262,7 +262,6 @@
     questionDetailText: document.getElementById('questionDetailText'),
     questionDetailAnswers: document.getElementById('questionDetailAnswers'),
     questionDetailExplanation: document.getElementById('questionDetailExplanation'),
-    questionDetailExplanationTag: document.getElementById('questionDetailExplanationTag'),
     questionDetailExplanationText: document.getElementById('questionDetailExplanationText'),
     progressBtn: document.getElementById('progressBtn'),
     progressOverlay: document.getElementById('progressOverlay'),
@@ -1225,14 +1224,7 @@
       ? { cls: 'ok', label: 'Σωστά.' }
       : { cls: 'no', label: 'Λάθος.' };
     el.quizFeedback.className = 'quiz-feedback show ' + verdict.cls;
-    var html = '<b>' + verdict.label + '</b>';
-    if (q.explanation) {
-      html += ' ' + q.explanation;
-      if (!q.explanationVerified) {
-        html += '<br><span class="explanation-unverified-tag">⚠ Μη επιβεβαιωμένη εξήγηση (παράχθηκε από AI)</span>';
-      }
-    }
-    el.quizFeedback.innerHTML = html;
+    el.quizFeedback.innerHTML = '<b>' + verdict.label + '</b>' + (q.explanation ? ' ' + q.explanation : '');
   }
 
   function selectAnswer(idx) {
@@ -1370,7 +1362,6 @@
 
     if (q.explanation) {
       el.questionDetailExplanationText.textContent = q.explanation;
-      el.questionDetailExplanationTag.hidden = !!q.explanationVerified;
       el.questionDetailExplanation.hidden = false;
     } else {
       el.questionDetailExplanation.hidden = true;
