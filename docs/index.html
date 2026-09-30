@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RoadReady — Εξάσκηση για τη θεωρία διπλώματος</title>
-<meta name="description" content="Εξασκήσου για τη θεωρία διπλώματος οδήγησης — αυτοκίνητο, μοτοσικλέτα, φορτηγό, λεωφορείο και ΠΕΙ. Δωρεάν εφαρμογή για Windows.">
+<title>RoadReady · Εξάσκηση για τη θεωρία διπλώματος</title>
+<meta name="description" content="Εξασκήσου για τη θεωρία διπλώματος οδήγησης: αυτοκίνητο, μοτοσικλέτα, φορτηγό, λεωφορείο και ΠΕΙ. Δωρεάν εφαρμογή για Windows.">
 <link rel="icon" href="assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,13 +21,11 @@
     --lane: #F5A623;
     --lane-ink: #6B4700;
     --lane-bg: #FFF3DD;
-    --go: #1E9E5A;
-    --go-bg: #E4F6EC;
     --font-head: 'Baloo 2', ui-rounded, 'Segoe UI', sans-serif;
     --font-body: 'Manrope', -apple-system, 'Segoe UI', sans-serif;
   }
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
       --bg: #15171A;
       --paper: #1B1E22;
       --surface: #21252A;
@@ -38,20 +36,50 @@
       --lane: #FFC12E;
       --lane-ink: #3A2900;
       --lane-bg: #3A2E10;
-      --go: #35C17E;
-      --go-bg: #123A26;
     }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171A;
+    --paper: #1B1E22;
+    --surface: #21252A;
+    --ink: #F1F1ED;
+    --ink-soft: #A7ACB2;
+    --ink-faint: #6E7379;
+    --border: #33383F;
+    --lane: #FFC12E;
+    --lane-ink: #3A2900;
+    --lane-bg: #3A2E10;
   }
 
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body {
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--bg) 82%, transparent), color-mix(in srgb, var(--bg) 82%, transparent)),
+      url('assets/bg-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--ink);
     font-family: var(--font-body);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) body {
+      background-image:
+        linear-gradient(color-mix(in srgb, var(--bg) 60%, transparent), color-mix(in srgb, var(--bg) 60%, transparent)),
+        url('assets/bg-dark.jpg');
+    }
+  }
+  :root[data-theme="dark"] body {
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--bg) 60%, transparent), color-mix(in srgb, var(--bg) 60%, transparent)),
+      url('assets/bg-dark.jpg');
+  }
+
   img { max-width: 100%; display: block; }
   a { color: inherit; }
 
@@ -62,41 +90,81 @@
   }
 
   header.site {
-    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 68%, transparent);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
   }
   header.site .wrap {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    flex-wrap: wrap;
   }
-  .brand-logo { height: 34px; width: auto; }
+  .brand-logo { height: 36px; width: auto; }
   .brand-logo-dark { display: none; }
   @media (prefers-color-scheme: dark) {
-    .brand-logo-light { display: none; }
-    .brand-logo-dark { display: block; }
+    :root:not([data-theme="light"]) .brand-logo-light { display: none; }
+    :root:not([data-theme="light"]) .brand-logo-dark { display: block; }
   }
-  .brand-name {
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 19px;
+  :root[data-theme="dark"] .brand-logo-light { display: none; }
+  :root[data-theme="dark"] .brand-logo-dark { display: block; }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .segmented {
+    display: flex;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 3px;
+    gap: 3px;
+  }
+  .segment {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--ink-soft);
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+    padding: 6px 9px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .segment svg { width: 14px; height: 14px; }
+  .segment.active {
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   }
 
   .hero {
-    padding: 40px 0 24px;
+    padding: 24px 0 4px;
     text-align: center;
   }
   .hero h1 {
     font-family: var(--font-head);
     font-weight: 700;
-    font-size: clamp(30px, 5vw, 44px);
-    margin: 0 0 14px;
+    font-size: clamp(24px, 4vw, 34px);
+    margin: 0 0 10px;
     text-wrap: balance;
   }
   .hero p.lead {
-    font-size: 17px;
+    font-size: 15px;
     color: var(--ink-soft);
     max-width: 560px;
-    margin: 0 auto 28px;
+    margin: 0 auto 26px;
   }
 
   .btn {
@@ -105,10 +173,11 @@
     gap: 10px;
     font-family: var(--font-head);
     font-weight: 700;
-    font-size: 17px;
+    font-size: 16px;
     text-decoration: none;
     border-radius: 14px;
-    padding: 16px 30px;
+    padding: 13px 26px;
+    margin: 6px 0;
     background: var(--lane);
     color: var(--lane-ink);
     box-shadow: 0 10px 30px rgba(245, 166, 35, 0.35);
@@ -118,20 +187,21 @@
   .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
 
   .hero-sub {
-    margin-top: 14px;
+    margin-top: 18px;
     font-size: 13px;
     color: var(--ink-faint);
   }
   .hero-sub a { text-decoration: underline; }
 
-  /* Animated road strip, matching the app's own hero animation */
+  /* Animated road strip, matching the app's own hero animation: full-bleed
+     across the viewport, like the app's own hero-road. */
   .hero-road {
     position: relative;
-    max-width: 640px;
-    margin: 48px auto 8px;
+    left: 50%;
+    width: 100vw;
+    margin: 30px 0 10px -50vw;
     height: 6px;
     background: var(--border);
-    border-radius: 3px;
     overflow: visible;
   }
   .hero-road::before {
@@ -156,80 +226,66 @@
   @keyframes drive-moto { from { left: -7%; } to { left: 107%; } }
 
   section.features {
-    padding: 64px 0 24px;
+    padding: 24px 0 8px;
   }
   section.features h2 {
     font-family: var(--font-head);
     font-weight: 700;
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
-    margin: 0 0 36px;
+    margin: 0 0 14px;
   }
   .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
   .feature-card {
-    background: var(--surface);
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 22px;
+    border-radius: 14px;
+    padding: 14px;
   }
   .feature-card .icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
     background: var(--lane-bg);
-    color: var(--lane-ink);
+    color: var(--lane);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
-  .feature-card .icon svg { width: 20px; height: 20px; }
+  .feature-card .icon svg { width: 17px; height: 17px; }
   .feature-card h3 {
     font-family: var(--font-head);
     font-weight: 600;
-    font-size: 16px;
-    margin: 0 0 6px;
+    font-size: 14px;
+    margin: 0 0 4px;
   }
   .feature-card p {
-    font-size: 13.5px;
+    font-size: 12px;
+    line-height: 1.4;
     color: var(--ink-soft);
     margin: 0;
   }
 
-  section.categories {
-    padding: 24px 0 64px;
-  }
-  .category-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  .category-pill {
-    background: var(--paper);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 9px 18px;
-    font-size: 13.5px;
-    font-weight: 600;
-  }
-
   footer.site {
     border-top: 1px solid var(--border);
-    padding: 28px 0 40px;
+    background: color-mix(in srgb, var(--paper) 75%, transparent);
+    padding: 14px 0 18px;
     text-align: center;
-    color: var(--ink-faint);
-    font-size: 12.5px;
+    color: var(--ink-soft);
+    font-size: 12px;
   }
   footer.site a { text-decoration: underline; }
 
-  @media (max-width: 480px) {
-    .hero { padding-top: 28px; }
-    section.features { padding-top: 44px; }
+  @media (max-width: 640px) {
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 420px) {
+    .feature-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -237,28 +293,40 @@
 
 <header class="site">
   <div class="wrap">
-    <img class="brand-logo brand-logo-light" src="assets/logo-light.png" alt="">
-    <img class="brand-logo brand-logo-dark" src="assets/logo-dark.png" alt="">
-    <span class="brand-name">RoadReady</span>
+    <img class="brand-logo brand-logo-light" src="assets/logo-light.png" alt="RoadReady">
+    <img class="brand-logo brand-logo-dark" src="assets/logo-dark.png" alt="RoadReady">
+    <div class="header-controls">
+      <div class="segmented" id="langToggle">
+        <button class="segment" data-lang="el" type="button">ΕΛ</button>
+        <button class="segment" data-lang="en" type="button">EN</button>
+      </div>
+      <div class="segmented" id="themeToggle">
+        <button class="segment" data-theme="system" type="button" aria-label="System theme">
+          <svg viewBox="0 0 16 16" fill="none"><rect x="1.5" y="2.5" width="13" height="9" rx="1.2" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 14H10.5M8 11.5V14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+        <button class="segment" data-theme="light" type="button" aria-label="Light theme">
+          <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.3"/><path d="M8 1.5V3M8 13V14.5M14.5 8H13M3 8H1.5M12.4 3.6L11.3 4.7M4.7 11.3L3.6 12.4M12.4 12.4L11.3 11.3M4.7 4.7L3.6 3.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="segment" data-theme="dark" type="button" aria-label="Dark theme">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M13.5 9.5C12.6 10 11.6 10.2 10.6 10C8 9.5 6.2 7.1 6.5 4.5C6.6 3.5 7 2.6 7.5 1.9C4.4 2.5 2 5.2 2 8.5C2 12.1 4.9 15 8.5 15C11.3 15 13.7 13.2 14.5 10.6C14.2 10.1 13.9 9.8 13.5 9.5Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 
 <main>
   <section class="hero wrap">
-    <h1>Εξασκήσου για τη θεωρία<br>του διπλώματος οδήγησης</h1>
-    <p class="lead">
-      Αυτοκίνητο, μοτοσικλέτα, φορτηγό, λεωφορείο και ΠΕΙ φορτηγό —
-      πάνω από 1.800 πραγματικές ερωτήσεις θεωρίας, με προσομοίωση εξέτασης
-      και παρακολούθηση της προόδου σου.
-    </p>
+    <h1 data-i18n="heroTitle"></h1>
+    <p class="lead" data-i18n="heroLead"></p>
 
     <a class="btn" href="https://github.com/VaratisG/RoadReady/releases/latest/download/RoadReadySetup.exe">
       <svg viewBox="0 0 24 24" fill="none"><path d="M12 3V15M12 15L7 10M12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 18V19C4 20.1 4.9 21 6 21H18C19.1 21 20 20.1 20 19V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      Λήψη για Windows
+      <span data-i18n="downloadBtn"></span>
     </a>
     <p class="hero-sub">
-      Δωρεάν · Windows 10/11 ·
-      <a href="https://github.com/VaratisG/RoadReady">Πηγαίος κώδικας στο GitHub</a>
+      Windows 10/11 ·
+      <a href="https://github.com/VaratisG/RoadReady" data-i18n="sourceLink"></a>
     </p>
 
     <div class="hero-road" aria-hidden="true">
@@ -269,60 +337,50 @@
     </div>
   </section>
 
-  <section class="categories wrap">
-    <div class="category-row">
-      <span class="category-pill">🚗 Αυτοκίνητο</span>
-      <span class="category-pill">🏍️ Μοτοσικλέτα</span>
-      <span class="category-pill">🚛 Φορτηγό</span>
-      <span class="category-pill">🚌 Λεωφορείο</span>
-      <span class="category-pill">📋 ΠΕΙ Φορτηγό</span>
-    </div>
-  </section>
-
   <section class="features wrap">
-    <h2>Τι περιλαμβάνει</h2>
+    <h2 data-i18n="featuresTitle"></h2>
     <div class="feature-grid">
       <div class="feature-card">
         <div class="icon">
           <svg viewBox="0 0 20 20" fill="none"><path d="M5 3V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M5 4H14L11.5 7L14 10H5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Προσομοίωση εξέτασης</h3>
-        <p>Επίλεξε αριθμό ερωτήσεων, ενεργοποίησε χρονόμετρο (ανά εξέταση ή ανά ερώτηση) και δες πλήρη ανασκόπηση στο τέλος.</p>
+        <h3 data-i18n="feat1Title"></h3>
+        <p data-i18n="feat1Desc"></p>
       </div>
       <div class="feature-card">
         <div class="icon">
           <svg viewBox="0 0 16 16" fill="none"><path d="M2.5 13.5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 13.5V4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M11.5 13.5V6.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
-        <h3>Παρακολούθηση προόδου</h3>
-        <p>Κάθε τεστ αποθηκεύεται στον λογαριασμό σου: μέσος όρος, ανάλυση ανά κατηγορία και ιστορικό, συγχρονισμένα σε κάθε συσκευή.</p>
+        <h3 data-i18n="feat2Title"></h3>
+        <p data-i18n="feat2Desc"></p>
       </div>
       <div class="feature-card">
         <div class="icon">
           <svg viewBox="0 0 22 22" fill="none"><path d="M11 3L20 18H2L11 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M11 9V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
-        <h3>Εξάσκηση σε λάθη</h3>
-        <p>Μόλις συγκεντρώσεις 5+ λάθη σε μια κατηγορία, ξεκλειδώνεται εξάσκηση αποκλειστικά πάνω σε αυτά, μέχρι να τα μάθεις.</p>
+        <h3 data-i18n="feat3Title"></h3>
+        <p data-i18n="feat3Desc"></p>
       </div>
       <div class="feature-card">
         <div class="icon">
           <svg viewBox="0 0 16 16" fill="none"><path d="M4 2.5H12C12.5 2.5 13 3 13 3.5V14L8 11.5L3 14V3.5C3 3 3.5 2.5 4 2.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Αποθηκευμένες ερωτήσεις</h3>
-        <p>Σημείωσε οποιαδήποτε ερώτηση κατά τη διάρκεια ενός τεστ και ξαναδές τη αργότερα από τη λίστα αποθηκευμένων.</p>
+        <h3 data-i18n="feat4Title"></h3>
+        <p data-i18n="feat4Desc"></p>
       </div>
       <div class="feature-card">
         <div class="icon">
           <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3.4" stroke="currentColor" stroke-width="1.4"/><path d="M8 1.5V3M8 13V14.5M14.5 8H13M3 8H1.5M12.4 3.6L11.3 4.7M4.7 11.3L3.6 12.4M12.4 12.4L11.3 11.3M4.7 4.7L3.6 3.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
         </div>
-        <h3>Φωτεινό / σκοτεινό θέμα</h3>
-        <p>Ακολουθεί αυτόματα το θέμα των Windows, ή διάλεξε το χειροκίνητα — μαζί με ρυθμιζόμενο μέγεθος κειμένου.</p>
+        <h3 data-i18n="feat5Title"></h3>
+        <p data-i18n="feat5Desc"></p>
       </div>
       <div class="feature-card">
         <div class="icon">
           <svg viewBox="0 0 16 16" fill="none"><path d="M2.5 12.5L6 4.5H10L13.5 12.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.2 9.5H11.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
         </div>
-        <h3>Αυτόματες ενημερώσεις</h3>
-        <p>Η εφαρμογή σε ειδοποιεί μόνη της όταν βγαίνει νέα έκδοση — ένα κλικ και ενημερώνεται.</p>
+        <h3 data-i18n="feat6Title"></h3>
+        <p data-i18n="feat6Desc"></p>
       </div>
     </div>
   </section>
@@ -331,12 +389,119 @@
 <footer class="site">
   <div class="wrap">
     <p>
-      RoadReady — <a href="https://github.com/VaratisG/RoadReady">πηγαίος κώδικας στο GitHub</a>.
-      Χρειάζεται σύνδεση στο διαδίκτυο για είσοδο και συγχρονισμό προόδου.
+      RoadReady · <a href="https://github.com/VaratisG/RoadReady" data-i18n="footerSource"></a>.
+      <span data-i18n="footerNote"></span>
     </p>
     <p>Developed by George Varatis</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var LANG_KEY = 'roadready-landing-lang';
+  var THEME_KEY = 'roadready-landing-theme';
+
+  var translations = {
+    el: {
+      pageTitle: 'RoadReady · Εξάσκηση για τη θεωρία διπλώματος',
+      heroTitle: 'Εξασκήσου για τη θεωρία<br>του διπλώματος οδήγησης',
+      heroLead: 'Αυτοκίνητο, μοτοσικλέτα, φορτηγό, λεωφορείο και ΠΕΙ φορτηγό. Πάνω από 1.800 πραγματικές ερωτήσεις θεωρίας, με προσομοίωση εξέτασης και παρακολούθηση της προόδου σου.',
+      downloadBtn: 'Λήψη για Windows',
+      sourceLink: 'Πηγαίος κώδικας στο GitHub',
+      featuresTitle: 'Τι περιλαμβάνει',
+      feat1Title: 'Προσομοίωση εξέτασης',
+      feat1Desc: 'Επίλεξε αριθμό ερωτήσεων, ενεργοποίησε χρονόμετρο (ανά εξέταση ή ανά ερώτηση) και δες πλήρη ανασκόπηση στο τέλος.',
+      feat2Title: 'Παρακολούθηση προόδου',
+      feat2Desc: 'Κάθε τεστ αποθηκεύεται στον λογαριασμό σου: μέσος όρος, ανάλυση ανά κατηγορία και ιστορικό, συγχρονισμένα σε κάθε συσκευή.',
+      feat3Title: 'Εξάσκηση σε λάθη',
+      feat3Desc: 'Μόλις συγκεντρώσεις 5+ λάθη σε μια κατηγορία, ξεκλειδώνεται εξάσκηση αποκλειστικά πάνω σε αυτά, μέχρι να τα μάθεις.',
+      feat4Title: 'Αποθηκευμένες ερωτήσεις',
+      feat4Desc: 'Σημείωσε οποιαδήποτε ερώτηση κατά τη διάρκεια ενός τεστ και ξαναδές τη αργότερα από τη λίστα αποθηκευμένων.',
+      feat5Title: 'Φωτεινό / σκοτεινό θέμα',
+      feat5Desc: 'Ακολουθεί αυτόματα το θέμα των Windows, ή διάλεξε το χειροκίνητα, μαζί με ρυθμιζόμενο μέγεθος κειμένου.',
+      feat6Title: 'Αυτόματες ενημερώσεις',
+      feat6Desc: 'Η εφαρμογή σε ειδοποιεί μόνη της όταν βγαίνει νέα έκδοση. Ένα κλικ και ενημερώνεται.',
+      footerSource: 'πηγαίος κώδικας στο GitHub',
+      footerNote: 'Χρειάζεται σύνδεση στο διαδίκτυο για είσοδο και συγχρονισμό προόδου.'
+    },
+    en: {
+      pageTitle: 'RoadReady · Practice for your driving theory test',
+      heroTitle: 'Practice for your<br>driving theory test',
+      heroLead: 'Car, motorcycle, truck, bus, and professional truck-driver certificate. Over 1,800 real theory questions, with exam simulation and progress tracking.',
+      downloadBtn: 'Download for Windows',
+      sourceLink: 'Source code on GitHub',
+      featuresTitle: "What's included",
+      feat1Title: 'Exam simulation',
+      feat1Desc: 'Choose the question count, enable a timer (per exam or per question), and get a full review at the end.',
+      feat2Title: 'Progress tracking',
+      feat2Desc: 'Every test is saved to your account: overall average, per-category breakdown, and history, synced across devices.',
+      feat3Title: 'Mistakes practice',
+      feat3Desc: 'Once you’ve missed 5+ questions in a category, a practice mode unlocks that quizzes you on exactly those until you get them right.',
+      feat4Title: 'Saved questions',
+      feat4Desc: 'Flag any question during a test and revisit it later from your saved-questions list.',
+      feat5Title: 'Light / dark theme',
+      feat5Desc: 'Follows your Windows theme automatically, or pick it manually, plus adjustable text size.',
+      feat6Title: 'Automatic updates',
+      feat6Desc: 'The app checks for new versions itself and updates with one click.',
+      footerSource: 'source code on GitHub',
+      footerNote: 'Requires an internet connection to sign in and sync progress.'
+    }
+  };
+
+  function detectDefaultLang() {
+    try {
+      var nav = (navigator.language || '').toLowerCase();
+      if (nav.indexOf('el') === 0) return 'el';
+    } catch (e) {}
+    return 'en';
+  }
+
+  function applyLang(lang) {
+    var dict = translations[lang] || translations.el;
+    document.documentElement.setAttribute('lang', lang);
+    document.title = dict.pageTitle;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll('#langToggle .segment').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light' || theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', theme);
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    document.querySelectorAll('#themeToggle .segment').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-theme') === theme);
+    });
+    try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
+  }
+
+  document.getElementById('langToggle').addEventListener('click', function (e) {
+    var btn = e.target.closest('.segment');
+    if (btn) applyLang(btn.getAttribute('data-lang'));
+  });
+  document.getElementById('themeToggle').addEventListener('click', function (e) {
+    var btn = e.target.closest('.segment');
+    if (btn) applyTheme(btn.getAttribute('data-theme'));
+  });
+
+  var savedLang = null;
+  var savedTheme = null;
+  try {
+    savedLang = localStorage.getItem(LANG_KEY);
+    savedTheme = localStorage.getItem(THEME_KEY);
+  } catch (e) {}
+
+  applyLang(savedLang || detectDefaultLang());
+  applyTheme(savedTheme || 'system');
+})();
+</script>
 
 </body>
 </html>
