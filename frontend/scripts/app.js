@@ -220,6 +220,11 @@
     createUserSubmitBtn: document.getElementById('createUserSubmitBtn'),
     usersListLabel: document.getElementById('usersListLabel'),
     usersList: document.getElementById('usersList'),
+    aboutVersion: document.getElementById('aboutVersion'),
+    updateOverlay: document.getElementById('updateOverlay'),
+    updateVersionText: document.getElementById('updateVersionText'),
+    updateLaterBtn: document.getElementById('updateLaterBtn'),
+    updateNowBtn: document.getElementById('updateNowBtn'),
     deleteUserOverlay: document.getElementById('deleteUserOverlay'),
     deleteUserName: document.getElementById('deleteUserName'),
     deleteUserCancelBtn: document.getElementById('deleteUserCancelBtn'),
@@ -256,6 +261,9 @@
     questionDetailMeta: document.getElementById('questionDetailMeta'),
     questionDetailText: document.getElementById('questionDetailText'),
     questionDetailAnswers: document.getElementById('questionDetailAnswers'),
+    questionDetailExplanation: document.getElementById('questionDetailExplanation'),
+    questionDetailExplanationTag: document.getElementById('questionDetailExplanationTag'),
+    questionDetailExplanationText: document.getElementById('questionDetailExplanationText'),
     progressBtn: document.getElementById('progressBtn'),
     progressOverlay: document.getElementById('progressOverlay'),
     closeProgressBtn: document.getElementById('closeProgressBtn'),
@@ -1217,7 +1225,14 @@
       ? { cls: 'ok', label: 'Σωστά.' }
       : { cls: 'no', label: 'Λάθος.' };
     el.quizFeedback.className = 'quiz-feedback show ' + verdict.cls;
-    el.quizFeedback.innerHTML = '<b>' + verdict.label + '</b>' + (q.explanation ? ' ' + q.explanation : '');
+    var html = '<b>' + verdict.label + '</b>';
+    if (q.explanation) {
+      html += ' ' + q.explanation;
+      if (!q.explanationVerified) {
+        html += '<br><span class="explanation-unverified-tag">⚠ Μη επιβεβαιωμένη εξήγηση (παράχθηκε από AI)</span>';
+      }
+    }
+    el.quizFeedback.innerHTML = html;
   }
 
   function selectAnswer(idx) {
@@ -1352,6 +1367,14 @@
       }
       el.questionDetailAnswers.appendChild(btn);
     });
+
+    if (q.explanation) {
+      el.questionDetailExplanationText.textContent = q.explanation;
+      el.questionDetailExplanationTag.hidden = !!q.explanationVerified;
+      el.questionDetailExplanation.hidden = false;
+    } else {
+      el.questionDetailExplanation.hidden = true;
+    }
 
     el.questionDetailOverlay.classList.add('show');
   }
@@ -1903,6 +1926,61 @@
     el.quizImageFrame.style.display = 'none';
   });
 
+  // ---- App update check ----
+
+  function compareVersions(a, b) {
+    var pa = String(a).split('.').map(function (n) { return parseInt(n, 10) || 0; });
+    var pb = String(b).split('.').map(function (n) { return parseInt(n, 10) || 0; });
+    var len = Math.max(pa.length, pb.length);
+    for (var i = 0; i < len; i++) {
+      var na = pa[i] || 0;
+      var nb = pb[i] || 0;
+      if (na !== nb) return na - nb;
+    }
+    return 0;
+  }
+
+  var pendingUpdateUrl = null;
+
+  function closeUpdateOverlay() {
+    el.updateOverlay.classList.remove('show');
+  }
+
+  function checkForUpdate() {
+    callApi('get_app_version').then(function (v) {
+      el.aboutVersion.textContent = 'v' + v;
+    }).catch(function () {});
+
+    callApi('check_for_update').then(function (res) {
+      if (!res || !res.ok) return;
+      if (compareVersions(res.latestVersion, res.currentVersion) > 0) {
+        pendingUpdateUrl = res.downloadUrl;
+        el.updateVersionText.textContent =
+          'Η έκδοση ' + res.latestVersion + ' είναι διαθέσιμη (τρέχουσα: ' + res.currentVersion + ').';
+        el.updateOverlay.classList.add('show');
+      }
+    }).catch(function () {});
+  }
+
+  el.updateLaterBtn.addEventListener('click', closeUpdateOverlay);
+  el.updateOverlay.addEventListener('click', function (e) {
+    if (e.target === el.updateOverlay) closeUpdateOverlay();
+  });
+  el.updateNowBtn.addEventListener('click', function () {
+    if (!pendingUpdateUrl) return;
+    el.updateNowBtn.disabled = true;
+    callApi('start_update', pendingUpdateUrl).then(function (res) {
+      el.updateNowBtn.disabled = false;
+      if (!res || !res.ok) {
+        showToast('Δεν ήταν δυνατή η λήψη της ενημέρωσης.');
+      }
+      // On success the app quits itself from the backend — nothing left to do here.
+    }).catch(function () {
+      el.updateNowBtn.disabled = false;
+      showToast('Δεν ήταν δυνατή η λήψη της ενημέρωσης.');
+    });
+  });
+
   initTheme();
   initZoom();
   prefillRememberedUsername();
@@ -1910,5 +1988,6 @@
 
   window.addEventListener('pywebviewready', function () {
     syncTitlebarTheme();
+    checkForUpdate();
   });
 })();

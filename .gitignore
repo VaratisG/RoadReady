@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 build/
 dist/
+installer/Output/
 scraper/
 .claude/
 

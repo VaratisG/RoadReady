@@ -135,3 +135,28 @@ $$;
 -- To change the schedule later: select cron.alter_job(job_id, schedule => '...');
 -- (find job_id via `select * from cron.job;`). To remove it entirely:
 -- `select cron.unschedule('roadready-data-retention');`
+
+-- ---------------------------------------------------------------------------
+-- App version check: a single-row table the app reads on launch (via the
+-- anon key, no login required) to see if a newer installer is available.
+-- Update `latest_version` / `download_url` here each time you cut a release.
+-- ---------------------------------------------------------------------------
+
+create table app_version (
+  id int primary key default 1,
+  latest_version text not null,
+  download_url text not null,
+  updated_at timestamptz not null default now(),
+  constraint app_version_singleton check (id = 1)
+);
+
+insert into app_version (id, latest_version, download_url) values (
+  1,
+  '1.0.0',
+  'https://github.com/VaratisG/RoadReady/releases/latest/download/RoadReadySetup.exe'
+);
+
+alter table app_version enable row level security;
+
+create policy "anyone can read the latest version" on app_version
+  for select using (true);

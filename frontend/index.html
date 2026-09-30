@@ -305,6 +305,11 @@
         <p class="quiz-question" id="questionDetailText"></p>
 
         <div class="quiz-answers" id="questionDetailAnswers"></div>
+
+        <div class="question-detail-explanation" id="questionDetailExplanation" hidden>
+          <p class="explanation-unverified-tag" id="questionDetailExplanationTag" hidden>⚠ Μη επιβεβαιωμένη εξήγηση (παράχθηκε από AI)</p>
+          <p id="questionDetailExplanationText"></p>
+        </div>
       </div>
     </div>
 
@@ -533,7 +538,7 @@
 
         <div class="setting-row">
           <p class="setting-label">Σχετικά</p>
-          <p class="setting-value">RoadReady v0.2.0 — η πρόοδος και οι αποθηκευμένες ερωτήσεις συγχρονίζονται στον λογαριασμό σου και χρειάζονται σύνδεση στο διαδίκτυο.</p>
+          <p class="setting-value">RoadReady <span id="aboutVersion">v...</span> — η πρόοδος και οι αποθηκευμένες ερωτήσεις συγχρονίζονται στον λογαριασμό σου και χρειάζονται σύνδεση στο διαδίκτυο.</p>
         </div>
       </div>
     </div>
@@ -575,6 +580,18 @@
 
         <button class="btn danger" id="signOutBtn" type="button">Αποσύνδεση</button>
         <button class="btn danger" id="closeAppFromProfileBtn" type="button">Έξοδος από την εφαρμογή</button>
+      </div>
+    </div>
+
+    <!-- UPDATE AVAILABLE -->
+    <div class="overlay" id="updateOverlay">
+      <div class="overlay-panel confirm-panel">
+        <p class="overlay-title">Νέα έκδοση διαθέσιμη</p>
+        <p class="confirm-sub" id="updateVersionText"></p>
+        <div class="confirm-actions">
+          <button class="btn ghost" id="updateLaterBtn" type="button">Αργότερα</button>
+          <button class="btn primary" id="updateNowBtn" type="button">Ενημέρωση τώρα</button>
+        </div>
       </div>
     </div>
 

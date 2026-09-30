@@ -10,6 +10,8 @@ from pathlib import Path
 import webview
 from supabase import AuthApiError, create_client
 
+APP_VERSION = "1.0.0"
+
 SUPABASE_URL = "https://nzuobxttcvdqqzsmcgmv.supabase.co"
 SUPABASE_ANON_KEY = (
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6"
@@ -245,6 +247,43 @@ class Api:
     def toggle_fullscreen(self):
         if self._window:
             self._window.toggle_fullscreen()
+
+    def get_app_version(self):
+        return APP_VERSION
+
+    def check_for_update(self):
+        try:
+            res = (
+                supabase.table("app_version")
+                .select("latest_version, download_url")
+                .eq("id", 1)
+                .single()
+                .execute()
+            )
+            return {
+                "ok": True,
+                "currentVersion": APP_VERSION,
+                "latestVersion": res.data["latest_version"],
+                "downloadUrl": res.data["download_url"],
+            }
+        except Exception as e:
+            return {"ok": False, "error": str(e)}
+
+    def start_update(self, download_url):
+        try:
+            import subprocess
+            import tempfile
+            import urllib.request
+            from pathlib import Path as _Path
+
+            installer_path = _Path(tempfile.gettempdir()) / "RoadReadySetup.exe"
+            urllib.request.urlretrieve(download_url, installer_path)
+            subprocess.Popen([str(installer_path)], close_fds=True)
+            if self._window:
+                self._window.destroy()
+            return {"ok": True}
+        except Exception as e:
+            return {"ok": False, "error": str(e)}
 
     def sign_in(self, username, password):
         try:

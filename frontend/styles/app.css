@@ -246,10 +246,6 @@ body {
   to { left: 108%; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-car-icon, .hero-bike-icon, .hero-motorbike-icon, .hero-bus-icon { animation: none; left: 20%; }
-}
-
 .home-title {
   font-family: var(--font-head); font-weight: 700; font-size: 30px;
   text-align: center; margin: 0 0 8px;
@@ -655,6 +651,25 @@ body {
 .quiz-feedback.ok { background: var(--go-bg); color: var(--go-ink); }
 .quiz-feedback.no { background: var(--stop-bg); color: var(--stop-ink); }
 .quiz-feedback b { font-family: var(--font-head); font-weight: 600; }
+
+.question-detail-explanation {
+  margin-top: 16px;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.explanation-unverified-tag {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--warn);
+  margin: 0 0 6px;
+}
 
 /* RESULTS SCREEN */
 #screen-results {
@@ -1227,15 +1242,6 @@ body {
   color: var(--ink-soft);
   margin: 0;
   letter-spacing: 0.02em;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .loading-road::before { animation: none; }
-  .screen, .screen.show,
-  .overlay, .overlay.show,
-  .loading-indicator, .loading-indicator:not([hidden]) {
-    transition: none;
-  }
 }
 
 .sr-only {
