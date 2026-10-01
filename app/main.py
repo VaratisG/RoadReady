@@ -10,7 +10,7 @@ from pathlib import Path
 import webview
 from supabase import AuthApiError, create_client
 
-APP_VERSION = "1.0.2"
+APP_VERSION = "1.0.3"
 
 SUPABASE_URL = "https://nzuobxttcvdqqzsmcgmv.supabase.co"
 SUPABASE_ANON_KEY = (
@@ -97,6 +97,14 @@ VEHICLE_LABELS = {
     "truck": "Φορτηγό",
     "bus": "Λεωφορείο",
     "peiforthgo": "ΠΕΙ Φορτηγό",
+}
+
+VEHICLE_LABELS_EN = {
+    "auto": "Car",
+    "moto": "Motorcycle",
+    "truck": "Truck",
+    "bus": "Bus",
+    "peiforthgo": "Professional Truck Driver",
 }
 
 QUESTIONS_PATHS = {
@@ -232,6 +240,81 @@ CATEGORY_ICONS = {
     "truck": CATEGORY_ICONS_TRUCK,
     "bus": CATEGORY_ICONS_BUS,
     "peiforthgo": CATEGORY_ICONS_PEIFORTHGO,
+}
+
+# English translations of every category name used across all vehicles above
+# (a handful of names repeat across vehicles, e.g. "Αλκοόλ" — one shared entry
+# covers every reuse). Used to localize section/category labels in the UI.
+CATEGORY_LABELS_EN = {
+    "Αλκοόλ": "Alcohol",
+    "Αποστάσεις": "Distances",
+    "Ατύχημα": "Accident",
+    "Αυτοκινητόδρομος": "Motorway",
+    "Διαδρομή": "Route",
+    "Διασταυρώσεις - Γενικά": "Intersections - General",
+    "Διασταυρώσεις - Δεξιά προτεραιότητα": "Intersections - Priority to the Right",
+    "Διασταυρώσεις - Πινακίδες": "Intersections - Signs",
+    "Διασταυρώσεις - Σιδηρόδρομος": "Intersections - Railway Crossing",
+    "Διασταυρώσεις - Τροχονόμος": "Intersections - Traffic Officer",
+    "Είσοδος": "Entry",
+    "Έκτακτα": "Emergencies",
+    "Κανόνες": "Rules",
+    "Οδηγός": "Driver",
+    "Οδηγός - Βουνό-κούραση": "Driver - Mountain Driving & Fatigue",
+    "Οδόστρωμα": "Road Surface",
+    "Οικολογία": "Ecology",
+    "Ορατότητα": "Visibility",
+    "Όργανα": "Instruments",
+    "Περιβάλλον": "Environment",
+    "Προσπέραση": "Overtaking",
+    "Πρόσφυση": "Traction",
+    "Σήμανση - Απαγόρευσης": "Signs - Prohibition",
+    "Σήμανση - Αυτοκινητοδρόμου": "Signs - Motorway",
+    "Σήμανση - Διαγραμμίσεις": "Signs - Road Markings",
+    "Σήμανση - Κατευθύνσεων": "Signs - Direction",
+    "Σήμανση - Κινδύνου": "Signs - Danger",
+    "Σήμανση - Πληροφοριακές": "Signs - Informational",
+    "Σήμανση - Πρόσθετες": "Signs - Additional",
+    "Σήμανση - Προτεραιότητας": "Signs - Priority",
+    "Σήμανση - Σηματοδότης": "Signs - Traffic Light",
+    "Σήμανση - Σιδηρόδρομος": "Signs - Railway Crossing",
+    "Σήμανση - Τροχονόμος": "Signs - Traffic Officer",
+    "Σήμανση - Υποχρέωσης": "Signs - Mandatory",
+    "Στάση-Στάθμευση": "Stopping & Parking",
+    "Στάση-Στάθμευση - Πρόσθετες": "Stopping & Parking - Additional",
+    "Στροφές": "Turns",
+    "Στροφές - Πρόσθετες": "Turns - Additional",
+    "Συντήρηση": "Maintenance",
+    "Συνύπαρξη": "Sharing the Road",
+    "Ταχύτητα": "Speed",
+    "Ασφάλεια": "Safety",
+    "Εξαρτήματα": "Components",
+    "Εξοπλισμός": "Equipment",
+    "Ετοιμότητα": "Readiness",
+    "Οδήγηση": "Driving",
+    "Ταχύτητα-Αποστάσεις": "Speed & Distances",
+    "Προσπέραση - Ολισθηρότητα": "Overtaking - Slipperiness",
+    "Θέση - Όρια Ταχύτητας": "Position - Speed Limits",
+    "Διαστάσεις - Βάρη": "Dimensions & Weights",
+    "Μηχανολογία": "Mechanics",
+    "Τεχνικά": "Technical",
+    "Διαστάσεις": "Dimensions",
+    "Κυρώσεις": "Penalties",
+    "Ταχογράφοι": "Tachographs",
+    "Εισαγωγή": "Introduction",
+    "Ορθολογική Οδήγηση - Τυπολογία Φορτηγών": "Rational Driving - Truck Types",
+    "Ορθολογική Οδήγηση - Μηχανολογικά": "Rational Driving - Mechanics",
+    "Ορθολογική Οδήγηση - Δυναμική Οχήματος": "Rational Driving - Vehicle Dynamics",
+    "Ορθολογική Οδήγηση - Κατανάλωση Καυσίμου": "Rational Driving - Fuel Consumption",
+    "Ορθολογική Οδήγηση - Ασφάλιση Φορτίου": "Rational Driving - Load Securing",
+    "Κανονιστικές Ρυθμίσεις - Κανονισμοί": "Regulations - Rules",
+    "Κανονιστικές Ρυθμίσεις - Υποχρεώσεις Οδηγού": "Regulations - Driver Obligations",
+    "Πρόληψη Κινδύνων": "Risk Prevention",
+    "Πρόληψη Κινδύνων - Φυσικοί Κίνδυνοι": "Risk Prevention - Natural Hazards",
+    "Πρόληψη Κινδύνων - Ατυχήματα": "Risk Prevention - Accidents",
+    "Καταστάσεις Έκτακτης Ανάγκης": "Emergency Situations",
+    "Αρχές Υγιεινής": "Health & Hygiene Principles",
+    "Οικονομικό Περιβάλλον": "Economic Environment",
 }
 
 
@@ -478,7 +561,10 @@ class Api:
             pass
 
     def get_vehicles(self):
-        return [{"id": vehicle_id, "label": label} for vehicle_id, label in VEHICLE_LABELS.items()]
+        return [
+            {"id": vehicle_id, "label": label, "labelEn": VEHICLE_LABELS_EN.get(vehicle_id, label)}
+            for vehicle_id, label in VEHICLE_LABELS.items()
+        ]
 
     def get_sections(self, vehicle):
         questions = self._load_questions(vehicle)
@@ -493,11 +579,18 @@ class Api:
             counts[category] += 1
 
         simulation_size = min(SIMULATION_SIZE, len(questions))
-        sections = [{"id": "all", "label": "Προσομοίωση Εξέτασης", "count": simulation_size, "icon": None}]
+        sections = [{
+            "id": "all",
+            "label": "Προσομοίωση Εξέτασης",
+            "labelEn": "Exam Simulation",
+            "count": simulation_size,
+            "icon": None,
+        }]
         for category in order:
             sections.append({
                 "id": category,
                 "label": category,
+                "labelEn": CATEGORY_LABELS_EN.get(category, category),
                 "count": counts[category],
                 "icon": icons.get(category),
             })

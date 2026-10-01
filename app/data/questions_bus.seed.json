@@ -3,2599 +3,3896 @@
     "id": "bus-1001",
     "category": "Σήμανση - Υποχρέωσης",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-32.jpg",
     "answers": [
       "Αποκλειστική διέλευση λεωφορείων ή τρόλεϊ.",
       "Τέλος αποκλειστικής διελεύσεως λεωφορείων ή τρόλεϊ.",
       "Απαγορεύεται η διέλευση λεωφορείων ή τρόλεϊ."
     ],
+    "answersEn": [
+      "Exclusive lane for buses or trolleybuses.",
+      "End of exclusive lane for buses or trolleybuses.",
+      "Buses or trolleybuses are prohibited from passing."
+    ],
     "correctIndex": 1,
     "explanation": "Η διαγώνια γραμμή πάνω στο σύμβολο δηλώνει τη λήξη μιας ρύθμισης, άρα το σήμα ανακοινώνει το τέλος της αποκλειστικής λωρίδας λεωφορείων ή τρόλεϊ και όχι την έναρξή της ή απαγόρευση διέλευσης.",
+    "explanationEn": "The diagonal line across the symbol indicates the end of a regulation, so the sign announces the end of the exclusive bus/trolleybus lane rather than its start or a prohibition on passing.",
     "explanationVerified": false
   },
   {
     "id": "bus-1002",
     "category": "Σήμανση - Απαγόρευσης",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-29.jpg",
     "answers": [
       "Απαγορεύεται η είσοδος στα επιβατηγά αυτοκίνητα.",
       "Απαγορεύεται η είσοδος σε όλα τα οχήματα εκτός επιβατηγών.",
       "Απαγορεύεται η είσοδος σε μηχανοκίνητα οχήματα εκτός των διτρόχων μοτοσυκλετών."
     ],
+    "answersEn": [
+      "Entry prohibited for passenger cars.",
+      "Entry prohibited for all vehicles except passenger cars.",
+      "Entry prohibited for motor vehicles except two-wheeled motorcycles."
+    ],
     "correctIndex": 2,
     "explanation": "Πρόκειται για πινακίδα απαγόρευσης που εξαιρεί ρητά τις δίτροχες μοτοσυκλέτες, γι' αυτό απαγορεύει την είσοδο σε όλα τα υπόλοιπα μηχανοκίνητα οχήματα και όχι μόνο στα επιβατηγά.",
+    "explanationEn": "This is a prohibition sign that explicitly exempts two-wheeled motorcycles, so it prohibits entry to all other motor vehicles, not just passenger cars.",
     "explanationVerified": false
   },
   {
     "id": "bus-1003",
     "category": "Σήμανση - Προτεραιότητας",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-27.jpg",
     "answers": [
       "Προτεραιότητα έναντι της επερχόμενης κυκλοφορίας.",
       "Προτεραιότητα της αντιθέτως ερχόμενης κυκλοφορίας λόγω στενότητας οδοστρώματος.",
       "Προαναγγελία οδού διπλής κυκλοφορίας."
     ],
+    "answersEn": [
+      "Priority over oncoming traffic.",
+      "Priority for oncoming traffic due to a narrow roadway.",
+      "Advance notice of a two-way road."
+    ],
     "correctIndex": 1,
     "explanation": "Το σήμα αυτό τοποθετείται σε στενά τμήματα οδοστρώματος και δίνει προτεραιότητα στα αντιθέτως ερχόμενα οχήματα, σε αντίθεση με το συμμετρικό σήμα που δίνει προτεραιότητα στη δική μας κατεύθυνση.",
+    "explanationEn": "This sign is placed on narrow sections of road and gives priority to oncoming vehicles, unlike the symmetrical sign which gives priority to our own direction.",
     "explanationVerified": false
   },
   {
     "id": "bus-1004",
     "category": "Σήμανση - Προτεραιότητας",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-28.jpg",
     "answers": [
       "Προτεραιότητα έναντι της επερχόμενης κυκλοφορίας.",
       "Προτεραιότητα της αντιθέτως ερχόμενης κυκλοφορίας.",
       "Προαναγγελία οδού διπλής κυκλοφορίας."
     ],
+    "answersEn": [
+      "Priority over oncoming traffic.",
+      "Priority for oncoming traffic.",
+      "Advance notice of a two-way road."
+    ],
     "correctIndex": 0,
     "explanation": "Το βέλος προς τα πάνω δηλώνει ότι η δική μας κατεύθυνση έχει προτεραιότητα έναντι της αντίθετης, σε τμήμα με στενό οδόστρωμα.",
+    "explanationEn": "The upward arrow indicates that our own direction has priority over the oncoming direction, on a section with a narrow roadway.",
     "explanationVerified": false
   },
   {
     "id": "bus-1005",
     "category": "Σήμανση - Κινδύνου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-05.jpg",
     "answers": [
       "Προτεραιότητα έναντι της επερχόμενης κυκλοφορίας.",
       "Προτεραιότητα της αντιθέτως ερχόμενης κυκλοφορίας.",
       "Προαναγγελία οδού διπλής κυκλοφορίας."
     ],
+    "answersEn": [
+      "Priority over oncoming traffic.",
+      "Priority for oncoming traffic.",
+      "Advance notice of a two-way road."
+    ],
     "correctIndex": 2,
     "explanation": "Ως προειδοποιητικό σήμα κινδύνου, ενημερώνει έγκαιρα τον οδηγό ότι πλησιάζει τμήμα όπου η κυκλοφορία γίνεται και προς τις δύο κατευθύνσεις, ώστε να προσέξει τα αντιθέτως ερχόμενα οχήματα.",
+    "explanationEn": "As a warning sign, it informs the driver in advance that a section is approaching where traffic flows in both directions, so they should watch for oncoming vehicles.",
     "explanationVerified": false
   },
   {
     "id": "bus-1006",
     "category": "Σήμανση - Πληροφοριακές",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-14.jpg",
     "answers": [
       "Οδός ταχείας κυκλοφορίας.",
       "Αυτοκινητόδρομος.",
       "Επιτρέπεται η είσοδος στα επιβατηγά αυτοκίνητα."
     ],
+    "answersEn": [
+      "Expressway (fast-traffic road).",
+      "Motorway.",
+      "Entry permitted for passenger cars."
+    ],
     "correctIndex": 0,
     "explanation": "Πρόκειται για πληροφοριακή πινακίδα που ενημερώνει τον οδηγό ότι εισέρχεται σε οδό ταχείας κυκλοφορίας, με διαφορετικά χαρακτηριστικά και όρια ταχύτητας από τον αυτοκινητόδρομο.",
+    "explanationEn": "This is an information sign informing the driver that they are entering an expressway, which has different characteristics and speed limits from a motorway.",
     "explanationVerified": false
   },
   {
     "id": "bus-1007",
     "category": "Σήμανση - Πληροφοριακές",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-15.jpg",
     "answers": [
       "Απαγορεύεται η είσοδος στα επιβατηγά αυτοκίνητα.",
       "Τέλος αυτοκινητόδρομου.",
       "Τέλος οδού ταχείας κυκλοφορίας."
     ],
+    "answersEn": [
+      "Entry prohibited for passenger cars.",
+      "End of motorway.",
+      "End of expressway."
+    ],
     "correctIndex": 2,
     "explanation": "Η διαγράμμιση πάνω στο σύμβολο της οδού ταχείας κυκλοφορίας δηλώνει τη λήξη του συγκεκριμένου καθεστώτος κυκλοφορίας.",
+    "explanationEn": "The diagonal line across the expressway symbol indicates the end of that particular traffic regime.",
     "explanationVerified": false
   },
   {
     "id": "bus-1008",
     "category": "Σήμανση - Αυτοκινητοδρόμου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-16.jpg",
     "answers": [
       "Οδός ταχείας κυκλοφορίας.",
       "Αυτοκινητόδρομος.",
       "Αδιέξοδος."
     ],
+    "answersEn": [
+      "Expressway (fast-traffic road).",
+      "Motorway.",
+      "Dead end."
+    ],
     "correctIndex": 1,
     "explanation": "Το σήμα αυτό επισημαίνει την είσοδο σε αυτοκινητόδρομο, όπου ισχύουν αυστηρότεροι κανόνες κυκλοφορίας (π.χ. απαγόρευση πεζών) και υψηλότερα όρια ταχύτητας.",
+    "explanationEn": "This sign marks the entrance to a motorway, where stricter traffic rules apply (e.g. pedestrians prohibited) and higher speed limits are in force.",
     "explanationVerified": false
   },
   {
     "id": "bus-1009",
     "category": "Σήμανση - Αυτοκινητοδρόμου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-17.jpg",
     "answers": [
       "Τέλος οδού ταχείας κυκλοφορίας.",
       "Τέλος αδιεξόδου.",
       "Τέλος αυτοκινητόδρομου."
     ],
+    "answersEn": [
+      "End of expressway.",
+      "End of dead end.",
+      "End of motorway."
+    ],
     "correctIndex": 2,
     "explanation": "Η διαγράμμιση πάνω στο σύμβολο του αυτοκινητόδρομου δηλώνει το σημείο όπου παύουν να ισχύουν οι ειδικοί κανόνες κυκλοφορίας του αυτοκινητόδρομου.",
+    "explanationEn": "The diagonal line across the motorway symbol marks the point where the special motorway traffic rules cease to apply.",
     "explanationVerified": false
   },
   {
     "id": "bus-1010",
     "category": "Σήμανση - Πληροφοριακές",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-13.jpg",
     "answers": [
       "Απαγορεύεται η διέλευση πεζών.",
       "Διάβαση πεζών.",
       "Υπόγεια διάβαση πεζών."
     ],
+    "answersEn": [
+      "Pedestrians prohibited from crossing.",
+      "Pedestrian crossing.",
+      "Underground pedestrian crossing."
+    ],
     "correctIndex": 1,
     "explanation": "Το σήμα αυτό οριοθετεί σημείο όπου οι πεζοί διασχίζουν το οδόστρωμα, ώστε ο οδηγός να μειώσει ταχύτητα και να είναι έτοιμος να σταματήσει.",
+    "explanationEn": "This sign marks a point where pedestrians cross the roadway, so the driver should reduce speed and be ready to stop.",
     "explanationVerified": false
   },
   {
     "id": "bus-1011",
     "category": "Σήμανση - Πληροφοριακές",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-10.jpg",
     "answers": [
       "Αρίθμηση εθνικών οδών.",
       "Αρίθμηση διεθνών αρτηριών.",
       "Χιλιομέτρηση οδών."
     ],
+    "answersEn": [
+      "Numbering of national roads.",
+      "Numbering of international routes.",
+      "Road distance markers (kilometer posts)."
+    ],
     "correctIndex": 0,
     "explanation": "Η συγκεκριμένη μορφή πινακίδας χρησιμοποιείται για την αναγραφή του αριθμού των εθνικών οδών, ώστε ο οδηγός να προσανατολίζεται στο οδικό δίκτυο.",
+    "explanationEn": "This particular shape of sign is used to display the number of national roads, helping the driver orient themselves on the road network.",
     "explanationVerified": false
   },
   {
     "id": "bus-1012",
     "category": "Σήμανση - Πληροφοριακές",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-11.jpg",
     "answers": [
       "Αρίθμηση εθνικών οδών.",
       "Αρίθμηση διεθνών αρτηριών.",
       "Χιλιομέτρηση οδών."
     ],
+    "answersEn": [
+      "Numbering of national roads.",
+      "Numbering of international routes.",
+      "Road distance markers (kilometer posts)."
+    ],
     "correctIndex": 1,
     "explanation": "Πρόκειται για την ειδική πινακίδα με την οποία σηματοδοτούνται οι διεθνείς οδικές αρτηρίες, διαφορετική από αυτή των εθνικών οδών.",
+    "explanationEn": "This is the special sign used to mark international road routes, distinct from that of national roads.",
     "explanationVerified": false
   },
   {
     "id": "bus-1013",
     "category": "Σήμανση - Πληροφοριακές",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-12.jpg",
     "answers": [
       "Αρίθμηση εθνικών οδών.",
       "Αρίθμηση διεθνών αρτηριών.",
       "Χιλιομέτρηση οδών."
     ],
+    "answersEn": [
+      "Numbering of national roads.",
+      "Numbering of international routes.",
+      "Road distance markers (kilometer posts)."
+    ],
     "correctIndex": 2,
     "explanation": "Η πινακίδα αυτή δείχνει την απόσταση σε χιλιόμετρα, βοηθώντας τον οδηγό να προσδιορίσει τη θέση του στο οδικό δίκτυο.",
+    "explanationEn": "This sign shows the distance in kilometers, helping the driver determine their position on the road network.",
     "explanationVerified": false
   },
   {
     "id": "bus-1014",
     "category": "Σήμανση - Κατευθύνσεων",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-08.jpg",
     "answers": [
       "Κατεύθυνση μιας τοπωνυμίας με μορφή βέλους.",
       "Προειδοποιητική υποχρεωτικής διαδρομής.",
       "Κατεύθυνση με μορφή βέλους μιας τοπωνυμίας μεγάλου τουριστικού ή αρχαιολογικού ενδιαφέροντος."
     ],
+    "answersEn": [
+      "Direction of a place name, shown as an arrow.",
+      "Warning sign for a compulsory route.",
+      "Arrow-shaped direction to a place name of major tourist or archaeological interest."
+    ],
     "correctIndex": 0,
     "explanation": "Οι πινακίδες κατεύθυνσης σε σχήμα βέλους δείχνουν την πορεία προς έναν συγκεκριμένο προορισμό, σε αντίθεση με τις προειδοποιητικές πινακίδες υποχρεωτικής διαδρομής.",
+    "explanationEn": "Arrow-shaped direction signs show the way to a specific destination, as opposed to warning signs for a compulsory route.",
     "explanationVerified": false
   },
   {
     "id": "bus-1015",
     "category": "Σήμανση - Κατευθύνσεων",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-09.jpg",
     "answers": [
       "Κατεύθυνση για περισσότερες της μιας τοπωνυμίες με μορφή βέλους.",
       "Προειδοποιητική υποχρεωτικής διαδρομής.",
       "Κατεύθυνση με μορφή βέλους μιας τοπωνυμίας μεγάλου τουριστικού ή αρχαιολογικού ενδιαφέροντος."
     ],
+    "answersEn": [
+      "Direction to more than one place name, shown as an arrow.",
+      "Warning sign for a compulsory route.",
+      "Arrow-shaped direction to a place name of major tourist or archaeological interest."
+    ],
     "correctIndex": 0,
     "explanation": "Όταν στην ίδια πινακίδα-βέλος αναγράφονται περισσότεροι του ενός προορισμοί, δηλώνεται η κατεύθυνση για όλες αυτές τις τοπωνυμίες μαζί.",
+    "explanationEn": "When more than one destination is listed on the same arrow sign, it indicates the direction to all of these places together.",
     "explanationVerified": false
   },
   {
     "id": "bus-1016",
     "category": "Σήμανση - Πληροφοριακές",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-19.jpg",
     "answers": [
       "Ελάχιστο όριο ταχύτητας ανά λωρίδα κυκλοφορίας.",
       "Ανώτατο όριο ταχύτητας ανά λωρίδα κυκλοφορίας.",
       "Γενικά, όρια ταχύτητας."
     ],
+    "answersEn": [
+      "Minimum speed limit per traffic lane.",
+      "Maximum speed limit per traffic lane.",
+      "General speed limits."
+    ],
     "correctIndex": 1,
     "explanation": "Όταν πάνω από κάθε λωρίδα αναγράφεται αριθμός μέσα σε κόκκινο κύκλο, αυτός δηλώνει το ανώτατο επιτρεπόμενο όριο ταχύτητας για τη συγκεκριμένη λωρίδα.",
+    "explanationEn": "When a number inside a red circle is shown above each lane, it indicates the maximum permitted speed limit for that particular lane.",
     "explanationVerified": false
   },
   {
     "id": "bus-1017",
     "category": "Σήμανση - Πληροφοριακές",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-20.jpg",
     "answers": [
       "Ελάχιστο όριο ταχύτητας ανά λωρίδα κυκλοφορίας.",
       "Ανώτατο όριο ταχύτητας ανά λωρίδα κυκλοφορίας.",
       "Γενικά, όρια ταχύτητας."
     ],
+    "answersEn": [
+      "Minimum speed limit per traffic lane.",
+      "Maximum speed limit per traffic lane.",
+      "General speed limits."
+    ],
     "correctIndex": 0,
     "explanation": "Ο μπλε κυκλικός σχηματισμός με αριθμό πάνω από τη λωρίδα δηλώνει το κατώτατο όριο ταχύτητας που πρέπει να τηρείται σε αυτήν, ώστε να μην παρεμποδίζεται η ροή της κυκλοφορίας.",
+    "explanationEn": "The blue circular sign with a number above the lane indicates the minimum speed that must be maintained in it, so as not to obstruct the flow of traffic.",
     "explanationVerified": false
   },
   {
     "id": "bus-1018",
     "category": "Σήμανση - Πληροφοριακές",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-18.jpg",
     "answers": [
       "Ελάχιστο όριο ταχύτητας ανά λωρίδα κυκλοφορίας.",
       "Ανώτατο όριο ταχύτητας ανά λωρίδα κυκλοφορίας.",
       "Γενικά, όρια ταχύτητας."
     ],
+    "answersEn": [
+      "Minimum speed limit per traffic lane.",
+      "Maximum speed limit per traffic lane.",
+      "General speed limits."
+    ],
     "correctIndex": 2,
     "explanation": "Όταν η πινακίδα αναφέρεται στο σύνολο του οδοστρώματος και όχι σε συγκεκριμένη λωρίδα, δηλώνει το γενικό όριο ταχύτητας που ισχύει για όλα τα οχήματα.",
+    "explanationEn": "When the sign refers to the roadway as a whole rather than a specific lane, it indicates the general speed limit that applies to all vehicles.",
     "explanationVerified": false
   },
   {
     "id": "bus-1019",
     "category": "Σήμανση - Αυτοκινητοδρόμου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-23.jpg",
     "answers": [
       "Κατεύθυνση εξόδου από αυτοκινητόδρομο.",
       "Κατεύθυνση εισόδου στον αυτοκινητόδρομο.",
       "Αναγγελία προσεγγίσεως σε ανισόπεδο κόμβο αυτοκινητόδρομου."
     ],
+    "answersEn": [
+      "Direction of exit from the motorway.",
+      "Direction of entry onto the motorway.",
+      "Advance notice of approaching a motorway interchange."
+    ],
     "correctIndex": 1,
     "explanation": "Το σήμα τοποθετείται στους κόμβους εισόδου και καθοδηγεί τον οδηγό προς τη ράμπα εισόδου στον αυτοκινητόδρομο.",
+    "explanationEn": "This sign is placed at entry junctions and guides the driver toward the on-ramp onto the motorway.",
     "explanationVerified": false
   },
   {
     "id": "bus-1020",
     "category": "Σήμανση - Αυτοκινητοδρόμου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-21.jpg",
     "answers": [
       "Κατεύθυνση εξόδου από αυτοκινητόδρομο.",
       "Κατεύθυνση εισόδου στον αυτοκινητόδρομο.",
       "Αναγγελία προσεγγίσεως σε ανισόπεδο κόμβο αυτοκινητόδρομου."
     ],
+    "answersEn": [
+      "Direction of exit from the motorway.",
+      "Direction of entry onto the motorway.",
+      "Advance notice of approaching a motorway interchange."
+    ],
     "correctIndex": 2,
     "explanation": "Το σήμα προειδοποιεί εκ των προτέρων τον οδηγό ότι πλησιάζει σε ανισόπεδο κόμβο, ώστε να προετοιμαστεί έγκαιρα για ενδεχόμενη αλλαγή λωρίδας.",
+    "explanationEn": "The sign warns the driver in advance that they are approaching an interchange, so they can prepare in good time for a possible lane change.",
     "explanationVerified": false
   },
   {
     "id": "bus-1021",
     "category": "Σήμανση - Αυτοκινητοδρόμου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-22.jpg",
     "answers": [
       "Κατεύθυνση εξόδου από αυτοκινητόδρομο.",
       "Κατεύθυνση εισόδου στον αυτοκινητόδρομο.",
       "Αναγγελία προσεγγίσεως σε ανισόπεδο κόμβο αυτοκινητόδρομου."
     ],
+    "answersEn": [
+      "Direction of exit from the motorway.",
+      "Direction of entry onto the motorway.",
+      "Advance notice of approaching a motorway interchange."
+    ],
     "correctIndex": 0,
     "explanation": "Το βέλος που αποκλίνει από την κύρια πορεία υποδεικνύει τη ράμπα εξόδου από τον αυτοκινητόδρομο.",
+    "explanationEn": "The arrow branching off from the main route indicates the off-ramp from the motorway.",
     "explanationVerified": false
   },
   {
     "id": "bus-1022",
     "category": "Σήμανση - Κινδύνου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-06.jpg",
     "answers": [
       "Διασταύρωση, όπου ισχύει η από δεξιά προτεραιότητα.",
       "Διακλάδωση με κάθετη οδό δεξιά, επί της οποίας οι κινούμενοι οφείλουν να παραχωρήσουν προτεραιότητα.",
       "Διασταύρωση με οδό προτεραιότητας."
     ],
+    "answersEn": [
+      "Intersection where priority to the right applies.",
+      "Junction with a side road to the right, on which traffic must give way.",
+      "Intersection with a priority road."
+    ],
     "correctIndex": 0,
     "explanation": "Το σήμα αυτό απεικονίζει ισότιμη διασταύρωση, στην οποία, ελλείψει άλλης ρύθμισης, ισχύει ο γενικός κανόνας προτεραιότητας του οχήματος που έρχεται από δεξιά.",
+    "explanationEn": "This sign depicts an intersection of equal roads, where, in the absence of any other regulation, the general rule of priority to the vehicle coming from the right applies.",
     "explanationVerified": false
   },
   {
     "id": "bus-1023",
     "category": "Σήμανση - Κινδύνου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-07.jpg",
     "answers": [
       "Διασταύρωση, όπου ισχύει η από δεξιά προτεραιότητα.",
       "Διακλάδωση με κάθετη οδό δεξιά, επί της οποίας οι κινούμενοι οφείλουν να παραχωρήσουν προτεραιότητα.",
       "Διασταύρωση με οδό προτεραιότητας."
     ],
+    "answersEn": [
+      "Intersection where priority to the right applies.",
+      "Junction with a side road to the right, on which traffic must give way.",
+      "Intersection with a priority road."
+    ],
     "correctIndex": 1,
     "explanation": "Η ασύμμετρη απεικόνιση της κάθετης οδού δηλώνει ότι όσοι προέρχονται από αυτήν οφείλουν να παραχωρήσουν προτεραιότητα σε εμάς που κινούμαστε στην κύρια οδό.",
+    "explanationEn": "The asymmetric depiction of the side road indicates that those coming from it must give way to us, as we travel on the main road.",
     "explanationVerified": false
   },
   {
     "id": "bus-1024",
     "category": "Σήμανση - Προτεραιότητας",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-24.jpg",
     "answers": [
       "Υποχρεωτική παραχώρηση προτεραιότητας.",
       "Οδός προτεραιότητας.",
       "Τέλος οδού προτεραιότητας."
     ],
+    "answersEn": [
+      "Compulsory give way (yield).",
+      "Priority road.",
+      "End of priority road."
+    ],
     "correctIndex": 0,
     "explanation": "Πρόκειται για το σήμα υποχρεωτικής παραχώρησης προτεραιότητας, που υποχρεώνει τον οδηγό να δώσει προτεραιότητα στην οδό που τέμνει την πορεία του.",
+    "explanationEn": "This is the compulsory give-way sign, which requires the driver to give priority to the road that crosses their path.",
     "explanationVerified": false
   },
   {
     "id": "bus-1025",
     "category": "Σήμανση - Προτεραιότητας",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-25.jpg",
     "answers": [
       "Υποχρεωτική παραχώρηση προτεραιότητας.",
       "Οδός προτεραιότητας.",
       "Τέλος οδού προτεραιότητας."
     ],
+    "answersEn": [
+      "Compulsory give way (yield).",
+      "Priority road.",
+      "End of priority road."
+    ],
     "correctIndex": 1,
     "explanation": "Το ρομβοειδές σήμα δηλώνει ότι ο οδηγός κινείται σε οδό που έχει προτεραιότητα έναντι των εγκάρσιων δρόμων που συναντά.",
+    "explanationEn": "The diamond-shaped sign indicates that the driver is traveling on a road that has priority over the side roads it meets.",
     "explanationVerified": false
   },
   {
     "id": "bus-1026",
     "category": "Σήμανση - Προτεραιότητας",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-26.jpg",
     "answers": [
       "Υποχρεωτική παραχώρηση προτεραιότητας.",
       "Οδός προτεραιότητας.",
       "Τέλος οδού προτεραιότητας."
     ],
+    "answersEn": [
+      "Compulsory give way (yield).",
+      "Priority road.",
+      "End of priority road."
+    ],
     "correctIndex": 2,
     "explanation": "Η διαγράμμιση πάνω στο ρόμβο της οδού προτεραιότητας δηλώνει ότι από το σημείο αυτό παύει να ισχύει το καθεστώς προτεραιότητας.",
+    "explanationEn": "The diagonal line across the priority-road diamond indicates that, from this point on, the priority road status no longer applies.",
     "explanationVerified": false
   },
   {
     "id": "bus-1027",
     "category": "Σήμανση - Κινδύνου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-01.jpg",
     "answers": [
       "Επικίνδυνη δεξιά στροφή.",
       "Υποχρεωτική κατεύθυνση πορείας με δεξιά στροφή.",
       "Υποχρεωτική διέλευση μόνο από τη δεξιά πλευρά της νησίδας ή του εμποδίου."
     ],
+    "answersEn": [
+      "Dangerous right bend.",
+      "Compulsory direction of travel: right turn.",
+      "Compulsory passage only on the right side of the island or obstacle."
+    ],
     "correctIndex": 0,
     "explanation": "Το προειδοποιητικό τρίγωνο με το καμπυλωτό βέλος προς τα δεξιά προειδοποιεί απλώς για επικίνδυνη στροφή, χωρίς να επιβάλλει κάποια συγκεκριμένη κατεύθυνση πορείας.",
+    "explanationEn": "The warning triangle with the curved arrow to the right merely warns of a dangerous bend, without imposing any particular direction of travel.",
     "explanationVerified": false
   },
   {
     "id": "bus-1028",
     "category": "Σήμανση - Υποχρέωσης",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-30.jpg",
     "answers": [
       "Επικίνδυνη δεξιά στροφή.",
       "Υποχρεωτική κατεύθυνση πορείας με δεξιά στροφή.",
       "Υποχρεωτική διέλευση μόνο από τη δεξιά πλευρά της νησίδας ή του εμποδίου."
     ],
+    "answersEn": [
+      "Dangerous right bend.",
+      "Compulsory direction of travel: right turn.",
+      "Compulsory passage only on the right side of the island or obstacle."
+    ],
     "correctIndex": 1,
     "explanation": "Ο κυκλικός πίνακας υποχρέωσης με το βέλος επιβάλλει στον οδηγό να ακολουθήσει την κατεύθυνση που δείχνει, δηλαδή δεξιά στροφή.",
+    "explanationEn": "The round mandatory sign with the arrow requires the driver to follow the direction shown, i.e. to turn right.",
     "explanationVerified": false
   },
   {
     "id": "bus-1029",
     "category": "Σήμανση - Υποχρέωσης",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-31.jpg",
     "answers": [
       "Επικίνδυνη δεξιά στροφή.",
       "Υποχρεωτική κατεύθυνση πορείας με δεξιά στροφή.",
       "Υποχρεωτική διέλευση μόνο από τη δεξιά πλευρά της νησίδας ή του εμποδίου."
     ],
+    "answersEn": [
+      "Dangerous right bend.",
+      "Compulsory direction of travel: right turn.",
+      "Compulsory passage only on the right side of the island or obstacle."
+    ],
     "correctIndex": 2,
     "explanation": "Το σήμα υποχρέωσης με το κατακόρυφο βέλος τοποθετείται μπροστά από νησίδα ή εμπόδιο και επιβάλλει την παράκαμψή του μόνο από τη δεξιά πλευρά.",
+    "explanationEn": "The mandatory sign with the vertical arrow is placed in front of an island or obstacle and requires it to be passed only on the right side.",
     "explanationVerified": false
   },
   {
     "id": "bus-1030",
     "category": "Σήμανση - Κινδύνου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-02.jpg",
     "answers": [
       "Ολισθηρό οδόστρωμα.",
       "Επικίνδυνες δύο αντίρροπες ή διαδοχικές (συνεχείς) στροφές εκ των οποίων η πρώτη αριστερά.",
       "Επικίνδυνες δύο αντίρροπες ή διαδοχικές (συνεχείς) στροφές, εκ των οποίων η πρώτη δεξιά."
     ],
+    "answersEn": [
+      "Slippery road surface.",
+      "Dangerous double bend (or a series of bends), first to the left.",
+      "Dangerous double bend (or a series of bends), first to the right."
+    ],
     "correctIndex": 1,
     "explanation": "Το σχήμα του βέλους που ξεκινά προς τα αριστερά δείχνει ότι η πρώτη από τις δύο διαδοχικές επικίνδυνες στροφές είναι αριστερή.",
+    "explanationEn": "The shape of the arrow starting to the left shows that the first of the two successive dangerous bends is to the left.",
     "explanationVerified": false
   },
   {
     "id": "bus-1031",
     "category": "Σήμανση - Κινδύνου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-03.jpg",
     "answers": [
       "Ολισθηρό οδόστρωμα.",
       "Επικίνδυνες δύο αντίρροπες ή διαδοχικές (συνεχείς) στροφές, εκ των οποίων η πρώτη αριστερά.",
       "Επικίνδυνες δύο αντίρροπες ή διαδοχικές (συνεχείς) στροφές, εκ των οποίων η πρώτη δεξιά."
     ],
+    "answersEn": [
+      "Slippery road surface.",
+      "Dangerous double bend (or a series of bends), first to the left.",
+      "Dangerous double bend (or a series of bends), first to the right."
+    ],
     "correctIndex": 2,
     "explanation": "Το βέλος που ξεκινά προς τα δεξιά δηλώνει ότι η πρώτη από τις δύο διαδοχικές επικίνδυνες στροφές είναι δεξιά.",
+    "explanationEn": "The arrow starting to the right indicates that the first of the two successive dangerous bends is to the right.",
     "explanationVerified": false
   },
   {
     "id": "bus-1032",
     "category": "Σήμανση - Κινδύνου",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-04.jpg",
     "answers": [
       "Ολισθηρό οδόστρωμα.",
       "Επικίνδυνες δύο αντίρροπες ή διαδοχικές (συνεχείς) στροφές, εκ των οποίων η πρώτη αριστερά.",
       "Επικίνδυνες δύο αντίρροπες ή διαδοχικές (συνεχείς) στροφές, εκ των οποίων η πρώτη δεξιά."
     ],
+    "answersEn": [
+      "Slippery road surface.",
+      "Dangerous double bend (or a series of bends), first to the left.",
+      "Dangerous double bend (or a series of bends), first to the right."
+    ],
     "correctIndex": 0,
     "explanation": "Το σύμβολο του οχήματος με τα ίχνη πλαγιολίσθησης προειδοποιεί τον οδηγό ότι το οδόστρωμα μπορεί να είναι ολισθηρό, συνήθως λόγω υγρασίας ή λαδιού.",
+    "explanationEn": "The symbol of a vehicle with skid marks warns the driver that the road surface may be slippery, usually due to moisture or oil.",
     "explanationVerified": false
   },
   {
     "id": "bus-1033",
     "category": "Σήμανση - Υποχρέωσης",
     "question": "Ποια είναι η σημασία του σήματος αυτού:",
+    "questionEn": "What is the meaning of this sign:",
     "image": "b-34.jpg",
     "answers": [
       "Αποκλειστική διέλευση λεωφορείων ή τρόλεϊ.",
       "Προσέγγιση σε στάση λεωφορείων ή τρόλεϊ.",
       "Οδός που επιτρέπεται η κυκλοφορία όλων των οχημάτων εκτός λεωφορείων ή τρόλεϊ."
     ],
+    "answersEn": [
+      "Exclusive lane for buses or trolleybuses.",
+      "Approaching a bus or trolleybus stop.",
+      "Road where all vehicles except buses or trolleybuses are allowed to circulate."
+    ],
     "correctIndex": 0,
     "explanation": "Το σήμα υποχρέωσης με το σύμβολο λεωφορείου δηλώνει λωρίδα ή οδό αποκλειστικά για τη διέλευση λεωφορείων ή τρόλεϊ.",
+    "explanationEn": "The mandatory sign with the bus symbol indicates a lane or road reserved exclusively for buses or trolleybuses.",
     "explanationVerified": false
   },
   {
     "id": "bus-1034",
     "category": "Διαστάσεις",
     "question": "Σύμφωνα με τη νομοθεσία μέγιστο επιτρεπόμενο βάρος είναι:",
+    "questionEn": "According to legislation, maximum permitted weight is:",
     "image": null,
     "answers": [
       "Το μέγιστο βάρος, που αντέχει να μεταφέρει το όχημα.",
       "Το μέγιστο βάρος φορτωμένου οχήματος, το οποίο αναγράφεται ως μικτό βάρος στην άδεια κυκλοφορίας του.",
       "Το μέγιστο βάρος φορτίου, με το οποίο επιτρέπεται να φορτωθεί το όχημα."
     ],
+    "answersEn": [
+      "The maximum weight that the vehicle can bear to carry.",
+      "The maximum weight of the loaded vehicle, which is recorded as the gross weight in its registration certificate.",
+      "The maximum load weight with which the vehicle is allowed to be loaded."
+    ],
     "correctIndex": 1,
     "explanation": "Ο ορισμός αυτός ταυτίζει το μέγιστο επιτρεπόμενο βάρος με το επίσημα καταχωρημένο μικτό βάρος στην άδεια κυκλοφορίας, δηλαδή το ανώτατο βάρος με το οποίο επιτρέπεται να κυκλοφορεί το φορτωμένο όχημα.",
+    "explanationEn": "This definition equates the maximum permitted weight with the officially registered gross weight on the registration certificate, i.e. the maximum weight at which the loaded vehicle is allowed to circulate.",
     "explanationVerified": false
   },
   {
     "id": "bus-1035",
     "category": "Διαστάσεις",
     "question": "Σύμφωνα με τη νομοθεσία μικτό βάρος είναι:",
+    "questionEn": "According to legislation, gross weight is:",
     "image": null,
     "answers": [
       "Το μέγιστο βάρος φορτίου, με το οποίο έχει φορτωθεί το όχημα.",
       "Το μέγιστο βάρος του οχήματος χωρίς το μεταφερόμενο φορτίο.",
       "Το εκάστοτε πραγματικό βάρος του οχήματος μετά του φορτίου, του πληρώματος και των επιβατών."
     ],
+    "answersEn": [
+      "The maximum load weight with which the vehicle has been loaded.",
+      "The maximum weight of the vehicle without the load it is carrying.",
+      "The actual weight of the vehicle at any given time, including load, crew and passengers."
+    ],
     "correctIndex": 2,
     "explanation": "Το μικτό βάρος είναι δυναμικό μέγεθος: αναφέρεται στο πραγματικό, στιγμιαίο βάρος του οχήματος μαζί με φορτίο, πλήρωμα και επιβάτες, σε αντίθεση με το απόβαρο που είναι σταθερό.",
+    "explanationEn": "Gross weight is a dynamic quantity: it refers to the actual, instantaneous weight of the vehicle together with its load, crew and passengers, as opposed to the unladen (tare) weight, which is fixed.",
     "explanationVerified": false
   },
   {
     "id": "bus-1036",
     "category": "Διαστάσεις",
     "question": "Σύμφωνα με τη νομοθεσία το ωφέλιμο φορτίο του λεωφορείου προκύπτει από:",
+    "questionEn": "According to legislation, the payload of a bus results from:",
     "image": null,
     "answers": [
       "Το μέγιστο επιτρεπόμενο βάρος, όταν αφαιρέσομε το απόβαρο.",
       "Το άθροισμα του απόβαρου και του φορτίου.",
       "Το μικτό φορτίο, όταν αφαιρέσομε το φορτίο."
     ],
+    "answersEn": [
+      "The maximum permitted weight, when we subtract the unladen weight.",
+      "The sum of the unladen weight and the load.",
+      "The gross load, when we subtract the load."
+    ],
     "correctIndex": 0,
     "explanation": "Το ωφέλιμο φορτίο προκύπτει αφαιρώντας από το μέγιστο επιτρεπόμενο (μικτό) βάρος το ίδιο βάρος του οχήματος (απόβαρο), δηλαδή είναι το περιθώριο φορτίου που απομένει.",
+    "explanationEn": "Payload results from subtracting the vehicle's own weight (unladen/tare weight) from the maximum permitted (gross) weight, i.e. it is the remaining load margin.",
     "explanationVerified": false
   },
   {
     "id": "bus-1037",
     "category": "Διαστάσεις",
     "question": "Η μέγιστη επιτρεπόμενη φόρτιση του οδοστρώματος από ένα διευθυντήριο άξονα (κινητήριο ή όχι) για εθνικές μεταφορές είναι:",
+    "questionEn": "The maximum permitted load on the road surface from a steering axle (driven or not) for domestic transport is:",
     "image": null,
     "answers": [
       "7.500 kg.",
       "8.000 kg.",
       "7.000 kg."
     ],
+    "answersEn": [
+      "7,500 kg.",
+      "8,000 kg.",
+      "7,000 kg."
+    ],
     "correctIndex": 2,
     "explanation": "Το όριο αυτό για τον διευθυντήριο άξονα είναι χαμηλότερο από ό,τι για άλλους άξονες, ώστε να προστατεύεται το οδόστρωμα και να διατηρείται η ικανότητα διεύθυνσης του οχήματος.",
+    "explanationEn": "This limit for the steering axle is lower than for other axles, in order to protect the road surface and preserve the vehicle's steering capability.",
     "explanationVerified": false
   },
   {
     "id": "bus-1038",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο όριο του μικτού βάρους ενός διαξονικού λεωφορείου, για εθνικές μεταφορές, είναι:",
+    "questionEn": "The maximum limit of the gross weight of a two-axle bus, for domestic transport, is:",
     "image": null,
     "answers": [
       "16.000 kg.",
       "19.000 kg.",
       "20.000 kg."
     ],
+    "answersEn": [
+      "16,000 kg.",
+      "19,000 kg.",
+      "20,000 kg."
+    ],
     "correctIndex": 1,
     "explanation": "Το ανώτατο μικτό βάρος ενός διαξονικού λεωφορείου καθορίζεται ώστε το συνολικό φορτίο να κατανέμεται με ασφάλεια στους δύο άξονες χωρίς υπέρβαση της αντοχής τους.",
+    "explanationEn": "The maximum gross weight of a two-axle bus is set so that the total load is safely distributed across the two axles without exceeding their capacity.",
     "explanationVerified": false
   },
   {
     "id": "bus-1039",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο όριο του μικτού βάρους ενός τριαξονικού λεωφορείου, για εθνικές μεταφορές, είναι:",
+    "questionEn": "The maximum limit of the gross weight of a three-axle bus, for domestic transport, is:",
     "image": null,
     "answers": [
       "24.000 kg.",
       "26.000 kg.",
       "28.000 kg."
     ],
+    "answersEn": [
+      "24,000 kg.",
+      "26,000 kg.",
+      "28,000 kg."
+    ],
     "correctIndex": 1,
     "explanation": "Η ύπαρξη τρίτου άξονα επιτρέπει μεγαλύτερο συνολικό επιτρεπόμενο βάρος σε σχέση με το διαξονικό, αφού το φορτίο κατανέμεται σε περισσότερα σημεία στήριξης.",
+    "explanationEn": "The presence of a third axle allows a higher total permitted weight compared to a two-axle bus, since the load is distributed over more support points.",
     "explanationVerified": false
   },
   {
     "id": "bus-1040",
     "category": "Διαστάσεις",
     "question": "Σύμφωνα με τις ισχύουσες διατάξεις το μέγιστο πλάτος λεωφορείου, για διεθνείς μεταφορές, είναι:",
+    "questionEn": "According to the regulations in force, the maximum width of a bus, for international transport, is:",
     "image": null,
     "answers": [
       "2,50 m.",
       "2,55 m.",
       "2,60 m."
     ],
+    "answersEn": [
+      "2.50 m.",
+      "2.55 m.",
+      "2.60 m."
+    ],
     "correctIndex": 1,
     "explanation": "Το όριο πλάτους των 2,55 m εξασφαλίζει ότι το λεωφορείο χωράει με ασφάλεια στις λωρίδες κυκλοφορίας του οδικού δικτύου.",
+    "explanationEn": "The width limit of 2.55 m ensures that the bus fits safely within the traffic lanes of the road network.",
     "explanationVerified": false
   },
   {
     "id": "bus-1041",
     "category": "Διαστάσεις",
     "question": "Σύμφωνα με τις ισχύουσες διατάξεις το μέγιστο ύψος λεωφορείου, για εθνικές ή διεθνείς μεταφορές, είναι:",
+    "questionEn": "According to the regulations in force, the maximum height of a bus, for domestic or international transport, is:",
     "image": null,
     "answers": [
       "3,80 m.",
       "4,00 m.",
       "4,20 m."
     ],
+    "answersEn": [
+      "3.80 m.",
+      "4.00 m.",
+      "4.20 m."
+    ],
     "correctIndex": 1,
     "explanation": "Το ανώτατο ύψος καθορίζεται ώστε το όχημα να διέρχεται με ασφάλεια κάτω από γέφυρες, σήραγγες και άλλες υπερυψωμένες κατασκευές του οδικού δικτύου.",
+    "explanationEn": "The maximum height is set so that the vehicle can safely pass under bridges, tunnels and other elevated structures of the road network.",
     "explanationVerified": false
   },
   {
     "id": "bus-1042",
     "category": "Διαστάσεις",
     "question": "Σύμφωνα με τις ισχύουσες διατάξεις το ελάχιστο ύψος υπερυψωμένου λεωφορείου πρέπει να υπερβαίνει:",
+    "questionEn": "According to the regulations in force, the minimum height of a high-floor (elevated) bus must exceed:",
     "image": null,
     "answers": [
       "Τα 3 m.",
       "Τα 3,20 m.",
       "Τα 3,50 m."
     ],
+    "answersEn": [
+      "3 m.",
+      "3.20 m.",
+      "3.50 m."
+    ],
     "correctIndex": 1,
     "explanation": "Ένα λεωφορείο χαρακτηρίζεται «υπερυψωμένο» μόνο όταν ξεπερνά το καθορισμένο ελάχιστο ύψος, όριο που το διαφοροποιεί από τα συνήθη λεωφορεία.",
+    "explanationEn": "A bus is classified as 'high-floor/elevated' only when it exceeds the specified minimum height, a threshold that distinguishes it from ordinary buses.",
     "explanationVerified": false
   },
   {
     "id": "bus-1043",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο επιτρεπόμενο βάρος ενός διαξονικού λεωφορείου που εκτελεί διεθνείς μεταφορές, είναι:",
+    "questionEn": "The maximum permitted weight of a two-axle bus carrying out international transport is:",
     "image": null,
     "answers": [
       "16.000 kg.",
       "18.000 kg.",
       "19.000 kg."
     ],
+    "answersEn": [
+      "16,000 kg.",
+      "18,000 kg.",
+      "19,000 kg."
+    ],
     "correctIndex": 1,
     "explanation": "Για τις διεθνείς μεταφορές ισχύει διαφορετικό όριο μικτού βάρους απ' ό,τι για τις εθνικές, σύμφωνα με τους σχετικούς κανονισμούς μεταφορών.",
+    "explanationEn": "A different gross weight limit applies to international transport than to domestic transport, according to the relevant transport regulations.",
     "explanationVerified": false
   },
   {
     "id": "bus-1044",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο βάρος ενός τριαξονικού λεωφορείου με μηχανική ανάρτηση που εκτελεί διεθνείς μεταφορές, είναι:",
+    "questionEn": "The maximum weight of a three-axle bus with mechanical suspension carrying out international transport is:",
     "image": null,
     "answers": [
       "25.000 kg.",
       "26.000 kg.",
       "28.000 kg."
     ],
+    "answersEn": [
+      "25,000 kg.",
+      "26,000 kg.",
+      "28,000 kg."
+    ],
     "correctIndex": 0,
     "explanation": "Τα οχήματα με απλή μηχανική ανάρτηση καταπονούν περισσότερο το οδόστρωμα από αυτά με αερανάρτηση, γι' αυτό τους επιβάλλεται χαμηλότερο ανώτατο βάρος.",
+    "explanationEn": "Vehicles with simple mechanical suspension put more strain on the road surface than those with air suspension, which is why they are subject to a lower maximum weight.",
     "explanationVerified": false
   },
   {
     "id": "bus-1045",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο βάρος ενός τριαξονικού αρθρωτού λεωφορείου που εκτελεί εθνικές μεταφορές, είναι:",
+    "questionEn": "The maximum weight of a three-axle articulated bus carrying out domestic transport is:",
     "image": null,
     "answers": [
       "28.000 kg.",
       "29.000 kg.",
       "32.000 kg."
     ],
+    "answersEn": [
+      "28,000 kg.",
+      "29,000 kg.",
+      "32,000 kg."
+    ],
     "correctIndex": 1,
     "explanation": "Το αρθρωτό λεωφορείο, έχοντας μεγαλύτερο μήκος και χωρητικότητα επιβατών, επιτρέπεται να έχει υψηλότερο μικτό βάρος στις εθνικές μεταφορές σε σχέση με ένα απλό τριαξονικό.",
+    "explanationEn": "An articulated bus, having greater length and passenger capacity, is allowed a higher gross weight for domestic transport compared to a simple three-axle bus.",
     "explanationVerified": false
   },
   {
     "id": "bus-1046",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο βάρος ενός τριαξονικού αρθρωτού λεωφορείου που εκτελεί διεθνείς μεταφορές, είναι:",
+    "questionEn": "The maximum weight of a three-axle articulated bus carrying out international transport is:",
     "image": null,
     "answers": [
       "28.000 kg.",
       "29.000 kg.",
       "32.000 kg."
     ],
+    "answersEn": [
+      "28,000 kg.",
+      "29,000 kg.",
+      "32,000 kg."
+    ],
     "correctIndex": 0,
     "explanation": "Στις διεθνείς μεταφορές το όριο βάρους του αρθρωτού λεωφορείου είναι ελαφρώς χαμηλότερο απ' ό,τι στις εθνικές, σύμφωνα με τους αντίστοιχους κανονισμούς.",
+    "explanationEn": "For international transport, the weight limit of the articulated bus is slightly lower than for domestic transport, according to the corresponding regulations.",
     "explanationVerified": false
   },
   {
     "id": "bus-1047",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο επιτρεπόμενο βάρος ενός απλού άξονα μη διευθυντήριου και μη κινητήριου σε λεωφορείο είναι:",
+    "questionEn": "The maximum permitted weight of a single non-steering, non-driven axle on a bus is:",
     "image": null,
     "answers": [
       "10.000 kg.",
       "11.500 kg.",
       "13.000 kg."
     ],
+    "answersEn": [
+      "10,000 kg.",
+      "11,500 kg.",
+      "13,000 kg."
+    ],
     "correctIndex": 0,
     "explanation": "Ένας απλός άξονας χωρίς διευθυντήρια ή κινητήρια λειτουργία φέρει καθαρά στατικό φορτίο, γι' αυτό έχει το δικό του καθορισμένο ανώτατο όριο φόρτισης.",
+    "explanationEn": "A simple axle with no steering or driving function carries a purely static load, which is why it has its own specified maximum loading limit.",
     "explanationVerified": false
   },
   {
     "id": "bus-1048",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο βάρος ενός τριαξονικού λεωφορείου, που εκτελεί διεθνείς μεταφορές και του οποίου κάθε κινητήριος άξονας είναι εξοπλισμένος με διπλά ελαστικά και το μέγιστο βάρος σε κάθε άξονα δεν υπερβαίνει τα 9.500 kg, είναι:",
+    "questionEn": "The maximum weight of a three-axle bus carrying out international transport, in which every driven axle is fitted with twin tyres and the maximum weight on each axle does not exceed 9,500 kg, is:",
     "image": null,
     "answers": [
       "25.000 kg.",
       "26.000 kg.",
       "28.000 kg."
     ],
+    "answersEn": [
+      "25,000 kg.",
+      "26,000 kg.",
+      "28,000 kg."
+    ],
     "correctIndex": 1,
     "explanation": "Όταν οι κινητήριοι άξονες διαθέτουν διπλά ελαστικά και το βάρος ανά άξονα δεν ξεπερνά τα 9.500 kg, η καλύτερη κατανομή φορτίου επιτρέπει υψηλότερο συνολικό μικτό βάρος στις διεθνείς μεταφορές.",
+    "explanationEn": "When the driven axles have twin tyres and the weight per axle does not exceed 9,500 kg, the better load distribution allows a higher total gross weight for international transport.",
     "explanationVerified": false
   },
   {
     "id": "bus-1049",
     "category": "Διαστάσεις",
     "question": "Η μέγιστη επιτρεπόμενη φόρτιση του οδοστρώματος από ένα ζεύγος μη διευθυντηρίων αξόνων με απόσταση μεταξύ τους μεγαλύτερη από ένα (1) μέτρο και μικρότερη ή ίση με δύο (2) μέτρα, για εθνικές μεταφορές, είναι:",
+    "questionEn": "The maximum permitted load on the road surface from a pair of non-steering axles with a distance between them greater than one (1) metre and less than or equal to two (2) metres, for domestic transport, is:",
     "image": null,
     "answers": [
       "17.000 kg.",
       "20.000 kg.",
       "22.000 kg."
     ],
+    "answersEn": [
+      "17,000 kg.",
+      "20,000 kg.",
+      "22,000 kg."
+    ],
     "correctIndex": 1,
     "explanation": "Όταν δύο άξονες βρίσκονται αρκετά κοντά ώστε να λειτουργούν σχεδόν σαν ενιαία μονάδα φόρτισης, τίθεται ένα συνδυαστικό ανώτατο όριο για το ζεύγος.",
+    "explanationEn": "When two axles are close enough together to function almost as a single loading unit, a combined maximum limit is set for the pair.",
     "explanationVerified": false
   },
   {
     "id": "bus-1050",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο επιτρεπόμενο βάρος του κινητήριου άξονα ενός διαξονικού λεωφορείου, που εκτελεί εθνικές μεταφορές, είναι:",
+    "questionEn": "The maximum permitted weight of the driven axle of a two-axle bus carrying out domestic transport is:",
     "image": null,
     "answers": [
       "11.500 kg.",
       "12.000 kg.",
       "13.000 kg."
     ],
+    "answersEn": [
+      "11,500 kg.",
+      "12,000 kg.",
+      "13,000 kg."
+    ],
     "correctIndex": 2,
     "explanation": "Ο κινητήριος άξονας δέχεται μεγαλύτερο φορτίο από τον μη κινητήριο λόγω της θέσης του κινητήρα και του συστήματος μετάδοσης, γι' αυτό του επιτρέπεται υψηλότερο όριο βάρους στις εθνικές μεταφορές.",
+    "explanationEn": "The driven axle bears a greater load than the non-driven one, due to the position of the engine and the transmission system, which is why it is allowed a higher weight limit for domestic transport.",
     "explanationVerified": false
   },
   {
     "id": "bus-1051",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο επιτρεπόμενο βάρος του κινητήριου άξονα ενός διαξονικού λεωφορείου, που εκτελεί διεθνείς μεταφορές, είναι:",
+    "questionEn": "The maximum permitted weight of the driven axle of a two-axle bus carrying out international transport is:",
     "image": null,
     "answers": [
       "12.000 kg.",
       "11.500 kg.",
       "13.000 kg."
     ],
+    "answersEn": [
+      "12,000 kg.",
+      "11,500 kg.",
+      "13,000 kg."
+    ],
     "correctIndex": 1,
     "explanation": "Στις διεθνείς μεταφορές το επιτρεπόμενο βάρος του κινητήριου άξονα είναι χαμηλότερο απ' ό,τι στις εθνικές, σύμφωνα με τους αντίστοιχους διεθνείς κανονισμούς φόρτισης αξόνων.",
+    "explanationEn": "For international transport, the permitted weight of the driven axle is lower than for domestic transport, according to the corresponding international axle-load regulations.",
     "explanationVerified": false
   },
   {
     "id": "bus-1052",
     "category": "Οδήγηση",
     "question": "Όταν ένα σχολικό λεωφορείο σταματήσει για την επιβίβαση ή αποβίβαση μαθητών, με ποια βασική ενέργεια ενημερώνονται οι οδηγοί των άλλων οχημάτων:",
+    "questionEn": "When a school bus stops to pick up or drop off students, what basic action informs the drivers of other vehicles:",
     "image": null,
     "answers": [
       "Με αναμμένο το δεξί φλας.",
       "Με αναμμένα τα φώτα έκτακτης ανάγκης (αλάρμ)."
     ],
+    "answersEn": [
+      "By having the right indicator (flasher) on.",
+      "By having the hazard warning lights on."
+    ],
     "correctIndex": 1,
     "explanation": "Τα φώτα έκτακτης ανάγκης είναι ορατά από όλες τις πλευρές και προειδοποιούν έγκαιρα τους άλλους οδηγούς ότι το σχολικό λεωφορείο είναι σταματημένο για επιβίβαση ή αποβίβαση μαθητών, κάτι που το απλό φλας δεν καλύπτει.",
+    "explanationEn": "The hazard warning lights are visible from all sides and warn other drivers in good time that the school bus is stopped for students to board or alight, which a simple indicator does not cover.",
     "explanationVerified": false
   },
   {
     "id": "bus-1053",
     "category": "Οδήγηση",
     "question": "Αν ένα σχολικό λεωφορείο κινείται σε οδόστρωμα με δύο λωρίδες κυκλοφορίας και έχει σταματήσει για την επιβίβαση ή αποβίβαση μαθητών, τι πρέπει να κάνουν οι οδηγοί των κινουμένων στην ίδια κατεύθυνση οχημάτων:",
+    "questionEn": "If a school bus is traveling on a roadway with two traffic lanes and has stopped to pick up or drop off students, what must the drivers of vehicles traveling in the same direction do:",
     "image": null,
     "answers": [
       "Να μειώσουν ταχύτητα και να προσπεράσουν με προσοχή το σχολικό λεωφορείο.",
       "Να κινούνται με ταχύτητα μέχρι το ανώτερο όριο (50 km/h) και να προσπεράσουν το σχολικό λεωφορείο με προσοχή.",
       "Να σταματήσουν και να περιμένουν να επιβιβασθούν ή να αποβιβασθούν όλοι οι μαθητές και, αφού ξεκινήσει το σχολικό λεωφορείο, να συνεχίσουν την πορεία τους."
     ],
+    "answersEn": [
+      "Reduce speed and overtake the school bus carefully.",
+      "Continue at a speed up to the maximum limit (50 km/h) and overtake the school bus carefully.",
+      "Stop and wait for all students to board or alight, and only continue once the school bus has set off again."
+    ],
     "correctIndex": 2,
     "explanation": "Οι μαθητές είναι ιδιαίτερα ευάλωτοι πεζοί κοντά στο σχολικό λεωφορείο, γι' αυτό τα υπόλοιπα οχήματα πρέπει να σταματούν και να περιμένουν να ολοκληρωθεί η επιβίβαση ή αποβίβαση, αντί να προσπερνούν.",
+    "explanationEn": "Students are particularly vulnerable pedestrians near the school bus, which is why other vehicles must stop and wait for boarding or alighting to finish, instead of overtaking.",
     "explanationVerified": false
   },
   {
     "id": "bus-1054",
     "category": "Οδήγηση",
     "question": "Για την αποφυγή ενοχλητικών θορύβων κατά την κυκλοφορία πρέπει μεταξύ των άλλων:",
+    "questionEn": "To avoid annoying noise while driving, among other things you should:",
     "image": null,
     "answers": [
       "Να αποφεύγετε τα απότομα φρεναρίσματα, εάν δεν είναι απολύτως απαραίτητα.",
       "Να χρησιμοποιείτε το ακουστικό σήμα (κόρνα) ως προειδοποίηση μόνο στην περίπτωση μακριάς αναμονής.",
       "Να χρησιμοποιείτε την κόρνα για να ειδοποιήσετε έναν άλλο οδηγό, μόνο εάν έπραξε ένα σφάλμα σε βάρος σας."
     ],
+    "answersEn": [
+      "Avoid sudden braking unless absolutely necessary.",
+      "Use the horn as a warning only in the case of a long wait.",
+      "Use the horn to alert another driver only if they have made an error at your expense."
+    ],
     "correctIndex": 0,
     "explanation": "Τα απότομα φρεναρίσματα προκαλούν έντονο θόρυβο, ενώ η κόρνα προορίζεται μόνο για προειδοποίηση κινδύνου και όχι για τακτική χρήση.",
+    "explanationEn": "Sudden braking causes loud noise, while the horn is intended only as a danger warning and not for routine use.",
     "explanationVerified": false
   },
   {
     "id": "bus-1055",
     "category": "Οδήγηση",
     "question": "Η πρόσφυση των τροχών επάνω στο οδόστρωμα μειώνεται από:",
+    "questionEn": "Tyre grip on the road surface is reduced by:",
     "image": null,
     "answers": [
       "Την ύπαρξη λαδιού ή νερού στο οδόστρωμα.",
       "Τη χρήση μικρής σχέσεως μεταδόσεως στο κιβώτιο.",
       "Τη συχνή χρήση των φρένων."
     ],
+    "answersEn": [
+      "The presence of oil or water on the road surface.",
+      "Using a low gear ratio in the gearbox.",
+      "Frequent use of the brakes."
+    ],
     "correctIndex": 0,
     "explanation": "Το λάδι ή το νερό στο οδόστρωμα μειώνουν την τριβή μεταξύ ελαστικού και δρόμου, μειώνοντας έτσι την πρόσφυση.",
+    "explanationEn": "Oil or water on the road surface reduce the friction between the tyre and the road, thereby reducing grip.",
     "explanationVerified": false
   },
   {
     "id": "bus-1056",
     "category": "Οδήγηση",
     "question": "Η πρόσφυση των τροχών επάνω στο δρόμο μειώνεται από:",
+    "questionEn": "Tyre grip on the road is reduced by:",
     "image": null,
     "answers": [
       "Την παρουσία φύλλων επάνω στο οδόστρωμα.",
       "Τον αυξημένο αριθμό στροφών του κινητήρα.",
       "Τη χαμηλή ταχύτητα του οχήματος."
     ],
+    "answersEn": [
+      "The presence of leaves on the road surface.",
+      "A higher engine RPM.",
+      "The vehicle's low speed."
+    ],
     "correctIndex": 0,
     "explanation": "Τα φύλλα δημιουργούν ένα λείο, ολισθηρό στρώμα ανάμεσα στο ελαστικό και το οδόστρωμα, μειώνοντας την πρόσφυση.",
+    "explanationEn": "Leaves create a smooth, slippery layer between the tyre and the road surface, reducing grip.",
     "explanationVerified": false
   },
   {
     "id": "bus-1057",
     "category": "Οδήγηση",
     "question": "Το φαινόμενο της υδρολισθήσεως έχει ως αποτέλεσμα:",
+    "questionEn": "The phenomenon of aquaplaning (hydroplaning) results in:",
     "image": null,
     "answers": [
       "Τη φθορά των ελαστικών.",
       "Την απώλεια του ελέγχου του συστήματος διευθύνσεως.",
       "Τη μείωση της ιπποδυνάμεως του κινητήρα."
     ],
+    "answersEn": [
+      "Wear of the tyres.",
+      "Loss of control of the steering system.",
+      "Reduced engine horsepower."
+    ],
     "correctIndex": 1,
     "explanation": "Στην υδρολίσθηση δημιουργείται στρώμα νερού ανάμεσα στο ελαστικό και το οδόστρωμα, με αποτέλεσμα οι τροχοί να χάνουν την επαφή τους και ο οδηγός να χάνει τον έλεγχο του τιμονιού.",
+    "explanationEn": "In aquaplaning a layer of water forms between the tyre and the road surface, causing the wheels to lose contact and the driver to lose control of the steering.",
     "explanationVerified": false
   },
   {
     "id": "bus-1058",
     "category": "Οδήγηση",
     "question": "Έξω από τα αστικά κέντρα οι οδηγοί πρέπει να σβήνουν τα φώτα πορείας και να χρησιμοποιούν τα φώτα διασταυρώσεως ή ομίχλης:",
+    "questionEn": "Outside urban centres, drivers must switch off their main-beam (driving) lights and use dipped-beam or fog lights:",
     "image": null,
     "answers": [
       "Εάν υπάρχει κίνδυνος να θαμπώνουν τους οδηγούς των άλλων οχημάτων, που έρχονται από την αντίθετη κατεύθυνση.",
       "Μισή ώρα πριν από την ανατολή του ηλίου.",
       "Όταν κατά την πορεία δεν τηρούν την απόσταση ασφαλείας."
     ],
+    "answersEn": [
+      "If there is a risk of dazzling drivers of other vehicles coming from the opposite direction.",
+      "Half an hour before sunrise.",
+      "When, while driving, they do not maintain a safe following distance."
+    ],
     "correctIndex": 0,
     "explanation": "Ο κύριος λόγος αλλαγής από τα φώτα πορείας στα φώτα διασταύρωσης ή ομίχλης είναι η αποφυγή θάμβωσης των αντιθέτως ερχόμενων οδηγών.",
+    "explanationEn": "The main reason for switching from main-beam to dipped-beam or fog lights is to avoid dazzling oncoming drivers.",
     "explanationVerified": false
   },
   {
     "id": "bus-1059",
     "category": "Οδήγηση",
     "question": "Η ελάχιστη συνολική απόσταση ακινητοποιήσεως ενός οχήματος:",
+    "questionEn": "The minimum total stopping distance of a vehicle:",
     "image": null,
     "answers": [
       "Δεν εξαρτάται από την κατάσταση των ελαστικών.",
       "Μικραίνει, εάν το πέλμα των ελαστικών είναι φθαρμένο.",
       "Μικραίνει, εάν αυξηθεί η ετοιμότητα του οδηγού."
     ],
+    "answersEn": [
+      "Does not depend on the condition of the tyres.",
+      "Decreases if the tyre tread is worn.",
+      "Decreases if the driver's alertness increases."
+    ],
     "correctIndex": 2,
     "explanation": "Η συνολική απόσταση ακινητοποίησης περιλαμβάνει το χρόνο αντίδρασης του οδηγού· όσο πιο σε εγρήγορση είναι, τόσο μικρότερος ο χρόνος αντίδρασης και άρα μικρότερη η συνολική απόσταση.",
+    "explanationEn": "The total stopping distance includes the driver's reaction time; the more alert they are, the shorter the reaction time and therefore the shorter the total stopping distance.",
     "explanationVerified": false
   },
   {
     "id": "bus-1060",
     "category": "Οδήγηση",
     "question": "Η επιβράδυνση, που επιτυγχάνεται σε ένα όχημα στο δρόμο κατά την πέδηση, επηρεάζεται από:",
+    "questionEn": "The deceleration achieved by a vehicle on the road while braking is affected by:",
     "image": null,
     "answers": [
       "Το είδος και την κατάσταση του οδοστρώματος.",
       "Την εξωτερική θερμοκρασία.",
       "Την ατμοσφαιρική πίεση."
     ],
+    "answersEn": [
+      "The type and condition of the road surface.",
+      "The outside temperature.",
+      "Atmospheric pressure."
+    ],
     "correctIndex": 0,
     "explanation": "Η επιβράδυνση κατά την πέδηση εξαρτάται κυρίως από το είδος και την κατάσταση του οδοστρώματος, αφού αυτό καθορίζει τη διαθέσιμη πρόσφυση.",
+    "explanationEn": "Deceleration during braking depends mainly on the type and condition of the road surface, since this determines the available grip.",
     "explanationVerified": false
   },
   {
     "id": "bus-1061",
     "category": "Οδήγηση",
     "question": "Κατά την πέδηση ενός οχήματος, με κανονικές συνθήκες, από τι κυρίως εξαρτάται η απόσταση πεδήσεως:",
+    "questionEn": "When braking a vehicle under normal conditions, what mainly determines the braking distance:",
     "image": null,
     "answers": [
       "Από την ταχύτητα με την οποία κινείται το όχημα.",
       "Από το είδος του συστήματος πεδήσεως.",
       "Από τη δύναμη, με την οποία πιέζεται τον ποδομοχλό των φρένων."
     ],
+    "answersEn": [
+      "The speed at which the vehicle is traveling.",
+      "The type of braking system.",
+      "The force with which the brake pedal is pressed."
+    ],
     "correctIndex": 0,
     "explanation": "Η απόσταση πέδησης αυξάνεται δραστικά με την ταχύτητα, γι' αυτό αυτή είναι ο κυριότερος παράγοντας που την καθορίζει.",
+    "explanationEn": "Braking distance increases drastically with speed, which is why it is the most important factor determining it.",
     "explanationVerified": false
   },
   {
     "id": "bus-1062",
     "category": "Οδήγηση",
     "question": "Όταν ένα όχημα πραγματοποιεί στροφή αριστερά, ποιος τροχός τρέχει περισσότερο:",
+    "questionEn": "When a vehicle makes a left turn, which wheel travels further:",
     "image": null,
     "answers": [
       "Ο αριστερός.",
       "Ο δεξιός.",
       "Και οι δύο το ίδιο."
     ],
+    "answersEn": [
+      "The left one.",
+      "The right one.",
+      "Both the same."
+    ],
     "correctIndex": 1,
     "explanation": "Σε στροφή αριστερά, ο δεξιός τροχός βρίσκεται στην εξωτερική πλευρά της καμπύλης και διαγράφει μεγαλύτερη τροχιά, άρα διανύει μεγαλύτερη απόσταση.",
+    "explanationEn": "In a left turn, the right wheel is on the outside of the curve and traces a larger arc, so it covers a greater distance.",
     "explanationVerified": false
   },
   {
     "id": "bus-1063",
     "category": "Οδήγηση",
     "question": "Όταν ένα αυτοκίνητο κινείται πάνω σε στροφή, ποιοι τροχοί διαγράφουν μεγαλύτερη τροχιά:",
+    "questionEn": "When a car is going around a bend, which wheels trace a larger arc:",
     "image": null,
     "answers": [
       "Οι εξωτερικοί τροχοί.",
       "Οι εσωτερικοί τροχοί.",
       "Οι οπίσθιοι τροχοί."
     ],
+    "answersEn": [
+      "The outer wheels.",
+      "The inner wheels.",
+      "The rear wheels."
+    ],
     "correctIndex": 0,
     "explanation": "Οι εξωτερικοί τροχοί βρίσκονται πιο μακριά από το κέντρο της καμπύλης, επομένως διαγράφουν μεγαλύτερη τροχιά από τους εσωτερικούς.",
+    "explanationEn": "The outer wheels are further from the centre of the curve, so they trace a larger arc than the inner wheels.",
     "explanationVerified": false
   },
   {
     "id": "bus-1064",
     "category": "Οδήγηση",
     "question": "Οι αντιολισθητικές αλυσίδες τοποθετούνται:",
+    "questionEn": "Anti-skid chains are fitted:",
     "image": null,
     "answers": [
       "Στους τροχούς του διευθυντήριου άξονα.",
       "Στον έναν τροχό του διευθυντήριου άξονα και στον αντιδιαμετρικό αυτού κινητήριο άξονα.",
       "Στους τροχούς του κινητήριου άξονα."
     ],
+    "answersEn": [
+      "On the wheels of the steering axle.",
+      "On one wheel of the steering axle and on the diagonally opposite wheel of the driven axle.",
+      "On the wheels of the driven axle."
+    ],
     "correctIndex": 2,
     "explanation": "Οι αλυσίδες τοποθετούνται στους κινητήριους τροχούς, διότι εκεί μεταδίδεται η κίνηση και απαιτείται πρόσφυση για να μην γλιστρούν.",
+    "explanationEn": "Chains are fitted on the driven wheels, because that is where motion is transmitted and grip is needed to prevent slipping.",
     "explanationVerified": false
   },
   {
     "id": "bus-1065",
     "category": "Οδήγηση",
     "question": "Εάν δεν υπάρχει σε όλους τους τροχούς η ίδια επενέργεια πεδήσεως, δημιουργείται κίνδυνος για την κυκλοφορία του οχήματος:",
+    "questionEn": "If braking action is not the same on all wheels, a danger is created for the vehicle's circulation:",
     "image": null,
     "answers": [
       "Μόνον όταν ο δρόμος έχει στροφές.",
       "Μόνον όταν ο δρόμος είναι ολισθηρός.",
       "Πάντοτε, γιατί σε περίπτωση πεδήσεως το όχημα παρεκκλίνει της οδού."
     ],
+    "answersEn": [
+      "Only when the road has bends.",
+      "Only when the road is slippery.",
+      "Always, because in the event of braking the vehicle will veer off course."
+    ],
     "correctIndex": 2,
     "explanation": "Ανομοιόμορφη πέδηση στους τροχούς προκαλεί ανισοκατανομή δυνάμεων, με αποτέλεσμα το όχημα να παρεκκλίνει της πορείας του σε κάθε περίπτωση, όχι μόνο σε στροφές ή ολισθηρό δρόμο.",
+    "explanationEn": "Uneven braking on the wheels causes an unequal distribution of forces, resulting in the vehicle veering off its path in every case, not only on bends or a slippery road.",
     "explanationVerified": false
   },
   {
     "id": "bus-1066",
     "category": "Οδήγηση",
     "question": "Γιατί δεν επιτρέπεται να κινείστε με σβησμένη τη μηχανή, ιδιαίτερα μάλιστα όταν το όχημά μας είναι εφοδιασμένο με αερόφρενα:",
+    "questionEn": "Why are you not allowed to drive with the engine switched off, especially when your vehicle is fitted with air brakes:",
     "image": null,
     "answers": [
       "Διότι το όχημα μένει ακυβέρνητο.",
       "Διότι από τη συνεχή χρήση του συστήματος πεδήσεως προκαλείτε γρήγορη φθορά στο συμπλέκτη.",
       "Διότι από τη συνεχή χρήση του συστήματος πεδήσεως υπάρχει κίνδυνος να μείνετε χωρίς φρένα."
     ],
+    "answersEn": [
+      "Because the vehicle becomes unsteerable.",
+      "Because continuous use of the braking system causes rapid wear of the clutch.",
+      "Because continuous use of the braking system risks leaving you without brakes."
+    ],
     "correctIndex": 2,
     "explanation": "Με σβηστή μηχανή δεν λειτουργεί ο αεροσυμπιεστής, οπότε η συνεχής χρήση των αεροφρένων αδειάζει σταδιακά τα αεροφυλάκια και υπάρχει κίνδυνος να μείνει το όχημα χωρίς φρένα.",
+    "explanationEn": "With the engine switched off the air compressor does not operate, so continuous use of the air brakes gradually empties the air reservoirs and there is a risk of being left without brakes.",
     "explanationVerified": false
   },
   {
     "id": "bus-1067",
     "category": "Οδήγηση",
     "question": "Πώς μπορείτε να περάσετε ασφαλέστερα ένα τμήμα δρόμου, που είναι ολισθηρό:",
+    "questionEn": "How can you most safely get through a stretch of road that is slippery:",
     "image": null,
     "answers": [
       "Επιταχύνοντας το αυτοκίνητο.",
       "Κινούμενοι με μικρή ταχύτητα και αποφεύγοντας το φρενάρισμα.",
       "Φρενάροντας συνεχώς το αυτοκίνητο."
     ],
+    "answersEn": [
+      "By accelerating the car.",
+      "By traveling at low speed and avoiding braking.",
+      "By braking the car continuously."
+    ],
     "correctIndex": 1,
     "explanation": "Σε ολισθηρό δρόμο η μικρή ταχύτητα και η αποφυγή απότομου φρεναρίσματος διατηρούν την πρόσφυση και τον έλεγχο του οχήματος.",
+    "explanationEn": "On a slippery road, low speed and avoiding sudden braking preserve grip and control of the vehicle.",
     "explanationVerified": false
   },
   {
     "id": "bus-1068",
     "category": "Οδήγηση",
     "question": "Μετά το πλύσιμο του αυτοκινήτου, διαπιστώνετε ότι κατά την πέδηση παρουσιάζεται ολίσθηση στις επιφάνειες τριβής. Τι πρέπει να κάνετε:",
+    "questionEn": "After washing the car, you notice that during braking there is slippage at the friction surfaces. What should you do:",
     "image": null,
     "answers": [
       "Να οδηγήσετε το αυτοκίνητο αμέσως στο ειδικό συνεργείο.",
       "Να πατήσετε επανειλημμένα και διαδοχικά τον ποδομοχλό πεδήσεως, οδηγώντας με μικρή ταχύτητα.",
       "Να χρησιμοποιήσετε αντί για το ποδόφρενο το χειρόφρενο."
     ],
+    "answersEn": [
+      "Drive the car immediately to a specialised garage.",
+      "Repeatedly and successively press the brake pedal while driving at low speed.",
+      "Use the handbrake instead of the footbrake."
+    ],
     "correctIndex": 1,
     "explanation": "Το νερό στις επιφάνειες τριβής μειώνει προσωρινά την αποτελεσματικότητα της πέδησης· το επανειλημμένο πάτημα του πεντάλ με μικρή ταχύτητα δημιουργεί τριβή που τις στεγνώνει.",
+    "explanationEn": "Water on the friction surfaces temporarily reduces braking effectiveness; repeatedly pressing the pedal at low speed creates friction that dries them out.",
     "explanationVerified": false
   },
   {
     "id": "bus-1069",
     "category": "Οδήγηση",
     "question": "Πότε έχετε καλύτερη πέδηση (μικρότερη διαδρομή πεδήσεως) του οχήματος:",
+    "questionEn": "When do you achieve better braking (a shorter braking distance) of the vehicle:",
     "image": null,
     "answers": [
       "Όταν πιέζετε με όλη τη δύναμη τον ποδομοχλό πεδήσεως.",
       "Όταν πιέζετε με τόση δύναμη τον ποδομοχλό ώστε ανάλογα με την κατάσταση του οδοστρώματος να μην ακινητοποιούνται (μπλοκάρονται) οι τροχοί.",
       "Όταν πιέζετε με δύναμη και αφήνετε διαδοχικά τον ποδομοχλό πεδήσεως."
     ],
+    "answersEn": [
+      "When you press the brake pedal with all your strength.",
+      "When you press the brake pedal with just enough force that, depending on the condition of the road surface, the wheels do not lock up.",
+      "When you press the brake pedal with force and release it repeatedly."
+    ],
     "correctIndex": 1,
     "explanation": "Ο τροχός που έχει μπλοκάρει πέδη λιγότερο αποτελεσματικά από έναν τροχό που περιστρέφεται στα όρια της πρόσφυσης, γι' αυτό η βέλτιστη πέδηση επιτυγχάνεται χωρίς μπλοκάρισμα.",
+    "explanationEn": "A locked wheel brakes less effectively than a wheel rotating at the limit of its grip, which is why optimal braking is achieved without locking the wheels.",
     "explanationVerified": false
   },
   {
     "id": "bus-1070",
     "category": "Οδήγηση",
     "question": "Σε αυτοκινητόδρομους και οδούς ταχείας κυκλοφορίας, με τρεις (3) ή περισσότερες λωρίδες κυκλοφορίας, τα λεωφορεία ή συνδυασμοί αυτών σε ποια ή ποιες λωρίδες επιτρέπεται να κινούνται:",
+    "questionEn": "On motorways and expressways with three (3) or more traffic lanes, in which lane or lanes are buses or combinations thereof allowed to travel:",
     "image": null,
     "answers": [
       "Στην πλησιέστερη προς το δεξιό άκρο του οδοστρώματος.",
       "Στις δύο πλησιέστερες προς το δεξιό άκρο του οδοστρώματος.",
       "Σε όλες, ανάλογα με τις συνθήκες κυκλοφορίας."
     ],
+    "answersEn": [
+      "In the lane nearest to the right-hand edge of the roadway.",
+      "In the two lanes nearest to the right-hand edge of the roadway.",
+      "In all of them, depending on traffic conditions."
+    ],
     "correctIndex": 1,
     "explanation": "Τα βαριά και αργά οχήματα, όπως τα λεωφορεία, οφείλουν να κινούνται στις λωρίδες πλησιέστερα στο δεξί άκρο, αφήνοντας τις αριστερές λωρίδες ελεύθερες για προσπέραση ταχύτερων οχημάτων.",
+    "explanationEn": "Heavy, slow vehicles such as buses must travel in the lanes closest to the right-hand edge, leaving the left-hand lanes free for faster vehicles to overtake.",
     "explanationVerified": false
   },
   {
     "id": "bus-1071",
     "category": "Οδήγηση",
     "question": "Σε οδούς με δύο (2) λωρίδες κυκλοφορίας ανά κατεύθυνση, τα λεωφορεία ή συνδυασμοί αυτών σε ποια ή ποιες λωρίδες επιτρέπεται να κινούνται:",
+    "questionEn": "On roads with two (2) traffic lanes per direction, in which lane or lanes are buses or combinations thereof allowed to travel:",
     "image": null,
     "answers": [
       "Μόνο στην πλησιέστερη προς το δεξιό άκρο του οδοστρώματος.",
       "Και στις δύο λωρίδες κυκλοφορίας.",
       "Στη δεξιά λωρίδα κυκλοφορίας και για ελάχιστο χρόνο και σε ειδικές περιπτώσεις (προσπέρασμα κλπ.) στην αριστερή."
     ],
+    "answersEn": [
+      "Only in the lane nearest to the right-hand edge of the roadway.",
+      "In both traffic lanes.",
+      "In the right-hand lane, and only briefly and in special cases (overtaking, etc.) in the left-hand lane."
+    ],
     "correctIndex": 2,
     "explanation": "Ο γενικός κανόνας επιβάλλει στα λεωφορεία να κινούνται στη δεξιά λωρίδα και να χρησιμοποιούν την αριστερή μόνο παροδικά, π.χ. για προσπέραση.",
+    "explanationEn": "The general rule requires buses to travel in the right-hand lane and to use the left-hand lane only temporarily, e.g. for overtaking.",
     "explanationVerified": false
   },
   {
     "id": "bus-1072",
     "category": "Ταχύτητα",
     "question": "Αν ένα αστικό ή υπεραστικό λεωφορείο μεταφέρει όρθιους επιβάτες, ποιο είναι το ανώτερο όριο ταχύτητας που επιτρέπεται να αναπτύσσει:",
+    "questionEn": "If an urban or intercity bus is carrying standing passengers, what is the maximum speed limit it is allowed to reach:",
     "image": null,
     "answers": [
+      "50 km/h.",
+      "60 km/h.",
+      "70 km/h."
+    ],
+    "answersEn": [
       "50 km/h.",
       "60 km/h.",
       "70 km/h."
     ],
     "correctIndex": 1,
     "explanation": "Όταν υπάρχουν όρθιοι επιβάτες, το όριο ταχύτητας μειώνεται σε σχέση με το κανονικό, ώστε να περιοριστεί ο κίνδυνος πτώσης τους σε απότομο φρενάρισμα ή στροφή.",
+    "explanationEn": "When there are standing passengers, the speed limit is reduced compared to normal, in order to limit the risk of them falling during sudden braking or a turn.",
     "explanationVerified": false
   },
   {
     "id": "bus-1073",
     "category": "Ταχύτητα",
     "question": "Ποιο το ανώτατο όριο ταχύτητας λεωφορείων με ελαφρό ρυμουλκούμενο, εκτός κατοικημένων περιοχών, αν αυτό δεν καθορίζεται με ειδικές πινακίδες:",
+    "questionEn": "What is the maximum speed limit for buses with a light trailer, outside built-up areas, if not otherwise specified by special signs:",
     "image": null,
     "answers": [
+      "70 km/h.",
+      "80 km/h.",
+      "90 km/h."
+    ],
+    "answersEn": [
       "70 km/h.",
       "80 km/h.",
       "90 km/h."
     ],
     "correctIndex": 1,
     "explanation": "Η ρυμούλκηση ρυμουλκούμενου επιβάλλει χαμηλότερο ανώτατο όριο ταχύτητας σε σχέση με μεμονωμένο λεωφορείο, λόγω της μειωμένης ευστάθειας του συνδυασμού.",
+    "explanationEn": "Towing a trailer imposes a lower maximum speed limit compared to a single bus, due to the reduced stability of the combination.",
     "explanationVerified": false
   },
   {
     "id": "bus-1074",
     "category": "Ταχύτητα",
     "question": "Ποιο είναι το ανώτατο επιτρεπόμενο όριο ταχύτητας των λεωφορείων μέσα σε κατοικημένες περιοχές, αν αυτό δεν καθορίζεται με ειδικές πινακίδες:",
+    "questionEn": "What is the maximum permitted speed limit for buses within built-up areas, if not otherwise specified by special signs:",
     "image": null,
     "answers": [
+      "50 km/h.",
+      "60 km/h.",
+      "70 km/h."
+    ],
+    "answersEn": [
       "50 km/h.",
       "60 km/h.",
       "70 km/h."
     ],
     "correctIndex": 0,
     "explanation": "Εντός κατοικημένων περιοχών, όπου η κυκλοφορία πεζών και η πυκνότητα διασταυρώσεων είναι μεγαλύτερη, το γενικό όριο ταχύτητας για τα λεωφορεία είναι χαμηλότερο.",
+    "explanationEn": "Within built-up areas, where pedestrian traffic and the density of intersections are greater, the general speed limit for buses is lower.",
     "explanationVerified": false
   },
   {
     "id": "bus-1075",
     "category": "Ταχύτητα",
     "question": "Ποιο είναι το ανώτατο επιτρεπόμενο όριο ταχύτητας των λεωφορείων, εκτός αυτοκινητοδρόμων, οδών ταχείας κυκλοφορίας και κατοικημένων περιοχών, αν αυτό δεν καθορίζεται με ειδικές πινακίδες:",
+    "questionEn": "What is the maximum permitted speed limit for buses, outside motorways, expressways and built-up areas, if not otherwise specified by special signs:",
     "image": null,
     "answers": [
+      "80 km/h.",
+      "90 km/h.",
+      "100 km/h."
+    ],
+    "answersEn": [
       "80 km/h.",
       "90 km/h.",
       "100 km/h."
     ],
     "correctIndex": 0,
     "explanation": "Σε συνήθεις υπεραστικές οδούς, χωρίς τα χαρακτηριστικά ασφαλείας ενός αυτοκινητόδρομου, το ανώτατο όριο ταχύτητας των λεωφορείων είναι χαμηλότερο από αυτό σε αυτοκινητόδρομο.",
+    "explanationEn": "On ordinary intercity roads, which lack the safety features of a motorway, the maximum speed limit for buses is lower than on a motorway.",
     "explanationVerified": false
   },
   {
     "id": "bus-1076",
     "category": "Ταχύτητα",
     "question": "Ποιο το ανώτατο επιτρεπόμενο όριο ταχύτητας των λεωφορείων σε οδούς ταχείας κυκλοφορίας, αν αυτό δεν καθορίζεται με ειδικές πινακίδες:",
+    "questionEn": "What is the maximum permitted speed limit for buses on expressways, if not otherwise specified by special signs:",
     "image": null,
     "answers": [
+      "80 km/h.",
+      "90 km/h.",
+      "100 km/h."
+    ],
+    "answersEn": [
       "80 km/h.",
       "90 km/h.",
       "100 km/h."
     ],
     "correctIndex": 1,
     "explanation": "Οι οδοί ταχείας κυκλοφορίας έχουν καλύτερα γεωμετρικά χαρακτηριστικά από τις συνήθεις οδούς, επιτρέποντας υψηλότερο όριο ταχύτητας για τα λεωφορεία.",
+    "explanationEn": "Expressways have better geometric characteristics than ordinary roads, allowing a higher speed limit for buses.",
     "explanationVerified": false
   },
   {
     "id": "bus-1077",
     "category": "Ταχύτητα",
     "question": "Ποιο είναι το ανώτατο όριο ταχύτητας λεωφορείων μεταφοράς μαθητών εκτός κατοικημένων περιοχών, αν αυτό δεν καθορίζεται με ειδικές πινακίδες:",
+    "questionEn": "What is the maximum speed limit for student transport buses outside built-up areas, if not otherwise specified by special signs:",
     "image": null,
     "answers": [
       "50 km/h.",
       "60 km/h.",
       "70 km/h."
     ],
+    "answersEn": [
+      "50 km/h.",
+      "60 km/h.",
+      "70 km/h."
+    ],
     "correctIndex": 1,
     "explanation": "Τα λεωφορεία μεταφοράς μαθητών έχουν χαμηλότερο όριο ταχύτητας λόγω της ευαισθησίας του μεταφερόμενου επιβατικού κοινού.",
+    "explanationEn": "Student transport buses have a lower speed limit due to the sensitivity of the passengers being carried.",
     "explanationVerified": false
   },
   {
     "id": "bus-1078",
     "category": "Ταχύτητα",
     "question": "Ποιο είναι το ανώτατο όριο ταχύτητας αρθρωτών λεωφορείων εκτός κατοικημένων περιοχών, αν αυτό δεν καθορίζεται διαφορετικά με ειδικές πινακίδες:",
+    "questionEn": "What is the maximum speed limit for articulated buses outside built-up areas, if not otherwise specified by special signs:",
     "image": null,
     "answers": [
+      "70 km/h.",
+      "80 km/h.",
+      "90 km/h."
+    ],
+    "answersEn": [
       "70 km/h.",
       "80 km/h.",
       "90 km/h."
     ],
     "correctIndex": 0,
     "explanation": "Τα αρθρωτά λεωφορεία, λόγω μεγαλύτερου μήκους και μειωμένης ευστάθειας στις στροφές, έχουν χαμηλότερο ανώτατο όριο ταχύτητας.",
+    "explanationEn": "Articulated buses, due to their greater length and reduced stability in bends, have a lower maximum speed limit.",
     "explanationVerified": false
   },
   {
     "id": "bus-1079",
     "category": "Κυρώσεις",
     "question": "Αν ο οδηγός εμπλακεί σε τροχαίο ατύχημα, και βρεθεί υπό την επήρεια αλκοόλ, η ασφαλιστική εταιρεία θα καλύψει κάθε ζημιά χωρίς καμιά απαίτηση απ' αυτόν:",
+    "questionEn": "If a driver is involved in a road accident and is found to be under the influence of alcohol, will the insurance company cover all damages without any claim against them:",
     "image": null,
     "answers": [
       "Όχι. Θα καταβάλει την αποζημίωση σε τρίτους, αλλά στη συνέχεια θα στραφεί εναντίον του.",
       "Ναι. Θα καταβάλει την αποζημίωση χωρίς καμιά επίπτωση σ' αυτόν."
     ],
+    "answersEn": [
+      "No. It will pay compensation to third parties, but will subsequently take action against them.",
+      "Yes. It will pay compensation without any consequence for them."
+    ],
     "correctIndex": 0,
     "explanation": "Η ασφαλιστική εταιρεία οφείλει να αποζημιώσει τους τρίτους ζημιωθέντες, αλλά επειδή η οδήγηση υπό την επήρεια αλκοόλ αποτελεί σοβαρή παράβαση εκ μέρους του οδηγού, στη συνέχεια έχει δικαίωμα αναγωγής εναντίον του για να ανακτήσει το ποσό.",
+    "explanationEn": "The insurance company must compensate the injured third parties, but because driving under the influence of alcohol is a serious offence on the driver's part, it subsequently has the right of recourse against them to recover the amount.",
     "explanationVerified": false
   },
   {
     "id": "bus-1080",
     "category": "Κυρώσεις",
     "question": "Τι διοικητικές ποινές προβλέπονται αν κάποιος οδηγεί όχημα κατά τη διάρκεια που του έχει αφαιρεθεί η άδεια οδηγήσεως:",
+    "questionEn": "What administrative penalties are provided for if someone drives a vehicle while their driving licence has been withdrawn:",
     "image": null,
     "answers": [
       "Στέρηση του δικαιώματος επαναχορηγήσεως για 3 έτη τουλάχιστον.",
       "Στέρηση του δικαιώματος επαναχορηγήσεως για 5 έτη τουλάχιστον.",
       "Στέρηση του δικαιώματος επαναχορηγήσεως για 10 έτη τουλάχιστον."
     ],
+    "answersEn": [
+      "Denial of the right to reissue for at least 3 years.",
+      "Denial of the right to reissue for at least 5 years.",
+      "Denial of the right to reissue for at least 10 years."
+    ],
     "correctIndex": 0,
     "explanation": "Η οδήγηση παρά την αφαίρεση της άδειας συνιστά ιδιαίτερα σοβαρή παράβαση, γι' αυτό επισύρει αυστηρότερη διοικητική ποινή σε σχέση με απλές τροχονομικές παραβάσεις, με μακρά στέρηση του δικαιώματος επαναχορήγησης.",
+    "explanationEn": "Driving despite the licence having been withdrawn constitutes a particularly serious offence, which is why it carries a stricter administrative penalty than ordinary traffic offences, with a long denial of the right to reissue.",
     "explanationVerified": false
   },
   {
     "id": "bus-1081",
     "category": "Κυρώσεις",
     "question": "Τι διοικητικές ποινές προβλέπονται, αν ένας οδηγός γίνεται υπαίτιος τροχαίου ατυχήματος με σοβαρό τραυματισμό:",
+    "questionEn": "What administrative penalties are provided for if a driver is found responsible for a road accident with serious injury:",
     "image": null,
     "answers": [
       "Αφαίρεση άδειας οδηγήσεως από 1 μήνα μέχρι 1 χρόνο.",
       "Αφαίρεση άδειας οδηγήσεως από 2 μήνες μέχρι 3 χρόνια.",
       "Αφαίρεση άδειας οδηγήσεως από 3 μήνες μέχρι 2 χρόνια."
     ],
+    "answersEn": [
+      "Licence withdrawal from 1 month to 1 year.",
+      "Licence withdrawal from 2 months to 3 years.",
+      "Licence withdrawal from 3 months to 2 years."
+    ],
     "correctIndex": 2,
     "explanation": "Η βαρύτητα του τραυματισμού που προκλήθηκε καθορίζει και τη διάρκεια αφαίρεσης της άδειας οδήγησης, η οποία είναι μεγαλύτερη από αυτή για απλές παραβάσεις αλλά μικρότερη από περιπτώσεις θανάτου.",
+    "explanationEn": "The severity of the injury caused also determines the length of the licence withdrawal, which is longer than for ordinary offences but shorter than for cases involving death.",
     "explanationVerified": false
   },
   {
     "id": "bus-1082",
     "category": "Κυρώσεις",
     "question": "Τι διοικητικές ποινές προβλέπονται, αν ένας οδηγός γίνεται υπαίτιος τροχαίου ατυχήματος με θάνατο:",
+    "questionEn": "What administrative penalties are provided for if a driver is found responsible for a fatal road accident:",
     "image": null,
     "answers": [
       "Αφαίρεση άδειας οδηγήσεως από 2 έως 3 χρόνια.",
       "Αφαίρεση άδειας οδηγήσεως από 2 έως 4 χρόνια.",
       "Αφαίρεση άδειας οδηγήσεως από 2 έως 5 χρόνια."
     ],
+    "answersEn": [
+      "Licence withdrawal from 2 to 3 years.",
+      "Licence withdrawal from 2 to 4 years.",
+      "Licence withdrawal from 2 to 5 years."
+    ],
     "correctIndex": 2,
     "explanation": "Η πρόκληση θανατηφόρου ατυχήματος είναι η βαρύτερη περίπτωση, γι' αυτό επιφέρει μεγαλύτερη διάρκεια αφαίρεσης άδειας σε σχέση με ατύχημα με απλό τραυματισμό.",
+    "explanationEn": "Causing a fatal accident is the most serious case, which is why it carries a longer licence withdrawal period than an accident with simple injury.",
     "explanationVerified": false
   },
   {
     "id": "bus-1083",
     "category": "Κυρώσεις",
     "question": "Τι ποινές προβλέπονται, αν κάποιος οδηγός, κατά το αλκοτέστ, βρεθεί για δεύτερη φορά εντός δύο ετών (υπότροπος) να έχει πάνω από 1,10 γραμμάρια ανά λίτρο αίματος, ανεξαρτήτως της περιεκτικότητας αλκοόλ στην πρώτη παράβαση:",
+    "questionEn": "What penalties are provided for if a driver, during a breathalyser test, is found for the second time within two years (repeat offender) to have more than 1.10 grams per litre of blood, regardless of the alcohol level in the first offence:",
     "image": null,
     "answers": [
       "Αφαίρεση άδειας οδηγήσεως για 5 χρόνια.",
       "Αφαίρεση άδειας οδηγήσεως για 3 χρόνια.",
       "Αφαίρεση άδειας οδηγήσεως για 2 χρόνια."
     ],
+    "answersEn": [
+      "Licence withdrawal for 5 years.",
+      "Licence withdrawal for 3 years.",
+      "Licence withdrawal for 2 years."
+    ],
     "correctIndex": 0,
     "explanation": "Η υποτροπή σε σοβαρή παράβαση αλκοόλ εντός σύντομου χρονικού διαστήματος αντιμετωπίζεται αυστηρότερα από την πρώτη παράβαση, με μεγαλύτερη διάρκεια αφαίρεσης της άδειας.",
+    "explanationEn": "A repeat occurrence of a serious alcohol offence within a short period of time is treated more strictly than the first offence, with a longer licence withdrawal period.",
     "explanationVerified": false
   },
   {
     "id": "bus-1084",
     "category": "Κυρώσεις",
     "question": "Τι διοικητικές ποινές προβλέπονται, αν κάποιος οδηγεί όχημα, κατά τη διάρκεια που του έχει αφαιρεθεί η άδεια οδηγήσεως και γίνει υπαίτιος τροχαίου ατυχήματος με σοβαρό τραυματισμό ή θάνατο:",
+    "questionEn": "What administrative penalties are provided for if someone drives a vehicle while their driving licence has been withdrawn and is found responsible for a road accident with serious injury or death:",
     "image": null,
     "answers": [
       "Στέρηση του δικαιώματος επαναχορηγήσεως για 10 έτη.",
       "Στέρηση του δικαιώματος επαναχορηγήσεως για 20 έτη.",
       "Μέχρι και την οριστική στέρηση του δικαιώματος επαναποκτήσεως άδειας οδηγήσεως."
     ],
+    "answersEn": [
+      "Denial of the right to reissue for 10 years.",
+      "Denial of the right to reissue for 20 years.",
+      "Up to and including permanent denial of the right to reacquire a driving licence."
+    ],
     "correctIndex": 2,
     "explanation": "Ο συνδυασμός οδήγησης χωρίς άδεια λόγω αφαίρεσης και πρόκλησης σοβαρού ατυχήματος αποτελεί τη βαρύτερη δυνατή περίπτωση, γι' αυτό μπορεί να οδηγήσει ακόμη και σε οριστική στέρηση του δικαιώματος απόκτησης άδειας.",
+    "explanationEn": "The combination of driving without a licence due to withdrawal and causing a serious accident constitutes the most severe possible case, which is why it can even lead to permanent denial of the right to acquire a licence.",
     "explanationVerified": false
   },
   {
     "id": "bus-1085",
     "category": "Μηχανολογία",
     "question": "Σε αυτοτελές όχημα με αερόφρενα, ο χρόνος πληρώσεως των αεροφυλακίων δεν πρέπει να είναι μεγαλύτερος από:",
+    "questionEn": "In a standalone vehicle with air brakes, the time to fill the air reservoirs must not be longer than:",
     "image": null,
     "answers": [
       "Τρία (3) λεπτά για αύξηση της πιέσεως από το 0 στο 65% της μέγιστης πιέσεως.",
       "Δεν υπάρχει όριο, αρκεί να γεμίσουν τα αεροφυλάκια.",
       "Δέκα (10) λεπτά για αύξηση της πιέσεως από το 0 στο 65% της μέγιστης πιέσεως."
     ],
+    "answersEn": [
+      "Three (3) minutes for the pressure to rise from 0 to 65% of maximum pressure.",
+      "There is no limit, as long as the air reservoirs fill up.",
+      "Ten (10) minutes for the pressure to rise from 0 to 65% of maximum pressure."
+    ],
     "correctIndex": 0,
     "explanation": "Ο χρόνος πλήρωσης των αεροφυλακίων είναι κρίσιμος για την ασφάλεια, γιατί όσο μικρότερος είναι τόσο πιο γρήγορα αποκτά το όχημα επαρκή πίεση αέρα για αποτελεσματική πέδηση.",
+    "explanationEn": "The filling time of the air reservoirs is critical for safety, because the shorter it is, the faster the vehicle acquires sufficient air pressure for effective braking.",
     "explanationVerified": false
   },
   {
     "id": "bus-1086",
     "category": "Μηχανολογία",
     "question": "Ποια είναι η λειτουργία του πρωτεύοντα άξονα στο κιβώτιο ταχυτήτων:",
+    "questionEn": "What is the function of the primary (input) shaft in the gearbox:",
     "image": null,
     "answers": [
       "Μέσω του συμπλέκτη λαμβάνει την κίνηση από τον κινητήρα.",
       "Μέσω του κεντρικού άξονα και των συνδέσμων, μεταδίδει την κίνηση στους κινητήριους τροχούς.",
       "Λαμβάνει την κίνηση από τον κεντρικό άξονα και τη μεταφέρει στο δευτερεύοντα."
     ],
+    "answersEn": [
+      "It receives motion from the engine through the clutch.",
+      "Through the central (propeller) shaft and joints, it transmits motion to the driven wheels.",
+      "It receives motion from the central shaft and transfers it to the secondary (output) shaft."
+    ],
     "correctIndex": 0,
     "explanation": "Ο πρωτεύων άξονας είναι ο πρώτος άξονας του κιβωτίου ταχυτήτων που συνδέεται με τον κινητήρα μέσω του συμπλέκτη και δέχεται απευθείας την κίνησή του.",
+    "explanationEn": "The primary (input) shaft is the first shaft of the gearbox, connected to the engine through the clutch, and it receives the engine's motion directly.",
     "explanationVerified": false
   },
   {
     "id": "bus-1087",
     "category": "Μηχανολογία",
     "question": "Σε στροφόμετρο λεωφορείου, που υπάρχουν χρωματισμένες κλίμακες με κίτρινο, πράσινο, κόκκινο χρώμα, σε ποια κλίμακα πρέπει να είναι ο δείκτης, για να έχετε καλή απόδοση του κινητήρα και περιορισμένη κατανάλωση καυσίμου:",
+    "questionEn": "On a bus tachometer that has coloured scales in yellow, green and red, on which scale should the needle be, in order to have good engine performance and limited fuel consumption:",
     "image": null,
     "answers": [
       "Στην κίτρινη.",
       "Στην πράσινη.",
       "Στην κόκκινη."
     ],
+    "answersEn": [
+      "On the yellow one.",
+      "On the green one.",
+      "On the red one."
+    ],
     "correctIndex": 1,
     "explanation": "Η πράσινη ζώνη του στροφόμετρου αντιστοιχεί στις στροφές λειτουργίας όπου ο κινητήρας αποδίδει καλύτερα με τη μικρότερη δυνατή κατανάλωση καυσίμου.",
+    "explanationEn": "The green zone of the tachometer corresponds to the operating RPM range where the engine performs best with the lowest possible fuel consumption.",
     "explanationVerified": false
   },
   {
     "id": "bus-1088",
     "category": "Μηχανολογία",
     "question": "Στο στροφόμετρο ορισμένων λεωφορείων υπάρχουν χρωματισμένες κλίμακες με κίτρινο, πράσινο, κόκκινο χρώμα. Σε ποια κλίμακα είναι ο δείκτης όταν έχετε υπερβολική κατανάλωση καυσίμου σε σχέση με την αποδιδόμενη ισχύ του κινητήρα:",
+    "questionEn": "On the tachometer of some buses there are coloured scales in yellow, green and red. On which scale is the needle when there is excessive fuel consumption relative to the engine's output power:",
     "image": null,
     "answers": [
       "Στην κίτρινη.",
       "Στην πράσινη.",
       "Στην κόκκινη."
     ],
+    "answersEn": [
+      "On the yellow one.",
+      "On the green one.",
+      "On the red one."
+    ],
     "correctIndex": 2,
     "explanation": "Η κόκκινη ζώνη δηλώνει υπερβολικά υψηλές στροφές, όπου ο κινητήρας καταναλώνει δυσανάλογα μεγάλη ποσότητα καυσίμου σε σχέση με την ισχύ που αποδίδει.",
+    "explanationEn": "The red zone indicates excessively high RPM, where the engine consumes a disproportionately large amount of fuel relative to the power it delivers.",
     "explanationVerified": false
   },
   {
     "id": "bus-1089",
     "category": "Μηχανολογία",
     "question": "Ποια είναι η λειτουργία του βοηθητικού άξονα στο κιβώτιο ταχυτήτων:",
+    "questionEn": "What is the function of the countershaft (layshaft) in the gearbox:",
     "image": null,
     "answers": [
       "Μέσω του συμπλέκτη λαμβάνει την κίνηση από τον κινητήρα.",
       "Μέσω του κεντρικού άξονα και των συνδέσμων μεταδίδει την κίνηση στους κινητήριους τροχούς.",
       "Λαμβάνει την κίνηση από τον πρωτεύοντα άξονα και τη μεταφέρει στο δευτερεύοντα."
     ],
+    "answersEn": [
+      "It receives motion from the engine through the clutch.",
+      "Through the central shaft and joints, it transmits motion to the driven wheels.",
+      "It receives motion from the primary shaft and transfers it to the secondary shaft."
+    ],
     "correctIndex": 2,
     "explanation": "Ο βοηθητικός (ενδιάμεσος) άξονας παραλαμβάνει την κίνηση από τον πρωτεύοντα άξονα και τη μεταβιβάζει στο δευτερεύοντα άξονα του κιβωτίου ταχυτήτων.",
+    "explanationEn": "The countershaft (intermediate shaft) receives motion from the primary shaft and transmits it to the secondary (output) shaft of the gearbox.",
     "explanationVerified": false
   },
   {
     "id": "bus-1090",
     "category": "Μηχανολογία",
     "question": "Το σύστημα αντιμπλοκαρίσματος των τροχών (ΑΒS):",
+    "questionEn": "The anti-lock braking system (ABS):",
     "image": null,
     "answers": [
       "Αποτρέπει το μπλοκάρισμα του διαφορικού στις στροφές.",
       "Αποτρέπει την ολίσθηση των τροχών κατά την επιτάχυνση.",
       "Αποτρέπει το μπλοκάρισμα των τροχών, όταν φρενάρετε (σε βρεγμένο δρόμο)."
     ],
+    "answersEn": [
+      "Prevents the differential from locking in bends.",
+      "Prevents the wheels from slipping during acceleration.",
+      "Prevents the wheels from locking up when you brake (on a wet road)."
+    ],
     "correctIndex": 2,
     "explanation": "Το ABS παρακολουθεί τη στροφική ταχύτητα κάθε τροχού και ρυθμίζει την πίεση πέδησης ώστε να αποτρέπει το μπλοκάρισμα, διατηρώντας τη διευθυντικότητα κατά το φρενάρισμα, ιδίως σε βρεγμένο δρόμο.",
+    "explanationEn": "ABS monitors the rotational speed of each wheel and regulates braking pressure to prevent locking, maintaining steerability during braking, especially on a wet road.",
     "explanationVerified": false
   },
   {
     "id": "bus-1091",
     "category": "Μηχανολογία",
     "question": "Σε ποιες περιοχές κυμαίνεται η μικρότερη επιτρεπόμενη πίεση πεπιεσμένου αέρα σε ένα πνευματικό σύστημα φρένων:",
+    "questionEn": "What is approximately the minimum permitted pressure of compressed air in a pneumatic braking system:",
     "image": null,
     "answers": [
       "Περίπου 5-6 bar.",
       "Περίπου 9-10 bar.",
       "Περίπου 14-15 bar."
     ],
+    "answersEn": [
+      "About 5-6 bar.",
+      "About 9-10 bar.",
+      "About 14-15 bar."
+    ],
     "correctIndex": 0,
     "explanation": "Η ελάχιστη αυτή πίεση λειτουργίας είναι απαραίτητη ώστε το πνευματικό σύστημα πέδησης να έχει επαρκή ισχύ για ασφαλές φρενάρισμα.",
+    "explanationEn": "This minimum operating pressure is necessary for the pneumatic braking system to have sufficient power for safe braking.",
     "explanationVerified": false
   },
   {
     "id": "bus-1092",
     "category": "Μηχανολογία",
     "question": "Σε ένα σύστημα αναρτήσεως με αέρα τι χρησιμεύει το κύκλωμα υψηλής πιέσεως:",
+    "questionEn": "In an air suspension system, what is the purpose of the high-pressure circuit:",
     "image": null,
     "answers": [
       "Παρέχει πρόσθετο αέρα και αυξάνει την πίεση στις αερόσουστες, όταν το αυτοκίνητο φορτώνεται, για να διατηρείται πάντα στο ίδιο επίπεδο.",
       "Διατηρεί πάντα σταθερή την πίεση στις αερόσουστες.",
       "Παρέχει αέρα στους σερβομηχανισμούς του οχήματος."
     ],
+    "answersEn": [
+      "It supplies additional air and increases the pressure in the air bellows when the vehicle is loaded, so that the level is always kept the same.",
+      "It always keeps the pressure in the air bellows constant.",
+      "It supplies air to the vehicle's servo mechanisms."
+    ],
     "correctIndex": 0,
     "explanation": "Το κύκλωμα υψηλής πίεσης προσθέτει αέρα στις αερόσουστες όταν αυξάνεται το φορτίο, ώστε το ύψος του αμαξώματος να παραμένει σταθερό ανεξάρτητα από τη φόρτιση.",
+    "explanationEn": "The high-pressure circuit adds air to the air bellows when the load increases, so that the body height remains constant regardless of loading.",
     "explanationVerified": false
   },
   {
     "id": "bus-1093",
     "category": "Μηχανολογία",
     "question": "Το μονοξείδιο του άνθρακα (CΟ) είναι ρύπος, που περιέχεται κυρίως στα προϊόντα καύσεως ενός:",
+    "questionEn": "Carbon monoxide (CO) is a pollutant found mainly in the combustion products of a:",
     "image": null,
     "answers": [
       "Πετρελαιοκίνητου αυτοκινήτου.",
       "Βενζινοκίνητου αυτοκινήτου.",
       "Ηλεκτροκίνητου αυτοκινήτου."
     ],
+    "answersEn": [
+      "Diesel-powered car.",
+      "Petrol-powered car.",
+      "Electric car."
+    ],
     "correctIndex": 1,
     "explanation": "Το μονοξείδιο του άνθρακα παράγεται κυρίως από ατελή καύση βενζίνης, γι' αυτό είναι χαρακτηριστικός ρύπος των βενζινοκίνητων κινητήρων.",
+    "explanationEn": "Carbon monoxide is produced mainly by incomplete combustion of petrol, which is why it is a characteristic pollutant of petrol engines.",
     "explanationVerified": false
   },
   {
     "id": "bus-1094",
     "category": "Μηχανολογία",
     "question": "Σε ένα πλήρως συγχρονισμένο κιβώτιο ταχυτήτων:",
+    "questionEn": "In a fully synchronised gearbox:",
     "image": null,
     "answers": [
       "Όλες οι ταχύτητες αλλάζουν συγχρονισμένα.",
       "Όλες οι ταχύτητες αλλάζουν συγχρονισμένα, εκτός από την πρώτη.",
       "Όλες οι ταχύτητες αλλάζουν συγχρονισμένα, εκτός από την όπισθεν."
     ],
+    "answersEn": [
+      "All gears change in a synchronised way.",
+      "All gears change in a synchronised way, except first.",
+      "All gears change in a synchronised way, except reverse."
+    ],
     "correctIndex": 2,
     "explanation": "Στα πλήρως συγχρονισμένα κιβώτια όλες οι εμπρόσθιες σχέσεις αλλάζουν ομαλά χάρη στους συγχρονιστές, ενώ η όπισθεν παραμένει συνήθως χωρίς συγχρονισμό.",
+    "explanationEn": "In fully synchronised gearboxes all forward ratios change smoothly thanks to synchronisers, while reverse usually remains without synchronisation.",
     "explanationVerified": false
   },
   {
     "id": "bus-1095",
     "category": "Μηχανολογία",
     "question": "Πώς μεταδίδουν τα έμβολα την πίεση, που δημιουργείται από την έκρηξη του μείγματος, στο στροφαλοφόρο άξονα:",
+    "questionEn": "How do the pistons transmit the pressure created by the explosion of the mixture to the crankshaft:",
     "image": null,
     "answers": [
       "Με τον εκκεντροφόρο άξονα.",
       "Με τα ωστήρια των βαλβίδων.",
       "Με τη βοήθεια των διωστήρων (μπιέλες)."
     ],
+    "answersEn": [
+      "Via the camshaft.",
+      "Via the valve tappets (lifters).",
+      "With the help of the connecting rods."
+    ],
     "correctIndex": 2,
     "explanation": "Οι διωστήρες (μπιέλες) συνδέουν το έμβολο με το στροφαλοφόρο άξονα και μετατρέπουν την ευθύγραμμη κίνηση του εμβόλου σε περιστροφική κίνηση του άξονα.",
+    "explanationEn": "The connecting rods link the piston to the crankshaft and convert the piston's linear motion into the rotational motion of the shaft.",
     "explanationVerified": false
   },
   {
     "id": "bus-1096",
     "category": "Μηχανολογία",
     "question": "Ο προορισμός του διωστήρα (μπιέλας) είναι:",
+    "questionEn": "The purpose of the connecting rod is:",
     "image": null,
     "answers": [
       "Να μεταφέρει την κινητική ενέργεια του εμβόλου στο στροφαλοφόρο άξονα.",
       "Να συνδέει το έμβολο με τον εκκεντροφόρο άξονα.",
       "Να ανοιγοκλείνει τις βαλβίδες εισαγωγής και εξαγωγής."
     ],
+    "answersEn": [
+      "To transfer the kinetic energy of the piston to the crankshaft.",
+      "To connect the piston to the camshaft.",
+      "To open and close the intake and exhaust valves."
+    ],
     "correctIndex": 0,
     "explanation": "Ο ρόλος του διωστήρα είναι ακριβώς να μεταφέρει την κινητική ενέργεια που παράγεται στο έμβολο προς το στροφαλοφόρο άξονα.",
+    "explanationEn": "The role of the connecting rod is precisely to transfer the kinetic energy generated at the piston to the crankshaft.",
     "explanationVerified": false
   },
   {
     "id": "bus-1097",
     "category": "Μηχανολογία",
     "question": "Στο ελαστικό 175/70 R 15 87T το μέγεθος 15 δηλώνει:",
+    "questionEn": "In the tyre 175/70 R 15 87T, the size 15 indicates:",
     "image": null,
     "answers": [
       "Την εξωτερική διάμετρο του ελαστικού σε ίντσες.",
       "Τη διάμετρο της ζάντας σε ίντσες.",
       "Το ύψος του πέλματος του ελαστικού σε ίντσες."
     ],
+    "answersEn": [
+      "The outer diameter of the tyre in inches.",
+      "The diameter of the rim in inches.",
+      "The height of the tyre tread in inches."
+    ],
     "correctIndex": 1,
     "explanation": "Στην κωδικοποίηση των ελαστικών, ο αριθμός πριν το δείκτη φορτίου/ταχύτητας δηλώνει τη διάμετρο της ζάντας σε ίντσες, στην οποία τοποθετείται το ελαστικό.",
+    "explanationEn": "In tyre coding, the number before the load/speed index indicates the diameter, in inches, of the rim on which the tyre is fitted.",
     "explanationVerified": false
   },
   {
     "id": "bus-1098",
     "category": "Μηχανολογία",
     "question": "Το διοξείδιο του θείου (SO2) είναι ρύπος που περιέχεται στα προϊόντα καύσεως ενός:",
+    "questionEn": "Sulphur dioxide (SO2) is a pollutant found in the combustion products of a:",
     "image": null,
     "answers": [
       "Βενζινοκίνητου αυτοκινήτου.",
       "Πετρελαιοκίνητου αυτοκινήτου.",
       "Υγραεριοκίνητου αυτοκινήτου."
     ],
+    "answersEn": [
+      "Petrol-powered car.",
+      "Diesel-powered car.",
+      "LPG-powered car."
+    ],
     "correctIndex": 1,
     "explanation": "Το διοξείδιο του θείου προέρχεται κυρίως από την καύση πετρελαίου, που περιέχει θείο, γι' αυτό συνδέεται με τους πετρελαιοκινητήρες.",
+    "explanationEn": "Sulphur dioxide comes mainly from the combustion of diesel fuel, which contains sulphur, which is why it is associated with diesel engines.",
     "explanationVerified": false
   },
   {
     "id": "bus-1099",
     "category": "Μηχανολογία",
     "question": "Τι αναρροφά ένας τετράχρονος πετρελαιοκινητήρας κατά το χρόνο της εισαγωγής:",
+    "questionEn": "What does a four-stroke diesel engine draw in during the intake stroke:",
     "image": null,
     "answers": [
       "Μείγμα πετρελαίου και αέρα.",
       "Μόνο πετρέλαιο.",
       "Μόνο αέρα."
     ],
+    "answersEn": [
+      "A mixture of diesel fuel and air.",
+      "Only diesel fuel.",
+      "Only air."
+    ],
     "correctIndex": 2,
     "explanation": "Σε αντίθεση με τον βενζινοκινητήρα, ο πετρελαιοκινητήρας αναρροφά μόνο αέρα στο χρόνο εισαγωγής, και το καύσιμο εγχέεται αργότερα υπό πίεση στο θάλαμο καύσης.",
+    "explanationEn": "Unlike the petrol engine, the diesel engine draws in only air during the intake stroke, and the fuel is injected later, under pressure, into the combustion chamber.",
     "explanationVerified": false
   },
   {
     "id": "bus-1100",
     "category": "Μηχανολογία",
     "question": "Ποιος είναι ο προορισμός του κεντρικού άξονα μεταδόσεως της κινήσεως για διάταξη με τον κινητήρα μπροστά και τους κινητήριους τροχούς πίσω:",
+    "questionEn": "What is the purpose of the propeller shaft for an arrangement with the engine at the front and the driven wheels at the rear:",
     "image": null,
     "answers": [
       "Να μεταφέρει την κίνηση στους μπροστινούς τροχούς.",
       "Να μεταφέρει την κίνηση από το διαφορικό στο κιβώτιο ταχυτήτων.",
       "Να μεταδίδει τη ροπή στρέψεως από το κιβώτιο ταχυτήτων στους κινητήριους τροχούς."
     ],
+    "answersEn": [
+      "To transfer motion to the front wheels.",
+      "To transfer motion from the differential to the gearbox.",
+      "To transmit torque from the gearbox to the driven wheels."
+    ],
     "correctIndex": 2,
     "explanation": "Ο κεντρικός άξονας μετάδοσης συνδέει το κιβώτιο ταχυτήτων με το διαφορικό, μεταφέροντας τη ροπή στρέψης στους πίσω κινητήριους τροχούς στη διάταξη κινητήρα-εμπρός.",
+    "explanationEn": "The propeller shaft connects the gearbox to the differential, transmitting torque to the rear driven wheels in a front-engine layout.",
     "explanationVerified": false
   },
   {
     "id": "bus-1101",
     "category": "Μηχανολογία",
     "question": "Ο οξειδωτικός καταλύτης στα λεωφορεία:",
+    "questionEn": "The oxidation catalyst in buses:",
     "image": null,
     "answers": [
       "Διευκολύνει την εξαγωγή των καυσαερίων.",
       "Μειώνει τους ρύπους που εκπέμπονται από την εξάτμιση.",
       "Αυξάνει την ιπποδύναμη του κινητήρα."
     ],
+    "answersEn": [
+      "Facilitates the exhaust of combustion gases.",
+      "Reduces the pollutants emitted from the exhaust.",
+      "Increases the engine's horsepower."
+    ],
     "correctIndex": 1,
     "explanation": "Ο καταλύτης οξειδώνει χημικά τους επιβλαβείς ρύπους των καυσαερίων πριν αυτά εξέλθουν από την εξάτμιση, μειώνοντας έτσι τις εκπομπές.",
+    "explanationEn": "The catalyst chemically oxidises the harmful pollutants in the exhaust gases before they leave through the tailpipe, thereby reducing emissions.",
     "explanationVerified": false
   },
   {
     "id": "bus-1102",
     "category": "Μηχανολογία",
     "question": "Τα ελατήρια συμπιέσεως του εμβόλου έχουν προορισμό:",
+    "questionEn": "The compression rings of the piston have the purpose of:",
     "image": null,
     "answers": [
       "Να μην αφήνουν τη διαφυγή των αερίων καύσεως προς το στροφαλοθάλαμο.",
       "Να μην αφήνουν το λάδι της λιπάνσεως να φτάνει στο θάλαμο καύσεως.",
       "Να λιπαίνουν τις επιφάνειες εμβόλου - κυλίνδρου."
     ],
+    "answersEn": [
+      "Preventing the escape of combustion gases into the crankcase.",
+      "Preventing lubricating oil from reaching the combustion chamber.",
+      "Lubricating the piston-cylinder surfaces."
+    ],
     "correctIndex": 0,
     "explanation": "Τα ελατήρια συμπίεσης σφραγίζουν το χώρο ανάμεσα σε έμβολο και κύλινδρο, εμποδίζοντας τα καυσαέρια υψηλής πίεσης να διαφύγουν προς το στροφαλοθάλαμο.",
+    "explanationEn": "The compression rings seal the space between piston and cylinder, preventing high-pressure combustion gases from escaping into the crankcase.",
     "explanationVerified": false
   },
   {
     "id": "bus-1103",
     "category": "Μηχανολογία",
     "question": "Το σύστημα πεδήσεως με πεπιεσμένο αέρα (αερόφρενα) χρησιμοποιείται στα λεωφορεία διότι:",
+    "questionEn": "The compressed-air braking system (air brakes) is used on buses because:",
     "image": null,
     "answers": [
       "Είναι πιο άνετη η οδήγηση του οχήματος.",
       "Το υδραυλικό σύστημα πεδήσεως δεν επαρκεί για την επιβράδυνση του οχήματος.",
       "Η εξωτερική φθορά στο δίκτυο σωληνώσεων και στους λοιπούς μηχανισμούς των αεροφρένων είναι σπάνια."
     ],
+    "answersEn": [
+      "Driving the vehicle is more comfortable.",
+      "The hydraulic braking system is not sufficient to decelerate the vehicle.",
+      "External wear on the piping network and other air-brake mechanisms is rare."
+    ],
     "correctIndex": 1,
     "explanation": "Στα βαριά οχήματα όπως τα λεωφορεία, το βάρος είναι τόσο μεγάλο που το υδραυλικό σύστημα πέδησης δεν μπορεί να αναπτύξει την απαιτούμενη δύναμη, γι' αυτό χρησιμοποιείται το ισχυρότερο σύστημα πεπιεσμένου αέρα.",
+    "explanationEn": "On heavy vehicles such as buses, the weight is so great that the hydraulic braking system cannot develop the required force, which is why the more powerful compressed-air system is used.",
     "explanationVerified": false
   },
   {
     "id": "bus-1104",
     "category": "Μηχανολογία",
     "question": "Σε έναν τετράχρονο πετρελαιοκινητήρα, όταν ο στροφαλοφόρος άξονας κάνει δύο στροφές, πόσες στροφές κάνει ο εκκεντροφόρος:",
+    "questionEn": "In a four-stroke diesel engine, when the crankshaft makes two revolutions, how many revolutions does the camshaft make:",
     "image": null,
     "answers": [
       "Μία στροφή.",
       "Δύο στροφές.",
       "Τέσσερις στροφές."
     ],
+    "answersEn": [
+      "One revolution.",
+      "Two revolutions.",
+      "Four revolutions."
+    ],
     "correctIndex": 0,
     "explanation": "Σε τετράχρονο κινητήρα ο κύκλος λειτουργίας ολοκληρώνεται σε δύο στροφές του στροφαλοφόρου, ενώ ο εκκεντροφόρος περιστρέφεται με το μισό αυτής της ταχύτητας, δηλαδή μία στροφή.",
+    "explanationEn": "In a four-stroke engine the operating cycle is completed in two revolutions of the crankshaft, while the camshaft rotates at half that speed, i.e. one revolution.",
     "explanationVerified": false
   },
   {
     "id": "bus-1105",
     "category": "Μηχανολογία",
     "question": "Η φυγοκεντρική αντλία του νερού του συστήματος ψύξεως παίρνει κίνηση:",
+    "questionEn": "The centrifugal water pump of the cooling system gets its motion:",
     "image": null,
     "answers": [
       "Από το στροφαλοφόρο άξονα με τη βοήθεια ιμάντα.",
       "Από τον εκκεντροφόρο άξονα με ειδικά γρανάζια.",
       "Από τον εκκεντροφόρο άξονα με τη βοήθεια ιμάντα."
     ],
+    "answersEn": [
+      "From the crankshaft via a belt.",
+      "From the camshaft via special gears.",
+      "From the camshaft via a belt."
+    ],
     "correctIndex": 0,
     "explanation": "Η αντλία νερού παίρνει κίνηση από το στροφαλοφόρο άξονα μέσω ιμάντα, ώστε να κυκλοφορεί το ψυκτικό υγρό όσο λειτουργεί ο κινητήρας.",
+    "explanationEn": "The water pump gets its motion from the crankshaft via a belt, so that the coolant circulates as long as the engine is running.",
     "explanationVerified": false
   },
   {
     "id": "bus-1106",
     "category": "Μηχανολογία",
     "question": "Η λίπανση των τριβομένων επιφανειών των κινητήρων των σημερινών αυτοκινήτων γίνεται:",
+    "questionEn": "Lubrication of the friction surfaces in the engines of today's cars is done:",
     "image": null,
     "answers": [
       "Με ψεκασμό των λαδιών.",
       "Με αναγκαστική κυκλοφορία του λαδιού.",
       "Με μικτό σύστημα."
     ],
+    "answersEn": [
+      "By spraying the oil.",
+      "By forced circulation of the oil.",
+      "By a mixed system."
+    ],
     "correctIndex": 1,
     "explanation": "Οι σύγχρονοι κινητήρες λιπαίνονται με αντλία που στέλνει το λάδι υπό πίεση σε όλα τα τριβόμενα σημεία, εξασφαλίζοντας συνεχή και επαρκή λίπανση.",
+    "explanationEn": "Modern engines are lubricated by a pump that sends oil under pressure to all friction points, ensuring continuous and adequate lubrication.",
     "explanationVerified": false
   },
   {
     "id": "bus-1107",
     "category": "Μηχανολογία",
     "question": "Το υδραυλικό σύστημα διευθύνσεως χρησιμοποιείται στα λεωφορεία με σκοπό:",
+    "questionEn": "The hydraulic power steering system is used on buses in order to:",
     "image": null,
     "answers": [
       "Να ελαττώσει το αποτέλεσμα της μυικής δυνάμεως του οδηγού κατά το στρίψιμο.",
       "Να αυξήσει το αποτέλεσμα της μυικής δυνάμεως του οδηγού κατά το στρίψιμο.",
       "Να αυξήσει την πρόσφυση των ελαστικών στο δρόμο."
     ],
+    "answersEn": [
+      "Reduce the effect of the driver's muscular effort when turning.",
+      "Increase the effect of the driver's muscular effort when turning.",
+      "Increase the grip of the tyres on the road."
+    ],
     "correctIndex": 1,
     "explanation": "Το υδραυλικό υποβοηθούμενο τιμόνι ενισχύει τη δύναμη που ασκεί ο οδηγός στο τιμόνι, κάνοντας το στρίψιμο ευκολότερο, ιδίως σε βαριά οχήματα.",
+    "explanationEn": "Hydraulic power steering amplifies the force the driver applies to the steering wheel, making turning easier, especially on heavy vehicles.",
     "explanationVerified": false
   },
   {
     "id": "bus-1108",
     "category": "Μηχανολογία",
     "question": "Ο αεροσυμπιεστής:",
+    "questionEn": "The air compressor:",
     "image": null,
     "answers": [
       "Αναρροφά τον αέρα, τον συμπιέζει και τον εισάγει στα αεροφυλάκια.",
       "Αναρροφά τον αέρα και τον στέλνει στο σύστημα αναρτήσεως.",
       "Αναρροφά τον αέρα και τον στέλνει στο σύστημα ψύξεως."
     ],
+    "answersEn": [
+      "Draws in air, compresses it and feeds it into the air reservoirs.",
+      "Draws in air and sends it to the suspension system.",
+      "Draws in air and sends it to the cooling system."
+    ],
     "correctIndex": 0,
     "explanation": "Ο αεροσυμπιεστής είναι η πηγή του πεπιεσμένου αέρα του συστήματος πέδησης: αναρροφά ατμοσφαιρικό αέρα, τον συμπιέζει και τον αποθηκεύει στα αεροφυλάκια.",
+    "explanationEn": "The air compressor is the source of compressed air for the braking system: it draws in atmospheric air, compresses it and stores it in the air reservoirs.",
     "explanationVerified": false
   },
   {
     "id": "bus-1109",
     "category": "Μηχανολογία",
     "question": "Το σερβόφρενο με πεπιεσμένο αέρα έχει εφαρμογή:",
+    "questionEn": "The compressed-air servo brake (booster) is applied:",
     "image": null,
     "answers": [
       "Σε μηχανικό σύστημα πεδήσεως.",
       "Σε υδραυλικό-πνευματικό σύστημα πεδήσεως.",
       "Σε ηλεκτρικό σύστημα πεδήσεως."
     ],
+    "answersEn": [
+      "In a mechanical braking system.",
+      "In a hydraulic-pneumatic braking system.",
+      "In an electric braking system."
+    ],
     "correctIndex": 1,
     "explanation": "Το σερβόφρενο με αέρα χρησιμοποιείται σε μικτά υδραυλικά-πνευματικά συστήματα πέδησης, όπου ο πεπιεσμένος αέρας ενισχύει τη δύναμη που μεταδίδεται υδραυλικά στα φρένα.",
+    "explanationEn": "The air servo brake is used in mixed hydraulic-pneumatic braking systems, where compressed air boosts the force transmitted hydraulically to the brakes.",
     "explanationVerified": false
   },
   {
     "id": "bus-1110",
     "category": "Μηχανολογία",
     "question": "Τα ελατήρια του λαδιού έχουν προορισμό:",
+    "questionEn": "The oil control rings have the purpose of:",
     "image": null,
     "answers": [
       "Να λιπαίνουν το διανομέα.",
       "Να μην αφήνουν το λάδι της λιπάνσεως να φθάνει στο θάλαμο καύσεως.",
       "Να μην αφήνουν να διαφεύγουν τα αέρια της καύσεως προς το στροφαλοθάλαμο."
     ],
+    "answersEn": [
+      "Lubricating the distributor.",
+      "Preventing lubricating oil from reaching the combustion chamber.",
+      "Preventing combustion gases from escaping into the crankcase."
+    ],
     "correctIndex": 1,
     "explanation": "Τα ελατήρια λαδιού «ξύνουν» το περίσσιο λάδι από τα τοιχώματα του κυλίνδρου, εμποδίζοντάς το να φτάσει στο θάλαμο καύσης και να καεί μαζί με το μείγμα.",
+    "explanationEn": "The oil control rings 'scrape' excess oil from the cylinder walls, preventing it from reaching the combustion chamber and burning together with the mixture.",
     "explanationVerified": false
   },
   {
     "id": "bus-1111",
     "category": "Μηχανολογία",
     "question": "Οι αποσβεστήρες κραδασμών (αμορτισέρ) είναι μηχανισμοί που:",
+    "questionEn": "Shock absorbers (dampers) are mechanisms that:",
     "image": null,
     "answers": [
       "Καθιστούν σταθερή την οδήγηση του αυτοκινήτου.",
       "Ελέγχουν και αποσβένουν γρήγορα τις ταλαντώσεις των ελατηρίων όταν οι τροχοί συναντούν ανωμαλία στο δρόμο.",
       "Συνδέουν το πλαίσιο του αυτοκινήτου με τα ελαστικά."
     ],
+    "answersEn": [
+      "Make the car's driving stable.",
+      "Control and quickly damp the oscillations of the springs when the wheels meet an irregularity in the road.",
+      "Connect the car's chassis to the tyres."
+    ],
     "correctIndex": 1,
     "explanation": "Τα αμορτισέρ ελέγχουν και αποσβένουν γρήγορα τις ταλαντώσεις των ελατηρίων της ανάρτησης όταν οι τροχοί συναντούν ανωμαλίες, διατηρώντας σταθερή επαφή με το οδόστρωμα.",
+    "explanationEn": "Shock absorbers control and quickly damp the oscillations of the suspension springs when the wheels meet irregularities, maintaining stable contact with the road surface.",
     "explanationVerified": false
   },
   {
     "id": "bus-1112",
     "category": "Μηχανολογία",
     "question": "Ο αυτόματος ρυθμιστής πιέσεως (ΑΡΠ) είναι ένας μηχανισμός του συστήματος πεδήσεως, ο οποίος:",
+    "questionEn": "The automatic pressure regulator (APR) is a mechanism of the braking system which:",
     "image": null,
     "answers": [
       "Ρυθμίζει αυτόματα την πίεση στους κυλίνδρους πεδήσεως ανάλογα με τη φόρτιση του οχήματος.",
       "Παράγει τον απαιτούμενο πεπιεσμένο αέρα.",
       "Διανέμει τον αέρα σε περισσότερα του ενός κυκλώματα."
     ],
+    "answersEn": [
+      "Automatically regulates the pressure in the brake cylinders according to the loading of the vehicle.",
+      "Produces the required compressed air.",
+      "Distributes the air to more than one circuit."
+    ],
     "correctIndex": 0,
     "explanation": "Ο αυτόματος ρυθμιστής πίεσης προσαρμόζει την πίεση πέδησης στους κυλίνδρους ανάλογα με το φορτίο του οχήματος, ώστε η πέδηση να είναι αποτελεσματική είτε το όχημα είναι άδειο είτε φορτωμένο.",
+    "explanationEn": "The automatic pressure regulator adjusts the braking pressure in the cylinders according to the vehicle's load, so that braking is effective whether the vehicle is empty or loaded.",
     "explanationVerified": false
   },
   {
     "id": "bus-1113",
     "category": "Μηχανολογία",
     "question": "Η φυγοκεντρική αντλία του νερού του συστήματος ψύξεως του κινητήρα:",
+    "questionEn": "The centrifugal water pump of the engine's cooling system:",
     "image": null,
     "answers": [
       "Αναρροφά το ψυκτικό υγρό από τον άνω υδροθάλαμο του ψυγείου και το αποστέλλει με φυσική ροή στα υδροχιτώνια του κινητήρα.",
       "Αναρροφά το ψυκτικό υγρό από τον κάτω υδροθάλαμο του ψυγείου και το αποστέλλει με πίεση στα υδροχιτώνια του κινητήρα.",
       "Με τη βοήθεια του θερμοστάτη αναρροφά το ψυκτικό υγρό και το αποστέλλει στα υδροχιτώνια."
     ],
+    "answersEn": [
+      "Draws coolant from the upper tank of the radiator and sends it by natural flow to the engine's water jackets.",
+      "Draws coolant from the lower tank of the radiator and sends it under pressure to the engine's water jackets.",
+      "With the help of the thermostat, draws the coolant and sends it to the water jackets."
+    ],
     "correctIndex": 1,
     "explanation": "Η αντλία νερού αναρροφά το ψυκτικό υγρό από τον κάτω υδροθάλαμο του ψυγείου και το προωθεί υπό πίεση στα υδροχιτώνια του κινητήρα για την ψύξη του.",
+    "explanationEn": "The water pump draws coolant from the lower tank of the radiator and forces it under pressure to the engine's water jackets to cool it.",
     "explanationVerified": false
   },
   {
     "id": "bus-1114",
     "category": "Μηχανολογία",
     "question": "Σε τι αποβλέπει η χρήση του μηχανόφρενου (κλαπέτου):",
+    "questionEn": "What is the purpose of using the engine (exhaust) brake:",
     "image": null,
     "answers": [
       "Στην οικονομία καυσίμων.",
       "Στο να περιορίζεται η χρήση του ποδόφρενου κατά την κίνηση του οχήματος σε κατωφέρεια.",
       "Στην ανακούφιση του κινητήρα."
     ],
+    "answersEn": [
+      "Fuel economy.",
+      "To limit the use of the footbrake while the vehicle is traveling downhill.",
+      "To relieve the engine."
+    ],
     "correctIndex": 1,
     "explanation": "Το μηχανόφρενο (κλαπέτο) δημιουργεί αντίσταση στον κινητήρα, επιβραδύνοντας το όχημα σε κατηφόρες χωρίς συνεχή χρήση του ποδόφρενου, αποτρέποντας την υπερθέρμανση των φρένων.",
+    "explanationEn": "The engine (exhaust) brake creates resistance in the engine, slowing the vehicle on downhill stretches without continuous use of the footbrake, preventing the brakes from overheating.",
     "explanationVerified": false
   },
   {
     "id": "bus-1115",
     "category": "Μηχανολογία",
     "question": "Σε ένα λεωφορείο εφοδιασμένο με σύστημα πεδήσεως με πεπιεσμένο αέρα (αερόφρενα), πού κυρίως πρέπει να στρέφεται η προσοχή του οδηγού:",
+    "questionEn": "On a bus fitted with a compressed-air braking system (air brakes), where should the driver's attention mainly be directed:",
     "image": null,
     "answers": [
       "Στον τρόπο με τον οποίο ενεργούν τα φρένα.",
       "Στην ένδειξη των μανομέτρων που βρίσκονται στον πίνακα οργάνων.",
       "Στον τρόπο με τον οποίο, κατά το πάτημα, υποχωρεί ο ποδομοχλός των φρένων."
     ],
+    "answersEn": [
+      "To the way the brakes act.",
+      "To the reading of the pressure gauges located on the instrument panel.",
+      "To the way the brake pedal yields when pressed."
+    ],
     "correctIndex": 1,
     "explanation": "Σε λεωφορείο με αερόφρενα, ο οδηγός πρέπει να παρακολουθεί τα μανόμετρα πίεσης αέρα, γιατί μόνο μέσω αυτών γνωρίζει αν υπάρχει επαρκής πίεση για ασφαλή πέδηση.",
+    "explanationEn": "On a bus with air brakes, the driver must monitor the air-pressure gauges, because only through these can they know whether there is sufficient pressure for safe braking.",
     "explanationVerified": false
   },
   {
     "id": "bus-1116",
     "category": "Μηχανολογία",
     "question": "Ποια από τα πιο κάτω εξαρτήματα παίρνουν κίνηση από τον εκκεντροφόρο άξονα:",
+    "questionEn": "Which of the following components get their motion from the camshaft:",
     "image": null,
     "answers": [
       "Ο στροφαλοφόρος άξονας.",
       "Ο ανεμιστήρας.",
       "Οι βαλβίδες εισαγωγής και εξαγωγής."
     ],
+    "answersEn": [
+      "The crankshaft.",
+      "The fan.",
+      "The intake and exhaust valves."
+    ],
     "correctIndex": 2,
     "explanation": "Ο εκκεντροφόρος άξονας, μέσω των εκκέντρων του, ανοιγοκλείνει τις βαλβίδες εισαγωγής και εξαγωγής στη σωστή χρονική στιγμή του κύκλου λειτουργίας.",
+    "explanationEn": "The camshaft, through its cams, opens and closes the intake and exhaust valves at the correct moment in the operating cycle.",
     "explanationVerified": false
   },
   {
     "id": "bus-1117",
     "category": "Μηχανολογία",
     "question": "Ποια είναι η κανονική κυκλοφορία του νερού στο σύστημα ψύξεως:",
+    "questionEn": "What is the normal circulation of water in the cooling system:",
     "image": null,
     "answers": [
       "Ψυγείο-υδροχιτώνια-υδραντλία-θερμοστάτης-ψυγείο.",
       "Ψυγείο-θερμοστάτης-υδροχιτώνια-υδραντλία-ψυγείο.",
       "Ψυγείο-υδραντλία-υδροχιτώνια-θερμοστάτης-ψυγείο."
     ],
+    "answersEn": [
+      "Radiator - water jackets - water pump - thermostat - radiator.",
+      "Radiator - thermostat - water jackets - water pump - radiator.",
+      "Radiator - water pump - water jackets - thermostat - radiator."
+    ],
     "correctIndex": 2,
     "explanation": "Η κανονική ροή του ψυκτικού είναι: η αντλία τραβά το νερό από το ψυγείο και το στέλνει στα υδροχιτώνια του κινητήρα για ψύξη, και μέσω του θερμοστάτη επιστρέφει στο ψυγείο για να κρυώσει ξανά.",
+    "explanationEn": "The normal flow of coolant is: the pump draws water from the radiator and sends it to the engine's water jackets for cooling, and through the thermostat it returns to the radiator to cool again.",
     "explanationVerified": false
   },
   {
     "id": "bus-1118",
     "category": "Μηχανολογία",
     "question": "Πόσα είναι κατ' ελάχιστον τα εσωτερικά κυκλώματα φωτισμού ενός λεωφορείου:",
+    "questionEn": "What is the minimum number of interior lighting circuits a bus must have:",
     "image": null,
     "answers": [
       "Ένα (1).",
       "Δύο (2).",
       "Τρία (3)."
     ],
+    "answersEn": [
+      "One (1).",
+      "Two (2).",
+      "Three (3)."
+    ],
     "correctIndex": 1,
     "explanation": "Η ύπαρξη τουλάχιστον δύο ανεξάρτητων κυκλωμάτων φωτισμού εξασφαλίζει ότι, αν χαλάσει το ένα, θα παραμείνει φωτισμός στο εσωτερικό του λεωφορείου.",
+    "explanationEn": "Having at least two independent lighting circuits ensures that, if one fails, lighting will remain inside the bus.",
     "explanationVerified": false
   },
   {
     "id": "bus-1119",
     "category": "Μηχανολογία",
     "question": "Τι δείχνει το μανόμετρο του λαδιού που είναι τοποθετημένο στον πίνακα οργάνων του λεωφορείου:",
+    "questionEn": "What does the oil pressure gauge located on the bus instrument panel show:",
     "image": null,
     "answers": [
       "Tην πίεση του λαδιού των υδραυλικών φρένων.",
       "Την πίεση του λαδιού του κινητήρα.",
       "Την ποσότητα του λαδιού στο κάρτερ."
     ],
+    "answersEn": [
+      "The pressure of the hydraulic brake fluid.",
+      "The pressure of the engine oil.",
+      "The quantity of oil in the oil sump."
+    ],
     "correctIndex": 1,
     "explanation": "Το μανόμετρο λαδιού στον πίνακα οργάνων ενημερώνει τον οδηγό για την πίεση με την οποία κυκλοφορεί το λάδι μέσα στον κινητήρα, δείκτη της σωστής λίπανσής του.",
+    "explanationEn": "The oil pressure gauge on the instrument panel informs the driver of the pressure at which oil circulates inside the engine, an indicator of proper lubrication.",
     "explanationVerified": false
   },
   {
     "id": "bus-1120",
     "category": "Μηχανολογία",
     "question": "Πόσους κατ' ελάχιστον εξωτερικούς καθρέπτες οπισθοσκοπήσεως πρέπει να φέρει ένα λεωφορείο:",
+    "questionEn": "What is the minimum number of exterior rear-view mirrors a bus must have:",
     "image": null,
     "answers": [
       "Δύο (2).",
       "Τρεις (3).",
       "Τέσσερις (4)."
     ],
+    "answersEn": [
+      "Two (2).",
+      "Three (3).",
+      "Four (4)."
+    ],
     "correctIndex": 0,
     "explanation": "Δύο εξωτερικοί καθρέπτες, ένας σε κάθε πλευρά, είναι το ελάχιστο απαιτούμενο ώστε ο οδηγός να έχει επαρκή οπισθοσκόπηση και από τις δύο πλευρές του λεωφορείου.",
+    "explanationEn": "Two exterior mirrors, one on each side, are the minimum required for the driver to have adequate rear visibility from both sides of the bus.",
     "explanationVerified": false
   },
   {
     "id": "bus-1121",
     "category": "Μηχανολογία",
     "question": "Ποια είναι η βασική λειτουργία του διαφορικού:",
+    "questionEn": "What is the basic function of the differential:",
     "image": null,
     "answers": [
       "Να διαφοροποιεί τις στροφές του ενός κινητήριου τροχού από τον άλλο.",
       "Να αυξάνει τον αριθμό των στροφών των κινητηρίων τροχών σε σχέση με αυτές του κεντρικού άξονα μεταδόσεως της κινήσεως.",
       "Να αλλάξει τη φορά κινήσεως κατά 40 μοίρες."
     ],
+    "answersEn": [
+      "To allow the rotational speed of one driven wheel to differ from the other.",
+      "To increase the number of revolutions of the driven wheels relative to those of the propeller shaft.",
+      "To change the direction of motion by 40 degrees."
+    ],
     "correctIndex": 0,
     "explanation": "Το διαφορικό επιτρέπει στους δύο κινητήριους τροχούς να περιστρέφονται με διαφορετική ταχύτητα, κάτι απαραίτητο όταν το όχημα στρίβει, αφού ο εξωτερικός τροχός διανύει μεγαλύτερη απόσταση.",
+    "explanationEn": "The differential allows the two driven wheels to rotate at different speeds, which is necessary when the vehicle turns, since the outer wheel covers a greater distance.",
     "explanationVerified": false
   },
   {
     "id": "bus-1122",
     "category": "Μηχανολογία",
     "question": "Ο διακόπτης κινδύνου, με τον οποίο είναι εφοδιασμένο κάθε λεωφορείο, που προορίζεται για να περιορίσει τον κίνδυνο πυρκαϊάς, όταν το όχημα είναι σε στάση, διακόπτει:",
+    "questionEn": "The emergency (master) switch that every bus is fitted with, intended to limit the risk of fire when the vehicle is stationary, cuts off:",
     "image": null,
     "answers": [
       "Την παροχή του καυσίμου.",
       "Το κύκλωμα του εσωτερικού φωτισμού κινδύνου.",
       "Το κύκλωμα κεντρικού ηλεκτρονικού κλειδώματος θυρών."
     ],
+    "answersEn": [
+      "The fuel supply.",
+      "The interior hazard-lighting circuit.",
+      "The central electronic door-locking circuit."
+    ],
     "correctIndex": 0,
     "explanation": "Ο γενικός διακόπτης κινδύνου κόβει την παροχή καυσίμου προς τον κινητήρα, ώστε σε περίπτωση κινδύνου πυρκαγιάς να μην τροφοδοτείται η φωτιά με καύσιμο.",
+    "explanationEn": "The general emergency switch cuts off the fuel supply to the engine, so that in the event of a fire risk, the flames are not fed with fuel.",
     "explanationVerified": false
   },
   {
     "id": "bus-1123",
     "category": "Μηχανολογία",
     "question": "Γιατί, όταν πιέζετε το γκάζι, αυξάνεται η ισχύς που παράγεται από έναν κινητήρα Diesel:",
+    "questionEn": "Why, when you press the accelerator, does the power produced by a Diesel engine increase:",
     "image": null,
     "answers": [
       "Γιατί ανοίγει περισσότερο η βαλβίδα εισαγωγής.",
       "Γιατί φθάνει περισσότερη ποσότητα πετρελαίου στους εγχυτήρες καυσίμου.",
       "Γιατί φθάνει στα μπουζί ρεύμα μεγαλύτερης εντάσεως."
     ],
+    "answersEn": [
+      "Because the intake valve opens wider.",
+      "Because a larger quantity of diesel fuel reaches the fuel injectors.",
+      "Because a higher current reaches the spark plugs."
+    ],
     "correctIndex": 1,
     "explanation": "Σε αντίθεση με τον βενζινοκινητήρα, στον πετρελαιοκινητήρα το πάτημα του γκαζιού αυξάνει την ποσότητα καυσίμου που εγχέεται στους κυλίνδρους, αυξάνοντας έτσι την παραγόμενη ισχύ.",
+    "explanationEn": "Unlike the petrol engine, in the diesel engine pressing the accelerator increases the quantity of fuel injected into the cylinders, thereby increasing the power produced.",
     "explanationVerified": false
   },
   {
     "id": "bus-1124",
     "category": "Μηχανολογία",
     "question": "Ποια είναι η λειτουργία του σιγαστήρα της εξατμίσεως:",
+    "questionEn": "What is the function of the exhaust silencer (muffler):",
     "image": null,
     "answers": [
       "Να μειώσει την ταχύτητα εξαγωγής των καυσαερίων, για να μειωθεί ο θόρυβος.",
       "Να μειώσει την ταχύτητα εξαγωγής των καυσαερίων, για να μειωθεί η κατανάλωση καυσίμου.",
       "Να μειώσει την ταχύτητα εξαγωγής των καυσαερίων, για να ζεστάνει τον εσωτερικό χώρο του οχήματος."
     ],
+    "answersEn": [
+      "To reduce the exit speed of the exhaust gases, in order to reduce noise.",
+      "To reduce the exit speed of the exhaust gases, in order to reduce fuel consumption.",
+      "To reduce the exit speed of the exhaust gases, in order to heat the vehicle's interior."
+    ],
     "correctIndex": 0,
     "explanation": "Ο σιγαστήρας μειώνει την ταχύτητα εξόδου των καυσαερίων ώστε να περιοριστεί ο θόρυβος της εξάτμισης.",
+    "explanationEn": "The silencer reduces the exit speed of the exhaust gases in order to limit exhaust noise.",
     "explanationVerified": false
   },
   {
     "id": "bus-1125",
     "category": "Συντήρηση",
     "question": "Διαπιστώνεται χαμηλή θερμοκρασία στη λειτουργία του κινητήρα. Ποια μπορεί να είναι η πιθανή αιτία γι' αυτό:",
+    "questionEn": "A low operating temperature is noticed in the engine. What could be the probable cause of this:",
     "image": null,
     "answers": [
       "Η βλάβη του θερμοστάτη.",
       "Η διακοπή ρεύματος στον ανεμιστήρα.",
       "Η μικρή χωρητικότητα του ψυγείου."
     ],
+    "answersEn": [
+      "A faulty thermostat.",
+      "A power cut to the fan.",
+      "The small capacity of the radiator."
+    ],
     "correctIndex": 0,
     "explanation": "Αν ο θερμοστάτης μείνει ανοιχτός λόγω βλάβης, το ψυκτικό κυκλοφορεί συνεχώς μέσω του ψυγείου, με αποτέλεσμα ο κινητήρας να μη φτάνει ποτέ στην κανονική του θερμοκρασία λειτουργίας.",
+    "explanationEn": "If the thermostat remains stuck open due to a fault, the coolant circulates continuously through the radiator, with the result that the engine never reaches its normal operating temperature.",
     "explanationVerified": false
   },
   {
     "id": "bus-1126",
     "category": "Συντήρηση",
     "question": "Για να εγγυηθείτε την ασφάλεια της κυκλοφορίας και να αποφύγετε ατυχήματα είναι απαραίτητο, μεταξύ των άλλων:",
+    "questionEn": "To guarantee traffic safety and avoid accidents, among other things it is necessary:",
     "image": null,
     "answers": [
       "Να αλλάζετε τα λαμπάκια των φώτων με άλλα μεγαλύτερης αποδόσεως για να εξασφαλίσετε μία μεγαλύτερη διάρκεια ζωής.",
       "Να καθαρίζετε συχνά τις φωτιστικές επιφάνειες των φώτων.",
       "Να ελέγχετε περιοδικά την αποτελεσματικότητα και τη λειτουργικότητα των εφεδρικών λαμπτήρων."
     ],
+    "answersEn": [
+      "To replace the light bulbs with others of higher output, to ensure a longer service life.",
+      "To clean the light-emitting surfaces of the lamps frequently.",
+      "To periodically check the effectiveness and functionality of the spare bulbs."
+    ],
     "correctIndex": 1,
     "explanation": "Οι λερωμένες επιφάνειες των φανών μειώνουν σημαντικά την ένταση και την εμβέλεια του φωτισμού, γι' αυτό ο τακτικός καθαρισμός τους διατηρεί την ορατότητα, ενώ λάμπες μεγαλύτερης απόδοσης από την προβλεπόμενη είναι επικίνδυνες.",
+    "explanationEn": "Dirty lamp surfaces significantly reduce the intensity and range of the lighting, which is why cleaning them regularly preserves visibility, while bulbs of higher output than specified are dangerous.",
     "explanationVerified": false
   },
   {
     "id": "bus-1127",
     "category": "Συντήρηση",
     "question": "Για να επιτύχετε την ασφάλεια της κυκλοφορίας και να αποφύγετε τα ατυχήματα είναι απαραίτητο, μεταξύ των άλλων:",
+    "questionEn": "To achieve traffic safety and avoid accidents, among other things it is necessary:",
     "image": null,
     "answers": [
       "Να αλλάζετε τις λάμπες με άλλης μεγαλύτερης τάσεως λειτουργίας, για να βελτιώσετε την αποτελεσματικότητα των φώτων.",
       "Να αφήνετε λερωμένα με σκόνη τα τζάμια των φώτων για να αποφεύγετε το ξεθώριασμά τους.",
       "Να ελέγχετε περιοδικά τη λειτουργία των φλας."
     ],
+    "answersEn": [
+      "To replace the bulbs with others of a higher operating voltage, to improve the effectiveness of the lights.",
+      "To leave the light covers dusty, to prevent them from fading.",
+      "To periodically check the operation of the indicators (turn signals)."
+    ],
     "correctIndex": 2,
     "explanation": "Τα φλας είναι απαραίτητα για την έγκαιρη προειδοποίηση των άλλων οδηγών για αλλαγή κατεύθυνσης, γι' αυτό πρέπει να ελέγχεται τακτικά η σωστή λειτουργία τους.",
+    "explanationEn": "Indicators are necessary to give other drivers advance warning of a change of direction, which is why their correct operation must be checked regularly.",
     "explanationVerified": false
   },
   {
     "id": "bus-1128",
     "category": "Συντήρηση",
     "question": "Τι σημαίνει το άναμμα της ενδείξεως λαδιού στον πίνακα οργάνων κατά τη διάρκεια της κινήσεως του οχήματος:",
+    "questionEn": "What does the oil warning light on the instrument panel coming on while the vehicle is moving mean:",
     "image": null,
     "answers": [
       "Ότι η γεννήτρια (δυναμό) δεν φορτίζει την μπαταρία.",
       "Ότι η λίπανση είναι κανονική.",
       "Ότι η πίεση του λαδιού είναι ανεπαρκής."
     ],
+    "answersEn": [
+      "That the alternator (generator) is not charging the battery.",
+      "That lubrication is normal.",
+      "That the oil pressure is insufficient."
+    ],
     "correctIndex": 2,
     "explanation": "Το άναμμα της ενδεικτικής λυχνίας λαδιού κατά την κίνηση προειδοποιεί για ανεπαρκή πίεση λίπανσης, κατάσταση που μπορεί να προκαλέσει σοβαρή βλάβη στον κινητήρα αν αγνοηθεί.",
+    "explanationEn": "The oil warning light coming on while driving warns of insufficient lubrication pressure, a condition that can cause serious engine damage if ignored.",
     "explanationVerified": false
   },
   {
     "id": "bus-1129",
     "category": "Συντήρηση",
     "question": "Τι πρέπει να ελέγχετε περιοδικά ώστε να περιορίσετε την κατανάλωση καυσίμου:",
+    "questionEn": "What should you check periodically in order to limit fuel consumption:",
     "image": null,
     "answers": [
       "Tο επίπεδο του υγρού ψύξεως του κινητήρα.",
       "Tο βάθος του πέλματος των ελαστικών.",
       "Tην πίεση των ελαστικών."
     ],
+    "answersEn": [
+      "The level of the engine coolant.",
+      "The depth of the tyre tread.",
+      "The tyre pressure."
+    ],
     "correctIndex": 2,
     "explanation": "Η σωστή πίεση των ελαστικών μειώνει την αντίσταση κύλισης, με αποτέλεσμα μικρότερη κατανάλωση καυσίμου σε σχέση με ελαστικά ξεφούσκωτα ή υπερφουσκωμένα.",
+    "explanationEn": "Correct tyre pressure reduces rolling resistance, resulting in lower fuel consumption compared to under-inflated or over-inflated tyres.",
     "explanationVerified": false
   },
   {
     "id": "bus-1130",
     "category": "Συντήρηση",
     "question": "Από τι προκαλείται η υπερθέρμανση των ταμπούρων των τροχών:",
+    "questionEn": "What causes overheating of the wheel brake drums:",
     "image": null,
     "answers": [
       "Από την κακή λειτουργία του διαφορικού.",
       "Από αντικανονική πίεση στα ελαστικά των τροχών.",
       "Από κακή λειτουργία των επανατατικών ελατηρίων των σιαγόνων."
     ],
+    "answersEn": [
+      "Poor operation of the differential.",
+      "Incorrect tyre pressure.",
+      "Poor operation of the brake shoe return springs."
+    ],
     "correctIndex": 2,
     "explanation": "Αν τα ελατήρια επαναφοράς των σιαγόνων δεν λειτουργούν σωστά, τα τακάκια παραμένουν σε μερική επαφή με το τύμπανο ακόμη και όταν δεν πατιέται το φρένο, προκαλώντας συνεχή τριβή και υπερθέρμανση.",
+    "explanationEn": "If the shoe return springs do not work properly, the brake linings remain in partial contact with the drum even when the brake is not applied, causing continuous friction and overheating.",
     "explanationVerified": false
   },
   {
     "id": "bus-1131",
     "category": "Συντήρηση",
     "question": "Κάθε πότε πρέπει ο οδηγός να ελέγχει την ποσότητα λαδιού στον κινητήρα:",
+    "questionEn": "How often should the driver check the quantity of oil in the engine:",
     "image": null,
     "answers": [
       "Πριν ξεκινήσει για μεγάλη διαδρομή.",
       "Καθημερινά.",
       "Όταν ανάψει η ενδεικτική λυχνία της πιέσεως του λαδιού."
     ],
+    "answersEn": [
+      "Before setting off on a long journey.",
+      "Daily.",
+      "When the oil pressure warning light comes on."
+    ],
     "correctIndex": 1,
     "explanation": "Ο καθημερινός έλεγχος της στάθμης λαδιού επιτρέπει τον έγκαιρο εντοπισμό τυχόν διαρροής ή κατανάλωσης, πριν αυτή οδηγήσει σε ανεπαρκή λίπανση του κινητήρα.",
+    "explanationEn": "Daily checking of the oil level allows timely detection of any leak or consumption, before it leads to insufficient engine lubrication.",
     "explanationVerified": false
   },
   {
     "id": "bus-1132",
     "category": "Συντήρηση",
     "question": "Όταν ο εκκινητής (μίζα) δεν μπορεί να λειτουργήσει, ποια είναι η πιθανή αιτία γι' αυτό:",
+    "questionEn": "When the starter motor fails to operate, what could be the probable cause:",
     "image": null,
     "answers": [
       "Έχει κοπεί ο ιμάντας.",
       "Υπάρχει διακοπή ρεύματος μεταξύ συσσωρευτή και εκκινητήρα.",
       "Δεν λειτουργεί καλά ο πολλαπλασιαστής."
     ],
+    "answersEn": [
+      "The belt has broken.",
+      "There is a power interruption between the battery and the starter motor.",
+      "The solenoid (multiplier) is not working properly."
+    ],
     "correctIndex": 1,
     "explanation": "Αν δεν φτάνει ρεύμα από τη μπαταρία στον εκκινητήρα, ο εκκινητήρας δεν μπορεί να περιστρέψει τον κινητήρα για την εκκίνησή του.",
+    "explanationEn": "If current does not reach the starter motor from the battery, the starter cannot turn the engine over to start it.",
     "explanationVerified": false
   },
   {
     "id": "bus-1133",
     "category": "Συντήρηση",
     "question": "Όταν ο πετρελαιοκινητήρας εκπέμπει υπερβολική αιθάλη (κάπνα), τι πρέπει να κάνετε:",
+    "questionEn": "When a diesel engine emits excessive smoke (soot), what should you do:",
     "image": null,
     "answers": [
       "Να αλλάξετε το λάδι λιπάνσεως.",
       "Να επισκευάσετε αμέσως τον κινητήρα.",
       "Να ελέγξετε και να ρυθμίσετε την αντλία και τους εγχυτήρες καυσίμου (μπεκ) και να καθαρίσετε το φίλτρο αέρα."
     ],
+    "answersEn": [
+      "Change the lubricating oil.",
+      "Repair the engine immediately.",
+      "Check and adjust the injection pump and fuel injectors, and clean the air filter."
+    ],
     "correctIndex": 2,
     "explanation": "Η μαύρη καπνιά υποδηλώνει ατελή καύση λόγω κακής ρύθμισης τροφοδοσίας καυσίμου ή βρώμικου φίλτρου αέρα, γι' αυτό απαιτείται έλεγχος και καθαρισμός αυτών των στοιχείων.",
+    "explanationEn": "Black smoke indicates incomplete combustion due to poor fuel-supply adjustment or a dirty air filter, which is why these components need to be checked and cleaned.",
     "explanationVerified": false
   },
   {
     "id": "bus-1134",
     "category": "Συντήρηση",
     "question": "Διαπιστώνετε ότι o πετρελαιοκινητήρας του λεωφορείου σας, ενώ τίθεται σε λειτουργία, σταματά έπειτα από λίγες στροφές. Ποια μπορεί να είναι η αιτία γι' αυτό:",
+    "questionEn": "You notice that your bus's diesel engine, while starting, stalls after a few revolutions. What could be the cause of this:",
     "image": null,
     "answers": [
       "Η χαμηλή συμπίεση των κυλίνδρων.",
       "Η έμφραξη του συστήματος τροφοδοσίας.",
       "Ο κακός εσωτερικός χρονισμός της αντλίας εγχύσεως."
     ],
+    "answersEn": [
+      "Low cylinder compression.",
+      "A blockage in the fuel supply system.",
+      "Incorrect internal timing of the injection pump."
+    ],
     "correctIndex": 1,
     "explanation": "Αν ο κινητήρας σβήνει αμέσως μετά την εκκίνηση, συχνή αιτία είναι η έμφραξη στο σύστημα τροφοδοσίας καυσίμου, που δεν επιτρέπει την ομαλή ροή πετρελαίου.",
+    "explanationEn": "If the engine stalls immediately after starting, a common cause is a blockage in the fuel supply system, which prevents smooth flow of diesel fuel.",
     "explanationVerified": false
   },
   {
     "id": "bus-1135",
     "category": "Συντήρηση",
     "question": "Όταν το σύστημα τροφοδοσίας είναι καλά ρυθμισμένο, πού οφείλεται η εκπομπή γαλάζιου καπνού από πετρελαιοκινητήρα:",
+    "questionEn": "When the fuel supply system is well adjusted, what is the cause of blue smoke being emitted from a diesel engine:",
     "image": null,
     "answers": [
       "Στο ότι ο οδηγός χρησιμοποιεί μεγάλη ταχύτητα.",
       "Στο ότι ο κινητήρας δεν έχει το κανονικό αβάνς.",
       "Στο ότι ο κινητήρας έχει μεγάλη κατανάλωση λαδιού."
     ],
+    "answersEn": [
+      "The driver is using high speed.",
+      "The engine does not have the correct injection timing (advance).",
+      "The engine has high oil consumption."
+    ],
     "correctIndex": 2,
     "explanation": "Ο γαλάζιος καπνός στην εξάτμιση είναι χαρακτηριστικό σημάδι καύσης λαδιού μέσα στους κυλίνδρους, δηλαδή υπερβολικής κατανάλωσης λαδιού.",
+    "explanationEn": "Blue smoke from the exhaust is a characteristic sign of oil burning inside the cylinders, i.e. of excessive oil consumption.",
     "explanationVerified": false
   },
   {
     "id": "bus-1136",
     "category": "Συντήρηση",
     "question": "Εάν τα ελαστικά του αυτοκινήτου σας έχουν πίεση μεγαλύτερη της κανονικής, πού θα παρουσιάσουν αυξημένη φθορά:",
+    "questionEn": "If your car's tyres have a pressure higher than normal, where will they show increased wear:",
     "image": null,
     "answers": [
       "Στις πλευρές του πέλματος.",
       "Στο μέσο (κέντρο) του πέλματος.",
       "Μόνο στην εσωτερική πλευρά του πέλματος."
     ],
+    "answersEn": [
+      "On the edges of the tread.",
+      "In the middle (centre) of the tread.",
+      "Only on the inner side of the tread."
+    ],
     "correctIndex": 1,
     "explanation": "Η υπερβολική πίεση κάνει το ελαστικό να «φουσκώνει» στο κέντρο του πέλματος, το οποίο έρχεται σε μεγαλύτερη επαφή με το δρόμο και φθείρεται περισσότερο εκεί.",
+    "explanationEn": "Excessive pressure makes the tyre 'bulge' at the centre of the tread, which comes into greater contact with the road and wears more there.",
     "explanationVerified": false
   },
   {
     "id": "bus-1137",
     "category": "Συντήρηση",
     "question": "Διαπιστώνετε ότι ένα αεροφυλάκιο του συστήματος πεδήσεως με πεπιεσμένο αέρα (αερόφρενο) έχει τρυπήσει. Τι πρέπει να κάνετε:",
+    "questionEn": "You notice that an air reservoir of the compressed-air braking system (air brakes) has sprung a leak. What should you do:",
     "image": null,
     "answers": [
       "Να φροντίσετε για την επισκευή του με συγκόλληση.",
       "Να το απομονώσετε από το λοιπό κύκλωμα.",
       "Να φροντίσετε για την άμεση αντικατάστασή του."
     ],
+    "answersEn": [
+      "Have it repaired by welding.",
+      "Isolate it from the rest of the circuit.",
+      "Have it replaced immediately."
+    ],
     "correctIndex": 2,
     "explanation": "Ένα τρυπημένο αεροφυλάκιο δεν μπορεί να διατηρήσει την απαιτούμενη πίεση αέρα για ασφαλή πέδηση, γι' αυτό πρέπει να αντικαθίσταται αμέσως και όχι απλώς να επισκευάζεται πρόχειρα.",
+    "explanationEn": "A leaking air reservoir cannot maintain the required air pressure for safe braking, which is why it must be replaced immediately rather than merely patched up.",
     "explanationVerified": false
   },
   {
     "id": "bus-1138",
     "category": "Συντήρηση",
     "question": "Διαπιστώνετε ότι στα καυσαέρια ενός πετρελαιοκινητήρα υπάρχει άσπρος καπνός. Ποια πρέπει να είναι η πιθανή αιτία:",
+    "questionEn": "You notice white smoke in the exhaust gases of a diesel engine. What could be the probable cause:",
     "image": null,
     "answers": [
       "Να έχει εισέλθει νερό στους κυλίνδρους.",
       "Να έχει υπερθερμανθεί ο πετρελαιοκινητήρας.",
       "Να υπάρχει μεγάλη κατανάλωση λαδιού."
     ],
+    "answersEn": [
+      "Water may have entered the cylinders.",
+      "The diesel engine may have overheated.",
+      "There may be high oil consumption."
+    ],
     "correctIndex": 0,
     "explanation": "Ο πυκνός λευκός καπνός στην εξάτμιση είναι τυπικό σύμπτωμα εισόδου νερού (ψυκτικού) στο θάλαμο καύσης, π.χ. λόγω φθαρμένης φλάντζας.",
+    "explanationEn": "Thick white smoke from the exhaust is a typical symptom of water (coolant) entering the combustion chamber, e.g. due to a worn gasket.",
     "explanationVerified": false
   },
   {
     "id": "bus-1139",
     "category": "Συντήρηση",
     "question": "Τα χαλασμένα αμορτισέρ προκαλούν:",
+    "questionEn": "Worn-out shock absorbers cause:",
     "image": null,
     "answers": [
       "Μικρότερη πλευρική κλίση  του οχήματος στις στροφές.",
       "Μη κανονική συμπεριφορά του οχήματος ειδικά στις στροφές.",
       "Μη κανονική λειτουργία του κινητήρα."
     ],
+    "answersEn": [
+      "Less body roll of the vehicle in bends.",
+      "Abnormal behaviour of the vehicle, especially in bends.",
+      "Abnormal operation of the engine."
+    ],
     "correctIndex": 1,
     "explanation": "Χωρίς τα αμορτισέρ να ελέγχουν τις ταλαντώσεις, το όχημα παρουσιάζει υπερβολικές κλίσεις και ασταθή συμπεριφορά ιδιαίτερα στις στροφές.",
+    "explanationEn": "Without the shock absorbers controlling the oscillations, the vehicle shows excessive lean and unstable behaviour, especially in bends.",
     "explanationVerified": false
   },
   {
     "id": "bus-1140",
     "category": "Συντήρηση",
     "question": "Ο σκοπός της αντλίας αντιπηκτικού σε ένα σύστημα πεδήσεως με πεπιεσμένο αέρα είναι:",
+    "questionEn": "The purpose of the anti-freeze pump in a compressed-air braking system is:",
     "image": null,
     "answers": [
       "Να διατηρεί σταθερή την πίεση στο σύστημα.",
       "Να τροφοδοτεί το σύστημα με πεπιεσμένο αέρα για να διατηρούνται σταθερές οι τιμές της ανώτερης και κατώτερης πιέσεως λειτουργίας στα αεροφυλάκια.",
       "Να ψεκάζει με αντιπηκτικό υγρό τον πεπιεσμένο αέρα, για να μην παγώνουν τα διάφορα εξαρτήματα στις πολύ χαμηλές θερμοκρασίες."
     ],
+    "answersEn": [
+      "To keep the pressure in the system constant.",
+      "To supply the system with compressed air so that the upper and lower operating pressure values in the air reservoirs remain constant.",
+      "To spray anti-freeze fluid into the compressed air, so that the various components do not freeze at very low temperatures."
+    ],
     "correctIndex": 2,
     "explanation": "Σε χαμηλές θερμοκρασίες η υγρασία μέσα στον πεπιεσμένο αέρα μπορεί να παγώσει και να μπλοκάρει εξαρτήματα· η αντλία αντιπηκτικού προσθέτει ειδικό υγρό που αποτρέπει το πάγωμα.",
+    "explanationEn": "At low temperatures, moisture inside the compressed air can freeze and jam components; the anti-freeze pump adds a special fluid that prevents freezing.",
     "explanationVerified": false
   },
   {
     "id": "bus-1141",
     "category": "Συντήρηση",
     "question": "Για την ασφάλεια της κυκλοφορίας είναι χρήσιμο:",
+    "questionEn": "For traffic safety, it is useful to:",
     "image": null,
     "answers": [
       "Να φουσκώσετε τα ελαστικά σε πίεση μικρότερη από εκείνη που συνιστά ο κατασκευαστής.",
       "Να ελέγξετε την πίεση των ελαστικών πριν από το ταξίδι.",
       "Να οδηγείτε με τη χρήση των φώτων πορείας."
     ],
+    "answersEn": [
+      "Inflate the tyres to a pressure lower than that recommended by the manufacturer.",
+      "Check the tyre pressure before a journey.",
+      "Drive using the main-beam (driving) lights."
+    ],
     "correctIndex": 1,
     "explanation": "Ο έλεγχος της πίεσης πριν από κάθε ταξίδι διασφαλίζει σωστή πρόσφυση, ευστάθεια και ομοιόμορφη φθορά των ελαστικών.",
+    "explanationEn": "Checking the pressure before every journey ensures proper grip, stability and even wear of the tyres.",
     "explanationVerified": false
   },
   {
     "id": "bus-1142",
     "category": "Συντήρηση",
     "question": "Η πρόσφυση μεταξύ ελαστικών και δρόμου επηρεάζεται από:",
+    "questionEn": "Grip between the tyres and the road is affected by:",
     "image": null,
     "answers": [
       "Τον αυξημένο αριθμό στροφών του κινητήρα.",
       "Την εξωτερική θερμοκρασία.",
       "Την ποιότητα και την πίεση των ελαστικών."
     ],
+    "answersEn": [
+      "A higher engine RPM.",
+      "The outside temperature.",
+      "The quality and pressure of the tyres."
+    ],
     "correctIndex": 2,
     "explanation": "Η κατάσταση, η ποιότητα και η σωστή πίεση των ελαστικών καθορίζουν άμεσα την ποιότητα επαφής τους με το οδόστρωμα, άρα και την πρόσφυση.",
+    "explanationEn": "The condition, quality and correct pressure of the tyres directly determine the quality of their contact with the road surface, and therefore grip.",
     "explanationVerified": false
   },
   {
     "id": "bus-1143",
     "category": "Συντήρηση",
     "question": "Τι θα συμβεί, όταν η κλίση των πίρων των ακραξονίων δεν είναι κανονική:",
+    "questionEn": "What will happen when the inclination (castor angle) of the kingpins of the axle beam is not correct:",
     "image": null,
     "answers": [
       "Δε θα έχετε κανονική επαναφορά του τιμονιού και σταθερότητα διευθύνσεως.",
       "Θα έχομε πρόωρη φθορά του συστήματος διευθύνσεως.",
       "Δεν μπορείτε να στρίψετε εύκολα το όχημα."
     ],
+    "answersEn": [
+      "You will not have normal steering wheel return and directional stability.",
+      "There will be premature wear of the steering system.",
+      "You will not be able to turn the vehicle easily."
+    ],
     "correctIndex": 0,
     "explanation": "Η κλίση των πίρων των ακραξονίων δίνει στο τιμόνι την τάση να επανέρχεται μόνο του στην ευθεία μετά από στροφή· αν δεν είναι σωστή, χάνεται αυτή η αυτόματη επαναφορά και η σταθερότητα διεύθυνσης.",
+    "explanationEn": "The inclination of the kingpins gives the steering wheel the tendency to return to straight ahead on its own after a turn; if it is not correct, this automatic return and directional stability are lost.",
     "explanationVerified": false
   },
   {
     "id": "bus-1144",
     "category": "Ταχογράφοι",
     "question": "Σε περίπτωση βλάβης της συσκευής του ταχογράφου, ποια υποχρέωση έχει ο οδηγός του αυτοκινήτου:",
+    "questionEn": "In the event of a tachograph malfunction, what obligation does the vehicle's driver have:",
     "image": null,
     "answers": [
       "Να ειδοποιήσει τον ιδιοκτήτη του οχήματος.",
       "Να φροντίσει για την ταχεία επισκευή της, αναφέροντας το γεγονός στην πλησιέστερη αστυνομική αρχή.",
       "Να επισκευάσει τη συσκευή, όταν μπορέσει."
     ],
+    "answersEn": [
+      "To notify the owner of the vehicle.",
+      "To arrange for its prompt repair, reporting the fact to the nearest police authority.",
+      "To repair the device whenever they are able to."
+    ],
     "correctIndex": 1,
     "explanation": "Ο οδηγός οφείλει να μεριμνήσει για την ταχεία επισκευή του ταχογράφου και παράλληλα να ενημερώσει την πλησιέστερη αστυνομική αρχή, ώστε να τεκμηριωθεί η βλάβη.",
+    "explanationEn": "The driver must arrange for prompt repair of the tachograph and at the same time inform the nearest police authority, so that the malfunction is documented.",
     "explanationVerified": false
   },
   {
     "id": "bus-1145",
     "category": "Ταχογράφοι",
     "question": "Για πόσο χρόνο πρέπει να φυλάσσονται τα φύλλα καταγραφής (δίσκοι - ταινίες) των ταχογράφων μετά τη χρήση τους:",
+    "questionEn": "For how long must tachograph record sheets (discs/tapes) be kept after use:",
     "image": null,
     "answers": [
       "6 μήνες.",
       "12 μήνες.",
       "24 μήνες."
     ],
+    "answersEn": [
+      "6 months.",
+      "12 months.",
+      "24 months."
+    ],
     "correctIndex": 1,
     "explanation": "Τα φύλλα καταγραφής πρέπει να φυλάσσονται για ικανό χρονικό διάστημα ώστε να είναι διαθέσιμα για έλεγχο των ωρών οδήγησης και ανάπαυσης.",
+    "explanationEn": "Record sheets must be kept for a sufficient period of time so that they are available for checking driving and rest hours.",
     "explanationVerified": false
   },
   {
     "id": "bus-1146",
     "category": "Ταχογράφοι",
     "question": "Στην άδεια κυκλοφορίας λεωφορείου που φέρει σύστημα περιορισμού ταχύτητας, πρέπει να αναγράφεται η εξής παρατήρηση:",
+    "questionEn": "On the registration certificate of a bus fitted with a speed-limiting system, the following remark must be recorded:",
     "image": null,
     "answers": [
       "Φέρει σύστημα περιορισμού ταχύτητας.",
       "Φέρει σύστημα περιορισμού ταχύτητας. Επιτρέπεται ταχύτητα μεγαλύτερη των 100 km/h.",
       "Φέρει σύστημα περιορισμού ταχύτητας. Μέγιστη ταχύτητα 100 km/h."
     ],
+    "answersEn": [
+      "Fitted with a speed-limiting system.",
+      "Fitted with a speed-limiting system. Speeds greater than 100 km/h permitted.",
+      "Fitted with a speed-limiting system. Maximum speed 100 km/h."
+    ],
     "correctIndex": 2,
     "explanation": "Η παρατήρηση στην άδεια κυκλοφορίας πρέπει να αναφέρει το πραγματικό ανώτατο όριο ταχύτητας στο οποίο έχει ρυθμιστεί ο περιοριστής, χωρίς διατύπωση που να επιτρέπει παρερμηνεία για υψηλότερη ταχύτητα.",
+    "explanationEn": "The remark on the registration certificate must state the actual maximum speed to which the limiter is set, with no wording that could be misread as allowing a higher speed.",
     "explanationVerified": false
   },
   {
     "id": "bus-1147",
     "category": "Ταχογράφοι",
     "question": "Το σύστημα περιορισμού ταχύτητας με το οποίο είναι εφοδιασμένο το λεωφορείo επενεργεί:",
+    "questionEn": "The speed-limiting system fitted on the bus acts on:",
     "image": null,
     "answers": [
       "Στο σύστημα πεδήσεως.",
       "Στο σύστημα τροφοδοσίας καυσίμου.",
       "Στο σύστημα εξαγωγής καυσαερίων."
     ],
+    "answersEn": [
+      "The braking system.",
+      "The fuel supply system.",
+      "The exhaust system."
+    ],
     "correctIndex": 1,
     "explanation": "Ο περιοριστής ταχύτητας παρεμβαίνει στο σύστημα τροφοδοσίας καυσίμου, περιορίζοντας την παροχή καυσίμου ώστε ο κινητήρας να μην μπορεί να ξεπεράσει το προκαθορισμένο όριο ταχύτητας.",
+    "explanationEn": "The speed limiter intervenes in the fuel supply system, restricting the fuel supply so that the engine cannot exceed the pre-set speed limit.",
     "explanationVerified": false
   },
   {
     "id": "bus-1148",
     "category": "Ταχογράφοι",
     "question": "Ο οδηγός λεωφορείου που φέρει σύστημα περιορισμού ταχύτητας:",
+    "questionEn": "The driver of a bus fitted with a speed-limiting system:",
     "image": null,
     "answers": [
       "Δεν επιτρέπεται να αυξήσει προσωρινά ή μόνιμα το όριο ταχύτητας του περιοριστή.",
       "Επιτρέπεται να αυξήσει προσωρινά το όριο ταχύτητας του περιοριστή.",
       "Επιτρέπεται να αυξήσει μόνιμα το όριο ταχύτητας του περιοριστή."
     ],
+    "answersEn": [
+      "Is not allowed to temporarily or permanently increase the limiter's speed setting.",
+      "Is allowed to temporarily increase the limiter's speed setting.",
+      "Is allowed to permanently increase the limiter's speed setting."
+    ],
     "correctIndex": 0,
     "explanation": "Ο περιοριστής είναι ρυθμισμένος από εξουσιοδοτημένο συνεργείο σύμφωνα με τη νομοθεσία, γι' αυτό ο οδηγός δεν έχει δικαίωμα να μεταβάλει το όριο ταχύτητάς του.",
+    "explanationEn": "The limiter is set by an authorised workshop in accordance with the legislation, which is why the driver has no right to alter its speed setting.",
     "explanationVerified": false
   },
   {
     "id": "bus-1149",
     "category": "Ταχογράφοι",
     "question": "Ο οδηγός λεωφορείου, το οποίο είναι εφοδιασμένο με σύστημα περιορισμού της ταχύτητας, πρέπει εκτός των άλλων να έχει πάντα μαζί του τα εξής έγγραφα, όσον αφορά το εν λόγω σύστημα:",
+    "questionEn": "The driver of a bus fitted with a speed-limiting system must, among other things, always carry the following documents regarding this system:",
     "image": null,
     "answers": [
       "Βεβαίωση του αντιπροσώπου ή βεβαίωση του εξουσιοδοτημένου συνεργείου τοποθετήσεως.",
       "Τεχνικό εγχειρίδιο του συστήματος (προσπέκτους).",
       "Την εγγύηση του συστήματος."
     ],
+    "answersEn": [
+      "A certificate from the dealer or from the authorised fitting workshop.",
+      "The system's technical manual (brochure).",
+      "The system's warranty."
+    ],
     "correctIndex": 0,
     "explanation": "Η βεβαίωση του αντιπροσώπου ή του εξουσιοδοτημένου συνεργείου πιστοποιεί ότι ο περιοριστής τοποθετήθηκε και ρυθμίστηκε σωστά, γι' αυτό πρέπει να υπάρχει πάντα στο όχημα για έλεγχο.",
+    "explanationEn": "The certificate from the dealer or the authorised workshop certifies that the limiter was fitted and set correctly, which is why it must always be in the vehicle for inspection.",
     "explanationVerified": false
   },
   {
     "id": "bus-1150",
     "category": "Ταχογράφοι",
     "question": "Τα λεωφορεία, που φέρουν σύστημα περιορισμού ταχύτητας, πρέπει να φέρουν ταχογράφο:",
+    "questionEn": "Must buses fitted with a speed-limiting system also be fitted with a tachograph:",
     "image": null,
     "answers": [
       "Όχι.",
       "Μπορούν να φέρουν προαιρετικά.",
       "Ναι."
     ],
+    "answersEn": [
+      "No.",
+      "They may optionally be fitted with one.",
+      "Yes."
+    ],
     "correctIndex": 2,
     "explanation": "Ο περιοριστής ταχύτητας και ο ταχογράφος εξυπηρετούν διαφορετικό σκοπό, γι' αυτό η ύπαρξη του ενός δεν αναιρεί την υποχρεωτική τοποθέτηση του άλλου.",
+    "explanationEn": "The speed limiter and the tachograph serve different purposes, which is why the presence of one does not remove the obligation to fit the other.",
     "explanationVerified": false
   },
   {
     "id": "bus-1151",
     "category": "Ταχογράφοι",
     "question": "Τα αστικά λεωφορεία υποχρεούνται να φέρουν σύστημα περιορισμού ταχύτητας σύμφωνα με την οδηγία 92/6/ΕΕ:",
+    "questionEn": "Are urban buses required to be fitted with a speed-limiting system in accordance with Directive 92/6/EEC:",
     "image": null,
     "answers": [
       "Όχι.",
       "Ναι."
     ],
+    "answersEn": [
+      "No.",
+      "Yes."
+    ],
     "correctIndex": 0,
     "explanation": "Η υποχρέωση περιοριστή αφορά κυρίως οχήματα που αναπτύσσουν υψηλές ταχύτητες σε ανοιχτό δρόμο, ενώ τα αστικά λεωφορεία κινούνται σε χαμηλότερες ταχύτητες εντός πόλης και εξαιρούνται.",
+    "explanationEn": "The obligation to fit a limiter mainly concerns vehicles that reach high speeds on the open road, while urban buses travel at lower speeds within the city and are exempt.",
     "explanationVerified": false
   },
   {
     "id": "bus-1152",
     "category": "Ταχογράφοι",
     "question": "Τα λεωφορεία πρέπει να φέρουν το σύστημα του περιορισμού ταχύτητας σύμφωνα με την οδηγία 92/6/ΕΕ εφόσον έχουν ταξινομηθεί για πρώτη φορά σε χώρα της Ευρωπαϊκής Ενώσεως μετά την:",
+    "questionEn": "Buses must be fitted with a speed-limiting system in accordance with Directive 92/6/EEC if they were first registered in a country of the European Union after:",
     "image": null,
     "answers": [
       "1 Ιανουαρίου 1984.",
       "1 Ιανουαρίου 1985.",
       "1 Ιανουαρίου 1988."
     ],
+    "answersEn": [
+      "1 January 1984.",
+      "1 January 1985.",
+      "1 January 1988."
+    ],
     "correctIndex": 2,
     "explanation": "Η υποχρέωση τοποθέτησης περιοριστή ταχύτητας ισχύει για οχήματα που ταξινομήθηκαν για πρώτη φορά μετά την καθορισμένη ημερομηνία έναρξης ισχύος της σχετικής οδηγίας.",
+    "explanationEn": "The obligation to fit a speed limiter applies to vehicles first registered after the specified date on which the relevant directive took effect.",
     "explanationVerified": false
   },
   {
     "id": "bus-1153",
     "category": "Ταχογράφοι",
     "question": "Τα λεωφορεία, που εκ κατασκευής δεν μπορούν να υπερβούν την ταχύτητα των 100 km/h, πρέπει να εφοδιασθούν με σύστημα περιορισμού της ταχύτητας:",
+    "questionEn": "Must buses that, by design, cannot exceed a speed of 100 km/h be fitted with a speed-limiting system:",
     "image": null,
     "answers": [
       "Ναι.",
       "Όχι."
     ],
+    "answersEn": [
+      "Yes.",
+      "No."
+    ],
     "correctIndex": 1,
     "explanation": "Αν το όχημα εκ κατασκευής δεν μπορεί να αναπτύξει ταχύτητα πάνω από το όριο που θα επέβαλλε ο περιοριστής, η τοποθέτησή του είναι περιττή.",
+    "explanationEn": "If the vehicle cannot, by design, reach a speed above the limit that the limiter would impose anyway, fitting one is unnecessary.",
     "explanationVerified": false
   },
   {
     "id": "bus-1154",
     "category": "Ταχογράφοι",
     "question": "Για ποιους λόγους επιβλήθηκε η χρήση του συστήματος περιορισμού της ταχύτητας στα λεωφορεία:",
+    "questionEn": "For what reasons was the use of the speed-limiting system made mandatory on buses:",
     "image": null,
     "answers": [
       "Για τη βελτίωση της οδικής συμπεριφοράς του λεωφορείου.",
       "Για λόγους ανέσεως των επιβατών.",
       "Για περιβαλλοντικούς λόγους και λόγους οδικής ασφάλειας."
     ],
+    "answersEn": [
+      "To improve the bus's road behaviour.",
+      "For reasons of passenger comfort.",
+      "For environmental reasons and road-safety reasons."
+    ],
     "correctIndex": 2,
     "explanation": "Ο περιορισμός της ταχύτητας μειώνει τόσο τον κίνδυνο ατυχημάτων λόγω υψηλής ταχύτητας όσο και την κατανάλωση καυσίμου και τις εκπομπές ρύπων.",
+    "explanationEn": "Limiting speed reduces both the risk of accidents due to high speed and fuel consumption and pollutant emissions.",
     "explanationVerified": false
   },
   {
     "id": "bus-1155",
     "category": "Ταχογράφοι",
     "question": "Ο περιοριστής ταχύτητας (κόφτης) τοποθετείται στα λεωφορεία, σε εφαρμογή της οδηγίας 92/6/ΕΟΚ, και περιορίζει την ταχύτητα αυτών σε:",
+    "questionEn": "The speed limiter fitted on buses, pursuant to Directive 92/6/EEC, restricts their speed to:",
     "image": null,
     "answers": [
       "90 km/h.",
       "100 km/h.",
       "110 km/h."
     ],
+    "answersEn": [
+      "90 km/h.",
+      "100 km/h.",
+      "110 km/h."
+    ],
     "correctIndex": 1,
     "explanation": "Η σχετική οδηγία καθόρισε το ανώτατο όριο ταχύτητας που επιτρέπεται να αναπτύσσουν τα λεωφορεία με περιοριστή.",
+    "explanationEn": "The relevant directive set the maximum speed that buses fitted with a limiter are allowed to reach.",
     "explanationVerified": false
   },
   {
     "id": "bus-1156",
     "category": "Ταχογράφοι",
     "question": "Πριν το φύλλο καταγραφής (δίσκος ή ταινία) εισαχθεί στη συσκευή του ταχογράφου, ο οδηγός πρέπει:",
+    "questionEn": "Before the record sheet (disc or tape) is inserted into the tachograph, the driver must:",
     "image": null,
     "answers": [
       "Να συμπληρώσει σε αυτό τα στοιχεία, που προβλέπονται από τις σχετικές για τους ταχογράφους διατάξεις.",
       "Να το τοποθετήσει στη συσκευή χωρίς καμιά συμπλήρωση.",
       "Να αναγράψει σε αυτό μόνο το ονοματεπώνυμό του."
     ],
+    "answersEn": [
+      "Fill in on it the details required by the relevant tachograph regulations.",
+      "Insert it into the device without filling anything in.",
+      "Write only their full name on it."
+    ],
     "correctIndex": 0,
     "explanation": "Ο οδηγός πρέπει να συμπληρώνει στο φύλλο καταγραφής τα στοιχεία που προβλέπει η νομοθεσία πριν το τοποθετήσει στη συσκευή, ώστε η καταγραφή να είναι έγκυρη και ελέγξιμη.",
+    "explanationEn": "The driver must fill in on the record sheet the details required by the legislation before inserting it into the device, so that the record is valid and able to be checked.",
     "explanationVerified": false
   },
   {
     "id": "bus-1157",
     "category": "Ταχογράφοι",
     "question": "Η συσκευή του ταχογράφου πρέπει να ευρίσκεται σε λειτουργία:",
+    "questionEn": "The tachograph device must be in operation:",
     "image": null,
     "answers": [
       "Ολόκληρο το εικοσιτετράωρο χωρίς διακοπή.",
       "Για 10 ώρες.",
       "Για 15 ώρες."
     ],
+    "answersEn": [
+      "The entire 24-hour period without interruption.",
+      "For 10 hours.",
+      "For 15 hours."
+    ],
     "correctIndex": 0,
     "explanation": "Ο ταχογράφος πρέπει να καταγράφει αδιάκοπα όλο το εικοσιτετράωρο, ώστε να αποτυπώνονται όλες οι περίοδοι οδήγησης, ανάπαυσης και διαθεσιμότητας του οδηγού.",
+    "explanationEn": "The tachograph must record continuously throughout the 24-hour period, so that all periods of driving, rest and availability of the driver are captured.",
     "explanationVerified": false
   },
   {
     "id": "bus-1158",
     "category": "Ταχογράφοι",
     "question": "Ποιος έχει την υποχρέωση να φυλάσσει για ένα χρόνο τα φύλλα καταγραφής (δίσκους-ταινίες) του ταχογράφου του λεωφορείου:",
+    "questionEn": "Who is obliged to keep the bus's tachograph record sheets (discs/tapes) for one year:",
     "image": null,
     "answers": [
       "Ο ιδιοκτήτης του οχήματος.",
       "Η αρμόδια αστυνομική αρχή.",
       "Ο οδηγός του οχήματος."
     ],
+    "answersEn": [
+      "The owner of the vehicle.",
+      "The competent police authority.",
+      "The driver of the vehicle."
+    ],
     "correctIndex": 0,
     "explanation": "Ο ιδιοκτήτης του οχήματος είναι υπεύθυνος για τη φύλαξη και διαθεσιμότητα των φύλλων καταγραφής, ώστε να μπορούν να ελεγχθούν από τις αρμόδιες αρχές όποτε ζητηθεί.",
+    "explanationEn": "The owner of the vehicle is responsible for keeping the record sheets available, so that they can be checked by the competent authorities whenever requested.",
     "explanationVerified": false
   },
   {
     "id": "bus-1159",
     "category": "Ταχογράφοι",
     "question": "Ο οδηγός του λεωφορείου, εκτός από το κλειδί του ταχογράφου, πρέπει να έχει στο λεωφορείο και να επιδεικνύει, αν του ζητηθεί, τα φύλλα καταγραφής ταχύτητας:",
+    "questionEn": "In addition to the tachograph key, the driver of the bus must have in the bus, and must show if requested, the speed record sheets for:",
     "image": null,
     "answers": [
       "Της προηγούμενης ημέρας.",
       "Των πέντε (5) προηγουμένων ημερών.",
       "Των δεκαπέντε (15) προηγουμένων ημερών."
     ],
+    "answersEn": [
+      "The previous day.",
+      "The previous five (5) days.",
+      "The previous fifteen (15) days."
+    ],
     "correctIndex": 2,
     "explanation": "Ο οδηγός οφείλει να έχει μαζί του τα φύλλα καταγραφής των τελευταίων ημερών, ώστε σε τυχόν έλεγχο να μπορεί να αποδείξει τη συμμόρφωσή του με τους κανόνες ωραρίου οδήγησης.",
+    "explanationEn": "The driver must carry the record sheets of the last few days, so that in the event of a check they can prove compliance with the driving-hours rules.",
     "explanationVerified": false
   },
   {
     "id": "bus-1160",
     "category": "Κανόνες",
     "question": "Η στάθμευση των λεωφορείων σε οδούς εντός κατοικημένων περιοχών πόσες συνεχείς ώρες επιτρέπεται:",
+    "questionEn": "For how many consecutive hours is parking of buses permitted on roads within built-up areas:",
     "image": null,
     "answers": [
       "Μέχρι 12 ώρες.",
       "Μέχρι 24 ώρες.",
       "Όσες ώρες θέλει ο ιδιοκτήτης ή ο οδηγός του."
     ],
+    "answersEn": [
+      "Up to 12 hours.",
+      "Up to 24 hours.",
+      "As many hours as the owner or their driver wishes."
+    ],
     "correctIndex": 1,
     "explanation": "Πέρα από το ανώτατο αυτό διάστημα, η παρατεταμένη στάθμευση ενός μεγάλου οχήματος όπως το λεωφορείο θα δέσμευε δημόσιο χώρο και θα παρεμπόδιζε την κυκλοφορία.",
+    "explanationEn": "Beyond this maximum period, prolonged parking of a large vehicle such as a bus would occupy public space and obstruct traffic.",
     "explanationVerified": false
   },
   {
     "id": "bus-1161",
     "category": "Κανόνες",
     "question": "Επειδή τα λεωφορεία, όταν είναι σταθμευμένα εντός κατοικημένων περιοχών, προεξέχουν από τα υπόλοιπα οχήματα και παρακωλύουν την ορατότητα των πεζών, πρέπει να αποφεύγεται η στάθμευση στις οδούς:",
+    "questionEn": "Because buses, when parked within built-up areas, protrude beyond other vehicles and obstruct pedestrians' visibility, should parking be avoided on such streets:",
     "image": null,
     "answers": [
       "Ναι.",
       "Όχι."
     ],
+    "answersEn": [
+      "Yes.",
+      "No."
+    ],
     "correctIndex": 0,
     "explanation": "Επειδή τα μεγάλα λεωφορεία προεξέχουν και κρύβουν την ορατότητα προς τους πεζούς και τα άλλα οχήματα, είναι ορθό να αποφεύγεται η στάθμευσή τους σε δρόμους εντός κατοικημένων περιοχών.",
+    "explanationEn": "Because large buses protrude and block visibility towards pedestrians and other vehicles, it is right to avoid parking them on streets within built-up areas.",
     "explanationVerified": false
   },
   {
     "id": "bus-1162",
     "category": "Κανόνες",
     "question": "Όταν ένα λεωφορείο πάθει βλάβη στο επαρχιακό οδικό δίκτυο σε πόση απόσταση πρέπει ο οδηγός να τοποθετήσει το τρίγωνο προειδοποιήσεως:",
+    "questionEn": "When a bus breaks down on the provincial road network, at what distance must the driver place the warning triangle:",
     "image": null,
     "answers": [
       "Σε απόσταση τουλάχιστον 20 m.",
       "Σε απόσταση τουλάχιστον 50 m.",
       "Σε απόσταση τουλάχιστον 100 m."
     ],
+    "answersEn": [
+      "At a distance of at least 20 m.",
+      "At a distance of at least 50 m.",
+      "At a distance of at least 100 m."
+    ],
     "correctIndex": 1,
     "explanation": "Σε επαρχιακούς δρόμους, όπου οι ταχύτητες είναι υψηλότερες, απαιτείται μεγαλύτερη απόσταση τοποθέτησης του τριγώνου ώστε οι επερχόμενοι οδηγοί να προλαβαίνουν να αντιδράσουν έγκαιρα.",
+    "explanationEn": "On provincial roads, where speeds are higher, a greater placement distance for the triangle is required so that approaching drivers have time to react in good time.",
     "explanationVerified": false
   },
   {
     "id": "bus-1163",
     "category": "Κανόνες",
     "question": "Μετά από συνεχή οδήγηση τεσσεράμισι ωρών, πόσος είναι ο χρόνος της διακοπής για την ανάπαυση του οδηγού λεωφορείου:",
+    "questionEn": "After four and a half hours of continuous driving, how long is the break for the bus driver's rest:",
     "image": null,
     "answers": [
       "Δέκα πρώτα λεπτά.",
       "Τριάντα πρώτα λεπτά.",
       "Σαράντα πέντε πρώτα λεπτά."
     ],
+    "answersEn": [
+      "At least ten minutes.",
+      "At least thirty minutes.",
+      "At least forty-five minutes."
+    ],
     "correctIndex": 2,
     "explanation": "Μετά από παρατεταμένη συνεχή οδήγηση η κόπωση του οδηγού αυξάνει σημαντικά τον κίνδυνο ατυχήματος, γι' αυτό απαιτείται υποχρεωτικό διάλειμμα ανάπαυσης.",
+    "explanationEn": "After prolonged continuous driving, the driver's fatigue significantly increases the risk of an accident, which is why a mandatory rest break is required.",
     "explanationVerified": false
   },
   {
     "id": "bus-1164",
     "category": "Κανόνες",
     "question": "Κάθε λεωφορείο πρέπει να είναι εφοδιασμένο με δύο (2) πυροσβεστήρες ξηράς κόνεως ή άλλου εγκεκριμένου από το Πυροσβεστικό Σώμα υλικού ισοδύναμης κατασβεστικής ικανότητας, με καθαρό βάρος ο καθένας:",
+    "questionEn": "Every bus must be fitted with two (2) dry-powder fire extinguishers, or other material approved by the Fire Service with equivalent extinguishing capacity, each with a net weight of:",
     "image": null,
     "answers": [
       "6 kg.",
       "8 kg.",
       "10 kg."
     ],
+    "answersEn": [
+      "6 kg.",
+      "8 kg.",
+      "10 kg."
+    ],
     "correctIndex": 0,
     "explanation": "Δύο πυροσβεστήρες επαρκούς βάρους εξασφαλίζουν επαρκή ποσότητα κατασβεστικού υλικού σε περίπτωση πυρκαγιάς μέσα σε ένα μεγάλο όχημα με πολλούς επιβάτες.",
+    "explanationEn": "Two extinguishers of sufficient weight ensure an adequate quantity of extinguishing material in the event of a fire inside a large vehicle carrying many passengers.",
     "explanationVerified": false
   },
   {
     "id": "bus-1165",
     "category": "Κανόνες",
     "question": "Οι ζώνες ασφαλείας για τους επιβάτες είναι υποχρεωτικές:",
+    "questionEn": "Seat belts for passengers are mandatory:",
     "image": null,
     "answers": [
       "Στα λεωφορεία μεταφοράς προσωπικού.",
       "Στα τουριστικά λεωφορεία.",
       "Στα σχολικά λεωφορεία."
     ],
+    "answersEn": [
+      "On staff transport buses.",
+      "On tourist buses.",
+      "On school buses."
+    ],
     "correctIndex": 2,
     "explanation": "Λόγω της ιδιαίτερης ευθύνης μεταφοράς ανήλικων μαθητών, η νομοθεσία επιβάλλει την υποχρεωτική χρήση ζωνών ασφαλείας ειδικά στα σχολικά λεωφορεία.",
+    "explanationEn": "Due to the particular responsibility of transporting minor students, the legislation makes the use of seat belts mandatory specifically on school buses.",
     "explanationVerified": false
   },
   {
     "id": "bus-1166",
     "category": "Κανόνες",
     "question": "Εάν αλλάξετε τον εξωτερικό χρωματισμό του οχήματός σας:",
+    "questionEn": "If you change the exterior colour of your vehicle:",
     "image": null,
     "answers": [
       "Έχετε υποχρέωση να το δηλώσετε στην Υπηρεσία που σας εξέδωσε την άδεια κυκλοφορίας του οχήματος.",
       "Δεν έχετε καμιά υποχρέωση, εφόσον γράψετε πάλι τις εξωτερικές ενδείξεις, που πρέπει να φέρει το όχημα.",
       "Η υποχρέωσή σας να το δηλώσετε εξαρτάται από το μέγιστο μικτό φορτίο του οχήματος."
     ],
+    "answersEn": [
+      "You are obliged to declare it to the authority that issued your vehicle's registration certificate.",
+      "You have no obligation, as long as you rewrite the external markings that the vehicle must bear.",
+      "Your obligation to declare it depends on the vehicle's maximum gross load."
+    ],
     "correctIndex": 0,
     "explanation": "Ο εξωτερικός χρωματισμός αναγράφεται στα στοιχεία της άδειας κυκλοφορίας, γι' αυτό κάθε αλλαγή του πρέπει να δηλώνεται στην αρμόδια υπηρεσία για ενημέρωση των επίσημων στοιχείων του οχήματος.",
+    "explanationEn": "The exterior colour is recorded in the details of the registration certificate, which is why any change to it must be declared to the competent authority, in order to update the vehicle's official details.",
     "explanationVerified": false
   },
   {
     "id": "bus-1167",
     "category": "Κανόνες",
     "question": "Σε περίπτωση που η εμπρόσθια πινακίδα κυκλοφορίας του οχήματος κοπεί στα δύο, τότε πρέπει:",
+    "questionEn": "If the vehicle's front registration plate is broken in two, then you must:",
     "image": null,
     "answers": [
       "Να στερεωθούν τα δύο τμήματα μαζί.",
       "Να αποταθείτε στην αρμόδια Υπηρεσία Συγκοινωνιών για αντικατάσταση.",
       "Να αγοράσετε και να τοποθετήσετε μία ανταλλακτική πινακίδα."
     ],
+    "answersEn": [
+      "Fasten the two pieces together.",
+      "Apply to the competent Transport Authority for a replacement.",
+      "Buy and fit a replacement plate."
+    ],
     "correctIndex": 1,
     "explanation": "Οι πινακίδες κυκλοφορίας είναι επίσημα στοιχεία ταυτοποίησης του οχήματος, γι' αυτό η αντικατάστασή τους πρέπει να γίνεται μόνο μέσω της αρμόδιας υπηρεσίας συγκοινωνιών.",
+    "explanationEn": "Registration plates are official vehicle identification items, which is why their replacement must be carried out only through the competent transport authority.",
     "explanationVerified": false
   },
   {
     "id": "bus-1168",
     "category": "Κανόνες",
     "question": "Κατά την κυκλοφορία, η χρήση των φώτων ομίχλης:",
+    "questionEn": "While driving, the use of fog lights:",
     "image": null,
     "answers": [
       "Δεν επιτρέπεται στα τούνελ.",
       "Είναι υποχρεωτική σε περίπτωση πυκνής ομίχλης τόσο στα αστικά κέντρα όσο και εκτός αυτών.",
       "Είναι υποχρεωτική ακόμα και κατά τη διάρκεια της ημέρας, όταν προσπερνάτε στρατιωτική φάλαγγα."
     ],
+    "answersEn": [
+      "Is not allowed in tunnels.",
+      "Is mandatory in the event of dense fog, both in urban centres and outside them.",
+      "Is mandatory even during the day, when overtaking a military convoy."
+    ],
     "correctIndex": 1,
     "explanation": "Σε συνθήκες πυκνής ομίχλης η ορατότητα μειώνεται δραστικά τόσο εντός όσο και εκτός πόλης, γι' αυτό η χρήση φώτων ομίχλης καθίσταται υποχρεωτική για να γίνεται το όχημα ορατό.",
+    "explanationEn": "In conditions of dense fog, visibility is drastically reduced both inside and outside the city, which is why the use of fog lights becomes mandatory to make the vehicle visible.",
     "explanationVerified": false
   },
   {
     "id": "bus-1169",
     "category": "Κανόνες",
     "question": "Οι ζώνες ασφαλείας:",
+    "questionEn": "Seat belts:",
     "image": null,
     "answers": [
       "Είναι τα μοναδικά συστήματα ασφαλείας που έχουν προβλεφθεί στα αυτοκίνητα.",
       "Είναι ασήμαντης χρησιμότητας στην κυκλοφορία.",
       "Πρέπει να είναι εγκεκριμένου τύπου και να διατηρούνται πάντα σε καλή κατάσταση."
     ],
+    "answersEn": [
+      "Are the only safety systems provided for in cars.",
+      "Are of negligible usefulness in traffic.",
+      "Must be of an approved type and always kept in good condition."
+    ],
     "correctIndex": 2,
     "explanation": "Μια ζώνη ασφαλείας προστατεύει αποτελεσματικά μόνο αν είναι εγκεκριμένου τύπου και σε καλή κατάσταση· φθαρμένη ή μη εγκεκριμένη ζώνη μπορεί να αστοχήσει σε σύγκρουση.",
+    "explanationEn": "A seat belt protects effectively only if it is of an approved type and in good condition; a worn or non-approved belt may fail in a collision.",
     "explanationVerified": false
   },
   {
     "id": "bus-1170",
     "category": "Κανόνες",
     "question": "Τα λεωφορεία πρέπει να ελέγχονται και να εφοδιάζονται με Κάρτα Ελέγχου Καυσαερίων:",
+    "questionEn": "Buses must be checked and issued with an Exhaust Emissions Card:",
     "image": null,
     "answers": [
       "Κάθε 6 μήνες.",
       "Κάθε χρόνο.",
       "Κάθε δύο χρόνια."
     ],
+    "answersEn": [
+      "Every 6 months.",
+      "Every year.",
+      "Every two years."
+    ],
     "correctIndex": 0,
     "explanation": "Λόγω της συχνής και εντατικής χρήσης τους, τα λεωφορεία ελέγχονται για τις εκπομπές καυσαερίων τους συχνότερα από τα συνήθη οχήματα.",
+    "explanationEn": "Due to their frequent and intensive use, buses are checked for their exhaust emissions more often than ordinary vehicles.",
     "explanationVerified": false
   },
   {
     "id": "bus-1171",
     "category": "Κανόνες",
     "question": "Η άδεια οδηγήσεως Δ ή Δ+Ε κάθε πότε ανανεώνεται:",
+    "questionEn": "How often is a category D or D+E driving licence renewed:",
     "image": null,
     "answers": [
       "Κάθε τρία (3) χρόνια.",
       "Κάθε πέντε (5) χρόνια.",
       "Κάθε πέντε (5) χρόνια μέχρι το 65ο έτος και κάθε τρία (3) χρόνια μετά το 65ο έτος."
     ],
+    "answersEn": [
+      "Every three (3) years.",
+      "Every five (5) years.",
+      "Every five (5) years up to age 65, and every three (3) years after age 65."
+    ],
     "correctIndex": 2,
     "explanation": "Λόγω της αυξημένης ευθύνης μεταφοράς επιβατών, η άδεια οδήγησης λεωφορείου ελέγχεται συχνότερα καθώς προχωρά η ηλικία του οδηγού, γι' αυτό το διάστημα ανανέωσης μειώνεται μετά τα 65.",
+    "explanationEn": "Due to the increased responsibility of carrying passengers, a bus driving licence is checked more frequently as the driver's age advances, which is why the renewal period is reduced after age 65.",
     "explanationVerified": false
   },
   {
     "id": "bus-1172",
     "category": "Κανόνες",
     "question": "Πότε επιτρέπεται η μεταφορά ορθίων επιβατών με τα αστικά ή υπεραστικά λεωφορεία:",
+    "questionEn": "When is it permitted to carry standing passengers on urban or intercity buses:",
     "image": null,
     "answers": [
       "Όταν αναφέρεται στην άδεια κυκλοφορίας του λεωφορείου.",
       "Όταν το προβλέπει το εργοστάσιο κατασκευής του λεωφορείου.",
       "Όταν στην οροφή του αμαξώματος και στο διάδρομο υπάρχει ανάλογος αριθμός χειρολαβών για τη στήριξή τους."
     ],
+    "answersEn": [
+      "When it is stated in the bus's registration certificate.",
+      "When it is provided for by the bus's manufacturer.",
+      "When there is a corresponding number of handholds on the roof of the body and in the aisle for them to hold onto."
+    ],
     "correctIndex": 2,
     "explanation": "Οι χειρολαβές στην οροφή και στο διάδρομο είναι απαραίτητες ώστε οι όρθιοι επιβάτες να έχουν στήριξη σε φρεναρίσματα ή στροφές, γι' αυτό η μεταφορά τους επιτρέπεται μόνο όταν αυτές υπάρχουν.",
+    "explanationEn": "Handholds on the roof and in the aisle are necessary so that standing passengers have support during braking or turns, which is why carrying them is only permitted when these are present.",
     "explanationVerified": false
   },
   {
     "id": "bus-1173",
     "category": "Κανόνες",
     "question": "Επιτρέπεται η μεταφορά ορθίων επιβατών με τα αστικά λεωφορεία; Αν ναι, μέχρι ποιο αριθμό:",
+    "questionEn": "Is it permitted to carry standing passengers on urban buses? If so, up to what number:",
     "image": null,
     "answers": [
       "Ναι, όσους χωράει το λεωφορείο.",
       "Ναι, όσους αναφέρει η άδεια κυκλοφορίας του λεωφορείου.",
       "Ναι, σε αριθμό ίσο με τον αριθμό των καθημένων επιβατών."
     ],
+    "answersEn": [
+      "Yes, as many as the bus can hold.",
+      "Yes, as many as the bus's registration certificate states.",
+      "Yes, in a number equal to the number of seated passengers."
+    ],
     "correctIndex": 1,
     "explanation": "Ο μέγιστος αριθμός όρθιων επιβατών καθορίζεται επίσημα στην άδεια κυκλοφορίας του συγκεκριμένου λεωφορείου, με βάση τα τεχνικά του χαρακτηριστικά.",
+    "explanationEn": "The maximum number of standing passengers is officially set out in the registration certificate of the specific bus, based on its technical characteristics.",
     "explanationVerified": false
   },
   {
     "id": "bus-1174",
     "category": "Κανόνες",
     "question": "Ο μέγιστος αριθμός (σε ποσοστό) των ορθίων επιβατών έναντι των καθημένων ενός υπεραστικού λεωφορείου ποιος είναι:",
+    "questionEn": "What is the maximum number (as a percentage) of standing passengers relative to seated passengers on an intercity bus:",
     "image": null,
     "answers": [
       "25%.",
       "30%.",
       "50%."
     ],
+    "answersEn": [
+      "25%.",
+      "30%.",
+      "50%."
+    ],
     "correctIndex": 0,
     "explanation": "Στα υπεραστικά λεωφορεία, που κινούνται συνήθως με υψηλότερες ταχύτητες, επιτρέπεται μικρότερο ποσοστό όρθιων επιβατών σε σχέση με τους καθήμενους, για λόγους ασφάλειας.",
+    "explanationEn": "On intercity buses, which usually travel at higher speeds, a smaller percentage of standing passengers relative to seated ones is permitted, for safety reasons.",
     "explanationVerified": false
   },
   {
     "id": "bus-1175",
     "category": "Κανόνες",
     "question": "Ο έλεγχος λεωφορείου  στο ΚΤΕΟ πρέπει να γίνεται:",
+    "questionEn": "How often must a bus be inspected at the Vehicle Roadworthiness Testing Centre (KTEO):",
     "image": null,
     "answers": [
       "Κάθε 6 μήνες.",
       "Κάθε χρόνο.",
       "Κάθε δύο χρόνια."
     ],
+    "answersEn": [
+      "Every 6 months.",
+      "Every year.",
+      "Every two years."
+    ],
     "correctIndex": 1,
     "explanation": "Λόγω της εντατικής χρήσης και του μεγάλου αριθμού επιβατών που μεταφέρουν, τα λεωφορεία υποβάλλονται σε τεχνικό έλεγχο ΚΤΕΟ συχνότερα από άλλα οχήματα.",
+    "explanationEn": "Due to intensive use and the large number of passengers they carry, buses undergo a KTEO technical inspection more frequently than other vehicles.",
     "explanationVerified": false
   },
   {
     "id": "bus-1176",
     "category": "Κανόνες",
     "question": "Πόσες ώρες τουλάχιστον πρέπει να διαρκεί η ημερήσια (περίοδος 24 ωρών) ανάπαυση του οδηγού ενός λεωφορείου:",
+    "questionEn": "How many hours, at least, must a bus driver's daily rest (within a 24-hour period) last:",
     "image": null,
     "answers": [
       "11 ώρες.",
       "14 ώρες.",
       "15 ώρες."
     ],
+    "answersEn": [
+      "11 hours.",
+      "14 hours.",
+      "15 hours."
+    ],
     "correctIndex": 0,
     "explanation": "Η ελάχιστη ημερήσια ανάπαυση αποσκοπεί στο να εξασφαλίσει ότι ο οδηγός θα ξεκουραστεί επαρκώς πριν επιστρέψει στο τιμόνι, μειώνοντας τον κίνδυνο κόπωσης.",
+    "explanationEn": "The minimum daily rest aims to ensure that the driver rests sufficiently before returning to the wheel, reducing the risk of fatigue.",
     "explanationVerified": false
   },
   {
     "id": "bus-1177",
     "category": "Κανόνες",
     "question": "Πόσες φορές σε μία εβδομάδα ο οδηγός ενός λεωφορείου μπορεί να οδηγεί επί 10 ώρες την ημέρα:",
+    "questionEn": "How many times in a week can a bus driver drive for 10 hours a day:",
     "image": null,
     "answers": [
       "Μία (1) φορά.",
       "Δύο (2) φορές.",
       "Τρεις (3) φορές."
     ],
+    "answersEn": [
+      "Once (1).",
+      "Twice (2).",
+      "Three times (3)."
+    ],
     "correctIndex": 1,
     "explanation": "Η επέκταση της ημερήσιας οδήγησης στις 10 ώρες επιτρέπεται μόνο περιορισμένο αριθμό φορών την εβδομάδα, ώστε να μην συσσωρεύεται υπερβολική κόπωση στον οδηγό.",
+    "explanationEn": "Extending daily driving to 10 hours is permitted only a limited number of times per week, so that excessive fatigue does not build up in the driver.",
     "explanationVerified": false
   },
   {
     "id": "bus-1178",
     "category": "Κανόνες",
     "question": "Ποιος είναι ο μέγιστος αριθμός ωρών εργασίας ενός οδηγού λεωφορείου στη διάρκεια δύο εβδομάδων:",
+    "questionEn": "What is the maximum number of working hours of a bus driver over a period of two weeks:",
     "image": null,
     "answers": [
       "80 ώρες.",
       "90 ώρες.",
       "100 ώρες."
     ],
+    "answersEn": [
+      "80 hours.",
+      "90 hours.",
+      "100 hours."
+    ],
     "correctIndex": 1,
     "explanation": "Το ανώτατο όριο ωρών εργασίας σε δύο εβδομάδες θέτει ένα συνολικό πλαίσιο που αποτρέπει την υπερβολική συσσώρευση ωρών οδήγησης, προστατεύοντας τον οδηγό από χρόνια κόπωση.",
+    "explanationEn": "The maximum limit on working hours over two weeks sets an overall framework that prevents excessive accumulation of driving hours, protecting the driver from chronic fatigue.",
     "explanationVerified": false
   },
   {
     "id": "bus-1179",
     "category": "Κανόνες",
     "question": "Η διάρκεια της συνεχούς οδηγήσεως από τον οδηγό ενός λεωφορείου είναι:",
+    "questionEn": "The duration of continuous driving by a bus driver is:",
     "image": null,
     "answers": [
       "5 ώρες και 30 πρώτα λεπτά.",
       "4 ώρες και 30 πρώτα λεπτά.",
       "3 ώρες και 30 πρώτα λεπτά."
     ],
+    "answersEn": [
+      "5 hours and 30 minutes.",
+      "4 hours and 30 minutes.",
+      "3 hours and 30 minutes."
+    ],
     "correctIndex": 1,
     "explanation": "Το όριο συνεχούς οδήγησης καθορίζει το χρονικό σημείο μετά το οποίο η συγκέντρωση του οδηγού μειώνεται σημαντικά και απαιτείται υποχρεωτικό διάλειμμα.",
+    "explanationEn": "The continuous-driving limit sets the point in time after which the driver's concentration decreases significantly and a mandatory break is required.",
     "explanationVerified": false
   },
   {
     "id": "bus-1180",
     "category": "Διαστάσεις",
     "question": "Το μέγιστο μήκος ενός αρθρωτού λεωφορείου είναι:",
+    "questionEn": "The maximum length of an articulated bus is:",
     "image": null,
     "answers": [
       "15,00 m.",
       "16,00 m.",
       "18,75 m."
     ],
+    "answersEn": [
+      "15.00 m.",
+      "16.00 m.",
+      "18.75 m."
+    ],
     "correctIndex": 2,
     "explanation": "Το ανώτατο μήκος για τα αρθρωτά λεωφορεία καθορίζεται ώστε το όχημα να παραμένει ελέγξιμο σε στροφές και ελιγμούς παρά το αυξημένο μήκος του.",
+    "explanationEn": "The maximum length for articulated buses is set so that the vehicle remains controllable in turns and manoeuvres despite its increased length.",
     "explanationVerified": false
   },
   {
     "id": "bus-1181",
     "category": "Διαστάσεις",
     "question": "Σύμφωνα με τις ισχύουσες διατάξεις το μέγιστο μήκος διαξονικού λεωφορείου για εθνικές ή διεθνείς μεταφορές είναι:",
+    "questionEn": "According to the regulations in force, the maximum length of a two-axle bus for domestic or international transport is:",
     "image": null,
     "answers": [
       "11,5 m.",
       "13,5 m.",
       "12,5 m."
     ],
+    "answersEn": [
+      "11.5 m.",
+      "13.5 m.",
+      "12.5 m."
+    ],
     "correctIndex": 1,
     "explanation": "Το όριο μήκους εξασφαλίζει ότι ένα συνηθισμένο διαξονικό λεωφορείο παραμένει ασφαλώς ελιγμούμενο σε δρόμους και κόμβους του οδικού δικτύου.",
+    "explanationEn": "The length limit ensures that an ordinary two-axle bus remains safely manoeuvrable on roads and at junctions of the road network.",
     "explanationVerified": false
   },
   {
     "id": "bus-1182",
     "category": "Ταχύτητα",
     "question": "Ποιο είναι το ανώτατο επιτρεπόμενο όριο ταχύτητας των λεωφορείων σε αυτοκινητόδρομους αν αυτό δεν καθορίζεται με ειδικές πινακίδες:",
+    "questionEn": "What is the maximum permitted speed limit for buses on motorways, if not otherwise specified by special signs:",
     "image": null,
     "answers": [
       "80 km/h.",
       "90 km/h.",
       "100 km/h."
     ],
+    "answersEn": [
+      "80 km/h.",
+      "90 km/h.",
+      "100 km/h."
+    ],
     "correctIndex": 2,
     "explanation": "Στους αυτοκινητόδρομους, με τα καλύτερα χαρακτηριστικά ασφαλείας, επιτρέπεται το υψηλότερο όριο ταχύτητας για τα λεωφορεία.",
+    "explanationEn": "On motorways, which have the best safety characteristics, the highest speed limit for buses is permitted.",
     "explanationVerified": false
   },
   {
     "id": "bus-1183",
     "category": "Ταχύτητα",
     "question": "Ποιο είναι το ανώτατο όριο ταχύτητας διόροφων λεωφορείων, εκτός κατοικημένων περιοχών, αν αυτό δεν καθορίζεται με ειδικές πινακίδες:",
+    "questionEn": "What is the maximum speed limit for double-decker buses, outside built-up areas, if not otherwise specified by special signs:",
     "image": null,
     "answers": [
       "70 km/h.",
       "80 km/h.",
       "90 km/h."
     ],
+    "answersEn": [
+      "70 km/h.",
+      "80 km/h.",
+      "90 km/h."
+    ],
     "correctIndex": 0,
     "explanation": "Τα διώροφα λεωφορεία έχουν υψηλότερο κέντρο βάρους, γι' αυτό κινούνται με χαμηλότερο ανώτατο όριο ταχύτητας για λόγους ευστάθειας.",
+    "explanationEn": "Double-decker buses have a higher centre of gravity, which is why they travel at a lower maximum speed limit for stability reasons.",
     "explanationVerified": false
   },
   {
     "id": "bus-1184",
     "category": "Κυρώσεις",
     "question": "Τι διοικητικές ποινές προβλέπονται αν κάποιος οδηγεί όχημα χωρίς να έχει τη νόμιμη άδεια οδήγησης και γίνει υπαίτιος τροχαίου ατυχήματος με σοβαρό τραυματισμό ή θάνατο:",
+    "questionEn": "What administrative penalties are provided for if someone drives a vehicle without holding a valid driving licence and is found responsible for a road accident with serious injury or death:",
     "image": null,
     "answers": [
       "Στέρηση του δικαιώματος αποκτήσεως άδειας οδηγήσεως για 10 χρόνια τουλάχιστον.",
       "Στέρηση του δικαιώματος αποκτήσεως άδειας οδηγήσεως για 15 χρόνια τουλάχιστον.",
       "Στέρηση του δικαιώματος αποκτήσεως άδειας οδηγήσεως για 20 χρόνια τουλάχιστον."
     ],
+    "answersEn": [
+      "Denial of the right to obtain a driving licence for at least 10 years.",
+      "Denial of the right to obtain a driving licence for at least 15 years.",
+      "Denial of the right to obtain a driving licence for at least 20 years."
+    ],
     "correctIndex": 0,
     "explanation": "Η οδήγηση χωρίς να έχει ποτέ αποκτηθεί άδεια, σε συνδυασμό με σοβαρό ατύχημα, θεωρείται ιδιαίτερα σοβαρή παράβαση και τιμωρείται με μεγάλη διάρκεια στέρησης του δικαιώματος απόκτησης άδειας.",
+    "explanationEn": "Driving without ever having obtained a licence, combined with a serious accident, is considered a particularly serious offence and is punished with a long denial of the right to obtain a licence.",
     "explanationVerified": false
   },
   {
     "id": "bus-1185",
     "category": "Κυρώσεις",
     "question": "Τι διοικητικές ποινές προβλέπονται αν κάποιος οδηγεί όχημα χωρίς να έχει τη νόμιμη άδεια οδήγησης:",
+    "questionEn": "What administrative penalties are provided for if someone drives a vehicle without holding a valid driving licence:",
     "image": null,
     "answers": [
       "Στέρηση του δικαιώματος αποκτήσεως άδειας οδηγήσεως για 3 έτη τουλάχιστον.",
       "Στέρηση του δικαιώματος αποκτήσεως άδειας οδηγήσεως για 5 έτη τουλάχιστον.",
       "Στέρηση του δικαιώματος αποκτήσεως άδειας οδηγήσεως για 10 έτη τουλάχιστον."
     ],
+    "answersEn": [
+      "Denial of the right to obtain a driving licence for at least 3 years.",
+      "Denial of the right to obtain a driving licence for at least 5 years.",
+      "Denial of the right to obtain a driving licence for at least 10 years."
+    ],
     "correctIndex": 0,
     "explanation": "Η απλή οδήγηση χωρίς να έχει αποκτηθεί ποτέ άδεια οδήγησης τιμωρείται με στέρηση του δικαιώματος απόκτησής της, μικρότερης διάρκειας απ' ό,τι όταν συνοδεύεται από σοβαρό ατύχημα.",
+    "explanationEn": "Simply driving without ever having obtained a driving licence is punished with denial of the right to obtain one, for a shorter period than when it is accompanied by a serious accident.",
     "explanationVerified": false
   },
   {
     "id": "bus-1186",
     "category": "Συντήρηση",
     "question": "Το ελάχιστο πάχος πέλματος των ελαστικών των κινητήριων αξόνων των λεωφορείων είναι:",
+    "questionEn": "The minimum tread depth of the tyres on the driven axles of buses is:",
     "image": null,
     "answers": [
       "1,6 mm.",
       "1,5 mm.",
       "2 mm."
     ],
+    "answersEn": [
+      "1.6 mm.",
+      "1.5 mm.",
+      "2 mm."
+    ],
     "correctIndex": 0,
     "explanation": "Κάτω από το ελάχιστο πάχος πέλματος, το ελαστικό χάνει σημαντικά την ικανότητα αποστράγγισης νερού και πρόσφυσης, αυξάνοντας τον κίνδυνο ολίσθησης, γι' αυτό ορίζεται ως το κατώτατο όριο ασφαλούς χρήσης.",
+    "explanationEn": "Below the minimum tread depth, the tyre significantly loses its ability to drain water and grip, increasing the risk of skidding, which is why it is set as the minimum limit for safe use.",
     "explanationVerified": false
   }
 ]

@@ -3,1098 +3,1645 @@
     "id": "moto-1001",
     "category": "Εξοπλισμός",
     "question": "To καλοκαίρι οδηγείτε τη μοτοσυκλέτα με κοντό παντελόνι:",
+    "questionEn": "In the summer you ride the motorcycle in short trousers (shorts):",
     "image": null,
     "answers": [
       "Όχι, γιατί με την παραμικρή πτώση θα έχετε σοβαρές σωματικές κακώσεις.",
       "Ναι, αλλά με προσοχή και μικρή ταχύτητα.",
       "Ναι, αρκεί να φοράτε προστατευτικό κράνος."
     ],
+    "answersEn": [
+      "No, because even the slightest fall will cause serious bodily injuries.",
+      "Yes, but carefully and at low speed.",
+      "Yes, as long as you wear a protective helmet."
+    ],
     "correctIndex": 0,
     "explanation": "Χωρίς προστατευτικό ρουχισμό στα πόδια, ακόμη και μια μικρή πτώση μπορεί να προκαλέσει σοβαρές εκδορές και τραυματισμούς στο δέρμα.",
+    "explanationEn": "Without protective clothing on your legs, even a minor fall can cause serious abrasions and injuries to the skin.",
     "explanationVerified": false
   },
   {
     "id": "moto-1002",
     "category": "Εξοπλισμός",
     "question": "Τι πρέπει να προσέξει ιδιαίτερα ο δικυκλιστής προκειμένου να αγοράσει προστατευτικό κράνος:",
+    "questionEn": "What should a motorcyclist pay particular attention to when buying a protective helmet:",
     "image": null,
     "answers": [
       "Το κράνος να είναι έγχρωμο.",
       "Το κράνος να είναι εγκεκριμένου τύπου και να ταιριάζει στο κεφάλι του δικυκλιστή που θα το χρησιμοποιήσει.",
       "Το κράνος να διατίθεται στην αγορά ανεξάρτητα αν είναι ή όχι εγκεκριμένου τύπου."
     ],
+    "answersEn": [
+      "The helmet should be colorful.",
+      "The helmet should be of an approved type and fit the head of the rider who will use it.",
+      "The helmet should be available on the market regardless of whether it is of an approved type or not."
+    ],
     "correctIndex": 1,
     "explanation": "Το κράνος προστατεύει αποτελεσματικά μόνο όταν είναι εγκεκριμένου τύπου και εφαρμόζει σωστά στο μέγεθος του κεφαλιού του συγκεκριμένου αναβάτη.",
+    "explanationEn": "A helmet only protects effectively when it is of an approved type and fits properly to the size of that particular rider's head.",
     "explanationVerified": false
   },
   {
     "id": "moto-1003",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Μία δίκυκλη μοτοσυκλέτα που έχει κινητήρα 75 cc κινείται στο επαρχιακό οδικό δίκτυο. Ποιο είναι το μέγιστο επιτρεπόμενο όριο ταχύτητας με το οποίο μπορεί να κινείται:",
+    "questionEn": "A two-wheeled motorcycle with a 75 cc engine is traveling on the rural (provincial) road network. What is the maximum speed limit it may travel at:",
     "image": null,
     "answers": [
       "70 km/h.",
       "80 km/h.",
       "100 km/h."
     ],
+    "answersEn": [
+      "70 km/h.",
+      "80 km/h.",
+      "100 km/h."
+    ],
     "correctIndex": 0,
     "explanation": "Για δίκυκλα μικρού κυβισμού, όπως τα 75 cc, ο Κώδικας Οδικής Κυκλοφορίας προβλέπει χαμηλότερο όριο ταχύτητας στο επαρχιακό δίκτυο, λόγω της περιορισμένης ιπποδύναμης και σταθερότητάς τους.",
+    "explanationEn": "For small-displacement motorcycles, such as 75 cc ones, the Road Traffic Code sets a lower speed limit on the rural road network, due to their limited power and stability.",
     "explanationVerified": false
   },
   {
     "id": "moto-1004",
     "category": "Εξαρτήματα",
     "question": "Πότε έχουν τα ελαστικά της μοτοσυκλέτας καλύτερη απόδοση:",
+    "questionEn": "When do motorcycle tires perform best:",
     "image": null,
     "answers": [
       "Όταν είναι κρύα.",
       "Όταν ζεσταθούν.",
       "Έχουν πάντα την ίδια απόδοση."
     ],
+    "answersEn": [
+      "When they are cold.",
+      "When they warm up.",
+      "They always perform the same."
+    ],
     "correctIndex": 1,
     "explanation": "Τα ελαστικά αποκτούν καλύτερη πρόσφυση στο οδόστρωμα όταν ζεσταθούν, γιατί το ελαστικό υλικό μαλακώνει και «κολλάει» καλύτερα στην άσφαλτο.",
+    "explanationEn": "Tires get better grip on the road surface once they warm up, because the rubber compound softens and 'grips' the asphalt better.",
     "explanationVerified": false
   },
   {
     "id": "moto-1005",
     "category": "Εξαρτήματα",
     "question": "Γιατί ο δικυκλιστής, ακόμα και την ημέρα, πρέπει να οδηγεί με τα φώτα αναμμένα:",
+    "questionEn": "Why should a motorcyclist ride with the lights on even during the day:",
     "image": null,
     "answers": [
       "Για να είναι καλύτερα ορατός.",
       "Για να βλέπει καλύτερα τα αντιθέτως ερχόμενα οχήματα.",
       "Για να βλέπει καλύτερα τα οχήματα που ακολουθεί."
     ],
+    "answersEn": [
+      "To be more visible.",
+      "To see oncoming vehicles better.",
+      "To see better the vehicles they are following."
+    ],
     "correctIndex": 0,
     "explanation": "Τα αναμμένα φώτα κάνουν το δίκυκλο πιο ευδιάκριτο στους άλλους οδηγούς, μειώνοντας τον κίνδυνο να μην το προσέξουν λόγω της μικρής του διατομής.",
+    "explanationEn": "Lit lights make the motorcycle more noticeable to other drivers, reducing the risk of it being overlooked due to its small profile.",
     "explanationVerified": false
   },
   {
     "id": "moto-1007",
     "category": "Συντήρηση",
     "question": "Η αλυσίδα που μεταδίδει την κίνηση από τον κινητήρα στον τροχό της μοτοσυκλέτας, πόση κάθετη ανοχή (να παίζει ελεύθερα πάνω - κάτω) πρέπει να έχει, αν εξεταστεί στη μέση της αποστάσεως κινητήρα - τροχού:",
+    "questionEn": "The chain that transmits motion from the engine to the motorcycle's wheel, how much vertical play (free up-and-down movement) should it have, when checked at the midpoint of the distance between engine and wheel:",
     "image": null,
     "answers": [
       "4-5 cm.",
       "2-3 cm.",
       "Πρέπει να είναι σφιγμένη τελείως."
     ],
+    "answersEn": [
+      "4-5 cm.",
+      "2-3 cm.",
+      "It must be fully tightened."
+    ],
     "correctIndex": 1,
     "explanation": "Μια ανοχή 2-3 cm εξασφαλίζει ότι η αλυσίδα δεν είναι ούτε υπερβολικά τεντωμένη, με κίνδυνο φθοράς, ούτε πολύ χαλαρή, με κίνδυνο να βγει από τα γρανάζια.",
+    "explanationEn": "A play of 2-3 cm ensures the chain is neither overly tight, risking wear, nor too loose, risking coming off the sprockets.",
     "explanationVerified": false
   },
   {
     "id": "moto-1008",
     "category": "Οδήγηση",
     "question": "Σε ένα ιδανικό φρενάρισμα, τι ποσοστό συμμετοχής έχει το φρένο κάθε τροχού της μοτοσυκλέτας:",
+    "questionEn": "In ideal braking, what percentage share does the brake of each motorcycle wheel have:",
     "image": null,
     "answers": [
       "75% ο εμπρόσθιος και 25% ο οπίσθιος.",
       "50% ο εμπρόσθιος και 50% ο οπίσθιος.",
       "25% ο εμπρόσθιος και 75% ο οπίσθιος."
     ],
+    "answersEn": [
+      "75% front and 25% rear.",
+      "50% front and 50% rear.",
+      "25% front and 75% rear."
+    ],
     "correctIndex": 0,
     "explanation": "Κατά το φρενάρισμα το βάρος μεταφέρεται προς τα εμπρός, οπότε ο εμπρόσθιος τροχός αναπτύσσει μεγαλύτερη πρόσφυση και μπορεί να αποδώσει το μεγαλύτερο μέρος της τροχοπέδησης.",
+    "explanationEn": "During braking, weight shifts forward, so the front wheel develops greater grip and can deliver the larger share of the braking.",
     "explanationVerified": false
   },
   {
     "id": "moto-1009",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Όταν βρέχει και οδηγείτε μοτοσυκλέτα, σε πόση απόσταση ακολουθείτε ένα προπορευόμενο όχημα:",
+    "questionEn": "When it is raining and you are riding a motorcycle, at what distance do you follow a vehicle ahead:",
     "image": null,
     "answers": [
       "Σε κάποια απόσταση που κρίνετε ασφαλή.",
       "Διπλάσια περίπου απ' ό,τι σε στεγνό δρόμο.",
       "Όση κρατάτε και σε στεγνό δρόμο."
     ],
+    "answersEn": [
+      "At some distance you judge to be safe.",
+      "About double what you would keep on a dry road.",
+      "The same as you would keep on a dry road."
+    ],
     "correctIndex": 1,
     "explanation": "Στον βρεγμένο δρόμο η πρόσφυση μειώνεται και η απόσταση ακινητοποιήσεως αυξάνεται σημαντικά, γι' αυτό χρειάζεται μεγαλύτερη απόσταση ασφαλείας.",
+    "explanationEn": "On a wet road grip is reduced and stopping distance increases significantly, which is why a greater safety distance is needed.",
     "explanationVerified": false
   },
   {
     "id": "moto-1010",
     "category": "Ετοιμότητα",
     "question": "Αν στο δρόμο που οδηγείτε το δίκυκλο, υπάρχει ένα τμήμα με πρόσφατη ασφαλτόστρωση τι κάνετε:",
+    "questionEn": "If on the road you are riding your motorcycle on there is a section with recently laid asphalt, what do you do:",
     "image": null,
     "answers": [
       "Το αποφεύγετε.",
       "Το αγνοείτε.",
       "Το ακολουθείτε γιατί έχει καλύτερο βαθμό προσφύσεως."
     ],
+    "answersEn": [
+      "You avoid it.",
+      "You ignore it.",
+      "You follow it because it has a better degree of grip."
+    ],
     "correctIndex": 2,
     "explanation": "Ένα τμήμα με πρόσφατη ασφαλτόστρωση έχει συνήθως πιο ομοιόμορφη και αδρή επιφάνεια σε σχέση με το φθαρμένο γύρω οδόστρωμα, προσφέροντας καλύτερη πρόσφυση στα ελαστικά.",
+    "explanationEn": "A section with freshly laid asphalt usually has a more uniform and rougher surface compared to the worn surrounding road, offering better grip for the tires.",
     "explanationVerified": false
   },
   {
     "id": "moto-1011",
     "category": "Εξαρτήματα",
     "question": "Ποιον τύπο αναφλεκτήρα (μπουζί) χρησιμοποιείτε στη μοτοσυκλέτα σας:",
+    "questionEn": "What type of spark plug do you use on your motorcycle:",
     "image": null,
     "answers": [
       "Ίδιο τύπο με αυτόν που συνιστά ένας φίλος σας δικυκλιστής.",
       "Οποιονδήποτε τύπο, αρκεί να μπορεί να βιδωθεί σωστά.",
       "Ίδιο ή αντίστοιχο τύπο με αυτόν που καθορίζει ο κατασκευαστής."
     ],
+    "answersEn": [
+      "The same type recommended by a motorcyclist friend of yours.",
+      "Any type, as long as it can be screwed in properly.",
+      "The same or an equivalent type to the one specified by the manufacturer."
+    ],
     "correctIndex": 2,
     "explanation": "Ο κατασκευαστής καθορίζει τον κατάλληλο τύπο μπουζί ανάλογα με τα χαρακτηριστικά του κινητήρα, ώστε να εξασφαλίζεται σωστή καύση και να αποφεύγεται βλάβη.",
+    "explanationEn": "The manufacturer specifies the suitable spark plug type according to the engine's characteristics, to ensure proper combustion and avoid damage.",
     "explanationVerified": false
   },
   {
     "id": "moto-1012",
     "category": "Οδήγηση",
     "question": "Οδηγώντας τη μοτοσυκλέτα σας, βρίσκεσθε πίσω από ένα φορτηγό αυτοκίνητο, τι κάνετε:",
+    "questionEn": "Riding your motorcycle, you find yourself behind a truck. What do you do:",
     "image": null,
     "answers": [
       "Το προσπερνάτε ή μένετε σε αρκετή απόσταση πίσω του ώστε να έχετε ορατότητα.",
       "Το προσπερνάτε ώστε να έχετε οπωσδήποτε ορατότητα.",
       "Ακολουθείτε ακριβώς από πίσω του."
     ],
+    "answersEn": [
+      "You overtake it or stay far enough behind it to have visibility.",
+      "You overtake it in order to have visibility no matter what.",
+      "You follow directly behind it."
+    ],
     "correctIndex": 0,
     "explanation": "Πίσω από φορτηγό η ορατότητα προς τα εμπρός είναι μειωμένη, γι' αυτό πρέπει είτε να προσπεράσετε με ασφάλεια είτε να κρατήσετε αρκετή απόσταση ώστε να βλέπετε τον δρόμο.",
+    "explanationEn": "Behind a truck, forward visibility is reduced, so you should either overtake safely or keep enough distance to be able to see the road.",
     "explanationVerified": false
   },
   {
     "id": "moto-1013",
     "category": "Εξοπλισμός",
     "question": "Πόσο σφικτό πρέπει να είναι το κράνος του δικυκλιστή στο κεφάλι του:",
+    "questionEn": "How tight should a motorcyclist's helmet be on their head:",
     "image": null,
     "answers": [
       "Ιδιαίτερα σφικτό, ώστε να μη βγαίνει σε περίπτωση συγκρούσεως.",
       "Να εφαρμόζει χωρίς να σφίγγει το κεφάλι.",
       "Πολύ χαλαρό για να μην ιδρώνει το κεφάλι."
     ],
+    "answersEn": [
+      "Very tight, so that it does not come off in a collision.",
+      "It should fit snugly without squeezing the head.",
+      "Very loose so the head doesn't sweat."
+    ],
     "correctIndex": 1,
     "explanation": "Το κράνος πρέπει να εφαρμόζει σταθερά στο κεφάλι χωρίς να προκαλεί δυσφορία, ώστε να παραμένει στη θέση του σε περίπτωση πτώσης, χωρίς να είναι επικίνδυνα σφιχτό.",
+    "explanationEn": "The helmet must fit firmly on the head without causing discomfort, so it stays in place in the event of a fall, without being dangerously tight.",
     "explanationVerified": false
   },
   {
     "id": "moto-1014",
     "category": "Ετοιμότητα",
     "question": "Ξαφνικά, ενώ οδηγείτε το δίκυκλό σας, εμφανίζεται στο δρόμο μία μπάλα. Τι θα κάνετε:",
+    "questionEn": "Suddenly, while riding your motorcycle, a ball appears in the road. What will you do:",
     "image": null,
     "answers": [
       "Κρατάτε σταθερή πορεία.",
       "Προσπαθείτε να αποφύγετε την μπάλα.",
       "Φρενάρετε γιατί πιθανόν να την ακολουθεί κάποιο παιδί."
     ],
+    "answersEn": [
+      "Keep a steady course.",
+      "Try to avoid the ball.",
+      "Brake, because a child may be following it."
+    ],
     "correctIndex": 2,
     "explanation": "Μια μπάλα στο δρόμο μπορεί να προαναγγέλλει την ξαφνική εμφάνιση ενός παιδιού που την ακολουθεί, γι' αυτό πρέπει να φρενάρετε προληπτικά.",
+    "explanationEn": "A ball in the road may signal the sudden appearance of a child following it, which is why you should brake pre-emptively.",
     "explanationVerified": false
   },
   {
     "id": "moto-1016",
     "category": "Εξοπλισμός",
     "question": "Ποια από τα παρακάτω εξαρτήματα δεν αποτελούν εξοπλισμό του δικυκλιστή:",
+    "questionEn": "Which of the following items do not form part of a motorcyclist's equipment:",
     "image": null,
     "answers": [
       "Μπότες και γάντια.",
       "Επιταχυντήρας και διακόπτης φώτων.",
       "Ζώνη μέσης και κράνος."
     ],
+    "answersEn": [
+      "Boots and gloves.",
+      "Throttle and light switch.",
+      "Waist (kidney) belt and helmet."
+    ],
     "correctIndex": 1,
     "explanation": "Ο επιταχυντήρας και ο διακόπτης φώτων είναι εξαρτήματα του ίδιου του δικύκλου και όχι ατομικός προστατευτικός εξοπλισμός του αναβάτη.",
+    "explanationEn": "The throttle and the light switch are components of the motorcycle itself, not personal protective equipment of the rider.",
     "explanationVerified": false
   },
   {
     "id": "moto-1017",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Μια δίκυκλη μοτοσυκλέτα με κινητήρα 200 cc κινείται σε επαρχιακό οδικό δίκτυο. Ποιο είναι το μέγιστο επιτρεπόμενο όριο ταχύτητας με το οποίο μπορεί να κινείται:",
+    "questionEn": "A two-wheeled motorcycle with a 200 cc engine is traveling on the rural road network. What is the maximum speed limit it may travel at:",
     "image": null,
     "answers": [
       "70 km/h.",
       "90 km/h",
       "100 km/h."
     ],
+    "answersEn": [
+      "70 km/h.",
+      "90 km/h",
+      "100 km/h."
+    ],
     "correctIndex": 1,
     "explanation": "Δίκυκλα μεγαλύτερου κυβισμού, όπως τα 200 cc, επιτρέπεται να κινούνται με υψηλότερο όριο ταχύτητας στο επαρχιακό δίκτυο σε σχέση με τα μικρότερου κυβισμού, λόγω μεγαλύτερης ισχύος και σταθερότητας.",
+    "explanationEn": "Motorcycles of larger displacement, such as 200 cc ones, are allowed to travel at a higher speed limit on the rural road network than smaller-displacement ones, due to greater power and stability.",
     "explanationVerified": false
   },
   {
     "id": "moto-1018",
     "category": "Ετοιμότητα",
     "question": "Ξαφνικά, ενώ οδηγείτε το δίκυκλό σας, συναντάτε στο δρόμο σας μία μεγάλη κηλίδα λαδιού. Τι θα κάνετε:",
+    "questionEn": "Suddenly, while riding your motorcycle, you come across a large oil patch on the road. What will you do:",
     "image": null,
     "answers": [
       "Προσπαθείτε να την αποφύγετε με κάθε τρόπο.",
       "Περνάτε με κλειστό γκάζι και σταθερό τιμόνι σε ευθεία πορεία.",
       "Αναπτύσσετε ταχύτητα και περνάτε γρήγορα την κηλίδα."
     ],
+    "answersEn": [
+      "Try to avoid it by any means.",
+      "Pass over it with a closed throttle and a steady handlebar, in a straight line.",
+      "Build up speed and pass the patch quickly."
+    ],
     "correctIndex": 1,
     "explanation": "Πάνω σε λάδι η πρόσφυση σχεδόν μηδενίζεται, γι' αυτό πρέπει να περάσετε σε ευθεία πορεία, με κλειστό γκάζι και χωρίς απότομες κινήσεις στο τιμόνι ή φρενάρισμα.",
+    "explanationEn": "On oil, grip drops to almost nothing, which is why you should cross it in a straight line, with a closed throttle and no abrupt movements of the handlebar or braking.",
     "explanationVerified": false
   },
   {
     "id": "moto-1019",
     "category": "Οδήγηση",
     "question": "Όταν αυξάνοντας τις στροφές του κινητήρα του δικύκλου σας περνάτε στην κόκκινη περιοχή του στροφόμετρου, τότε τι συμβαίνει στην ιπποδύναμη του δικύκλου:",
+    "questionEn": "When, by increasing your motorcycle engine's revs, you move into the red zone of the tachometer, what happens to the motorcycle's horsepower:",
     "image": null,
     "answers": [
       "Μειώνεται.",
       "Αυξάνεται.",
       "Παραμένει σταθερή."
     ],
+    "answersEn": [
+      "It decreases.",
+      "It increases.",
+      "It stays the same."
+    ],
     "correctIndex": 0,
     "explanation": "Στην κόκκινη περιοχή του στροφόμετρου ο κινητήρας λειτουργεί πέρα από τις στροφές μέγιστης απόδοσης, οπότε η ιπποδύναμη μειώνεται ενώ αυξάνεται η φθορά του.",
+    "explanationEn": "In the red zone of the tachometer the engine operates beyond its peak-performance revs, so horsepower decreases while wear increases.",
     "explanationVerified": false
   },
   {
     "id": "moto-1020",
     "category": "Εξαρτήματα",
     "question": "Σε ποιο ύψος πρέπει να βρίσκονται οι μοχλοί φρένου και συμπλέκτη στο τιμόνι του δικύκλου:",
+    "questionEn": "At what height should the brake and clutch levers be on the motorcycle's handlebar:",
     "image": null,
     "answers": [
       "Λίγο ψηλότερα από το τιμόνι.",
       "Λίγο χαμηλότερα από το τιμόνι.",
       "Στο ύψος της ανοικτής παλάμης του οδηγού, όταν ακουμπάει στο τιμόνι."
     ],
+    "answersEn": [
+      "A little higher than the handlebar.",
+      "A little lower than the handlebar.",
+      "At the height of the rider's open palm, when it rests on the handlebar."
+    ],
     "correctIndex": 2,
     "explanation": "Οι μοχλοί πρέπει να βρίσκονται στο ύψος της ανοιχτής παλάμης του οδηγού, ώστε να ενεργοποιούνται εύκολα και γρήγορα χωρίς αλλαγή λαβής.",
+    "explanationEn": "The levers should be at the height of the rider's open palm, so they can be operated easily and quickly without changing grip.",
     "explanationVerified": false
   },
   {
     "id": "moto-1021",
     "category": "Κανόνες",
     "question": "Σε μία διασταύρωση έχετε προτεραιότητα οδηγώντας το δίκυκλό σας. Την διεκδικείτε επίμονα:",
+    "questionEn": "At an intersection you have right of way while riding your motorcycle. Do you insist on it stubbornly:",
     "image": null,
     "answers": [
       "Ναι, γιατί αυτό είναι νόμιμο.",
       "Όχι, γιατί το ατύχημα με δίκυκλο δεν έχει δυσάρεστες συνέπειες για τον αναβάτη του.",
       "Όχι, γιατί αυτό είναι επικίνδυνο."
     ],
+    "answersEn": [
+      "Yes, because this is lawful.",
+      "No, because an accident with a motorcycle has no unpleasant consequences for its rider.",
+      "No, because this is dangerous."
+    ],
     "correctIndex": 2,
     "explanation": "Ακόμη κι αν έχετε νόμιμα προτεραιότητα, η επίμονη διεκδίκησή της είναι επικίνδυνη γιατί το δίκυκλο είναι ευάλωτο σε σύγκρουση και ο άλλος οδηγός ίσως δεν σας έχει αντιληφθεί.",
+    "explanationEn": "Even if you legally have right of way, insisting on it stubbornly is dangerous because the motorcycle is vulnerable in a collision and the other driver may not have noticed you.",
     "explanationVerified": false
   },
   {
     "id": "moto-1022",
     "category": "Οδήγηση",
     "question": "Όταν ακολουθείτε, οδηγώντας τη μοτοσυκλέτα σας, ένα αυτοκίνητο, σε ποιες θέσεις αποφεύγετε να τοποθετείστε:",
+    "questionEn": "When you are riding your motorcycle following a car, in which positions do you avoid placing yourself:",
     "image": null,
     "answers": [
       "Αριστερά από το αυτοκίνητο.",
       "Ακριβώς πίσω από το αυτοκίνητο.",
       "Στις θέσεις εκείνες που δεν καλύπτονται από τους καθρέπτες του αυτοκινήτου."
     ],
+    "answersEn": [
+      "To the left of the car.",
+      "Directly behind the car.",
+      "In the positions that are not covered by the car's mirrors."
+    ],
     "correctIndex": 2,
     "explanation": "Στις νεκρές γωνίες των καθρεπτών ο οδηγός του αυτοκινήτου δεν μπορεί να δει το δίκυκλο, γι' αυτό πρέπει να αποφεύγετε να παραμένετε εκεί.",
+    "explanationEn": "In the blind spots of the mirrors, the car's driver cannot see the motorcycle, which is why you should avoid staying there.",
     "explanationVerified": false
   },
   {
     "id": "moto-1023",
     "category": "Συντήρηση",
     "question": "Ποιον τύπο λαδιού χρησιμοποιείτε για τον κινητήρα της μοτοσυκλέτας σας και κάθε πότε αλλάζετε λάδια:",
+    "questionEn": "What type of oil do you use for your motorcycle's engine and how often do you change the oil:",
     "image": null,
     "answers": [
       "Τον τύπο που ορίζει ο κατασκευαστής και αλλάζετε λάδια όταν αντιληφθείτε ότι ο κινητήρας υπερθερμαίνεται.",
       "Τον τύπο που ορίζει ο κατασκευαστής και αλλάζετε κάθε 1000 km.",
       "Τον τύπο που έχει τη ρευστότητα που ορίζει ο κατασκευαστής και αλλάζετε σε τακτά χρονικά διαστήματα, σύμφωνα με όσα καθορίζoυν οι κατασκευαστές των λαδιών και της μοτοσυκλέτας."
     ],
+    "answersEn": [
+      "The type specified by the manufacturer, and you change the oil when you notice the engine overheating.",
+      "The type specified by the manufacturer, and you change it every 1000 km.",
+      "The type with the viscosity specified by the manufacturer, and you change it at regular intervals, according to what the oil and motorcycle manufacturers specify."
+    ],
     "correctIndex": 2,
     "explanation": "Η τήρηση των προδιαγραφών του κατασκευαστή για τον τύπο λαδιού και τα διαστήματα αλλαγής διασφαλίζει σωστή λίπανση και μακροζωία του κινητήρα.",
+    "explanationEn": "Following the manufacturer's specifications for the oil type and change intervals ensures proper lubrication and a long engine life.",
     "explanationVerified": false
   },
   {
     "id": "moto-1024",
     "category": "Εξοπλισμός",
     "question": "Σε μία σύγκρουση μοτοσυκλέτας με αυτοκίνητο τι πιστεύετε ότι προστατεύει το δικυκλιστή:",
+    "questionEn": "In a collision between a motorcycle and a car, what do you believe protects the motorcyclist:",
     "image": null,
     "answers": [
       "Το κατάλληλο ντύσιμο και το σωστό προστατευτικό κράνος.",
       "Η μικρή μάζα της μοτοσυκλέτας.",
       "Η εκτίναξή του από τη μοτοσυκλέτα."
     ],
+    "answersEn": [
+      "Suitable clothing and a correct protective helmet.",
+      "The motorcycle's small mass.",
+      "Being thrown off the motorcycle."
+    ],
     "correctIndex": 0,
     "explanation": "Ο κατάλληλος προστατευτικός ρουχισμός και το εγκεκριμένο κράνος απορροφούν κραδασμούς και προστατεύουν το σώμα και το κεφάλι σε περίπτωση σύγκρουσης.",
+    "explanationEn": "Suitable protective clothing and an approved helmet absorb impact and protect the body and head in the event of a collision.",
     "explanationVerified": false
   },
   {
     "id": "moto-1025",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Μια μοτοσυκλέτα που αναπτύσσει ταχύτητα πάνω από 40 km/h πρέπει να διαθέτει:",
+    "questionEn": "A motorcycle that reaches a speed above 40 km/h must be equipped with:",
     "image": null,
     "answers": [
       "Μέχρι δύο φώτα πορείας, τοποθετημένα συμμετρικά το ένα κοντά στο άλλο.",
       "Δεν επιβάλλεται να έχει φώτα πορείας.",
       "Μόνο φώτα διασταυρώσεως."
     ],
+    "answersEn": [
+      "Up to two headlights, positioned symmetrically close to each other.",
+      "It is not required to have headlights.",
+      "Only low-beam (dipped) lights."
+    ],
     "correctIndex": 0,
     "explanation": "Ο Κώδικας Οδικής Κυκλοφορίας προβλέπει ότι τα δίκυκλα άνω των 40 km/h πρέπει να φέρουν φώτα πορείας τοποθετημένα συμμετρικά, ώστε να είναι ευδιάκριτα χωρίς να προκαλούν σύγχυση στους άλλους οδηγούς.",
+    "explanationEn": "The Road Traffic Code provides that motorcycles over 40 km/h must carry headlights positioned symmetrically, so they are clearly visible without confusing other drivers.",
     "explanationVerified": false
   },
   {
     "id": "moto-1027",
     "category": "Κανόνες",
     "question": "Πλησιάζετε οδηγώντας το δίκυκλό σας σε διασταύρωση, όπου ο φωτεινός σηματοδότης δείχνει κόκκινο φως. Στο οδόστρωμα μπροστά υπάρχει σημασμένη διάβαση πεζών. Πού θα σταματήσετε περιμένοντας ο σηματοδότης να δείξει πράσινο φως:",
+    "questionEn": "You are approaching an intersection on your motorcycle, where the traffic light shows red. On the road ahead there is a marked pedestrian crossing. Where will you stop while waiting for the light to turn green:",
     "image": null,
     "answers": [
       "Επάνω στη σημασμένη διάβαση των πεζών.",
       "Μόλις περάσετε τη σημασμένη διάβαση των πεζών.",
       "Πριν ακριβώς από τη σημασμένη διάβαση των πεζών."
     ],
+    "answersEn": [
+      "On top of the marked pedestrian crossing.",
+      "Just after the marked pedestrian crossing.",
+      "Right before the marked pedestrian crossing."
+    ],
     "correctIndex": 2,
     "explanation": "Πρέπει να σταματήσετε πριν τη διάβαση πεζών ώστε να μην την εμποδίζετε και να επιτρέπεται η ασφαλής διέλευση των πεζών.",
+    "explanationEn": "You must stop before the pedestrian crossing so as not to obstruct it and to allow pedestrians to cross safely.",
     "explanationVerified": false
   },
   {
     "id": "moto-1028",
     "category": "Κανόνες",
     "question": "Ο οδηγός μιας μοτοσυκλέτας υποχρεούται όταν οδηγεί:",
+    "questionEn": "A motorcycle rider is obliged, while riding, to:",
     "image": null,
     "answers": [
       "Να κρατά το τιμόνι με τα δύο χέρια, εκτός αν δίνει σήμα σύμφωνα με τις διατάξεις του Κ.Ο.Κ.",
       "Να κρατά το τιμόνι με το δεξί χέρι.",
       "Να κρατά το τιμόνι με το αριστερό χέρι."
     ],
+    "answersEn": [
+      "Hold the handlebar with both hands, except when signaling in accordance with the provisions of the Road Traffic Code.",
+      "Hold the handlebar with the right hand.",
+      "Hold the handlebar with the left hand."
+    ],
     "correctIndex": 0,
     "explanation": "Το κράτημα του τιμονιού με τα δύο χέρια εξασφαλίζει καλύτερο έλεγχο και ισορροπία του δικύκλου, με εξαίρεση τη στιγμιαία χρήση του ενός χεριού για να δοθεί σήμα.",
+    "explanationEn": "Holding the handlebar with both hands ensures better control and balance of the motorcycle, with the exception of briefly using one hand to give a signal.",
     "explanationVerified": false
   },
   {
     "id": "moto-1029",
     "category": "Οδήγηση",
     "question": "Σε ποια σημεία γύρω από ένα φορτηγό ή λεωφορείο δεν διακρίνεται ένα δίκυκλο από τον οδηγό του φορτηγού ή του λεωφορείου:",
+    "questionEn": "At which points around a truck or bus is a motorcycle not visible to the truck's or bus's driver:",
     "image": null,
     "answers": [
       "Αριστερά και από το μέσο του μήκους του και πίσω.",
       "Ακριβώς από πίσω του.",
       "Δεξιά και από το μέσο του μήκους του και πίσω."
     ],
+    "answersEn": [
+      "To the left, and from the midpoint of its length backwards.",
+      "Directly behind it.",
+      "To the right, and from the midpoint of its length backwards."
+    ],
     "correctIndex": 1,
     "explanation": "Ακριβώς πίσω από ένα φορτηγό ή λεωφορείο το δίκυκλο βρίσκεται στη νεκρή γωνία του οδηγού και δεν είναι ορατό από τους καθρέπτες του.",
+    "explanationEn": "Directly behind a truck or bus, the motorcycle is in the driver's blind spot and is not visible in the mirrors.",
     "explanationVerified": false
   },
   {
     "id": "moto-1030",
     "category": "Ετοιμότητα",
     "question": "Οδηγείτε το δίκυκλό σας και για κάποια αιτία εκνευρίζεστε υπερβολικά. Πώς ενεργείτε:",
+    "questionEn": "You are riding your motorcycle and for some reason become excessively irritated. How do you act:",
     "image": null,
     "answers": [
       "Αναπτύσσετε ταχύτητα, αδιαφορώντας για την κατάστασή σας.",
       "Σταματάτε την οδήγηση μέχρι να ηρεμήσετε.",
       "Οδηγείτε με μειωμένη ταχύτητα."
     ],
+    "answersEn": [
+      "You build up speed, disregarding your state.",
+      "You stop riding until you calm down.",
+      "You ride at reduced speed."
+    ],
     "correctIndex": 1,
     "explanation": "Η οδήγηση υπό έντονο εκνευρισμό επηρεάζει την κρίση και τις αντιδράσεις σας, γι' αυτό είναι ασφαλέστερο να σταματήσετε μέχρι να ηρεμήσετε.",
+    "explanationEn": "Riding while severely agitated affects your judgment and reactions, which is why it is safer to stop until you calm down.",
     "explanationVerified": false
   },
   {
     "id": "moto-1031",
     "category": "Εξαρτήματα",
     "question": "Πιστεύετε ότι τα φώτα της μοτοσυκλέτας πρέπει να είναι αναμμένα και κατά τη διάρκεια της ημέρας:",
+    "questionEn": "Do you believe the motorcycle's lights should be on during the daytime as well:",
     "image": null,
     "answers": [
       "Ναι, γιατί έτσι γίνεται ευκολότερα αντιληπτή από τους οδηγούς των άλλων οχημάτων.",
       "Όχι, γιατί αδειάζει ο συσσωρευτής.",
       "Όχι, γιατί έτσι μειώνουν την ορατότητα των οδηγών των άλλων οχημάτων."
     ],
+    "answersEn": [
+      "Yes, because this way it is more easily noticed by other vehicles' drivers.",
+      "No, because it drains the battery.",
+      "No, because this reduces the visibility of other vehicles' drivers."
+    ],
     "correctIndex": 0,
     "explanation": "Τα αναμμένα φώτα, ακόμη και τη μέρα, κάνουν το δίκυκλο πιο εύκολα αντιληπτό λόγω της μικρής του διατομής σε σχέση με τα άλλα οχήματα.",
+    "explanationEn": "Lit lights, even during the day, make the motorcycle more easily noticeable due to its small profile compared to other vehicles.",
     "explanationVerified": false
   },
   {
     "id": "moto-1032",
     "category": "Οδήγηση",
     "question": "Αν σε μια ανάβαση με το δίκυκλό σας αντιληφθείτε ότι η σχέση που έχετε στο κιβώτιο ταχυτήτων δεν «τραβάει», τι κάνετε:",
+    "questionEn": "If, on an uphill climb with your motorcycle, you notice that the gear you are in doesn't 'pull', what do you do:",
     "image": null,
     "answers": [
       "Πατινάρετε το συμπλέκτη, ώστε να ανέβουν οι στροφές του κινητήρα.",
       "Ανοίγετε τέρμα το γκάζι.",
       "Κατεβάζετε μία σχέση."
     ],
+    "answersEn": [
+      "Slip the clutch, so the engine revs rise.",
+      "Open the throttle fully.",
+      "Shift down a gear."
+    ],
     "correctIndex": 2,
     "explanation": "Όταν η σχέση δεν «τραβάει» σε ανάβαση, η μετάβαση σε χαμηλότερη σχέση αυξάνει τη ροπή στον τροχό και επιτρέπει στον κινητήρα να αποδώσει επαρκή ισχύ.",
+    "explanationEn": "When a gear doesn't 'pull' on an uphill climb, shifting to a lower gear increases torque at the wheel and allows the engine to deliver adequate power.",
     "explanationVerified": false
   },
   {
     "id": "moto-1033",
     "category": "Εξαρτήματα",
     "question": "Όταν τοποθετείτε μία σχάρα στο πίσω μέρος του δικύκλου, τι πρέπει να προσέχετε ιδιαίτερα:",
+    "questionEn": "When fitting a luggage rack to the rear of the motorcycle, what should you pay particular attention to:",
     "image": null,
     "answers": [
       "Να είναι κατά το δυνατόν μπροστά και χαμηλά, ώστε να επηρεάζεται λιγότερο το κέντρο βάρους.",
       "Να στηρίζεται στο πλαίσιο του δικύκλου.",
       "Να είναι αρκετά φαρδιά, ώστε να στερεώνονται καλά τα αντικείμενα που θα φορτώνετε."
     ],
+    "answersEn": [
+      "That it is as far forward and low as possible, so the center of gravity is affected as little as possible.",
+      "That it is supported on the motorcycle's frame.",
+      "That it is wide enough so that the items you load are secured well."
+    ],
     "correctIndex": 0,
     "explanation": "Τοποθετώντας το φορτίο όσο πιο μπροστά και χαμηλά γίνεται, επηρεάζεται λιγότερο το κέντρο βάρους και διατηρείται καλύτερα η ευστάθεια του δικύκλου.",
+    "explanationEn": "By placing the load as far forward and low as possible, the center of gravity is affected less and the motorcycle's stability is better maintained.",
     "explanationVerified": false
   },
   {
     "id": "moto-1034",
     "category": "Συντήρηση",
     "question": "Ο έλεγχος της ανοχής των βαλβίδων του κινητήρα του δικύκλου γίνεται:",
+    "questionEn": "The check of the valve clearance of the motorcycle's engine is carried out:",
     "image": null,
     "answers": [
       "Από τον οδηγό του δικύκλου.",
       "Από οποιονδήποτε οδηγεί δίκυκλο.",
       "Μόνο από συνεργείο που λειτουργεί νόμιμα."
     ],
+    "answersEn": [
+      "By the motorcycle's rider.",
+      "By anyone who rides a motorcycle.",
+      "Only by a legally operating repair shop."
+    ],
     "correctIndex": 2,
     "explanation": "Ο έλεγχος της ανοχής των βαλβίδων απαιτεί εξειδικευμένες γνώσεις και εργαλεία, γι' αυτό πρέπει να γίνεται μόνο από αρμόδιο και νόμιμα λειτουργούν συνεργείο.",
+    "explanationEn": "Checking valve clearance requires specialized knowledge and tools, which is why it should only be done by a competent, legally operating repair shop.",
     "explanationVerified": false
   },
   {
     "id": "moto-1035",
     "category": "Οδήγηση",
     "question": "Ποιον θεωρείτε σωστό τρόπο για το προσπέρασμα προπορευόμενου οχήματος:",
+    "questionEn": "Which do you consider the correct way to overtake a vehicle ahead:",
     "image": null,
     "answers": [
       "Από αριστερά ή δεξιά και με μεγάλη ταχύτητα.",
       "Από αριστερά και όσο πιο αργά μπορούμε.",
       "Από αριστερά και, αφού κάνετε γνωστή την παρουσία και την πρόθεσή σας, χρησιμοποιώντας όλη την επιτάχυνση που διαθέτετε."
     ],
+    "answersEn": [
+      "From the left or right, and at high speed.",
+      "From the left and as slowly as possible.",
+      "From the left and, after making your presence and intention known, using all the acceleration you have available."
+    ],
     "correctIndex": 2,
     "explanation": "Το ασφαλές προσπέρασμα γίνεται από αριστερά, αφού προειδοποιήσετε τον προπορευόμενο και τους άλλους οδηγούς, και ολοκληρώνεται γρήγορα με επαρκή επιτάχυνση ώστε να μειωθεί ο χρόνος έκθεσης στο αντίθετο ρεύμα.",
+    "explanationEn": "A safe overtake is done from the left, after warning the vehicle ahead and other drivers, and is completed quickly with sufficient acceleration to reduce the time spent in the opposite lane.",
     "explanationVerified": false
   },
   {
     "id": "moto-1036",
     "category": "Εξοπλισμός",
     "question": "Γιατί είναι απαραίτητο ο δικυκλιστής να φοράει το προστατευτικό του κράνος:",
+    "questionEn": "Why is it necessary for a motorcyclist to wear their protective helmet:",
     "image": null,
     "answers": [
       "Διότι το απαιτεί ο νόμος.",
       "Διότι υπάρχει κίνδυνος να πληρώσει πρόστιμο.",
       "Διότι σε περίπτωση πτώσεως, οι συνέπειες χωρίς το προστατευτικό κράνος μπορεί να είναι τραγικές."
     ],
+    "answersEn": [
+      "Because the law requires it.",
+      "Because there is a risk of having to pay a fine.",
+      "Because in the event of a fall, the consequences without a protective helmet can be tragic."
+    ],
     "correctIndex": 2,
     "explanation": "Χωρίς κράνος, ένα χτύπημα στο κεφάλι σε περίπτωση πτώσης μπορεί να έχει πολύ σοβαρές έως θανατηφόρες συνέπειες, γι' αυτό η χρήση του είναι απαραίτητη.",
+    "explanationEn": "Without a helmet, a blow to the head in the event of a fall can have very serious, even fatal, consequences, which is why wearing it is necessary.",
     "explanationVerified": false
   },
   {
     "id": "moto-1037",
     "category": "Εξαρτήματα",
     "question": "Το φως διασταυρώσεως του δικύκλου σας πρέπει να φωτίζει επαρκώς την οδό κατά την νύκτα με συνθήκες αίθριες:",
+    "questionEn": "Your motorcycle's dipped (low) beam must adequately light the road at night, in clear conditions:",
     "image": null,
     "answers": [
       "Τουλάχιστον 10 m μπροστά από τη μοτοσυκλέτα.",
       "Τουλάχιστον 20 m μπροστά από τη μοτοσυκλέτα.",
       "Τουλάχιστον 40 m μπροστά από τη μοτοσυκλέτα."
     ],
+    "answersEn": [
+      "At least 10 m ahead of the motorcycle.",
+      "At least 20 m ahead of the motorcycle.",
+      "At least 40 m ahead of the motorcycle."
+    ],
     "correctIndex": 2,
     "explanation": "Το φως διασταυρώσεως πρέπει να φωτίζει επαρκή απόσταση εμπρός από το δίκυκλο, ώστε ο οδηγός να έχει αρκετό χρόνο αντίδρασης σε εμπόδια κατά τη νυχτερινή οδήγηση.",
+    "explanationEn": "The dipped beam must light a sufficient distance ahead of the motorcycle, so the rider has enough reaction time for obstacles during night riding.",
     "explanationVerified": false
   },
   {
     "id": "moto-1038",
     "category": "Ετοιμότητα",
     "question": "Γιατί είναι επικίνδυνο να οδηγείτε το δίκυκλό σας υπό την επίδραση έστω και μικρής ποσότητας οινοπνεύματος (π.χ. ένα ποτήρι μπύρας):",
+    "questionEn": "Why is it dangerous to ride your motorcycle under the influence of even a small amount of alcohol (e.g. one glass of beer):",
     "image": null,
     "answers": [
       "Διότι κινδυνεύετε να υποστείτε κυρώσεις αν σας κάνουν αλκοτέστ.",
       "Διότι μειώνεται ο βαθμός αντιδράσεώς σας.",
       "Διότι η μπύρα περιέχει μεγάλη ποσότητα οινοπνεύματος."
     ],
+    "answersEn": [
+      "Because you risk being penalized if you are given a breathalyzer test.",
+      "Because your degree of reaction is reduced.",
+      "Because beer contains a large amount of alcohol."
+    ],
     "correctIndex": 1,
     "explanation": "Ακόμη και μικρή ποσότητα οινοπνεύματος επηρεάζει το νευρικό σύστημα και μειώνει τον χρόνο αντίδρασης, κάτι κρίσιμο στην οδήγηση δικύκλου όπου απαιτείται συνεχής ισορροπία.",
+    "explanationEn": "Even a small amount of alcohol affects the nervous system and reduces reaction time, which is critical when riding a motorcycle, where continuous balance is required.",
     "explanationVerified": false
   },
   {
     "id": "moto-1039",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Το ανώτατο επιτρεπόμενο όριο ταχύτητας μιας δίκυκλης μοτοσυκλέτας με κινητήρα πάνω από 125 cc, όταν κινείται σε οδό ταχείας κυκλοφορίας είναι:",
+    "questionEn": "The maximum permitted speed limit for a two-wheeled motorcycle with an engine over 125 cc, when traveling on an expressway (fast traffic road), is:",
     "image": null,
     "answers": [
       "50 km/h.",
       "110 km/h.",
       "70 km/h"
     ],
+    "answersEn": [
+      "50 km/h.",
+      "110 km/h.",
+      "70 km/h"
+    ],
     "correctIndex": 1,
     "explanation": "Σε οδό ταχείας κυκλοφορίας επιτρέπεται υψηλότερο όριο ταχύτητας για δίκυκλα άνω των 125 cc, καθώς διαθέτουν επαρκή ισχύ και σταθερότητα για τέτοιες ταχύτητες.",
+    "explanationEn": "On an expressway, a higher speed limit is allowed for motorcycles over 125 cc, since they have sufficient power and stability for such speeds.",
     "explanationVerified": false
   },
   {
     "id": "moto-1040",
     "category": "Συντήρηση",
     "question": "Η αλυσίδα της μοτοσυκλέτας χρειάζεται περιοδική λίπανση:",
+    "questionEn": "Does the motorcycle's chain need periodic lubrication:",
     "image": null,
     "answers": [
       "Ναι, γιατί έτσι μειώνονται οι φθορές και η θερμοκρασία τόσο της αλυσίδας όσο και των γραναζιών μεταδόσεως της κινήσεως.",
       "Όχι, γιατί φροντίζει ο κινητήρας για τη λίπανσή της.",
       "Όχι, γιατί έτσι μπορεί να βγει από τα γρανάζια και να ακινητοποιήσει τον πίσω τρόχο."
     ],
+    "answersEn": [
+      "Yes, because this reduces wear and the temperature of both the chain and the drive sprockets.",
+      "No, because the engine takes care of lubricating it.",
+      "No, because this could make it come off the sprockets and lock the rear wheel."
+    ],
     "correctIndex": 0,
     "explanation": "Η τακτική λίπανση της αλυσίδας μειώνει την τριβή, τη φθορά και τη θερμοκρασία της αλυσίδας και των γραναζιών, παρατείνοντας τη διάρκεια ζωής τους.",
+    "explanationEn": "Regular lubrication of the chain reduces friction, wear, and the temperature of the chain and sprockets, extending their lifespan.",
     "explanationVerified": false
   },
   {
     "id": "moto-1041",
     "category": "Συντήρηση",
     "question": "Διαπιστώνεται ότι μία μοτοσυκλέτα εκπέμπει ουσίες ή προϊόντα βλαπτικά για την υγεία του ανθρώπου ή που ρυπαίνουν το περιβάλλον περισσότερο από τα επιτρεπόμενα όρια. Πώς τιμωρείται αυτή η παράβαση:",
+    "questionEn": "It is found that a motorcycle emits substances or products harmful to human health or that pollute the environment beyond the permitted limits. How is this violation punished:",
     "image": null,
     "answers": [
       "Δεν έχει καμιά συνέπεια η παράβαση αυτή.",
       "Μόνο με πρόστιμο.",
       "Με πρόστιμο και με επί τόπου αφαίρεση των στοιχείων κυκλοφορίας της μοτοσυκλέτας από το αρμόδιο όργανο που βεβαιώνει την παράβαση."
     ],
+    "answersEn": [
+      "This violation has no consequences at all.",
+      "Only with a fine.",
+      "With a fine and the on-the-spot removal of the motorcycle's registration documents by the authority that certifies the violation."
+    ],
     "correctIndex": 2,
     "explanation": "Η υπέρβαση των ορίων εκπομπών ρύπων βλάπτει το περιβάλλον και τη δημόσια υγεία, γι' αυτό επισύρει κυρώσεις που αποτρέπουν την κυκλοφορία του οχήματος μέχρι να αποκατασταθεί το πρόβλημα.",
+    "explanationEn": "Exceeding emission limits harms the environment and public health, which is why it carries penalties that prevent the vehicle from circulating until the problem is fixed.",
     "explanationVerified": false
   },
   {
     "id": "moto-1042",
     "category": "Συντήρηση",
     "question": "Το υγρό του συσσωρευτή του δικύκλου σας χρειάζεται έλεγχο και τι είδους:",
+    "questionEn": "Does the fluid in your motorcycle's battery need checking, and what kind:",
     "image": null,
     "answers": [
       "Χρειάζεται έλεγχο για το αν ο συσσωρευτής είναι αρκετά φορτισμένος.",
       "Δεν χρειάζεται έλεγχος.",
       "Ελέγχεται περιοδικά η στάθμη των υγρών του και συμπληρώνεται με αποσταγμένο νερό."
     ],
+    "answersEn": [
+      "It needs to be checked to see if the battery is sufficiently charged.",
+      "No check is needed.",
+      "Its fluid level is checked periodically and topped up with distilled water."
+    ],
     "correctIndex": 2,
     "explanation": "Η στάθμη του υγρού στον συσσωρευτή πρέπει να ελέγχεται περιοδικά και να συμπληρώνεται με αποσταγμένο νερό, ώστε οι πλάκες του να παραμένουν καλυμμένες και ο συσσωρευτής να λειτουργεί σωστά.",
+    "explanationEn": "The fluid level in the battery must be checked periodically and topped up with distilled water, so its plates remain covered and the battery functions properly.",
     "explanationVerified": false
   },
   {
     "id": "moto-1043",
     "category": "Εξαρτήματα",
     "question": "Τα φώτα πορείας μιας δίτροχης μοτοσυκλέτας έχουν χρώμα:",
+    "questionEn": "The headlights of a two-wheeled motorcycle are what color:",
     "image": null,
     "answers": [
       "Λευκό.",
       "Πράσινο.",
       "Κόκκινο."
     ],
+    "answersEn": [
+      "White.",
+      "Green.",
+      "Red."
+    ],
     "correctIndex": 0,
     "explanation": "Τα φώτα πορείας πρέπει να είναι λευκού χρώματος, ώστε να φωτίζουν αποτελεσματικά τον δρόμο χωρίς να προκαλούν σύγχυση με άλλα φώτα σηματοδότησης.",
+    "explanationEn": "Headlights must be white, so they light the road effectively without being confused with other signal lights.",
     "explanationVerified": false
   },
   {
     "id": "moto-1044",
     "category": "Ετοιμότητα",
     "question": "Διαπιστώνετε ότι το σύστημα πεδήσεως του δικύκλου σας δεν λειτουργεί αποτελεσματικά. Τι πρέπει να κάνετε:",
+    "questionEn": "You notice that your motorcycle's braking system is not working effectively. What should you do:",
     "image": null,
     "answers": [
       "Θα ζητήσετε τη βοήθεια ενός φίλου που ευκαιριακά ασχολείται με τέτοια θέματα.",
       "Θα φροντίσετε να το επισκευάσετε μόνοι σας.",
       "Θα απευθυνθείτε σε συνεργείο επισκευής που λειτουργεί νόμιμα για την επισκευή και τον έλεγχο της καλής λειτουργίας."
     ],
+    "answersEn": [
+      "Ask for the help of a friend who occasionally deals with such matters.",
+      "See to repairing it yourself.",
+      "Go to a legally operating repair shop for the repair and check of proper operation."
+    ],
     "correctIndex": 2,
     "explanation": "Το σύστημα πεδήσεως είναι κρίσιμο για την ασφάλεια, γι' αυτό η επισκευή και ο έλεγχός του πρέπει να γίνονται μόνο από εξειδικευμένο και νόμιμα λειτουργούν συνεργείο.",
+    "explanationEn": "The braking system is critical for safety, which is why its repair and inspection should only be carried out by a specialized, legally operating repair shop.",
     "explanationVerified": false
   },
   {
     "id": "moto-1045",
     "category": "Συντήρηση",
     "question": "Οι ντίζες γκαζιού, συμπλέκτη και φρένων του δικύκλου χρειάζονται λίπανση:",
+    "questionEn": "Do the throttle, clutch, and brake cables of the motorcycle need lubrication:",
     "image": null,
     "answers": [
       "Όχι, γιατί ο κατασκευαστής έχει φροντίσει για τη λίπανσή τους.",
       "Χρειάζονται περιοδικό έλεγχο και λίπανση γιατί διαφορετικά ξηραίνονται και κόβονται.",
       "Χρειάζονται λίπανση όταν ο οδηγός αντιλαμβάνεται ότι αρχίζουν να σφίγγουν."
     ],
+    "answersEn": [
+      "No, because the manufacturer has already taken care of lubricating them.",
+      "They need periodic inspection and lubrication, otherwise they dry out and snap.",
+      "They need lubrication when the rider notices they are starting to stiffen."
+    ],
     "correctIndex": 1,
     "explanation": "Χωρίς περιοδική λίπανση, οι ντίζες ξηραίνονται και μπορεί να κοπούν, θέτοντας σε κίνδυνο τη λειτουργία γκαζιού, συμπλέκτη ή φρένων.",
+    "explanationEn": "Without periodic lubrication, the cables dry out and may snap, endangering the operation of the throttle, clutch, or brakes.",
     "explanationVerified": false
   },
   {
     "id": "moto-1046",
     "category": "Συντήρηση",
     "question": "Διαπιστώνεται ότι μία μοτοσυκλέτα προκαλεί, κατά την κίνηση και τη λειτουργία της, θόρυβο πέραν του επιτρεπόμενου ορίου. Πώς τιμωρείται η παράβαση αυτή:",
+    "questionEn": "It is found that a motorcycle, while moving and operating, produces noise beyond the permitted limit. How is this violation punished:",
     "image": null,
     "answers": [
       "Μόνο με πρόστιμο.",
       "Με πρόστιμο και με επί τόπου αφαίρεση των στοιχείων κυκλοφορίας της μοτοσυκλέτας από αυτόν που βεβαιώνει την παράβαση.",
       "Δεν έχει καμιά συνέπεια η παράβαση αυτή."
     ],
+    "answersEn": [
+      "Only with a fine.",
+      "With a fine and the on-the-spot removal of the motorcycle's registration documents by whoever certifies the violation.",
+      "This violation has no consequences at all."
+    ],
     "correctIndex": 1,
     "explanation": "Η υπερβολική ηχορύπανση ενοχλεί και βλάπτει το κοινωνικό σύνολο, γι' αυτό τιμωρείται με πρόστιμο και αφαίρεση των στοιχείων κυκλοφορίας.",
+    "explanationEn": "Excessive noise pollution disturbs and harms the community, which is why it is punished with a fine and removal of the registration documents.",
     "explanationVerified": false
   },
   {
     "id": "moto-1048",
     "category": "Συντήρηση",
     "question": "Γιατί οι αποσβεστήρες κραδασμών (αμορτισέρ) του δικύκλου περιέχουν και λάδι:",
+    "questionEn": "Why do the motorcycle's shock absorbers also contain oil:",
     "image": null,
     "answers": [
       "Για να είναι αθόρυβη η λειτουργία του και χωρίς φθορές.",
       "Γιατί το λάδι δίνει ελαστικότητα στο σύστημα πεδήσεως.",
       "Γιατί με το λάδι επιτυγχάνεται καλύτερη απόσβεση των κραδασμών που δημιουργούνται από τις ανωμαλίες του δρόμου."
     ],
+    "answersEn": [
+      "So that it operates quietly and without wear.",
+      "Because the oil gives elasticity to the braking system.",
+      "Because the oil achieves better damping of the vibrations created by road irregularities."
+    ],
     "correctIndex": 2,
     "explanation": "Το λάδι μέσα στα αμορτισέρ επιτρέπει την ελεγχόμενη απόσβεση των κραδασμών που προκαλούν οι ανωμαλίες του δρόμου, βελτιώνοντας την ευστάθεια και την άνεση.",
+    "explanationEn": "The oil inside the shock absorbers allows controlled damping of the vibrations caused by road irregularities, improving stability and comfort.",
     "explanationVerified": false
   },
   {
     "id": "moto-1049",
     "category": "Εξοπλισμός",
     "question": "Η ειδική ζώνη που φοράει ο δικυκλιστής στη μέση του χρησιμεύει:",
+    "questionEn": "What is the purpose of the special belt a motorcyclist wears around the waist:",
     "image": null,
     "answers": [
       "Για να στηρίζεται καλύτερα στο δίκυκλο.",
       "Για να συγκρατεί τη σπονδυλική του στήλη, να προστατεύει τα νεφρά και τα υπόλοιπα όργανα του σώματός του στην περιοχή της μέσης.",
       "Για λόγους αισθητικής."
     ],
+    "answersEn": [
+      "To hold on better to the motorcycle.",
+      "To support the spine and protect the kidneys and other organs in the waist area of the body.",
+      "For aesthetic reasons."
+    ],
     "correctIndex": 1,
     "explanation": "Η ζώνη μέσης στηρίζει τη σπονδυλική στήλη και προστατεύει τα νεφρά και τα εσωτερικά όργανα από τους κραδασμούς και την καταπόνηση κατά την οδήγηση.",
+    "explanationEn": "The waist (kidney) belt supports the spine and protects the kidneys and internal organs from the vibrations and strain of riding.",
     "explanationVerified": false
   },
   {
     "id": "moto-1050",
     "category": "Εξαρτήματα",
     "question": "Το φως πορείας (ή τα φώτα πορείας αν είναι δύο) του δικύκλου πρέπει να φωτίζει (ή να φωτίζουν) επαρκώς την οδό κατά τη νύκτα, όταν οι συνθήκες είναι αίθριες, σε απόσταση:",
+    "questionEn": "The high (main) beam light (or lights, if there are two) of the motorcycle must adequately light the road at night, in clear conditions, at a distance of:",
     "image": null,
     "answers": [
       "Τουλάχιστον 50 m μπροστά από το δίκυκλο.",
       "Τουλάχιστον 100 m μπροστά από το δίκυκλο.",
       "Τουλάχιστον 70 m μπροστά από το δίκυκλο."
     ],
+    "answersEn": [
+      "At least 50 m ahead of the motorcycle.",
+      "At least 100 m ahead of the motorcycle.",
+      "At least 70 m ahead of the motorcycle."
+    ],
     "correctIndex": 1,
     "explanation": "Το φως πορείας πρέπει να φωτίζει αρκετά μεγάλη απόσταση εμπρός, ώστε ο οδηγός να έχει επαρκή χρόνο αντίδρασης σε υψηλότερες ταχύτητες τη νύχτα.",
+    "explanationEn": "The high beam must light a sufficiently long distance ahead, so the rider has enough reaction time at higher speeds at night.",
     "explanationVerified": false
   },
   {
     "id": "moto-1051",
     "category": "Κανόνες",
     "question": "Διαπιστώνεται ότι ο οδηγός μιας μοτοσυκλέτας οδηγεί για επίδειξη ικανότητας και εντυπωσιασμό ή εκτελεί αυτοσχέδιους αγώνες. Πώς τιμωρείται μία τέτοια παράβαση:",
+    "questionEn": "It is found that a motorcycle's rider is riding to show off their skill and impress others, or is engaging in improvised races. How is such a violation punished:",
     "image": null,
     "answers": [
       "Μόνο με πρόστιμο.",
       "Με πρόστιμο και αφαίρεση επί τόπου της άδειας κυκλοφορίας.",
       "Με πρόστιμο και με επί τόπου αφαίρεση των στοιχείων κυκλοφορίας της μοτοσυκλέτας και της άδειας ικανότητας του οδηγού από αυτόν που βεβαιώνει την παράβαση για 30 ημέρες."
     ],
+    "answersEn": [
+      "Only with a fine.",
+      "With a fine and on-the-spot removal of the registration certificate.",
+      "With a fine and the on-the-spot removal of the motorcycle's registration documents and the rider's driving license by whoever certifies the violation, for 30 days."
+    ],
     "correctIndex": 2,
     "explanation": "Η επιδεικτική οδήγηση ή οι αυτοσχέδιοι αγώνες θέτουν σε κίνδυνο τον ίδιο τον οδηγό και τρίτους, γι' αυτό τιμωρούνται αυστηρά με πρόστιμο και προσωρινή αφαίρεση εγγράφων.",
+    "explanationEn": "Showy riding or improvised racing endangers both the rider and third parties, which is why it is punished severely with a fine and temporary removal of documents.",
     "explanationVerified": false
   },
   {
     "id": "moto-1052",
     "category": "Κανόνες",
     "question": "Αν με το δίκυκλό σας μεταφέρετε κάποιο μεγάλο αντικείμενο, τότε αυτό επιτρέπεται να προεξέχει:",
+    "questionEn": "If you are carrying a large object with your motorcycle, it is allowed to protrude:",
     "image": null,
     "answers": [
       "Μόνο από την πίσω πλευρά του δικύκλου, λιγότερο από 0,50 m.",
       "Και από τις δύο πλευρές (δεξιά και αριστερά) του δικύκλου, λιγότερο από 0,50 m.",
       "Από τις πλευρές του δικύκλου ή του εμπρός ή του πίσω ακραίου σημείου, λιγότερο από 0,50 m."
     ],
+    "answersEn": [
+      "Only from the rear of the motorcycle, less than 0.50 m.",
+      "From both sides (right and left) of the motorcycle, less than 0.50 m.",
+      "From the sides of the motorcycle or from its front or rear extreme point, less than 0.50 m."
+    ],
     "correctIndex": 2,
     "explanation": "Ο περιορισμός στην προεξοχή του φορτίου αποσκοπεί στο να μην δημιουργείται κίνδυνος για τους άλλους χρήστες του δρόμου και να διατηρείται η ευστάθεια του δικύκλου.",
+    "explanationEn": "The restriction on load protrusion aims to avoid creating a hazard for other road users and to maintain the motorcycle's stability.",
     "explanationVerified": false
   },
   {
     "id": "moto-1053",
     "category": "Κανόνες",
     "question": "Οδηγώντας τη μοτοσυκλέτα σας δεν επιτρέπεται:",
+    "questionEn": "While riding your motorcycle, it is not allowed to:",
     "image": null,
     "answers": [
       "Να κρατάτε το τιμόνι της με τα δυο σας χέρια.",
       "Να χρησιμοποιείτε ακουστικά που έχουν συνδεθεί με φορητό ραδιόφωνο ή μαγνητόφωνο.",
       "Να κινείσθε στο δεξιό άκρο του οδοστρώματος."
     ],
+    "answersEn": [
+      "Hold the handlebar with both hands.",
+      "Use headphones connected to a portable radio or cassette player.",
+      "Ride at the right edge of the roadway."
+    ],
     "correctIndex": 1,
     "explanation": "Η χρήση ακουστικών συνδεδεμένων με ραδιόφωνο περιορίζει την ακουστική αντίληψη του περιβάλλοντος, όπως κόρνες ή σειρήνες, κάτι επικίνδυνο για την ασφαλή οδήγηση.",
+    "explanationEn": "Using headphones connected to a radio limits your ability to hear your surroundings, such as horns or sirens, which is dangerous for safe riding.",
     "explanationVerified": false
   },
   {
     "id": "moto-1054",
     "category": "Ασφάλεια",
     "question": "Μετά από μια πτώση ή μικρή σύγκρουση που δεν έχει συνέπειες για τους επιβάτες της μοτοσυκλέτας, τι πρέπει να κάνει ο οδηγός της μοτοσυκλέτας:",
+    "questionEn": "After a fall or minor collision that has no consequences for the motorcycle's occupants, what should the motorcycle's rider do:",
     "image": null,
     "answers": [
       "Να μεταφέρει τη μοτοσυκλέτα στην άκρη του δρόμου και να συνεχίσει το ταξίδι του με άλλο μέσο.",
       "Να φροντίσει για τον εαυτό του, τον συνεπιβάτη του και να συνεχίσει το ταξίδι του εφόσον ελέγξει προσεκτικά τη λειτουργία της μοτοσυκλέτας του και διαπιστώσει ότι μπορεί να την οδηγήσει με ασφάλεια.",
       "Να μεταβεί για κάθε ενδεχόμενο σε εφημερεύον νοσοκομείο για εξετάσεις."
     ],
+    "answersEn": [
+      "Move the motorcycle to the side of the road and continue the trip by another means.",
+      "Take care of themselves and their passenger, and continue the trip provided they carefully check the motorcycle's operation and find that they can ride it safely.",
+      "Go to an on-duty hospital for a check-up just in case."
+    ],
     "correctIndex": 1,
     "explanation": "Πριν συνεχίσετε το ταξίδι μετά από πτώση, πρέπει να βεβαιωθείτε ότι δεν υπάρχουν τραυματισμοί και ότι η μοτοσυκλέτα λειτουργεί κανονικά, ώστε η συνέχιση να γίνει με ασφάλεια.",
+    "explanationEn": "Before continuing your trip after a fall, you must make sure there are no injuries and that the motorcycle operates normally, so that continuing is safe.",
     "explanationVerified": false
   },
   {
     "id": "moto-1055",
     "category": "Κανόνες",
     "question": "Γιατί ο δικυκλιστής δεν πρέπει να κάνει επιδείξεις στο δρόμο με το δίκυκλο που οδηγεί:",
+    "questionEn": "Why should a motorcyclist not show off on the road with the motorcycle they are riding:",
     "image": null,
     "answers": [
       "Γιατί ενοχλούνται αυτοί που τον βλέπουν.",
       "Γιατί κινδυνεύει να πάρει κλήση από το όργανο της Τροχαίας.",
       "Γιατί οι ενέργειες αυτές έχουν σημαντικό βαθμό επικινδυνότητας, οι δρόμοι χρησιμοποιούνται από όλους και δεν πρέπει να απειλούμε τη σωματική ακεραιότητα και τη ζωή των άλλων."
     ],
+    "answersEn": [
+      "Because it annoys those who see them.",
+      "Because they risk getting a ticket from a traffic officer.",
+      "Because such actions carry a significant degree of danger, roads are used by everyone, and we must not threaten the physical safety and life of others."
+    ],
     "correctIndex": 2,
     "explanation": "Οι επιδείξεις στο δρόμο είναι επικίνδυνες γιατί ο δρόμος είναι κοινόχρηστος χώρος και τέτοιες ενέργειες απειλούν τη σωματική ακεραιότητα του ίδιου του οδηγού και των άλλων χρηστών.",
+    "explanationEn": "Showing off on the road is dangerous because the road is a shared public space, and such actions threaten the physical integrity of the rider themselves and other road users.",
     "explanationVerified": false
   },
   {
     "id": "moto-1056",
     "category": "Οδήγηση",
     "question": "Πώς πραγματοποιείτε (παίρνετε) με τη μοτοσυκλέτα σας μια ανοικτή στροφή:",
+    "questionEn": "How do you take a wide (open) turn with your motorcycle:",
     "image": null,
     "answers": [
       "Διαγράφετε τη μεγαλύτερη δυνατή καμπύλη, πάντα μέσα στη λωρίδα κινήσεώς σας, με σταθερή ταχύτητα.",
       "Διαγράφετε μία καμπύλη αυξάνοντας ταχύτητα.",
       "Στρίβετε με συνεχείς μικρές γωνίες."
     ],
+    "answersEn": [
+      "You trace the widest possible curve, always within your lane, at a steady speed.",
+      "You trace a curve while increasing speed.",
+      "You turn in a series of small-angle steps."
+    ],
     "correctIndex": 0,
     "explanation": "Διαγράφοντας τη μεγαλύτερη δυνατή καμπύλη μέσα στη λωρίδα σας με σταθερή ταχύτητα, μειώνεται η φυγόκεντρος δύναμη και αυξάνεται η ευστάθεια στη στροφή.",
+    "explanationEn": "By tracing the widest possible curve within your lane at a steady speed, centrifugal force is reduced and stability through the turn is increased.",
     "explanationVerified": false
   },
   {
     "id": "moto-1057",
     "category": "Οδήγηση",
     "question": "Σε ένα σχηματισμό δικύκλων (ομαδική οδήγηση), ποιο δίκυκλο παίρνει την τελευταία θέση:",
+    "questionEn": "In a formation of motorcycles (group riding), which motorcycle takes the last position:",
     "image": null,
     "answers": [
       "Οποιοδήποτε δίκυκλο.",
       "Το δίκυκλο που πηγαίνει πιο αργά.",
       "Το δίκυκλο που μπορεί να αναπτύξει τη μεγαλύτερη ταχύτητα."
     ],
+    "answersEn": [
+      "Any motorcycle.",
+      "The motorcycle that goes slowest.",
+      "The motorcycle that can reach the highest speed."
+    ],
     "correctIndex": 2,
     "explanation": "Το δίκυκλο με τη μεγαλύτερη δυνατή ταχύτητα τοποθετείται τελευταίο, ώστε να μπορεί εύκολα να προσαρμόζεται στον ρυθμό της ομάδας χωρίς να καθυστερεί.",
+    "explanationEn": "The motorcycle with the highest possible speed is placed last, so it can easily adjust to the group's pace without causing delays.",
     "explanationVerified": false
   },
   {
     "id": "moto-1058",
     "category": "Οδήγηση",
     "question": "Οδηγώντας με τη μοτοσυκλέτα όταν βρέχει, τι πρέπει να έχετε υπόψη σας για να οδηγείτε με ασφάλεια:",
+    "questionEn": "When riding a motorcycle in the rain, what should you keep in mind to ride safely:",
     "image": null,
     "answers": [
       "Να αποφεύγετε τα σημεία του δρόμου που έχουν πολύ νερό.",
       "Να μην χρησιμοποιείτε το μπροστινό φρένο.",
       "Επειδή η απόσταση ακινητοποιήσεως μεγαλώνει σε περίπτωση πεδήσεως, πρέπει να τηρείτε μεγαλύτερες αποστάσεις από ό,τι συνήθως."
     ],
+    "answersEn": [
+      "Avoid parts of the road with a lot of water.",
+      "Do not use the front brake.",
+      "Because stopping distance increases when braking, you must keep greater distances than usual."
+    ],
     "correctIndex": 2,
     "explanation": "Η βροχή μειώνει την πρόσφυση και αυξάνει την απόσταση που χρειάζεται το δίκυκλο για να σταματήσει, γι' αυτό απαιτούνται μεγαλύτερες αποστάσεις ασφαλείας.",
+    "explanationEn": "Rain reduces grip and increases the distance the motorcycle needs to stop, which is why greater safety distances are required.",
     "explanationVerified": false
   },
   {
     "id": "moto-1059",
     "category": "Ετοιμότητα",
     "question": "Σε περίπτωση ανάγκης για άμεση ακινητοποίηση της μοτοσυκλέτας σας, πόση πίεση ασκείτε στα φρένα της:",
+    "questionEn": "In an emergency requiring immediate stopping of your motorcycle, how much pressure do you apply to the brakes:",
     "image": null,
     "answers": [
       "Δεν υπάρχει όριο.",
       "Τόση ώστε να ακινητοποιηθεί ο πίσω τροχός.",
       "Τη μεγαλύτερη που δεν μπλοκάρει τους τροχούς."
     ],
+    "answersEn": [
+      "There is no limit.",
+      "Enough to lock the rear wheel.",
+      "The greatest amount that does not lock the wheels."
+    ],
     "correctIndex": 2,
     "explanation": "Η μέγιστη πίεση φρένων χωρίς μπλοκάρισμα των τροχών δίνει τη συντομότερη απόσταση ακινητοποίησης, γιατί διατηρείται η πρόσφυση των ελαστικών στο οδόστρωμα.",
+    "explanationEn": "Maximum brake pressure without locking the wheels gives the shortest stopping distance, because the tires' grip on the road is maintained.",
     "explanationVerified": false
   },
   {
     "id": "moto-1060",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Οδηγείτε τη μοτοσυκλέτα σας με σταθερή ταχύτητα και το σύστημα πεδήσεως βρίσκεται σε καλή κατάσταση. Από τι εξαρτάται η απόσταση ακινητοποιήσεως της μοτοσυκλέτας:",
+    "questionEn": "You are riding your motorcycle at a steady speed and the braking system is in good condition. What does the motorcycle's stopping distance depend on:",
     "image": null,
     "answers": [
       "Από τις καιρικές συνθήκες.",
       "Από τον τύπο των φρένων.",
       "Από την κατάσταση του οδοστρώματος, των ελαστικών σας και τις καιρικές συνθήκες."
     ],
+    "answersEn": [
+      "On weather conditions.",
+      "On the type of brakes.",
+      "On the condition of the road surface, your tires, and the weather conditions."
+    ],
     "correctIndex": 2,
     "explanation": "Η απόσταση ακινητοποίησης εξαρτάται από συνδυασμό παραγόντων, όπως η κατάσταση του δρόμου, των ελαστικών και οι καιρικές συνθήκες, που όλοι επηρεάζουν την πρόσφυση.",
+    "explanationEn": "Stopping distance depends on a combination of factors, such as the condition of the road, the tires, and the weather, all of which affect grip.",
     "explanationVerified": false
   },
   {
     "id": "moto-1061",
     "category": "Συντήρηση",
     "question": "Πρέπει να αλλάζετε την πίεση των ελαστικών ανάλογα με τον καιρό:",
+    "questionEn": "Should you change tire pressure according to the weather:",
     "image": null,
     "answers": [
       "Ναι. Αυξάνετε την πίεση σε κρύο καιρό.",
       "Ναι. Αυξάνετε την πίεση με ζεστό καιρό.",
       "Όχι. Χρησιμοποιείτε την ίδια πίεση πάντα, προσέχοντας η μέτρηση της πιέσεως να γίνεται όταν τα λάστιχα είναι κρύα."
     ],
+    "answersEn": [
+      "Yes. Increase the pressure in cold weather.",
+      "Yes. Increase the pressure in hot weather.",
+      "No. Always use the same pressure, making sure pressure is measured when the tires are cold."
+    ],
     "correctIndex": 2,
     "explanation": "Η σωστή πίεση των ελαστικών πρέπει να μετριέται όταν είναι κρύα, γιατί η θέρμανση από την κίνηση αυξάνει προσωρινά την πίεση και θα έδινε λανθασμένη μέτρηση.",
+    "explanationEn": "Correct tire pressure must be measured when the tires are cold, because heating from riding temporarily raises the pressure and would give an inaccurate reading.",
     "explanationVerified": false
   },
   {
     "id": "moto-1062",
     "category": "Συντήρηση",
     "question": "Ποιοι από τους παρακάτω ελέγχους, που αφορούν στο δίκυκλό σας, πρέπει να γίνονται σε εξειδικευμένο συνεργείο που λειτουργεί νόμιμα:",
+    "questionEn": "Which of the following checks, concerning your motorcycle, must be carried out at a specialized, legally operating repair shop:",
     "image": null,
     "answers": [
       "Έλεγχος αναφλεκτήρα μόνον.",
       "Έλεγχος του αναφλεκτήρα, της τάσεως της αλυσίδας και ειδικά ο έλεγχος του εξαεριωτήρα.",
       "Έλεγχος της τάσεως της αλυσίδας μόνον."
     ],
+    "answersEn": [
+      "Spark plug check only.",
+      "Checking the spark plug, the chain tension, and especially checking the carburetor.",
+      "Checking the chain tension only."
+    ],
     "correctIndex": 1,
     "explanation": "Ο έλεγχος στοιχείων όπως ο εξαεριωτήρας απαιτεί εξειδικευμένες γνώσεις και ρυθμίσεις, γι' αυτό πρέπει να ανατίθεται σε νόμιμα λειτουργούν συνεργείο.",
+    "explanationEn": "Checking components such as the carburetor requires specialized knowledge and adjustments, which is why it must be assigned to a legally operating repair shop.",
     "explanationVerified": false
   },
   {
     "id": "moto-1063",
     "category": "Οδήγηση",
     "question": "Για την ταχύτερη δυνατή ακινητοποίηση της μοτοσυκλέτας σας ποιος τροχός πρέπει να μπλοκάρει:",
+    "questionEn": "For the quickest possible stop of your motorcycle, which wheel should lock:",
     "image": null,
     "answers": [
       "Ο εμπρόσθιος τροχός.",
       "Κανένας τροχός.",
       "Ο οπίσθιος τροχός."
     ],
+    "answersEn": [
+      "The front wheel.",
+      "Neither wheel.",
+      "The rear wheel."
+    ],
     "correctIndex": 1,
     "explanation": "Όταν ένας τροχός μπλοκάρει χάνεται η πρόσφυση και ο έλεγχος της κατεύθυνσης, με αποτέλεσμα να αυξάνεται η απόσταση ακινητοποίησης αντί να μειώνεται.",
+    "explanationEn": "When a wheel locks, grip and directional control are lost, resulting in an increased stopping distance instead of a reduced one.",
     "explanationVerified": false
   },
   {
     "id": "moto-1064",
     "category": "Οδήγηση",
     "question": "Ποια θεωρείται η σωστή θέση κατά την οδήγηση του δικύκλου:",
+    "questionEn": "What is considered the correct body position while riding a motorcycle:",
     "image": null,
     "answers": [
       "Με τα γόνατα σφιγμένα στη δεξαμενή βενζίνης, τα πόδια να πατάνε καλά στα υποπόδια και τα χέρια να κρατάνε σταθερά το τιμόνι.",
       "Με τα γόνατα ανοικτά, γιατί έτσι επηρεάζεται το κέντρο βάρους ευκολότερα.",
       "Δεν έχει σημασία η στάση."
     ],
+    "answersEn": [
+      "With the knees gripping the fuel tank, the feet resting firmly on the footpegs, and the hands holding the handlebar steadily.",
+      "With the knees open, because this affects the center of gravity more easily.",
+      "Body position doesn't matter."
+    ],
     "correctIndex": 0,
     "explanation": "Αυτή η στάση εξασφαλίζει καλύτερο έλεγχο και ισορροπία του δικύκλου, καθώς ο αναβάτης παραμένει σταθερά «ενωμένος» με το όχημα.",
+    "explanationEn": "This position ensures better control and balance of the motorcycle, as the rider stays firmly 'united' with the vehicle.",
     "explanationVerified": false
   },
   {
     "id": "moto-1065",
     "category": "Οδήγηση",
     "question": "Σε μία κατάβαση με σημαντική κλίση ποια σχέση του κιβωτίου ταχυτήτων της μοτοσυκλέτας χρησιμοποιείτε:",
+    "questionEn": "On a downhill section with a significant slope, which gear of the motorcycle's gearbox do you use:",
     "image": null,
     "answers": [
       "Την πρώτη.",
       "Τη δεύτερη.",
       "Εκείνη με την οποία ανεβαίνετε το ίδιο τμήμα του δρόμου ή τμήμα άλλου δρόμου με παρόμοιες κλίσεις."
     ],
+    "answersEn": [
+      "First.",
+      "Second.",
+      "The one you would use to climb the same section of road, or a section of another road with a similar slope."
+    ],
     "correctIndex": 2,
     "explanation": "Χρησιμοποιώντας τη σχέση που θα χρησιμοποιούσατε για ανάβαση παρόμοιας κλίσης, επιτυγχάνετε πέδηση με τον κινητήρα και αποφεύγετε την υπερθέρμανση των φρένων.",
+    "explanationEn": "By using the gear you would use to climb a slope of similar steepness, you achieve engine braking and avoid overheating the brakes.",
     "explanationVerified": false
   },
   {
     "id": "moto-1066",
     "category": "Συντήρηση",
     "question": "Οι αποσβεστήρες κραδασμών της μοτοσυκλέτας σας παρουσιάζουν διαρροή λαδιού. Τι κάνετε:",
+    "questionEn": "Your motorcycle's shock absorbers show an oil leak. What do you do:",
     "image": null,
     "answers": [
       "Προσέχετε να μη φθάσει το λάδι στα φρένα ή στους τροχούς.",
       "Αφενός μεν προσέχετε να μην φθάσει το λάδι στα φρένα ή στους τροχούς και αφετέρου επισκευάζετε αμέσως τη διαρροή γιατί αλλάζει η συμπεριφορά της μοτοσυκλέτας.",
       "Δεν ανησυχείτε άμεσα, γιατί περιέχουν αρκετό λάδι και απαιτείται αρκετός χρόνος για να φθαρούν από έλλειψη λαδιού."
     ],
+    "answersEn": [
+      "You make sure the oil doesn't reach the brakes or the wheels.",
+      "You both make sure the oil doesn't reach the brakes or the wheels, and you repair the leak immediately, because it changes the motorcycle's behavior.",
+      "You are not immediately concerned, because they contain enough oil and it takes a long time for them to wear out from lack of oil."
+    ],
     "correctIndex": 1,
     "explanation": "Η διαρροή λαδιού από τα αμορτισέρ μπορεί να καταλήξει στα φρένα ή τους τροχούς μειώνοντας την πρόσφυση, ενώ αλλάζει και τη συμπεριφορά της ανάρτησης, γι' αυτό απαιτεί άμεση επισκευή.",
+    "explanationEn": "Oil leaking from the shock absorbers can end up on the brakes or wheels, reducing grip, while also changing the suspension's behavior, which is why it requires immediate repair.",
     "explanationVerified": false
   },
   {
     "id": "moto-1067",
     "category": "Συντήρηση",
     "question": "Σε περίπτωση που χρησιμοποιείτε διαφορετικού τύπου αναφλεκτήρα στη μοτοσυκλέτα σας από αυτόν που προβλέπει ο κατασκευαστής της, τι μπορεί να συμβεί:",
+    "questionEn": "If you use a spark plug of a different type on your motorcycle than the one specified by its manufacturer, what might happen:",
     "image": null,
     "answers": [
       "Να μη λειτουργεί ο κινητήρας και να χαλάσει το σύστημα αναφλέξεως.",
       "Να υποστεί βλάβη ο κινητήρας.",
       "Να μη λειτουργεί το σύστημα πεδήσεως."
     ],
+    "answersEn": [
+      "The engine may not run, and the ignition system may be damaged.",
+      "The engine may suffer damage.",
+      "The braking system may stop working."
+    ],
     "correctIndex": 0,
     "explanation": "Λάθος τύπος μπουζί μπορεί να προκαλέσει ανεπαρκή ή λανθασμένη ανάφλεξη του μείγματος, με αποτέλεσμα ο κινητήρας να μη λειτουργεί σωστά ή να υποστεί βλάβη.",
+    "explanationEn": "The wrong spark plug type can cause insufficient or incorrect ignition of the mixture, resulting in the engine not running properly or being damaged.",
     "explanationVerified": false
   },
   {
     "id": "moto-1068",
     "category": "Ετοιμότητα",
     "question": "Στην πόλη προσπερνάτε με το δίκυκλό σας σταματημένο λεωφορείο. Τι προσέχετε ιδιαίτερα:",
+    "questionEn": "In the city, you are overtaking a stopped bus with your motorcycle. What do you pay particular attention to:",
     "image": null,
     "answers": [
       "Αν θα ξεκινήσει το λεωφορείο.",
       "Αν θα εμφανισθεί κάποιος πεζός μπροστά από το λεωφορείο.",
       "Αν θα ξεκινήσει το λεωφορείο και αν θα εμφανισθεί κάποιος πεζός μπροστά από το λεωφορείο."
     ],
+    "answersEn": [
+      "Whether the bus will pull away.",
+      "Whether a pedestrian will appear in front of the bus.",
+      "Whether the bus will pull away and whether a pedestrian will appear in front of the bus."
+    ],
     "correctIndex": 2,
     "explanation": "Ένα σταματημένο λεωφορείο μπορεί ξαφνικά να ξεκινήσει ή να κρύβει έναν πεζό που πρόκειται να διασχίσει τον δρόμο, γι' αυτό πρέπει να προσέχετε και τα δύο ενδεχόμενα.",
+    "explanationEn": "A stopped bus may suddenly pull away or may be hiding a pedestrian about to cross the road, which is why you must watch for both possibilities.",
     "explanationVerified": false
   },
   {
     "id": "moto-1069",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Ποια θεωρείτε πιο ασφαλή θέση για δίκυκλο που ταξιδεύει στην εθνική οδό σε σχέση με τα υπόλοιπα οχήματα:",
+    "questionEn": "Which do you consider the safest position for a motorcycle traveling on the national highway relative to other vehicles:",
     "image": null,
     "answers": [
       "Ανάμεσα από έναν όμιλο αυτοκινήτων.",
       "Πολύ μπροστά ή πολύ πίσω από τα άλλα αυτοκίνητα.",
       "Το δεξιό άκρο της οδού."
     ],
+    "answersEn": [
+      "Among a cluster of cars.",
+      "Well ahead of or well behind the other cars.",
+      "The right edge of the road."
+    ],
     "correctIndex": 1,
     "explanation": "Τοποθετούμενοι πολύ μπροστά ή πολύ πίσω από τα άλλα οχήματα, αποφεύγετε τις νεκρές γωνίες και παραμένετε ορατοί, σε αντίθεση με το να βρίσκεστε ανάμεσά τους.",
+    "explanationEn": "By positioning yourself well ahead of or well behind other vehicles, you avoid blind spots and remain visible, unlike being among them.",
     "explanationVerified": false
   },
   {
     "id": "moto-1071",
     "category": "Συντήρηση",
     "question": "Κάθε πότε πρέπει να ελέγχετε τη στάθμη του λαδιού του δικύκλου σας:",
+    "questionEn": "How often should you check your motorcycle's oil level:",
     "image": null,
     "answers": [
       "Πριν από κάθε χρήση.",
       "Κάθε 1.000 km.",
       "Κάθε 2.000 km."
     ],
+    "answersEn": [
+      "Before every use.",
+      "Every 1,000 km.",
+      "Every 2,000 km."
+    ],
     "correctIndex": 0,
     "explanation": "Ο έλεγχος της στάθμης λαδιού πριν από κάθε χρήση αποτρέπει τη λειτουργία του κινητήρα με ανεπαρκή λίπανση, κάτι που θα προκαλούσε σοβαρή φθορά.",
+    "explanationEn": "Checking the oil level before every use prevents the engine from running with insufficient lubrication, which would cause serious wear.",
     "explanationVerified": false
   },
   {
     "id": "moto-1072",
     "category": "Κανόνες",
     "question": "Πώς πρέπει να στηρίζεται ο συνεπιβάτης του δικύκλου:",
+    "questionEn": "How should a motorcycle's passenger support themselves:",
     "image": null,
     "answers": [
       "Από τη σχάρα ή το σχετικό εξάρτημα που υπάρχει πίσω του.",
       "Από τον οδηγό σφίγγοντας τα γόνατά του.",
       "Πατά καλά στα υποπόδια και κρατά χαλαρά αλλά σταθερά τον οδηγό από τη μέση ή από τη χειρολαβή του καθίσματος, αν υπάρχει."
     ],
+    "answersEn": [
+      "By the luggage rack or the relevant accessory located behind them.",
+      "By gripping the rider's knees.",
+      "They should rest their feet firmly on the footpegs and hold the rider loosely but securely by the waist, or by the seat grab handle if there is one."
+    ],
     "correctIndex": 2,
     "explanation": "Ο συνεπιβάτης πρέπει να στηρίζεται σταθερά στα υποπόδια και να κρατά τον οδηγό ή τη χειρολαβή, ώστε να διατηρεί την ισορροπία του χωρίς να επηρεάζει επικίνδυνα την οδήγηση.",
+    "explanationEn": "The passenger must support themselves firmly on the footpegs and hold onto the rider or the grab handle, so as to keep their balance without dangerously affecting the riding.",
     "explanationVerified": false
   },
   {
     "id": "moto-1073",
     "category": "Ετοιμότητα",
     "question": "Ενώ οδηγείτε το δίκυκλό σας ένας πεζός που διασχίζει το δρόμο μπροστά σας, σταματά απότομα στη μέση του δρόμου. Τι θα κάνετε:",
+    "questionEn": "While riding your motorcycle, a pedestrian crossing the road ahead of you suddenly stops in the middle of the road. What will you do:",
     "image": null,
     "answers": [
       "Θα φρενάρετε (τροχοπεδήσετε) όσο το δυνατόν πιο απότομα.",
       "Θα προσπαθήσετε να τον αποφύγετε είτε αλλάζοντας πορεία είτε φρενάροντας με ασφάλεια.",
       "Θα προσπαθήσετε να τον προσπεράσετε."
     ],
+    "answersEn": [
+      "Brake as abruptly as possible.",
+      "Try to avoid them, either by changing course or by braking safely.",
+      "Try to overtake them."
+    ],
     "correctIndex": 1,
     "explanation": "Μπροστά σε έναν πεζό που σταματά ξαφνικά, η ασφαλέστερη αντίδραση είναι είτε η αλλαγή πορείας είτε το ελεγχόμενο φρενάρισμα, ώστε να αποφευχθεί η σύγκρουση χωρίς απώλεια ελέγχου.",
+    "explanationEn": "Faced with a pedestrian who stops suddenly, the safest reaction is either to change course or to brake in a controlled way, so as to avoid a collision without losing control.",
     "explanationVerified": false
   },
   {
     "id": "moto-1074",
     "category": "Συντήρηση",
     "question": "Μια φθαρμένη ή κομμένη εξάτμιση επηρεάζει αρνητικά την απόδοση του κινητήρα:",
+    "questionEn": "Does a worn or holed exhaust negatively affect the engine's performance:",
     "image": null,
     "answers": [
       "Όχι, δεν την επηρεάζει.",
       "Ναι, την επηρεάζει αλλάζοντας απρόβλεπτα την ιπποδύναμη, αυξάνοντας το θόρυβο και μειώνοντας τη μακροβιότητα του κινητήρα.",
       "Ναι, την επηρεάζει θετικά."
     ],
+    "answersEn": [
+      "No, it does not affect it.",
+      "Yes, it affects it by unpredictably changing the horsepower, increasing noise, and reducing the engine's longevity.",
+      "Yes, it affects it positively."
+    ],
     "correctIndex": 1,
     "explanation": "Μια φθαρμένη εξάτμιση αλλάζει την αντίθλιψη των καυσαερίων, επηρεάζοντας απρόβλεπτα την απόδοση του κινητήρα, αυξάνοντας τον θόρυβο και επιταχύνοντας τη φθορά του.",
+    "explanationEn": "A worn exhaust changes the back-pressure of the exhaust gases, unpredictably affecting engine performance, increasing noise, and accelerating its wear.",
     "explanationVerified": false
   },
   {
     "id": "moto-1075",
     "category": "Κανόνες",
     "question": "Ο συνεπιβάτης στη μοτοσυκλέτα παίζει ρόλο στην οδήγησή της και γιατί:",
+    "questionEn": "Does the passenger on the motorcycle play a role in how it is ridden, and why:",
     "image": null,
     "answers": [
       "Όχι, γιατί δεν την οδηγεί.",
       "Ναι, γιατί επηρεάζει το κέντρο βάρους της.",
       "Ναι, γιατί το όχημα γίνεται βαρύτερο."
     ],
+    "answersEn": [
+      "No, because they are not riding it.",
+      "Yes, because they affect its center of gravity.",
+      "Yes, because the vehicle becomes heavier."
+    ],
     "correctIndex": 1,
     "explanation": "Η παρουσία και οι κινήσεις του συνεπιβάτη μεταβάλλουν το κέντρο βάρους της μοτοσυκλέτας, επηρεάζοντας την ευστάθεια και τη συμπεριφορά της στις στροφές.",
+    "explanationEn": "The presence and movements of the passenger change the motorcycle's center of gravity, affecting its stability and behavior in turns.",
     "explanationVerified": false
   },
   {
     "id": "moto-1076",
     "category": "Οδήγηση",
     "question": "Οδηγώντας το δίκυκλό σας πλησιάζετε σε μία στροφή. Πώς συμπεριφέρεσθε:",
+    "questionEn": "Riding your motorcycle, you are approaching a turn. How do you behave:",
     "image": null,
     "answers": [
       "Αναπτύσσετε ταχύτητα για να περάσετε γρήγορα τη στροφή.",
       "Αναπτύσσετε ταχύτητα, γέρνετε πλησιάζοντας στο έδαφος και περνάτε τη στροφή.",
       "Ελέγχετε το δρόμο, παίρνετε θέση και ρυθμίζετε την ταχύτητά σας και τη σχέση στο κιβώτιο ταχυτήτων."
     ],
+    "answersEn": [
+      "You build up speed to get through the turn quickly.",
+      "You build up speed, lean toward the ground, and go through the turn.",
+      "You check the road, take up position, and adjust your speed and gear."
+    ],
     "correctIndex": 2,
     "explanation": "Πριν από μια στροφή πρέπει να αξιολογήσετε τον δρόμο και να ρυθμίσετε εγκαίρως την ταχύτητα, τη θέση και τη σχέση, ώστε να τη διανύσετε με ασφάλεια και έλεγχο.",
+    "explanationEn": "Before a turn you must assess the road and adjust your speed, position, and gear in good time, so you can go through it safely and in control.",
     "explanationVerified": false
   },
   {
     "id": "moto-1077",
     "category": "Συντήρηση",
     "question": "Μια φθαρμένη ή κομμένη εξάτμιση μπορεί να προξενήσει βλάβη στον κινητήρα του δικύκλου:",
+    "questionEn": "Can a worn or holed exhaust cause damage to the motorcycle's engine:",
     "image": null,
     "answers": [
       "Επηρεάζει αρνητικά την απόδοση του κινητήρα ειδικά αν πρόκειται για δίχρονο.",
       "Δεν προξενεί βλάβη στον κινητήρα, αλλά τον απορρυθμίζει.",
       "Δεν δημιουργεί κανένα πρόβλημα."
     ],
+    "answersEn": [
+      "It negatively affects engine performance, especially in the case of a two-stroke engine.",
+      "It does not damage the engine, but it throws it out of tune.",
+      "It causes no problem at all."
+    ],
     "correctIndex": 0,
     "explanation": "Σε δίχρονους κινητήρες η εξάτμιση παίζει σημαντικό ρόλο στην απόδοση, γι' αυτό μια φθορά ή τρύπα της επηρεάζει αρνητικά τη λειτουργία του κινητήρα.",
+    "explanationEn": "In two-stroke engines, the exhaust plays an important role in performance, which is why wear or a hole in it negatively affects the engine's operation.",
     "explanationVerified": false
   },
   {
     "id": "moto-1078",
     "category": "Ετοιμότητα",
     "question": "Αν αντιθέτως ερχόμενο όχημα ανάβει τα μεγάλα του φώτα με αποτέλεσμα να μη βλέπετε τι κάνετε:",
+    "questionEn": "If an oncoming vehicle turns on its high beams, making it hard for you to see what you're doing:",
     "image": null,
     "answers": [
       "Ανάβετε και εσείς τα μεγάλα φώτα της μοτοσυκλέτας σας.",
       "Κλείνετε το γκάζι, ανάβετε τη μεσαία σκάλα των φώτων σας και ακολουθείτε τις γραμμές της οριζόντιας σημάνσεως, κινούμενοι όσο δεξιότερα είναι δυνατόν.",
       "Τροχοπεδείτε."
     ],
+    "answersEn": [
+      "You also turn on your motorcycle's high beams.",
+      "You close the throttle, switch to your dipped (low) beam, and follow the lines of the road markings, keeping as far to the right as possible.",
+      "You brake."
+    ],
     "correctIndex": 1,
     "explanation": "Όταν τυφλώνεστε από τα φώτα αντίθετου οχήματος, πρέπει να μειώσετε ταχύτητα, να χαμηλώσετε τα φώτα σας και να ακολουθήσετε την οριζόντια σήμανση προς τα δεξιά, ώστε να διατηρήσετε την πορεία σας με ασφάλεια.",
+    "explanationEn": "When blinded by the lights of an oncoming vehicle, you must reduce speed, dip your own lights, and follow the road markings toward the right, so as to keep your course safely.",
     "explanationVerified": false
   },
   {
     "id": "moto-1079",
     "category": "Εξαρτήματα",
     "question": "Μια βασική μετατροπή στο δίκυκλό σας:",
+    "questionEn": "A basic modification to your motorcycle:",
     "image": null,
     "answers": [
       "Δεν επηρεάζει την ασφάλεια της κυκλοφορίας του δικύκλου.",
       "Είναι επικίνδυνη εφόσον γίνεται χωρίς την τήρηση των προβλεπομένων προδιαγραφών του κατασκευαστή.",
       "Μπορείτε να την κάνετε μόνοι σας."
     ],
+    "answersEn": [
+      "Does not affect the safety of the motorcycle's circulation.",
+      "Is dangerous if it is done without following the manufacturer's specified requirements.",
+      "You can do it yourself."
+    ],
     "correctIndex": 1,
     "explanation": "Μια μετατροπή που δεν τηρεί τις προδιαγραφές του κατασκευαστή μπορεί να αλλοιώσει τα χαρακτηριστικά ασφαλείας του δικύκλου, γι' αυτό είναι επικίνδυνη.",
+    "explanationEn": "A modification that does not follow the manufacturer's specifications may alter the motorcycle's safety characteristics, which is why it is dangerous.",
     "explanationVerified": false
   },
   {
     "id": "moto-1080",
     "category": "Οδήγηση",
     "question": "Σε ποιο σημείο γύρω από το επιβατικό αυτοκίνητο μπορεί μία μοτοσυκλέτα να μη γίνει αντιληπτή από τον οδηγό του αυτοκινήτου:",
+    "questionEn": "At which point around a passenger car might a motorcycle go unnoticed by the car's driver:",
     "image": null,
     "answers": [
       "Αριστερά μόνο.",
       "Όταν κινείται μέσα στις νεκρές γωνίες των καθρεπτών του αυτοκινήτου.",
       "Ακριβώς πίσω από το αυτοκίνητο."
     ],
+    "answersEn": [
+      "On the left only.",
+      "When it is riding inside the car's mirror blind spots.",
+      "Directly behind the car."
+    ],
     "correctIndex": 1,
     "explanation": "Μέσα στις νεκρές γωνίες των καθρεπτών ενός αυτοκινήτου, ο οδηγός του δεν μπορεί να δει το δίκυκλο, ανεξάρτητα από την πλευρά.",
+    "explanationEn": "Inside a car's mirror blind spots, its driver cannot see the motorcycle, regardless of the side.",
     "explanationVerified": false
   },
   {
     "id": "moto-1081",
     "category": "Κανόνες",
     "question": "Ποια είναι η σωστή θέση για το σώμα του συνεπιβάτη της μοτοσυκλέτας:",
+    "questionEn": "What is the correct body position for the motorcycle's passenger:",
     "image": null,
     "answers": [
       "Κοντά στο σώμα του οδηγού, ακολουθώντας τις κινήσεις του.",
       "Παραμένει πάντα κατακόρυφο.",
       "Ελαφρώς γερμένο προς τα πίσω."
     ],
+    "answersEn": [
+      "Close to the rider's body, following their movements.",
+      "Always upright.",
+      "Slightly leaning backward."
+    ],
     "correctIndex": 0,
     "explanation": "Ο συνεπιβάτης πρέπει να ακολουθεί τις κινήσεις του οδηγού και να παραμένει κοντά του, ώστε το σύνολο του βάρους να κινείται αρμονικά και να μη διαταράσσεται η ισορροπία.",
+    "explanationEn": "The passenger must follow the rider's movements and stay close to them, so that the total weight moves harmoniously and balance is not disturbed.",
     "explanationVerified": false
   },
   {
     "id": "moto-1082",
     "category": "Συντήρηση",
     "question": "Για την ασφάλεια της κυκλοφορίας, ποια από τις παρακάτω εργασίες πρέπει να γίνεται από συνεργείο που λειτουργεί νόμιμα:",
+    "questionEn": "For road safety, which of the following tasks must be carried out by a legally operating repair shop:",
     "image": null,
     "answers": [
       "Καθάρισμα του φίλτρου βενζίνης.",
       "Λίπανση της αλυσίδας.",
       "Έλεγχος του συστήματος πεδήσεως, των αναρτήσεων και της λειτουργίας του κινητήρα."
     ],
+    "answersEn": [
+      "Cleaning the fuel filter.",
+      "Lubricating the chain.",
+      "Checking the braking system, the suspension, and the engine's operation."
+    ],
     "correctIndex": 2,
     "explanation": "Ο έλεγχος κρίσιμων συστημάτων όπως τα φρένα, οι αναρτήσεις και ο κινητήρας απαιτεί εξειδικευμένη τεχνογνωσία, γι' αυτό πρέπει να γίνεται από νόμιμα λειτουργούν συνεργείο.",
+    "explanationEn": "Checking critical systems such as the brakes, suspension, and engine requires specialized expertise, which is why it must be carried out by a legally operating repair shop.",
     "explanationVerified": false
   },
   {
     "id": "moto-1083",
     "category": "Εξαρτήματα",
     "question": "Οι μοτοσυκλέτες και τα μοτοποδήλατα πρέπει να είναι εφοδιασμένα με:",
+    "questionEn": "Motorcycles and mopeds must be equipped with:",
     "image": null,
     "answers": [
       "Δύο συστήματα τροχοπεδήσεως, που να επενεργούν και στους δύο τροχούς.",
       "Ένα σύστημα τροχοπεδήσεως που επενεργεί στους πίσω τροχούς.",
       "Ένα σύστημα τροχοπεδήσεως που επενεργεί στους μπροστινούς τροχούς."
     ],
+    "answersEn": [
+      "Two braking systems, acting on both wheels.",
+      "One braking system acting on the rear wheels.",
+      "One braking system acting on the front wheels."
+    ],
     "correctIndex": 0,
     "explanation": "Η ύπαρξη ξεχωριστού συστήματος πέδησης σε κάθε τροχό επιτρέπει καλύτερο έλεγχο και κατανομή της τροχοπέδησης, αυξάνοντας την ασφάλεια.",
+    "explanationEn": "Having a separate braking system on each wheel allows better control and distribution of braking, increasing safety.",
     "explanationVerified": false
   },
   {
     "id": "moto-1084",
     "category": "Οδήγηση",
     "question": "Η τελευταία ενέργειά σας πριν κάνετε στροφή 180ο στο δρόμο είναι:",
+    "questionEn": "Your last action before making a 180-degree turn in the road is:",
     "image": null,
     "answers": [
       "Να κοιτάξετε επάνω από τον ώμο σας για έναν τελευταίο έλεγχο.",
@@ -1102,14 +1649,22 @@
       "Να κάνετε με τα χέρια σας σήματα και συγχρόνως να ανάψετε τα φλας.",
       "Να επιλέξετε μια μεγαλύτερη σχέση στο κιβώτιο απ’ ό,τι συνήθως."
     ],
+    "answersEn": [
+      "To look over your shoulder for one last check.",
+      "To signal so other drivers slow down for you",
+      "To signal with your hands and switch on your turn signals (indicators) at the same time.",
+      "To select a higher gear than usual."
+    ],
     "correctIndex": 0,
     "explanation": "Πριν κάνετε στροφή 180 μοιρών, πρέπει να ρίξετε μια τελευταία ματιά πάνω από τον ώμο σας για να βεβαιωθείτε ότι ο δρόμος είναι ελεύθερος από επερχόμενα οχήματα.",
+    "explanationEn": "Before making a 180-degree turn, you must take one last look over your shoulder to make sure the road is clear of oncoming vehicles.",
     "explanationVerified": false
   },
   {
     "id": "moto-1085",
     "category": "Οδήγηση",
     "question": "Η τελευταία σας ενέργεια λίγο πριν κινηθείτε με ασφάλεια από τη θέση σταθμεύσεως είναι:",
+    "questionEn": "Your last action just before you move off safely from a parked position is:",
     "image": null,
     "answers": [
       "Να ειδοποιήσετε, εφόσον χρειάζεται να επιβραδύνουν οι άλλοι οδηγοί.",
@@ -1117,14 +1672,22 @@
       "Να κάνετε με τα χέρια σας σήματα και συγχρόνως να ανάψετε τα φλας.",
       "Να κοιτάξετε επάνω από τον ώμο σας για έναν τελευταίο έλεγχο."
     ],
+    "answersEn": [
+      "To let other drivers know, if they need to slow down.",
+      "Not to look around, since there is a parked car right in front of you.",
+      "To signal with your hands and switch on your turn signals at the same time.",
+      "To look over your shoulder for one last check."
+    ],
     "correctIndex": 3,
     "explanation": "Πριν κινηθείτε από τη στάθμευση, ο τελευταίος έλεγχος πάνω από τον ώμο εξασφαλίζει ότι δεν πλησιάζει κάποιο όχημα ή πεζός που δεν φαίνεται στους καθρέπτες.",
+    "explanationEn": "Before moving off from a parked position, a final check over your shoulder ensures that no vehicle or pedestrian not visible in the mirrors is approaching.",
     "explanationVerified": false
   },
   {
     "id": "moto-1086",
     "category": "Εξαρτήματα",
     "question": "Καθώς οδηγείτε διαπιστώνετε ότι οι ώμοι σας εμποδίζουν την ορατότητα, που σας παρέχουν οι καθρέπτες σας. Για να το αντιμετωπίσετε πρέπει:",
+    "questionEn": "While riding, you notice that your shoulders are blocking the visibility your mirrors give you. To address this you should:",
     "image": null,
     "answers": [
       "Να εκτείνετε (επιμηκύνετε) τα μπράτσα των καθρεπτών.",
@@ -1132,14 +1695,22 @@
       "Να χρησιμοποιήσετε τα φλας σας νωρίτερα από ό,τι συνήθως.",
       "Να μην χρησιμοποιείτε τους καθρέπτες."
     ],
+    "answersEn": [
+      "Extend (lengthen) the mirror arms.",
+      "Fit smaller mirrors.",
+      "Use your turn signals earlier than usual.",
+      "Not use your mirrors."
+    ],
     "correctIndex": 0,
     "explanation": "Επιμηκύνοντας τα μπράτσα των καθρεπτών, αυξάνεται το οπτικό πεδίο πίσω σας και μειώνεται η τυφλή περιοχή που δημιουργούν οι ώμοι σας.",
+    "explanationEn": "By lengthening the mirror arms, your field of view behind you increases and the blind area created by your shoulders is reduced.",
     "explanationVerified": false
   },
   {
     "id": "moto-1087",
     "category": "Ασφάλεια",
     "question": "Πρόκειται αμέσως τώρα να στρίψετε δεξιά. Ποια είναι η τελευταία ενέργειά σας πριν στρίψετε:",
+    "questionEn": "You are about to turn right immediately. What is your last action before turning:",
     "image": null,
     "answers": [
       "Δείχνετε το σωστό σήμα.",
@@ -1147,14 +1718,22 @@
       "Επιλέγετε τη σωστή σχέση ταχυτήτων.",
       "Παίρνετε τη σωστή θέση για τη στροφή."
     ],
+    "answersEn": [
+      "You give the correct signal.",
+      "You take a quick glance over your right shoulder.",
+      "You select the correct gear.",
+      "You take up the correct position for the turn."
+    ],
     "correctIndex": 1,
     "explanation": "Το τελευταίο βήμα πριν στρίψετε είναι μια γρήγορη ματιά πάνω από τον ώμο, για να εντοπίσετε τυχόν όχημα ή πεζό που βρίσκεται στην τυφλή γωνία σας.",
+    "explanationEn": "The last step before turning is a quick glance over your shoulder, to spot any vehicle or pedestrian in your blind spot.",
     "explanationVerified": false
   },
   {
     "id": "moto-1088",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Βλέπετε προειδοποιητικές πινακίδες που δείχνουν απότομη στροφή εμπρός δεξιά. Τι πρέπει να κάνετε:",
+    "questionEn": "You see warning signs indicating a sharp turn ahead to the right. What should you do:",
     "image": null,
     "answers": [
       "Να συνεχίσετε με την ίδια ταχύτητα.",
@@ -1162,14 +1741,22 @@
       "Να επιβραδύνετε καθώς βγαίνετε από τη στροφή.",
       "Να επιβραδύνετε πριν τη στροφή."
     ],
+    "answersEn": [
+      "Continue at the same speed.",
+      "Slow down while you are in the turn.",
+      "Slow down as you exit the turn.",
+      "Slow down before the turn."
+    ],
     "correctIndex": 3,
     "explanation": "Η επιβράδυνση πρέπει να γίνει πριν την είσοδο στη στροφή, ώστε μέσα σε αυτήν να διατηρείτε σταθερή ταχύτητα και καλύτερο έλεγχο του δικύκλου.",
+    "explanationEn": "Slowing down must happen before entering the turn, so that within it you maintain a steady speed and better control of the motorcycle.",
     "explanationVerified": false
   },
   {
     "id": "moto-1089",
     "category": "Ετοιμότητα",
     "question": "Οδηγείτε νύκτα και τυφλώνεστε από τα φώτα επερχόμενου οχήματος, τι κάνετε:",
+    "questionEn": "You are riding at night and are blinded by the lights of an oncoming vehicle. What do you do:",
     "image": null,
     "answers": [
       "Επιβραδύνετε ή σταματάτε.",
@@ -1177,14 +1764,22 @@
       "Αναβοσβήνετε τα φώτα πορείας.",
       "Γυρνάτε το κεφάλι σας σε άλλη κατεύθυνση."
     ],
+    "answersEn": [
+      "Slow down or stop.",
+      "Close your eyes.",
+      "Flash your headlights.",
+      "Turn your head in another direction."
+    ],
     "correctIndex": 0,
     "explanation": "Όταν τυφλώνεστε από τα φώτα αντίθετου οχήματος τη νύχτα, η μειωμένη ορατότητα επιβάλλει να μειώσετε ταχύτητα ή να σταματήσετε μέχρι να προσαρμοστεί η όρασή σας.",
+    "explanationEn": "When blinded by the lights of an oncoming vehicle at night, the reduced visibility requires you to slow down or stop until your eyesight adjusts.",
     "explanationVerified": false
   },
   {
     "id": "moto-1090",
     "category": "Ετοιμότητα",
     "question": "Κινείσθε προς μια διάβαση πεζών και πεζοί περιμένουν να περάσουν το δρόμο. Πώς συμπεριφέρεστε:",
+    "questionEn": "You are moving toward a pedestrian crossing and pedestrians are waiting to cross the road. How do you behave:",
     "image": null,
     "answers": [
       "Αφήνετε να περάσουν οι πιο ηλικιωμένοι.",
@@ -1192,14 +1787,22 @@
       "Χρησιμοποιείτε τα φώτα πορείας για να τους ειδοποιήσετε να περάσουν.",
       "Τους κάνετε νεύμα να περάσουν το δρόμο."
     ],
+    "answersEn": [
+      "You let the older ones cross first.",
+      "You slow down and prepare to stop.",
+      "You use your headlights to signal them to cross.",
+      "You wave to them to cross the road."
+    ],
     "correctIndex": 1,
     "explanation": "Πλησιάζοντας διάβαση με πεζούς που περιμένουν, πρέπει να επιβραδύνετε και να είστε έτοιμοι να σταματήσετε ώστε να τους δώσετε προτεραιότητα διάβασης με ασφάλεια.",
+    "explanationEn": "Approaching a crossing with waiting pedestrians, you must slow down and be ready to stop so as to give them priority to cross safely.",
     "explanationVerified": false
   },
   {
     "id": "moto-1091",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Οδηγείτε μοτοσυκλέτα και ακολουθείτε ένα μεγάλο όχημα με 60 km/h. Ποια θέση πρέπει να πάρετε:",
+    "questionEn": "You are riding a motorcycle and following a large vehicle at 60 km/h. What position should you take:",
     "image": null,
     "answers": [
       "Πλησιάζετε κοντά στο όχημα για να προσπεράσετε εύκολα.",
@@ -1207,14 +1810,22 @@
       "Πλησιάζετε κοντά στο όχημα ώστε να προφυλάσσεστε από τον άνεμο.",
       "Μένετε αρκετά πίσω, ώστε να μπορείτε να δείτε εμπρός από το όχημα."
     ],
+    "answersEn": [
+      "You get close to the vehicle so you can overtake easily.",
+      "To the right of the road, to have visibility.",
+      "You get close to the vehicle so as to shelter from the wind.",
+      "You stay well back, so you can see ahead of the vehicle."
+    ],
     "correctIndex": 3,
     "explanation": "Κρατώντας αρκετή απόσταση από ένα μεγάλο όχημα, αποκτάτε καλύτερη ορατότητα του δρόμου μπροστά και περισσότερο χρόνο αντίδρασης.",
+    "explanationEn": "By keeping a good distance from a large vehicle, you gain better visibility of the road ahead and more reaction time.",
     "explanationVerified": false
   },
   {
     "id": "moto-1092",
     "category": "Οδήγηση",
     "question": "Όταν οδηγείτε μοτοσυκλέτα η συνηθισμένη θέση σας στο δρόμο πρέπει να σας επιτρέπει:",
+    "questionEn": "When riding a motorcycle, your usual position on the road should allow you:",
     "image": null,
     "answers": [
       "Να φαίνεστε ώστε να σας βλέπουν τα άλλα οχήματα εμπρός σας.",
@@ -1223,14 +1834,23 @@
       "Να αφήσετε τα άλλα επερχόμενα οχήματα να προσπεράσουν από τα δεξιά σας.",
       "Να μείνετε σε απόσταση 0,50 m από το πεζοδρόμιο."
     ],
+    "answersEn": [
+      "To be seen by the vehicles ahead of you.",
+      "To be visible in the mirrors of the vehicle ahead of you.",
+      "To delay vehicles that wish to overtake.",
+      "To let oncoming vehicles overtake on your right.",
+      "To stay 0.50 m from the pavement/curb."
+    ],
     "correctIndex": 1,
     "explanation": "Η θέση σας στον δρόμο πρέπει να σας επιτρέπει να φαίνεστε στους καθρέπτες του προπορευόμενου οχήματος, ώστε ο οδηγός του να γνωρίζει την παρουσία σας.",
+    "explanationEn": "Your position on the road should allow you to be visible in the mirrors of the vehicle ahead, so its driver is aware of your presence.",
     "explanationVerified": false
   },
   {
     "id": "moto-1093",
     "category": "Οδήγηση",
     "question": "Επιθυμείτε να στρίψετε εμπρός δεξιά. Γιατί πρέπει να πάρετε τη σωστή θέση στο δρόμο εγκαίρως:",
+    "questionEn": "You want to turn right ahead. Why should you take up the correct position on the road in good time:",
     "image": null,
     "answers": [
       "Για να επιτρέψετε στους άλλους οδηγούς να στρίψουν εμπρός σας.",
@@ -1238,14 +1858,22 @@
       "Για να ειδοποιήσετε τους άλλους οδηγούς σχετικά με το πώς πρόκειται να ενεργήσετε.",
       "Για να επιτρέψετε στους άλλους οδηγούς να σας προσπεράσουν από τα αριστερά."
     ],
+    "answersEn": [
+      "To allow other drivers to turn ahead of you.",
+      "To see the road you will turn into better.",
+      "To let other drivers know how you are about to act.",
+      "To allow other drivers to overtake you on the left."
+    ],
     "correctIndex": 2,
     "explanation": "Η έγκαιρη τοποθέτηση στη σωστή θέση του δρόμου ενημερώνει τους άλλους οδηγούς για την πρόθεσή σας να στρίψετε, μειώνοντας την πιθανότητα παρεξήγησης ή σύγκρουσης.",
+    "explanationEn": "Taking up the correct road position in good time informs other drivers of your intention to turn, reducing the chance of misunderstanding or collision.",
     "explanationVerified": false
   },
   {
     "id": "moto-1094",
     "category": "Συντήρηση",
     "question": "Όταν η αλυσίδα κινήσεως είναι χαλαρή, τότε μπορεί:",
+    "questionEn": "When the drive chain is loose, this can:",
     "image": null,
     "answers": [
       "Να φρενάρει ο εμπρός τροχός.",
@@ -1253,14 +1881,22 @@
       "Να χαλάσουν τα φρένα.",
       "Να ακινητοποιηθεί ο πίσω τροχός."
     ],
+    "answersEn": [
+      "Brake the front wheel.",
+      "Cut off the power supply to the ignition.",
+      "Damage the brakes.",
+      "Lock the rear wheel."
+    ],
     "correctIndex": 3,
     "explanation": "Μια χαλαρή αλυσίδα μπορεί να βγει από τα γρανάζια και να μπλοκάρει, ακινητοποιώντας ξαφνικά τον πίσω τροχό με κίνδυνο ανατροπής.",
+    "explanationEn": "A loose chain can come off the sprockets and jam, suddenly locking the rear wheel with a risk of a crash.",
     "explanationVerified": false
   },
   {
     "id": "moto-1095",
     "category": "Οδήγηση",
     "question": "Ποιες ενέργειες του αναβάτη προκαλούν σοβαρές φθορές στα ελαστικά της μοτοσυκλέτας:",
+    "questionEn": "Which actions by the rider cause serious wear to the motorcycle's tires:",
     "image": null,
     "answers": [
       "Το φρενάρισμα.",
@@ -1268,14 +1904,22 @@
       "Η αλλαγή σχέσεων στο κιβώτιο ταχυτήτων.",
       "Η στάθμευση."
     ],
+    "answersEn": [
+      "Braking.",
+      "Turning.",
+      "Changing gears in the gearbox.",
+      "Parking."
+    ],
     "correctIndex": 0,
     "explanation": "Το συχνό ή απότομο φρενάρισμα προκαλεί μεγαλύτερη τριβή και θερμότητα στα ελαστικά, επιταχύνοντας τη φθορά τους.",
+    "explanationEn": "Frequent or abrupt braking causes greater friction and heat on the tires, accelerating their wear.",
     "explanationVerified": false
   },
   {
     "id": "moto-1096",
     "category": "Συντήρηση",
     "question": "Πόσο συχνά οφείλετε να ελέγχετε την πίεση των ελαστικών σας:",
+    "questionEn": "How often should you check your tire pressure:",
     "image": null,
     "answers": [
       "Μόνο σε κάθε τακτική συντήρηση.",
@@ -1283,14 +1927,22 @@
       "Μια φορά το μήνα.",
       "Μια φορά την εβδομάδα."
     ],
+    "answersEn": [
+      "Only at every scheduled service.",
+      "After every long trip.",
+      "Once a month.",
+      "Once a week."
+    ],
     "correctIndex": 3,
     "explanation": "Η πίεση των ελαστικών μειώνεται σταδιακά με το χρόνο, γι' αυτό συνιστάται τακτικός εβδομαδιαίος έλεγχος για να διατηρείται η σωστή πρόσφυση και συμπεριφορά του δικύκλου.",
+    "explanationEn": "Tire pressure gradually decreases over time, which is why a regular weekly check is recommended to maintain correct grip and handling.",
     "explanationVerified": false
   },
   {
     "id": "moto-1097",
     "category": "Συντήρηση",
     "question": "Το πέλμα των ελαστικών πρέπει να έχει βάθος τουλάχιστον:",
+    "questionEn": "The tire tread must have a depth of at least:",
     "image": null,
     "answers": [
       "2,5 mm.",
@@ -1298,14 +1950,22 @@
       "1 mm.",
       "1,6 mm."
     ],
+    "answersEn": [
+      "2.5 mm.",
+      "4 mm.",
+      "1 mm.",
+      "1.6 mm."
+    ],
     "correctIndex": 2,
     "explanation": "Το ελάχιστο βάθος πέλματος διασφαλίζει επαρκή αποστράγγιση του νερού και πρόσφυση, ιδίως σε βρεγμένο οδόστρωμα· κάτω από αυτό το όριο η ασφάλεια μειώνεται σημαντικά.",
+    "explanationEn": "The minimum tread depth ensures adequate water drainage and grip, especially on a wet road surface; below this limit, safety is significantly reduced.",
     "explanationVerified": false
   },
   {
     "id": "moto-1098",
     "category": "Συντήρηση",
     "question": "Η μοτοσυκλέτα σας έχει ελαστικά με αεροθαλάμους. Τότε:",
+    "questionEn": "Your motorcycle has tires with inner tubes. In that case:",
     "image": null,
     "answers": [
       "Πρέπει να αντικαθιστάτε τους αεροθαλάμους κάθε 6 μήνες.",
@@ -1313,14 +1973,22 @@
       "Πρέπει να αντικαθιστάτε τους αεροθαλάμους όταν αλλάζετε το πίσω  λάστιχο.",
       "Πρέπει να αντικαθιστάτε τους αεροθαλάμους μαζί με τα ελαστικά."
     ],
+    "answersEn": [
+      "You must replace the inner tubes every 6 months.",
+      "You must replace the inner tubes every 10,000 km.",
+      "You must replace the inner tubes when you change the rear tire.",
+      "You must replace the inner tubes together with the tires."
+    ],
     "correctIndex": 3,
     "explanation": "Οι αεροθάλαμοι φθείρονται παράλληλα με τα ελαστικά, γι' αυτό συνιστάται η αντικατάστασή τους ταυτόχρονα με τα ελαστικά, ώστε να αποφευχθούν διαρροές ή φθορά του νέου λάστιχου.",
+    "explanationEn": "Inner tubes wear out in parallel with the tires, which is why it is recommended to replace them at the same time as the tires, to avoid leaks or damage to the new tire.",
     "explanationVerified": false
   },
   {
     "id": "moto-1099",
     "category": "Εξοπλισμός",
     "question": "Ποια από τα ακόλουθα δεν θα σας κάνουν πιο ορατούς την ημέρα:",
+    "questionEn": "Which of the following will NOT make you more visible during the day:",
     "image": null,
     "answers": [
       "Ένα μαύρο κράνος.",
@@ -1328,14 +1996,22 @@
       "Το άναμμα των φώτων.",
       "Η χρήση ενός ρούχου με ανακλαστήρες."
     ],
+    "answersEn": [
+      "A black helmet.",
+      "A white helmet.",
+      "Having your lights on.",
+      "Wearing clothing with reflectors."
+    ],
     "correctIndex": 0,
     "explanation": "Ένα μαύρο κράνος απορροφά το φως αντί να ξεχωρίζει, σε αντίθεση με τα ανοιχτόχρωμα κράνη, τα ανακλαστικά ρούχα ή τα αναμμένα φώτα που αυξάνουν την ορατότητά σας.",
+    "explanationEn": "A black helmet absorbs light instead of standing out, unlike light-colored helmets, reflective clothing, or lit lights, all of which increase your visibility.",
     "explanationVerified": false
   },
   {
     "id": "moto-1100",
     "category": "Εξοπλισμός",
     "question": "Οδηγείτε μια μοτοσυκλέτα με πολύ ζεστό καιρό. Τότε πρέπει:",
+    "questionEn": "You are riding a motorcycle in very hot weather. In that case you should:",
     "image": null,
     "answers": [
       "Να οδηγείτε με τη ζελατίνα του κράνους ανοικτή τελείως.",
@@ -1343,14 +2019,22 @@
       "Να φοράτε απλά υποδήματα αντί μπότες.",
       "Να χαλαρώσετε το λουρί του κράνους."
     ],
+    "answersEn": [
+      "Ride with the helmet visor fully open.",
+      "Continue wearing protective clothing.",
+      "Wear plain shoes instead of boots.",
+      "Loosen the helmet's chin strap."
+    ],
     "correctIndex": 1,
     "explanation": "Ακόμη και με ζέστη, τα προστατευτικά ρούχα πρέπει να παραμένουν, γιατί προσφέρουν προστασία από εκδορές και τραυματισμούς σε περίπτωση πτώσης, ανεξάρτητα από τη θερμοκρασία.",
+    "explanationEn": "Even in hot weather, protective clothing should still be worn, because it offers protection from abrasions and injuries in a fall, regardless of temperature.",
     "explanationVerified": false
   },
   {
     "id": "moto-1101",
     "category": "Εξοπλισμός",
     "question": "Γιατί πρέπει να φοράτε ρούχα με ανακλαστήρες την ημέρα:",
+    "questionEn": "Why should you wear clothing with reflectors during the day:",
     "image": null,
     "answers": [
       "Μειώνουν την πίεση του αέρα.",
@@ -1358,84 +2042,127 @@
       "Βοηθούν τους άλλους οδηγούς να σας βλέπουν.",
       "Σας κρατούν δροσερό, ενώ ο καιρός είναι ζεστός."
     ],
+    "answersEn": [
+      "They reduce air pressure.",
+      "They limit injuries if you fall.",
+      "They help other drivers see you.",
+      "They keep you cool when the weather is hot."
+    ],
     "correctIndex": 2,
     "explanation": "Τα ρούχα με ανακλαστήρες αυξάνουν σημαντικά την ορατότητά σας στους άλλους οδηγούς, ειδικά σε συνθήκες χαμηλού φωτισμού.",
+    "explanationEn": "Reflective clothing significantly increases your visibility to other drivers, especially in low-light conditions.",
     "explanationVerified": false
   },
   {
     "id": "moto-1102",
     "category": "Εξαρτήματα",
     "question": "Ποια από τα παρακάτω, διευκολύνουν να γίνονται καλύτερα αντιληπτοί οι μοτοσυκλετιστές από τους άλλους χρήστες του δρόμου:",
+    "questionEn": "Which of the following helps motorcyclists to be better noticed by other road users:",
     "image": null,
     "answers": [
       "Η χρήση φώτων.",
       "Το γκρίζο κράνος.",
       "Τα μαύρα δερμάτινα ρούχα."
     ],
+    "answersEn": [
+      "Using lights.",
+      "A grey helmet.",
+      "Black leather clothing."
+    ],
     "correctIndex": 0,
     "explanation": "Τα αναμμένα φώτα αυξάνουν την ορατότητα του δικύκλου στους άλλους χρήστες του δρόμου, σε αντίθεση με σκουρόχρωμα κράνη ή ρούχα.",
+    "explanationEn": "Lit lights increase the motorcycle's visibility to other road users, unlike dark-colored helmets or clothing.",
     "explanationVerified": false
   },
   {
     "id": "moto-1103",
     "category": "Εξοπλισμός",
     "question": "Ποια από τα παρακάτω, διευκολύνουν να γίνονται καλύτερα αντιληπτοί οι μοτοσυκλετιστές από τους άλλους χρήστες του δρόμου:",
+    "questionEn": "Which of the following helps motorcyclists to be better noticed by other road users:",
     "image": null,
     "answers": [
       "Τα ρούχα με ανακλαστήρες.",
       "Το γκρίζο κράνος.",
       "Τα μαύρα δερμάτινα ρούχα."
     ],
+    "answersEn": [
+      "Clothing with reflectors.",
+      "A grey helmet.",
+      "Black leather clothing."
+    ],
     "correctIndex": 0,
     "explanation": "Τα ρούχα με ανακλαστήρες κάνουν τον αναβάτη πιο ευδιάκριτο, ιδίως σε συνθήκες χαμηλού φωτισμού, σε αντίθεση με τα σκουρόχρωμα ρούχα ή κράνη.",
+    "explanationEn": "Reflective clothing makes the rider much more noticeable, especially in low-light conditions, unlike dark-colored clothing or helmets.",
     "explanationVerified": false
   },
   {
     "id": "moto-1104",
     "category": "Εξοπλισμός",
     "question": "Ποια από τα παρακάτω, διευκολύνουν να γίνονται καλύτερα αντιληπτοί οι μοτοσυκλετιστές από τους άλλους χρήστες του δρόμου:",
+    "questionEn": "Which of the following helps motorcyclists to be better noticed by other road users:",
     "image": null,
     "answers": [
       "Το άσπρο κράνος.",
       "Το γκρίζο κράνος.",
       "Τα μαύρα δερμάτινα ρούχα."
     ],
+    "answersEn": [
+      "A white helmet.",
+      "A grey helmet.",
+      "Black leather clothing."
+    ],
     "correctIndex": 0,
     "explanation": "Ένα ανοιχτόχρωμο, άσπρο κράνος αντανακλά περισσότερο φως και είναι πιο ευδιάκριτο από ένα γκρίζο ή μαύρο κράνος.",
+    "explanationEn": "A light-colored, white helmet reflects more light and is more noticeable than a grey or black helmet.",
     "explanationVerified": false
   },
   {
     "id": "moto-1105",
     "category": "Εξαρτήματα",
     "question": "Ποιοι τύποι προστατευτικών κατασκευών προστατεύουν καλύτερα:",
+    "questionEn": "Which types of protective structures offer better protection:",
     "image": null,
     "answers": [
       "Ανεμοθώρακας (παρ-μπριζ) επάνω στο τιμόνι.",
       "Σπορ φαίρινγκ.",
       "Τουριστικού τύπου φαίρινγκ."
     ],
+    "answersEn": [
+      "A windscreen mounted on the handlebar.",
+      "A sport fairing.",
+      "A touring-type fairing."
+    ],
     "correctIndex": 2,
     "explanation": "Ένα φαίρινγκ τουριστικού τύπου καλύπτει μεγαλύτερο τμήμα του σώματος του αναβάτη από τον άνεμο, τη βροχή και το κρύο, προσφέροντας καλύτερη προστασία σε σχέση με μικρότερες κατασκευές.",
+    "explanationEn": "A touring-type fairing covers a larger part of the rider's body from wind, rain, and cold, offering better protection than smaller structures.",
     "explanationVerified": false
   },
   {
     "id": "moto-1106",
     "category": "Εξαρτήματα",
     "question": "Ποιοι τύποι προστατευτικών κατασκευών προστατεύουν καλύτερα:",
+    "questionEn": "Which types of protective structures offer better protection:",
     "image": null,
     "answers": [
       "Ανεμοθώρακας (παρ-μπριζ) επάνω στο τιμόνι.",
       "Σπορ φαίρινγκ.",
       "Ανεμοθώρακας σταθερός."
     ],
+    "answersEn": [
+      "A windscreen mounted on the handlebar.",
+      "A sport fairing.",
+      "A fixed windscreen."
+    ],
     "correctIndex": 2,
     "explanation": "Ένας σταθερός ανεμοθώρακας προσφέρει πιο αξιόπιστη και σταθερή προστασία από τον αέρα σε σχέση με μικρότερες ή λιγότερο άκαμπτες κατασκευές.",
+    "explanationEn": "A fixed windscreen offers more reliable and stable protection from the wind compared to smaller or less rigid structures.",
     "explanationVerified": false
   },
   {
     "id": "moto-1107",
     "category": "Εξοπλισμός",
     "question": "Το κράνος σας έχει μια μικρή ρωγμή. Πρέπει:",
+    "questionEn": "Your helmet has a small crack. You should:",
     "image": null,
     "answers": [
       "Να αλλάξετε το κράνος πριν οδηγήσετε ξανά.",
@@ -1443,14 +2170,22 @@
       "Να ζητήσετε από την αστυνομία να το ελέγξει.",
       "Να το επισκευάσει ένας οδηγός."
     ],
+    "answersEn": [
+      "Replace the helmet before riding again.",
+      "Only ride at low speed.",
+      "Ask the police to check it.",
+      "Have a fellow rider repair it."
+    ],
     "correctIndex": 0,
     "explanation": "Μια ρωγμή στο κέλυφος του κράνους μειώνει σημαντικά την αντοχή του σε κρούση, γι' αυτό πρέπει να αντικατασταθεί άμεσα πριν από νέα χρήση.",
+    "explanationEn": "A crack in the helmet shell significantly reduces its impact resistance, which is why it must be replaced immediately before further use.",
     "explanationVerified": false
   },
   {
     "id": "moto-1108",
     "category": "Εξοπλισμός",
     "question": "Αν η ζελατίνα του κράνους σας είναι χαραγμένη άσχημα, τότε πρέπει:",
+    "questionEn": "If your helmet's visor is badly scratched, you should:",
     "image": null,
     "answers": [
       "Να τη γυαλίσετε με ένα γυαλιστικό.",
@@ -1458,14 +2193,22 @@
       "Να την πλύνετε με σαπουνάδα.",
       "Να την καθαρίσετε με πετρέλαιο."
     ],
+    "answersEn": [
+      "Polish it with a polishing compound.",
+      "Replace it.",
+      "Wash it with soapy water.",
+      "Clean it with kerosene/petrol."
+    ],
     "correctIndex": 1,
     "explanation": "Μια χαραγμένη ζελατίνα μειώνει την ορατότητα του οδηγού, ειδικά τη νύχτα ή με αντηλιά, γι' αυτό πρέπει να αντικατασταθεί.",
+    "explanationEn": "A scratched visor reduces the rider's visibility, especially at night or in glare, which is why it must be replaced.",
     "explanationVerified": false
   },
   {
     "id": "moto-1109",
     "category": "Εξαρτήματα",
     "question": "Το πλαϊνό στήριγμα (σταντ) της μοτοσυκλέτας σας δεν συμπτύχθηκε στη θέση του καλά και εσείς ξεκινάτε. Τι μπορεί να συμβεί:",
+    "questionEn": "Your motorcycle's side stand did not fold up properly into position and you set off. What might happen:",
     "image": null,
     "answers": [
       "Να αλλάξει το κέντρο βάρους της μοτοσυκλέτας.",
@@ -1473,14 +2216,22 @@
       "Το στήριγμα να «συρθεί» στο έδαφος όταν στρίψετε και να ανατραπεί η μοτοσυκλέτα.",
       "Να προκαλέσει πρόβλημα στην οδήγηση."
     ],
+    "answersEn": [
+      "The motorcycle's center of gravity changes.",
+      "Your foot might get caught.",
+      "The stand may 'drag' on the ground when you turn and the motorcycle may tip over.",
+      "It may cause a riding problem."
+    ],
     "correctIndex": 2,
     "explanation": "Αν το πλαϊνό σταντ δεν έχει διπλώσει σωστά, μπορεί να «σκαλώσει» στο έδαφος κατά τη στροφή και να προκαλέσει απώλεια ελέγχου ή ανατροπή του δικύκλου.",
+    "explanationEn": "If the side stand has not folded up correctly, it may catch on the ground during a turn and cause loss of control or the motorcycle to tip over.",
     "explanationVerified": false
   },
   {
     "id": "moto-1110",
     "category": "Οδήγηση",
     "question": "Οδηγείτε τη μοτοσυκλέτα σας κάτω από πολύ καλές συνθήκες δρόμου και καιρού. Ο αποτελεσματικότερος τρόπος να ακινητοποιηθείτε με τα φρένα είναι:",
+    "questionEn": "You are riding your motorcycle under very good road and weather conditions. The most effective way to stop using the brakes is:",
     "image": null,
     "answers": [
       "Φρενάρετε με τα δύο φρένα εμπρός και πίσω. Χρησιμοποιείτε πιο πολύ το πίσω.",
@@ -1488,14 +2239,22 @@
       "Φρενάρετε με το πίσω φρένο και λίγο πριν σταματήσετε χρησιμοποιείτε το εμπρός.",
       "Φρενάρετε και με τα δύο φρένα με έμφαση στο εμπρός."
     ],
+    "answersEn": [
+      "Brake with both the front and rear brakes. Use the rear one more.",
+      "Brake applying equal pressure to both brakes.",
+      "Brake with the rear brake and use the front one just before stopping.",
+      "Brake with both brakes, with emphasis on the front one."
+    ],
     "correctIndex": 3,
     "explanation": "Σε καλές συνθήκες δρόμου, το εμπρόσθιο φρένο αναλαμβάνει το μεγαλύτερο μέρος της επιβράδυνσης λόγω της μεταφοράς βάρους προς τα εμπρός, γι' αυτό η χρήση και των δύο φρένων με έμφαση στο μπροστινό δίνει την πιο αποτελεσματική πέδηση.",
+    "explanationEn": "In good road conditions, the front brake handles most of the deceleration due to the forward weight transfer, which is why using both brakes with emphasis on the front one gives the most effective braking.",
     "explanationVerified": false
   },
   {
     "id": "moto-1111",
     "category": "Εξοπλισμός",
     "question": "Τι κάνετε για να μείνετε ζεστοί όταν οδηγείτε με πολύ κρύο:",
+    "questionEn": "What do you do to stay warm when riding in very cold weather:",
     "image": null,
     "answers": [
       "Οδηγείτε πολύ κοντά στα προπορευόμενα αυτοκίνητα.",
@@ -1503,42 +2262,64 @@
       "Σκύβετε πολύ επάνω στο δοχείο βενζίνης.",
       "Βάζετε πότε-πότε τα χέρια σας επάνω στο σωλήνα εξατμίσεως."
     ],
+    "answersEn": [
+      "Ride very close to the vehicles ahead.",
+      "Wear suitable clothing.",
+      "Lean far forward over the fuel tank.",
+      "Occasionally put your hands on the exhaust pipe."
+    ],
     "correctIndex": 1,
     "explanation": "Ο κατάλληλος θερμομονωτικός ρουχισμός διατηρεί τη θερμοκρασία του σώματος και αποτρέπει την απώλεια συγκέντρωσης λόγω κρύου.",
+    "explanationEn": "Suitable thermal clothing maintains body temperature and prevents loss of concentration due to cold.",
     "explanationVerified": false
   },
   {
     "id": "moto-1112",
     "category": "Ασφάλεια",
     "question": "Σε πολύ ζεστό καιρό η πίσσα στην επιφάνεια του δρόμου μπορεί να μαλακώνει. Ποια τμήματα της μοτοσυκλέτας σας επηρεάζονται περισσότερο:",
+    "questionEn": "In very hot weather, the tar on the road surface can soften. Which parts of your motorcycle are affected the most:",
     "image": null,
     "answers": [
       "Η ανάρτηση.",
       "Η πρόσφυση των ελαστικών.",
       "Η εξάτμιση."
     ],
+    "answersEn": [
+      "The suspension.",
+      "The tires' grip.",
+      "The exhaust."
+    ],
     "correctIndex": 1,
     "explanation": "Η μαλακωμένη πίσσα μειώνει την πρόσφυση των ελαστικών στο οδόστρωμα, αυξάνοντας τον κίνδυνο ολίσθησης.",
+    "explanationEn": "Softened tar reduces the tires' grip on the road surface, increasing the risk of skidding.",
     "explanationVerified": false
   },
   {
     "id": "moto-1113",
     "category": "Ασφάλεια",
     "question": "Σε πολύ ζεστό καιρό η πίσσα στην επιφάνεια του δρόμου μπορεί να μαλακώνει. Ποια τμήματα της μοτοσυκλέτας σας επηρεάζονται περισσότερο:",
+    "questionEn": "In very hot weather, the tar on the road surface can soften. Which parts of your motorcycle are affected the most:",
     "image": null,
     "answers": [
       "Η ανάρτηση.",
       "Η τροχοπέδηση.",
       "Η εξάτμιση."
     ],
+    "answersEn": [
+      "The suspension.",
+      "The braking.",
+      "The exhaust."
+    ],
     "correctIndex": 1,
     "explanation": "Η μειωμένη πρόσφυση λόγω μαλακής πίσσας επηρεάζει άμεσα την αποτελεσματικότητα της τροχοπέδησης, αυξάνοντας την απόσταση ακινητοποίησης.",
+    "explanationEn": "Reduced grip due to soft tar directly affects the effectiveness of braking, increasing the stopping distance.",
     "explanationVerified": false
   },
   {
     "id": "moto-1114",
     "category": "Κανόνες",
     "question": "Τα φλας σας μπορεί να μην φαίνονται εξαιτίας του δυνατού ηλιακού φωτός. Πώς αντιδράτε:",
+    "questionEn": "Your turn signals may not be visible because of strong sunlight. How do you react:",
     "image": null,
     "answers": [
       "Ανάβετε τα φλας νωρίτερα.",
@@ -1546,14 +2327,22 @@
       "Πατάτε μερικές φορές το ποδόπληκτρο του πίσω φρένου, για να ανάψει το φως του φρεναρίσματος.",
       "Στρίβετε πολύ γρήγορα."
     ],
+    "answersEn": [
+      "You turn on your signals earlier.",
+      "You use hand signals together with your turn signals to make your intention to change direction known.",
+      "You tap the rear brake pedal a few times, so the brake light comes on.",
+      "You turn very quickly."
+    ],
     "correctIndex": 1,
     "explanation": "Όταν τα φλας δεν είναι ευδιάκριτα λόγω έντονου φωτός, η συμπληρωματική χρήση σημάτων με το χέρι εξασφαλίζει ότι οι άλλοι οδηγοί κατανοούν την πρόθεσή σας.",
+    "explanationEn": "When turn signals are not clearly visible due to strong light, additionally using hand signals ensures that other drivers understand your intention.",
     "explanationVerified": false
   },
   {
     "id": "moto-1115",
     "category": "Εξοπλισμός",
     "question": "Τι πρέπει να κάνετε για να βλέπετε την νύκτα:",
+    "questionEn": "What should you do in order to see at night:",
     "image": null,
     "answers": [
       "Αφήνετε ένα κενό μεταξύ των γυαλιών σας ή της ζελατίνας.",
@@ -1561,14 +2350,22 @@
       "Φοράτε μια σκουρόχρωμη ζελατίνα.",
       "Δεν χρησιμοποιείτε γυαλιά ή ζελατίνα καθόλου."
     ],
+    "answersEn": [
+      "Leave a gap between your glasses and the visor.",
+      "Keep your glasses and visor clean.",
+      "Wear a dark-tinted visor.",
+      "Don't use glasses or a visor at all."
+    ],
     "correctIndex": 1,
     "explanation": "Καθαρά γυαλιά ή ζελατίνα εξασφαλίζουν καθαρή ορατότητα του δρόμου τη νύχτα, χωρίς θολούρες ή αντανακλάσεις που εμποδίζουν την όραση.",
+    "explanationEn": "Clean glasses or visor ensure clear visibility of the road at night, without blurring or reflections that hinder vision.",
     "explanationVerified": false
   },
   {
     "id": "moto-1116",
     "category": "Εξοπλισμός",
     "question": "Οδηγείτε τη νύκτα. Τι κάνετε για να διακρίνεσθε καλύτερα:",
+    "questionEn": "You are riding at night. What do you do to be seen better:",
     "image": null,
     "answers": [
       "Οδηγείτε με τα φώτα αναμμένα.",
@@ -1577,14 +2374,23 @@
       "Κινείσθε σαφώς στο αριστερό μέρος του δρόμου.",
       "Φοράτε ρούχα με έντονο χρώμα."
     ],
+    "answersEn": [
+      "Ride with your lights on.",
+      "Wear clothing with reflectors.",
+      "Clean your motorcycle.",
+      "Ride clearly on the left side of the road.",
+      "Wear brightly colored clothing."
+    ],
     "correctIndex": 1,
     "explanation": "Τα ρούχα με ανακλαστήρες κάνουν τον αναβάτη πολύ πιο ευδιάκριτο τη νύχτα στα φώτα των άλλων οχημάτων.",
+    "explanationEn": "Reflective clothing makes the rider much more noticeable at night in the lights of other vehicles.",
     "explanationVerified": false
   },
   {
     "id": "moto-1117",
     "category": "Εξοπλισμός",
     "question": "Δεν διαθέτετε κατάλληλο εξοπλισμό και οδηγείτε τη μοτοσυκλέτα σας με βροχή και με κρύο. Τι μπορεί να συμβεί:",
+    "questionEn": "You do not have suitable equipment and you ride your motorcycle in rain and cold. What might happen:",
     "image": null,
     "answers": [
       "Χάνετε την αυτοσυγκέντρωσή σας, την προσοχή σας.",
@@ -1593,14 +2399,23 @@
       "Ο χρόνος της αντιδράσεώς σας μειώνεται.",
       "Μπορεί να χαλαρώσει το κράνος σας."
     ],
+    "answersEn": [
+      "You lose your concentration, your attention.",
+      "Your visor freezes.",
+      "You might slip off the seat.",
+      "Your reaction time decreases.",
+      "Your helmet might come loose."
+    ],
     "correctIndex": 0,
     "explanation": "Χωρίς κατάλληλο εξοπλισμό, το κρύο και η βροχή προκαλούν δυσφορία που αποσπά την προσοχή και μειώνει την αυτοσυγκέντρωση, κρίσιμη για ασφαλή οδήγηση.",
+    "explanationEn": "Without suitable equipment, cold and rain cause discomfort that distracts you and reduces concentration, which is critical for safe riding.",
     "explanationVerified": false
   },
   {
     "id": "moto-1118",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Δεν πρέπει να οδηγείτε πίσω και πολύ κοντά σε ένα φορτηγό διότι:",
+    "questionEn": "You should not ride behind and very close to a truck because:",
     "image": null,
     "answers": [
       "Θα αναπνέετε τα καυσαέριά του.",
@@ -1608,14 +2423,22 @@
       "Οι οδηγοί πίσω σας δεν θα μπορούν να σας δουν.",
       "Μειώνεται η ορατότητά σας εμπρός."
     ],
+    "answersEn": [
+      "You will breathe its exhaust fumes.",
+      "The truck's airstream will knock you down.",
+      "Drivers behind you will not be able to see you.",
+      "Your forward visibility is reduced."
+    ],
     "correctIndex": 3,
     "explanation": "Κινούμενοι πολύ κοντά πίσω από φορτηγό, το μέγεθός του εμποδίζει την ορατότητά σας προς τα εμπρός, μειώνοντας τον χρόνο αντίδρασης σε εμπόδια.",
+    "explanationEn": "Riding very close behind a truck, its size blocks your forward visibility, reducing your reaction time to obstacles.",
     "explanationVerified": false
   },
   {
     "id": "moto-1119",
     "category": "Ετοιμότητα",
     "question": "Οδηγείτε σε κεντρικό δρόμο, ο οποίος διασταυρώνεται με πολλούς μικρότερους δρόμους. Γιατί οφείλετε να προσέχετε πολύ:",
+    "questionEn": "You are riding on a main road that intersects with many smaller roads. Why must you pay close attention:",
     "image": null,
     "answers": [
       "Ριπές ανέμου από τους πλευρικούς δρόμους μπορεί να σας ρίξουν.",
@@ -1623,14 +2446,22 @@
       "Ο δρόμος που κινείσθε μπορεί να είναι ολισθηρός επειδή στρίβουν οχήματα.",
       "Οι οδηγοί επιβραδύνουν λίγο πριν στρίψουν."
     ],
+    "answersEn": [
+      "Gusts of wind from the side roads might knock you down.",
+      "Drivers from the side roads may not notice you.",
+      "The road you are on might be slippery because vehicles are turning.",
+      "Drivers slow down a little before turning."
+    ],
     "correctIndex": 1,
     "explanation": "Οι οδηγοί που βγαίνουν από μικρότερους δρόμους ενδέχεται να μην προσέξουν έγκαιρα ένα δίκυκλο λόγω της μικρής του διατομής, γι' αυτό απαιτείται αυξημένη προσοχή.",
+    "explanationEn": "Drivers emerging from smaller roads may not notice a motorcycle in time due to its small profile, which is why increased attention is required.",
     "explanationVerified": false
   },
   {
     "id": "moto-1120",
     "category": "Ετοιμότητα",
     "question": "Οδηγείτε σε επαρχιακό δρόμο. Στο οδόστρωμα κινούνται βοοειδή. Τι κάνετε:",
+    "questionEn": "You are riding on a rural road. Cattle are moving on the road surface. What do you do:",
     "image": null,
     "answers": [
       "Επιβραδύνετε και σταματάτε αν χρειασθεί.",
@@ -1638,14 +2469,22 @@
       "Κορνάρετε.",
       "Οδηγείτε κοντά τους."
     ],
+    "answersEn": [
+      "Slow down and stop if necessary.",
+      "Accelerate.",
+      "Sound your horn.",
+      "Ride close to them."
+    ],
     "correctIndex": 0,
     "explanation": "Τα βοοειδή στο οδόστρωμα είναι απρόβλεπτα, γι' αυτό η ασφαλής αντίδραση είναι να επιβραδύνετε και να σταματήσετε αν χρειαστεί.",
+    "explanationEn": "Cattle on the road are unpredictable, which is why the safe reaction is to slow down and stop if necessary.",
     "explanationVerified": false
   },
   {
     "id": "moto-1121",
     "category": "Οδήγηση",
     "question": "Το όχημα εμπρός οδηγείται από μαθητευόμενο οδηγό. Εσείς πρέπει να:",
+    "questionEn": "The vehicle ahead is being driven by a learner driver. You should:",
     "image": null,
     "answers": [
       "Διατηρείτε την ψυχραιμία σας και την υπομονή σας.",
@@ -1653,14 +2492,22 @@
       "Ανάβετε τα μεγάλα σας φώτα.",
       "Κορνάρετε και προσπερνάτε."
     ],
+    "answersEn": [
+      "Keep your calm and your patience.",
+      "Ride right behind it, very close.",
+      "Turn on your high beams.",
+      "Sound your horn and overtake."
+    ],
     "correctIndex": 0,
     "explanation": "Ο μαθητευόμενος οδηγός μπορεί να έχει απρόβλεπτες ή αργές αντιδράσεις, γι' αυτό η ψυχραιμία και η υπομονή είναι η ασφαλέστερη στάση.",
+    "explanationEn": "A learner driver may have unpredictable or slow reactions, which is why staying calm and patient is the safest approach.",
     "explanationVerified": false
   },
   {
     "id": "moto-1122",
     "category": "Οδήγηση",
     "question": "Οδηγείτε πίσω από ένα μακρύ όχημα. Υπάρχει μικρός κυκλικός κόμβος εμπρός σας. Το προπορευόμενο όχημα ανάβει δεξί φλας αλλά παίρνει θέση αριστερά στο οδόστρωμα. Εσείς πρέπει να:",
+    "questionEn": "You are riding behind a long vehicle. There is a small roundabout ahead of you. The vehicle ahead signals right but moves to the left side of the road. You should:",
     "image": null,
     "answers": [
       "Κορνάρετε.",
@@ -1668,14 +2515,22 @@
       "Να παραμείνετε πίσω του μέχρις ότου ολοκληρώσει τους ελιγμούς του.",
       "Να αναβοσβήσετε τα φώτα σας."
     ],
+    "answersEn": [
+      "Sound your horn.",
+      "Overtake it on the right.",
+      "Stay behind it until it completes its maneuvers.",
+      "Flash your lights."
+    ],
     "correctIndex": 2,
     "explanation": "Όταν το προπορευόμενο όχημα δείχνει αντικρουόμενα σήματα, είναι ασφαλέστερο να περιμένετε πίσω του μέχρι να ξεκαθαρίσει την κίνησή του, αντί να προσπεράσετε βιαστικά.",
+    "explanationEn": "When the vehicle ahead gives conflicting signals, it is safer to wait behind it until its movement becomes clear, rather than overtaking hastily.",
     "explanationVerified": false
   },
   {
     "id": "moto-1123",
     "category": "Εξαρτήματα",
     "question": "Δεν πρέπει να κινείσθε με το συμπλέκτη πατημένο περισσότερο από όσο είναι εντελώς απαραίτητο χρονικά γιατί:",
+    "questionEn": "You should not ride with the clutch pulled in for longer than strictly necessary because:",
     "image": null,
     "answers": [
       "Αυξάνεται η φθορά του κιβωτίου ταχυτήτων.",
@@ -1683,56 +2538,85 @@
       "Μειώνεται ο έλεγχος της μοτοσυκλέτας σας.",
       "Μειώνεται η πρόσφυση των ελαστικών σας."
     ],
+    "answersEn": [
+      "Wear on the gearbox increases.",
+      "Fuel consumption increases.",
+      "Your control of the motorcycle is reduced.",
+      "Your tires' grip is reduced."
+    ],
     "correctIndex": 2,
     "explanation": "Με τον συμπλέκτη πατημένο η κινητήρια δύναμη δεν μεταδίδεται στον τροχό, μειώνοντας τη δυνατότητα ελέγχου της μοτοσυκλέτας, ειδικά σε επιβράδυνση με τον κινητήρα.",
+    "explanationEn": "With the clutch pulled in, engine power is not transmitted to the wheel, reducing your ability to control the motorcycle, especially when slowing down using the engine.",
     "explanationVerified": false
   },
   {
     "id": "moto-1124",
     "category": "Ασφάλεια",
     "question": "Ποιες μορφές δρόμου δεν δημιουργούν κινδύνους ολισθήσεως:",
+    "questionEn": "Which types of road surface do not create a risk of skidding:",
     "image": null,
     "answers": [
       "Η λευκή διαγράμμιση.",
       "Η στεγνή άσφαλτος.",
       "Η λειωμένη πίσσα."
     ],
+    "answersEn": [
+      "White road markings.",
+      "Dry asphalt.",
+      "Melted tar."
+    ],
     "correctIndex": 1,
     "explanation": "Η στεγνή άσφαλτος προσφέρει την καλύτερη και πιο σταθερή πρόσφυση, σε αντίθεση με τη λευκή διαγράμμιση ή τη λιωμένη πίσσα που είναι ολισθηρές.",
+    "explanationEn": "Dry asphalt offers the best and most stable grip, unlike white road markings or melted tar, which are slippery.",
     "explanationVerified": false
   },
   {
     "id": "moto-1125",
     "category": "Ασφάλεια",
     "question": "Ποιοι είναι οι κυριότεροι λόγοι ολισθήσεως:",
+    "questionEn": "What are the main causes of skidding:",
     "image": null,
     "answers": [
       "«Μαλακό» φρενάρισμα.",
       "Το υπερβολικό πλάγιασμα στη στροφή ή το απότομο φρενάρισμα ή απότομη αλλαγή κατευθύνσεως.",
       "Η όρθια θέση στη στροφή."
     ],
+    "answersEn": [
+      "'Soft' braking.",
+      "Excessive leaning in a turn, or abrupt braking, or an abrupt change of direction.",
+      "An upright position in a turn."
+    ],
     "correctIndex": 1,
     "explanation": "Το υπερβολικό πλάγιασμα στη στροφή ή οι απότομες ενέργειες φρεναρίσματος και αλλαγής κατεύθυνσης ξεπερνούν τα όρια πρόσφυσης των ελαστικών, προκαλώντας ολίσθηση.",
+    "explanationEn": "Excessive leaning in a turn or abrupt braking and direction changes exceed the tires' grip limits, causing a skid.",
     "explanationVerified": false
   },
   {
     "id": "moto-1126",
     "category": "Ετοιμότητα",
     "question": "Επικρατεί πολύ κρύο και ο δρόμος δείχνει βρεγμένος. Δεν ακούγεται ο θόρυβος κυλίσεως. Τι κάνετε:",
+    "questionEn": "It is very cold and the road looks wet. You cannot hear the sound of the tires rolling. What do you do:",
     "image": null,
     "answers": [
       "Συνεχίζετε να οδηγείτε με την ίδια ταχύτητα.",
       "Οδηγείτε αργά με τη μικρότερη σχέση που μπορείτε.",
       "Επιβραδύνετε γιατί μπορεί να βρίσκεστε σε μαύρο πάγο."
     ],
+    "answersEn": [
+      "Continue riding at the same speed.",
+      "Ride slowly in the lowest gear you can.",
+      "Slow down, because you might be on black ice."
+    ],
     "correctIndex": 2,
     "explanation": "Η απουσία θορύβου κύλισης σε κρύο και υγρό δρόμο μπορεί να υποδηλώνει την ύπαρξη μαύρου πάγου, ο οποίος είναι εξαιρετικά ολισθηρός και δυσδιάκριτος, γι' αυτό απαιτείται επιβράδυνση.",
+    "explanationEn": "The absence of rolling noise on a cold, wet road may indicate the presence of black ice, which is extremely slippery and hard to spot, which is why you must slow down.",
     "explanationVerified": false
   },
   {
     "id": "moto-1127",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Πλησιάζετε ένα δρόμο με την επιφάνειά του καλυμμένη από ψιλό χαλίκι. Τι κάνετε:",
+    "questionEn": "You are approaching a road whose surface is covered with fine gravel. What do you do:",
     "image": null,
     "answers": [
       "Οδηγείτε κανονικά.",
@@ -1740,28 +2624,43 @@
       "Επιβραδύνετε.",
       "Σταματάτε."
     ],
+    "answersEn": [
+      "Ride normally.",
+      "Accelerate.",
+      "Slow down.",
+      "Stop."
+    ],
     "correctIndex": 2,
     "explanation": "Η επιφάνεια με ψιλό χαλίκι μειώνει σημαντικά την πρόσφυση των ελαστικών, γι' αυτό πρέπει να επιβραδύνετε πριν την προσεγγίσετε.",
+    "explanationEn": "A surface covered with fine gravel significantly reduces tire grip, which is why you should slow down before reaching it.",
     "explanationVerified": false
   },
   {
     "id": "moto-1128",
     "category": "Συντήρηση",
     "question": "Πρέπει να ταξιδέψετε με ομίχλη. Ποια είναι τα σημαντικότερα πράγματα που πρέπει να κάνετε:",
+    "questionEn": "You must travel in fog. What are the most important things you should do:",
     "image": null,
     "answers": [
       "Εφοδιάζεσθε με καύσιμα.",
       "Παίρνετε ζεστό ρόφημα μαζί σας.",
       "Ελέγχετε τη λειτουργία των φώτων, τη μπαταρία και καθαρίζετε τη ζελατίνα του κράνους σας."
     ],
+    "answersEn": [
+      "Fill up with fuel.",
+      "Take a hot drink with you.",
+      "Check that your lights and battery are working, and clean your helmet's visor."
+    ],
     "correctIndex": 2,
     "explanation": "Σε συνθήκες ομίχλης η ορατότητα είναι κρίσιμη, γι' αυτό πρέπει να διασφαλίσετε τη σωστή λειτουργία των φώτων και την καθαρότητα της ζελατίνας, για να βλέπετε και να σας βλέπουν.",
+    "explanationEn": "In foggy conditions visibility is critical, which is why you must ensure your lights work properly and your visor is clean, so you can see and be seen.",
     "explanationVerified": false
   },
   {
     "id": "moto-1129",
     "category": "Ασφάλεια",
     "question": "Το καλύτερο μέρος να σταθμεύσετε τη μοτοσυκλέτα σας είναι:",
+    "questionEn": "The best place to park your motorcycle is:",
     "image": null,
     "answers": [
       "Μαλακός ασφαλτοτάπητας.",
@@ -1769,14 +2668,22 @@
       "Γρασίδι.",
       "Σταθερό, επίπεδο έδαφος."
     ],
+    "answersEn": [
+      "Soft asphalt surface.",
+      "Soft ground.",
+      "Grass.",
+      "Firm, level ground."
+    ],
     "correctIndex": 3,
     "explanation": "Ένα σταθερό και επίπεδο έδαφος αποτρέπει την ανατροπή ή τη βύθιση του σταντ, εξασφαλίζοντας ασφαλή στάθμευση.",
+    "explanationEn": "Firm, level ground prevents the motorcycle from tipping over or the stand sinking in, ensuring safe parking.",
     "explanationVerified": false
   },
   {
     "id": "moto-1130",
     "category": "Οδήγηση",
     "question": "Κατά τη συνηθισμένη οδήγηση στο δρόμο πρέπει να βρίσκεσθε:",
+    "questionEn": "During normal riding on the road, you should be positioned:",
     "image": null,
     "answers": [
       "30 cm μακριά από το πεζοδρόμιο.",
@@ -1784,14 +2691,22 @@
       "Στο δεξί της λωρίδας σας.",
       "Κοντά στο κέντρο του δρόμου."
     ],
+    "answersEn": [
+      "30 cm away from the curb.",
+      "In the center of your lane, slightly to the right.",
+      "At the right of your lane.",
+      "Close to the center of the road."
+    ],
     "correctIndex": 1,
     "explanation": "Κινούμενοι στο κέντρο της λωρίδας ελαφρώς προς τα δεξιά, έχετε καλή ορατότητα του δρόμου και παραμένετε ταυτόχρονα ορατοί στους άλλους οδηγούς.",
+    "explanationEn": "By riding in the center of your lane, slightly to the right, you have good visibility of the road while also remaining visible to other drivers.",
     "explanationVerified": false
   },
   {
     "id": "moto-1131",
     "category": "Οδήγηση",
     "question": "Εισέρχεστε στην εθνική οδό από πλευρικό δρόμο. Τι πρέπει να κάνετε:",
+    "questionEn": "You are entering the national highway from a side road. What should you do:",
     "image": null,
     "answers": [
       "Να προσαρμόσετε την ταχύτητά σας σε αυτήν των οχημάτων της εθνικής οδού.",
@@ -1799,14 +2714,22 @@
       "Να οδηγείτε κοντά στην πλευρά της εθνικής οδού ψάχνοντας για κενό.",
       "Να ανάψετε φλας."
     ],
+    "answersEn": [
+      "Adjust your speed to match that of the vehicles on the national highway.",
+      "Accelerate as fast as possible and ride straight ahead.",
+      "Ride close to the edge of the highway looking for a gap.",
+      "Turn on your indicator."
+    ],
     "correctIndex": 0,
     "explanation": "Η προσαρμογή της ταχύτητάς σας σε αυτήν των οχημάτων της εθνικής οδού επιτρέπει ομαλή και ασφαλή ένταξη στην κυκλοφορία χωρίς απότομες διαφορές ταχύτητας.",
+    "explanationEn": "Adjusting your speed to that of the vehicles on the national highway allows smooth and safe merging into traffic without abrupt speed differences.",
     "explanationVerified": false
   },
   {
     "id": "moto-1132",
     "category": "Κανόνες",
     "question": "Πώς πρέπει να δείξετε με τα χέρια σας ότι θέλετε να στρίψετε αριστερά:",
+    "questionEn": "How should you signal with your hands that you want to turn left:",
     "image": null,
     "answers": [
       "Τεντώνετε σταθερά το δεξί σας χέρι.",
@@ -1814,14 +2737,22 @@
       "Κινείτε πάνω-κάτω τεντωμένο το αριστερό σας χέρι.",
       "Κινείτε πάνω-κάτω τεντωμένο το δεξί σας χέρι."
     ],
+    "answersEn": [
+      "Extend your right hand firmly.",
+      "Extend your left hand firmly out to the side.",
+      "Move your extended left hand up and down.",
+      "Move your extended right hand up and down."
+    ],
     "correctIndex": 1,
     "explanation": "Το τεντωμένο πλάγια αριστερό χέρι είναι το καθιερωμένο σήμα που δηλώνει πρόθεση στροφής αριστερά, ενημερώνοντας καθαρά τους άλλους οδηγούς.",
+    "explanationEn": "The left hand extended out to the side is the established signal indicating an intention to turn left, clearly informing other drivers.",
     "explanationVerified": false
   },
   {
     "id": "moto-1133",
     "category": "Κανόνες",
     "question": "Αφού δείξατε με το αριστερό σας χέρι ότι στρίβετε αριστερά, γιατί πρέπει να το κατεβάσετε την ώρα που στρίβετε:",
+    "questionEn": "After signaling with your left hand that you are turning left, why must you bring it back down while you are turning:",
     "image": null,
     "answers": [
       "Γιατί μπορεί να χτυπήσετε έναν πεζό.",
@@ -1829,28 +2760,43 @@
       "Γιατί θα χρειαστεί να πατήσετε το μοχλό του συμπλέκτη",
       "Γιατί οι άλλοι οδηγοί θα πιστέψουν ότι θα σταματήσετε στη γωνία"
     ],
+    "answersEn": [
+      "Because you might hit a pedestrian.",
+      "Because otherwise you have less ability to control your direction.",
+      "Because you will need to pull in the clutch lever",
+      "Because other drivers will think you are going to stop at the corner"
+    ],
     "correctIndex": 1,
     "explanation": "Με το ένα χέρι εκτός τιμονιού μειώνεται η ικανότητα ελέγχου της κατεύθυνσης, γι' αυτό πρέπει να επαναφέρετε και τα δύο χέρια στο τιμόνι πριν εκτελέσετε τη στροφή.",
+    "explanationEn": "With one hand off the handlebar, your ability to control direction is reduced, which is why you must return both hands to the handlebar before executing the turn.",
     "explanationVerified": false
   },
   {
     "id": "moto-1134",
     "category": "Κανόνες",
     "question": "Ποια έγγραφα οφείλετε να έχετε μαζί σας όταν οδηγείτε τη μοτοσυκλέτα σας:",
+    "questionEn": "What documents must you carry with you when riding your motorcycle:",
     "image": null,
     "answers": [
       "Άδεια ικανότητας οδηγήσεως, άδεια κυκλοφορίας, ασφαλιστήριο, σήμα τελών.",
       "Σήμα τελών, άδεια κυκλοφορίας.",
       "Ασφαλιστήριο, άδεια ικανότητας οδηγήσεως."
     ],
+    "answersEn": [
+      "Driving license, registration certificate, insurance policy, road tax sticker.",
+      "Road tax sticker, registration certificate.",
+      "Insurance policy, driving license."
+    ],
     "correctIndex": 0,
     "explanation": "Ο νόμος απαιτεί ο οδηγός να φέρει τα βασικά έγγραφα του οχήματος και της ικανότητάς του, ώστε να αποδεικνύεται η νόμιμη κυκλοφορία και οδήγηση σε τυχόν έλεγχο.",
+    "explanationEn": "The law requires the rider to carry the basic documents of the vehicle and their license, so legal circulation and riding can be proven in any check.",
     "explanationVerified": false
   },
   {
     "id": "moto-1135",
     "category": "Ασφάλεια",
     "question": "Είχατε ένα ατύχημα και ο συνεπιβάτης σας τραυματίσθηκε. Τι δεν πρέπει να κάνετε:",
+    "questionEn": "You had an accident and your passenger was injured. What should you NOT do:",
     "image": null,
     "answers": [
       "Να βγάλετε το κράνος.",
@@ -1858,14 +2804,22 @@
       "Να τον αφήσετε στην ίδια θέση που βρίσκεται.",
       "Να τον ξεντύσετε."
     ],
+    "answersEn": [
+      "Remove their helmet.",
+      "Keep them warm.",
+      "Leave them in the same position they are in.",
+      "Undress them."
+    ],
     "correctIndex": 0,
     "explanation": "Η αφαίρεση του κράνους από τραυματισμένο άτομο μπορεί να επιδεινώσει ενδεχόμενο τραυματισμό στον αυχένα ή τη σπονδυλική στήλη, γι' αυτό πρέπει να αποφεύγεται.",
+    "explanationEn": "Removing the helmet from an injured person may worsen a possible neck or spinal injury, which is why it should be avoided.",
     "explanationVerified": false
   },
   {
     "id": "moto-1136",
     "category": "Κανόνες",
     "question": "Κάθε φορτίο που φορτώνετε στη μοτοσυκλέτα πρέπει να:",
+    "questionEn": "Any load you put on the motorcycle must:",
     "image": null,
     "answers": [
       "Δένεται ασφαλώς.",
@@ -1873,14 +2827,22 @@
       "Είναι όσο γίνεται πιο ελαφρύ.",
       "Να καλύπτεται με πλαστική σακούλα."
     ],
+    "answersEn": [
+      "Be securely tied down.",
+      "Only be carried when absolutely necessary.",
+      "Be as light as possible.",
+      "Be covered with a plastic bag."
+    ],
     "correctIndex": 0,
     "explanation": "Ένα φορτίο που δεν είναι καλά στερεωμένο μπορεί να μετακινηθεί κατά την οδήγηση, επηρεάζοντας την ισορροπία και προκαλώντας κίνδυνο ατυχήματος.",
+    "explanationEn": "A load that is not well secured can shift while riding, affecting balance and creating a risk of an accident.",
     "explanationVerified": false
   },
   {
     "id": "moto-1137",
     "category": "Οδήγηση",
     "question": "Όταν η μοτοσυκλέτα σας ταλαντεύεται ή κινείται σαν φίδι εσείς πρέπει να:",
+    "questionEn": "When your motorcycle wobbles or moves like a snake, you should:",
     "image": null,
     "answers": [
       "Κλείνετε προοδευτικά το γκάζι και μειώνετε ταχύτητα.",
@@ -1888,14 +2850,22 @@
       "Να φρενάρετε δυνατά και κρατάτε τα φρένα.",
       "Να αυξήσετε την ταχύτητά σας."
     ],
+    "answersEn": [
+      "Progressively close the throttle and reduce speed.",
+      "Let go of the handlebar and let it right itself.",
+      "Brake hard and hold the brakes.",
+      "Increase your speed."
+    ],
     "correctIndex": 0,
     "explanation": "Όταν το δίκυκλο ταλαντεύεται, το προοδευτικό κλείσιμο του γκαζιού και η μείωση ταχύτητας βοηθούν να ανακτηθεί η σταθερότητα, ενώ απότομες ενέργειες θα επιδείνωναν την κατάσταση.",
+    "explanationEn": "When the motorcycle wobbles, progressively closing the throttle and reducing speed helps regain stability, while abrupt actions would worsen the situation.",
     "explanationVerified": false
   },
   {
     "id": "moto-1138",
     "category": "Εξοπλισμός",
     "question": "Οι συνεπιβάτες οφείλουν να:",
+    "questionEn": "Passengers must:",
     "image": null,
     "answers": [
       "Έχουν άδεια ικανότητας οδηγήσεως.",
@@ -1903,42 +2873,64 @@
       "Να φορούν κράνος.",
       "Να φορούν ρούχα με αντανακλαστικά."
     ],
+    "answersEn": [
+      "Hold a driving license.",
+      "Be lighter than the rider.",
+      "Wear a helmet.",
+      "Wear clothing with reflectors."
+    ],
     "correctIndex": 2,
     "explanation": "Το κράνος είναι απαραίτητο και για τον συνεπιβάτη, καθώς τον προστατεύει εξίσου σε περίπτωση πτώσης ή σύγκρουσης.",
+    "explanationEn": "A helmet is also necessary for the passenger, as it protects them equally in the event of a fall or collision.",
     "explanationVerified": false
   },
   {
     "id": "moto-1139",
     "category": "Κανόνες",
     "question": "Όταν φορτώνετε τη μοτοσυκλέτα προσέχετε να:",
+    "questionEn": "When loading the motorcycle, you should make sure to:",
     "image": null,
     "answers": [
       "Φορτώνετε τα πράγματά σας όσο γίνεται πιο πίσω από τον πίσω άξονα.",
       "Φορτώνετε τα πράγματά σας όσο γίνεται πλησιέστερα στο κέντρο βάρους της.",
       "Κρατάτε καλά τα πράγματα στα χέρια σας."
     ],
+    "answersEn": [
+      "Load your items as far back as possible, behind the rear axle.",
+      "Load your items as close as possible to its center of gravity.",
+      "Hold the items firmly in your hands."
+    ],
     "correctIndex": 1,
     "explanation": "Τοποθετώντας το φορτίο όσο πιο κοντά γίνεται στο κέντρο βάρους της μοτοσυκλέτας, διατηρείται καλύτερα η ευστάθεια και η συμπεριφορά της στις στροφές.",
+    "explanationEn": "By placing the load as close as possible to the motorcycle's center of gravity, its stability and handling in turns are better maintained.",
     "explanationVerified": false
   },
   {
     "id": "moto-1140",
     "category": "Κανόνες",
     "question": "Όταν φορτώνετε τη μοτοσυκλέτα προσέχετε να:",
+    "questionEn": "When loading the motorcycle, you should make sure to:",
     "image": null,
     "answers": [
       "Φορτώνετε τα πράγματά σας όσο γίνεται πιο πίσω από τον πίσω άξονα.",
       "Μην υπερβαίνετε το όριο φορτώσεως που ορίζει ο κατασκευαστής.",
       "Κρατάτε καλά τα πράγματά στα χέρια σας."
     ],
+    "answersEn": [
+      "Load your items as far back as possible, behind the rear axle.",
+      "Not exceed the load limit specified by the manufacturer.",
+      "Hold the items firmly in your hands."
+    ],
     "correctIndex": 1,
     "explanation": "Η υπέρβαση του ορίου φόρτωσης που ορίζει ο κατασκευαστής επιβαρύνει υπερβολικά την ανάρτηση, τα ελαστικά και τη σταθερότητα του δικύκλου.",
+    "explanationEn": "Exceeding the load limit specified by the manufacturer places excessive strain on the suspension, tires, and the motorcycle's stability.",
     "explanationVerified": false
   },
   {
     "id": "moto-1141",
     "category": "Κανόνες",
     "question": "Ο συνεπιβάτης οφείλει να:",
+    "questionEn": "The passenger must:",
     "image": null,
     "answers": [
       "Δίνει οδηγίες στον οδηγό.",
@@ -1946,64 +2938,99 @@
       "Να ελέγχει το δρόμο πίσω.",
       "Να δείχνει με τα χέρια του την πρόθεση για αλλαγή κατευθύνσεως."
     ],
+    "answersEn": [
+      "Give instructions to the rider.",
+      "Lean together with the rider in turns.",
+      "Watch the road behind.",
+      "Signal with their hands their intention to change direction."
+    ],
     "correctIndex": 1,
     "explanation": "Ο συνεπιβάτης πρέπει να γέρνει μαζί με τον οδηγό στις στροφές, ώστε το σύνολο του βάρους να ακολουθεί ομαλά την κλίση του δικύκλου και να μη διαταράσσεται η ισορροπία.",
+    "explanationEn": "The passenger must lean together with the rider in turns, so the combined weight follows the motorcycle's lean smoothly and balance is not disturbed.",
     "explanationVerified": false
   },
   {
     "id": "moto-1142",
     "category": "Κανόνες",
     "question": "Μπορείτε να πάρετε συνεπιβάτη στη μοτοσυκλέτα σας, εφόσον υπάρχουν:",
+    "questionEn": "You may take a passenger on your motorcycle, provided there is:",
     "image": null,
     "answers": [
       "Σέλα κατάλληλη για δύο άτομα και υποπόδια για τον συνεπιβάτη και πρόβλεψη στην άδεια κυκλοφορίας.",
       "Κινητήρας μεγαλύτερος από 250 cc.",
       "Μόνο αν ο συνεπιβάτης είναι ελαφρύτερος από τον οδηγό."
     ],
+    "answersEn": [
+      "A seat suitable for two people and footpegs for the passenger, and this is provided for in the registration certificate.",
+      "An engine larger than 250 cc.",
+      "Only if the passenger is lighter than the rider."
+    ],
     "correctIndex": 0,
     "explanation": "Η μεταφορά συνεπιβάτη επιτρέπεται μόνο όταν το δίκυκλο διαθέτει τον κατάλληλο εξοπλισμό, όπως σέλα και υποπόδια, και αυτό προβλέπεται επίσημα στην άδεια κυκλοφορίας του.",
+    "explanationEn": "Carrying a passenger is only allowed when the motorcycle has the appropriate equipment, such as a seat and footpegs, and this is officially provided for in its registration certificate.",
     "explanationVerified": false
   },
   {
     "id": "moto-1143",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Μια δίκυκλη μοτοσυκλέτα που έχει κινητήρα 120 cc, κινείται σε οδό ταχείας κυκλοφορίας. Ποιο είναι το μέγιστο επιτρεπόμενο όριο ταχύτητας με το οποίο μπορεί να κινείται:",
+    "questionEn": "A two-wheeled motorcycle with a 120 cc engine is traveling on an expressway (fast traffic road). What is the maximum speed limit it may travel at:",
     "image": null,
     "answers": [
       "110 km/h.",
       "80 km/h.",
       "90 km/h."
     ],
+    "answersEn": [
+      "110 km/h.",
+      "80 km/h.",
+      "90 km/h."
+    ],
     "correctIndex": 1,
     "explanation": "Δίκυκλα κάτω των 125 cc έχουν χαμηλότερο όριο ταχύτητας σε οδό ταχείας κυκλοφορίας σε σχέση με τα μεγαλύτερου κυβισμού, λόγω μικρότερης ισχύος.",
+    "explanationEn": "Motorcycles under 125 cc have a lower speed limit on an expressway compared to larger-displacement ones, due to lower power.",
     "explanationVerified": false
   },
   {
     "id": "moto-1144",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Το ανώτατο επιτρεπόμενο όριο ταχύτητας μιας δίκυκλης μοτοσυκλέτας με κινητήρα πάνω από 125 cc, όταν κινείται σε αυτοκινητόδρομο, είναι:",
+    "questionEn": "The maximum permitted speed limit for a two-wheeled motorcycle with an engine over 125 cc, when traveling on a motorway (highway), is:",
     "image": null,
     "answers": [
       "60 km/h.",
       "75 km/h.",
       "130 km/h."
     ],
+    "answersEn": [
+      "60 km/h.",
+      "75 km/h.",
+      "130 km/h."
+    ],
     "correctIndex": 2,
     "explanation": "Σε αυτοκινητόδρομο, τα δίκυκλα άνω των 125 cc επιτρέπεται να αναπτύσσουν το ίδιο ανώτατο όριο ταχύτητας με τα επιβατικά αυτοκίνητα, καθώς διαθέτουν επαρκή ισχύ και σταθερότητα.",
+    "explanationEn": "On a motorway, motorcycles over 125 cc are allowed to reach the same maximum speed limit as passenger cars, since they have sufficient power and stability.",
     "explanationVerified": false
   },
   {
     "id": "moto-1145",
     "category": "Ταχύτητα-Αποστάσεις",
     "question": "Μία δίκυκλη μοτοσυκλέτα που έχει κινητήρα 80 cc κινείται σε αυτοκινητόδρομο. Ποιο είναι το μέγιστο επιτρεπόμενο όριο ταχύτητας με το οποίο μπορεί να κινείται:",
+    "questionEn": "A two-wheeled motorcycle with an 80 cc engine is traveling on a motorway. What is the maximum speed limit it may travel at:",
     "image": null,
     "answers": [
       "45 km/h.",
       "80 km/h.",
       "100 km/h."
     ],
+    "answersEn": [
+      "45 km/h.",
+      "80 km/h.",
+      "100 km/h."
+    ],
     "correctIndex": 1,
     "explanation": "Δίκυκλα μικρού κυβισμού, όπως τα 80 cc, έχουν χαμηλότερο επιτρεπόμενο όριο ταχύτητας στον αυτοκινητόδρομο σε σχέση με ισχυρότερα δίκυκλα, λόγω περιορισμένης ιπποδύναμης.",
+    "explanationEn": "Small-displacement motorcycles, such as 80 cc ones, have a lower permitted speed limit on the motorway compared to more powerful motorcycles, due to limited horsepower.",
     "explanationVerified": false
   }
 ]

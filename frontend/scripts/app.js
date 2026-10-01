@@ -2,6 +2,336 @@
   var THEME_KEY = 'drivequiz.theme';
   var ZOOM_KEY = 'drivequiz.zoom';
   var REMEMBER_USERNAME_KEY = 'drivequiz.rememberedUsername';
+  var LANG_KEY = 'drivequiz.lang';
+  var currentLang = 'el';
+
+  var STRINGS = {
+    el: {
+      pageTitle: 'RoadReady',
+      srOnlyTitle: 'RoadReady — αρχική οθόνη με ρυθμίσεις, μενού ενοτήτων κουίζ και έξοδο από την εφαρμογή.',
+      navAnalytics: 'Στατιστικά',
+      navUsers: 'Χρήστες',
+      navProgress: 'Πρόοδος',
+      navSettings: 'Ρυθμίσεις',
+      navProfile: 'Προφίλ',
+      loginTitle: 'Καλωσόρισες',
+      loginSubtitle: 'Συνδέσου για να συνεχίσεις την εξάσκησή σου.',
+      usernameLabel: 'Όνομα χρήστη',
+      passwordLabel: 'Κωδικός',
+      rememberUsernameLabel: 'Να θυμάσαι το όνομα χρήστη',
+      loginSubmitBtn: 'Σύνδεση',
+      readyTitle: 'Έτοιμοι για τον δρόμο;',
+      vehiclesSubtitle: 'Διάλεξε κατηγορία διπλώματος για να ξεκινήσεις.',
+      vehicleAuto: 'Αυτοκίνητο',
+      vehicleAutoCat: 'Κατηγορία Β',
+      vehicleMoto: 'Μοτοσικλέτα',
+      vehicleMotoCat: 'Κατηγορία Α, Α1, Α2',
+      vehicleTruck: 'Φορτηγό',
+      vehicleTruckCat: 'Κατηγορία C, C1',
+      vehicleBus: 'Λεωφορείο',
+      vehicleBusCat: 'Κατηγορία D, D1',
+      vehiclePei: 'ΠΕΙ Φορτηγό',
+      vehiclePeiCat: 'Πιστοποιητικό Επαγγελματικής Ικανότητας',
+      homeSubtitle: 'Διάλεξε μια ενότητα για εξάσκηση, ή δοκίμασε την προσομοίωση εξέτασης με 60 τυχαίες ερωτήσεις.',
+      savedQuestionsLabel: 'Αποθηκευμένες Ερωτήσεις',
+      questionWord: 'Ερώτηση',
+      ofWord: 'από',
+      questionImageAlt: 'Εικόνα ερώτησης',
+      prevBtn: 'Προηγούμενη',
+      nextBtn: 'Επόμενη',
+      submitBtn: 'Υποβολή',
+      resultsHomeBtn: 'Επιστροφή στην αρχική',
+      savedQuestionsEmpty: 'Δεν έχεις αποθηκεύσει ερωτήσεις ακόμα. Πάτα το σημαιάκι σε μια ερώτηση για να την αποθηκεύσεις εδώ.',
+      noTestsYet: 'Δεν έχεις κάνει ακόμα κανένα τεστ.',
+      recentTests: 'Πρόσφατα τεστ',
+      manageUsersTitle: 'Διαχείριση Χρηστών',
+      createUserBtn: 'Δημιουργία χρήστη',
+      newUserTitle: 'Νέος χρήστης',
+      roleLabel: 'Ρόλος',
+      roleUserOption: 'Απλός χρήστης (υπό Admin)',
+      roleSupervisorWord: 'Επόπτης',
+      cancelBtn: 'Άκυρο',
+      noTestsYetAlt: 'Δεν υπάρχουν ακόμα τεστ.',
+      byVehicleLabel: 'Ανά κατηγορία',
+      bySupervisorLabel: 'Ανά επόπτη',
+      recentActivityLabel: 'Πρόσφατη δραστηριότητα',
+      simSettingsTitle: 'Ρυθμίσεις Προσομοίωσης',
+      questionCountLabel: 'Αριθμός ερωτήσεων',
+      timerLabel: 'Χρονόμετρο',
+      timerOff: 'Ανενεργό',
+      timerPerExam: 'Ανά εξέταση',
+      timerPerQuestion: 'Ανά ερώτηση',
+      durationLabel: 'Διάρκεια',
+      timePerQuestionLabel: 'Χρόνος ανά ερώτηση',
+      startBtn: 'Έναρξη',
+      appearanceLabel: 'Εμφάνιση',
+      themeSystem: 'Σύστημα',
+      themeLight: 'Φωτεινό',
+      themeDark: 'Σκοτεινό',
+      textSizeLabel: 'Μέγεθος κειμένου',
+      windowLabel: 'Παράθυρο',
+      aboutLabel: 'Σχετικά',
+      aboutText: '— η πρόοδος και οι αποθηκευμένες ερωτήσεις συγχρονίζονται στον λογαριασμό σου και χρειάζονται σύνδεση στο διαδίκτυο.',
+      accountLabel: 'Λογαριασμός',
+      changePasswordBtn: 'Αλλαγή κωδικού',
+      newPasswordLabel: 'Νέος κωδικός',
+      confirmPasswordLabel: 'Επιβεβαίωση κωδικού',
+      signOutBtn: 'Αποσύνδεση',
+      exitAppBtn: 'Έξοδος από την εφαρμογή',
+      updateAvailableTitle: 'Νέα έκδοση διαθέσιμη',
+      laterBtn: 'Αργότερα',
+      updateNowBtn: 'Ενημέρωση τώρα',
+      deleteUserTitlePrefix: 'Διαγραφή χρήστη',
+      deleteUserWarning: 'Ο λογαριασμός και όλα τα δεδομένα του (ιστορικό, λάθη, αποθηκευμένες ερωτήσεις) θα διαγραφούν οριστικά. Αυτή η ενέργεια δεν αναιρείται.',
+      noBtn: 'Όχι',
+      yesDeleteBtn: 'Ναι, διαγραφή',
+      exitConfirmTitle: 'Έξοδος από το RoadReady;',
+      exitConfirmSub: 'Η εφαρμογή θα κλείσει εντελώς.',
+      yesExitBtn: 'Ναι, έξοδος',
+      leaveQuizTitle: 'Έξοδος από το κουίζ;',
+      leaveQuizSub: 'Θα χάσεις την πρόοδό σου σε αυτό το κουίζ.',
+      incompleteTitle: 'Λείπουν απαντήσεις',
+      gotItBtn: 'Κατάλαβα',
+
+      authErrorInvalidCredentials: 'Λάθος όνομα χρήστη ή κωδικός. Αν το πρόβλημα συνεχίζεται, επικοινώνησε με τον εκπαιδευτή σου.',
+      genericError: 'Κάτι πήγε στραβά. Δοκίμασε ξανά.',
+      noConnectionError: 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.',
+      couldNotDelete: 'Δεν ήταν δυνατή η διαγραφή.',
+      mistakesPracticeLabel: 'Εξάσκηση σε Λάθη',
+      mistakesNeedPrefix: 'Χρειάζεσαι τουλάχιστον ',
+      mistakesNeedMiddle: ' λάθη (έχεις ',
+      mistakesNeedSuffix: ')',
+      questionSingular: 'ερώτηση',
+      questionPlural: 'ερωτήσεις',
+      testWordSingular: 'τεστ',
+      testWordPlural: 'τεστ',
+      directlyUnderAdmin: 'Απευθείας υπό Admin',
+      underPrefix: 'Υπό: ',
+      roleAdminWord: 'Admin',
+      roleUserWord: 'Χρήστης',
+      editUserAria: 'Επεξεργασία χρήστη',
+      deleteUserAria: 'Διαγραφή χρήστη',
+      editUserTitle: 'Επεξεργασία χρήστη',
+      newPasswordOptionalLabel: 'Νέος κωδικός (προαιρετικό)',
+      saveBtn: 'Αποθήκευση',
+      couldNotLoadMistakes: 'Δεν ήταν δυνατή η φόρτωση των λαθών.',
+      noQuestionsInSection: 'Δεν υπάρχουν ερωτήσεις σε αυτή την ενότητα ακόμα.',
+      removeFromSavedAria: 'Αφαίρεση από τις αποθηκευμένες',
+      correctLabel: 'Σωστά.',
+      wrongLabel: 'Λάθος.',
+      notAnswered: 'Δεν απαντήθηκε',
+      unansweredPrefix: 'Δεν έχεις απαντήσει στις ',
+      unansweredSuffix: '. Γύρνα πίσω και συμπλήρωσέ τις πριν την υποβολή.',
+      resultsCorrectSuffix: 'σωστές',
+      resultsMsgPerfect: 'Άριστα! Καθαρό μηδέν λαθών.',
+      resultsMsgGood: 'Πολύ καλή προσπάθεια! Λίγη ακόμα εξάσκηση και είσαι έτοιμος/η.',
+      resultsMsgOk: 'Καλή αρχή — χρειάζεσαι λίγη ακόμα εξάσκηση σε αυτή την ενότητα.',
+      resultsMsgPoor: 'Χρειάζεσαι περισσότερη εξάσκηση σε αυτή την ενότητα πριν το τεστ.',
+      avgOverPrefix: 'Μέσος όρος σε ',
+      notAvailableInApp: 'Διαθέσιμο μόνο μέσα στην εφαρμογή.',
+      couldNotLoadAnalytics: 'Δεν ήταν δυνατή η φόρτωση.',
+      adminsLabel: 'admin',
+      supervisorsLabel: 'επόπτες',
+      usersLabel: 'χρήστες',
+      allUsersSuffix: ', όλων των χρηστών',
+      passwordsDontMatch: 'Οι κωδικοί δεν ταιριάζουν.',
+      passwordChangedToast: 'Ο κωδικός άλλαξε επιτυχώς.',
+      couldNotDownloadUpdate: 'Δεν ήταν δυνατή η λήψη της ενημέρωσης.',
+      updateAvailablePrefix: 'Η έκδοση ',
+      updateAvailableMiddle: ' είναι διαθέσιμη (τρέχουσα: ',
+      updateAvailableSuffix: ').',
+      fullscreenEnterLabel: 'Πλήρης οθόνη',
+      fullscreenExitLabel: 'Παράθυρο',
+      yourUsersPrefix: 'Οι χρήστες σου (',
+      usersPrefix: 'Χρήστες (',
+      questionDetailDefaultTitle: 'Ερώτηση',
+      savedQuestionDetailTitle: 'Αποθηκευμένη Ερώτηση'
+    },
+    en: {
+      pageTitle: 'RoadReady',
+      srOnlyTitle: 'RoadReady — home screen with settings, quiz section menu, and app exit.',
+      navAnalytics: 'Analytics',
+      navUsers: 'Users',
+      navProgress: 'Progress',
+      navSettings: 'Settings',
+      navProfile: 'Profile',
+      loginTitle: 'Welcome',
+      loginSubtitle: 'Sign in to continue your practice.',
+      usernameLabel: 'Username',
+      passwordLabel: 'Password',
+      rememberUsernameLabel: 'Remember username',
+      loginSubmitBtn: 'Sign in',
+      readyTitle: 'Ready for the road?',
+      vehiclesSubtitle: 'Choose a license category to get started.',
+      vehicleAuto: 'Car',
+      vehicleAutoCat: 'Category B',
+      vehicleMoto: 'Motorcycle',
+      vehicleMotoCat: 'Category A, A1, A2',
+      vehicleTruck: 'Truck',
+      vehicleTruckCat: 'Category C, C1',
+      vehicleBus: 'Bus',
+      vehicleBusCat: 'Category D, D1',
+      vehiclePei: 'PEI Truck',
+      vehiclePeiCat: 'Certificate of Professional Competence',
+      homeSubtitle: 'Choose a section to practice, or try the exam simulation with 60 random questions.',
+      savedQuestionsLabel: 'Saved Questions',
+      questionWord: 'Question',
+      ofWord: 'of',
+      questionImageAlt: 'Question image',
+      prevBtn: 'Previous',
+      nextBtn: 'Next',
+      submitBtn: 'Submit',
+      resultsHomeBtn: 'Back to home',
+      savedQuestionsEmpty: "You haven't saved any questions yet. Tap the flag icon on a question to save it here.",
+      noTestsYet: "You haven't taken any tests yet.",
+      recentTests: 'Recent tests',
+      manageUsersTitle: 'Manage Users',
+      createUserBtn: 'Create user',
+      newUserTitle: 'New user',
+      roleLabel: 'Role',
+      roleUserOption: 'Regular user (under Admin)',
+      roleSupervisorWord: 'Supervisor',
+      cancelBtn: 'Cancel',
+      noTestsYetAlt: 'There are no tests yet.',
+      byVehicleLabel: 'By category',
+      bySupervisorLabel: 'By supervisor',
+      recentActivityLabel: 'Recent activity',
+      simSettingsTitle: 'Simulation Settings',
+      questionCountLabel: 'Number of questions',
+      timerLabel: 'Timer',
+      timerOff: 'Off',
+      timerPerExam: 'Per exam',
+      timerPerQuestion: 'Per question',
+      durationLabel: 'Duration',
+      timePerQuestionLabel: 'Time per question',
+      startBtn: 'Start',
+      appearanceLabel: 'Appearance',
+      themeSystem: 'System',
+      themeLight: 'Light',
+      themeDark: 'Dark',
+      textSizeLabel: 'Text size',
+      windowLabel: 'Window',
+      aboutLabel: 'About',
+      aboutText: '— your progress and saved questions sync to your account and require an internet connection.',
+      accountLabel: 'Account',
+      changePasswordBtn: 'Change password',
+      newPasswordLabel: 'New password',
+      confirmPasswordLabel: 'Confirm password',
+      signOutBtn: 'Sign out',
+      exitAppBtn: 'Exit app',
+      updateAvailableTitle: 'New version available',
+      laterBtn: 'Later',
+      updateNowBtn: 'Update now',
+      deleteUserTitlePrefix: 'Delete user',
+      deleteUserWarning: 'The account and all its data (history, mistakes, saved questions) will be permanently deleted. This action cannot be undone.',
+      noBtn: 'No',
+      yesDeleteBtn: 'Yes, delete',
+      exitConfirmTitle: 'Exit RoadReady?',
+      exitConfirmSub: 'The app will close completely.',
+      yesExitBtn: 'Yes, exit',
+      leaveQuizTitle: 'Exit the quiz?',
+      leaveQuizSub: 'You will lose your progress in this quiz.',
+      incompleteTitle: 'Missing answers',
+      gotItBtn: 'Got it',
+
+      authErrorInvalidCredentials: 'Incorrect username or password. If the problem continues, contact your instructor.',
+      genericError: 'Something went wrong. Try again.',
+      noConnectionError: 'No connection to the server right now.',
+      couldNotDelete: 'Could not delete.',
+      mistakesPracticeLabel: 'Mistake Practice',
+      mistakesNeedPrefix: 'You need at least ',
+      mistakesNeedMiddle: ' mistakes (you have ',
+      mistakesNeedSuffix: ')',
+      questionSingular: 'question',
+      questionPlural: 'questions',
+      testWordSingular: 'test',
+      testWordPlural: 'tests',
+      directlyUnderAdmin: 'Directly under Admin',
+      underPrefix: 'Under: ',
+      roleAdminWord: 'Admin',
+      roleUserWord: 'User',
+      editUserAria: 'Edit user',
+      deleteUserAria: 'Delete user',
+      editUserTitle: 'Edit user',
+      newPasswordOptionalLabel: 'New password (optional)',
+      saveBtn: 'Save',
+      couldNotLoadMistakes: 'Could not load mistakes.',
+      noQuestionsInSection: 'There are no questions in this section yet.',
+      removeFromSavedAria: 'Remove from saved',
+      correctLabel: 'Correct.',
+      wrongLabel: 'Wrong.',
+      notAnswered: 'Not answered',
+      unansweredPrefix: "You haven't answered ",
+      unansweredSuffix: '. Go back and complete them before submitting.',
+      resultsCorrectSuffix: 'correct',
+      resultsMsgPerfect: 'Excellent! Zero mistakes.',
+      resultsMsgGood: "Great effort! A bit more practice and you'll be ready.",
+      resultsMsgOk: 'Good start — you need a bit more practice in this section.',
+      resultsMsgPoor: 'You need more practice in this section before the test.',
+      avgOverPrefix: 'Average over ',
+      notAvailableInApp: 'Only available inside the app.',
+      couldNotLoadAnalytics: 'Could not load.',
+      adminsLabel: 'admin',
+      supervisorsLabel: 'supervisors',
+      usersLabel: 'users',
+      allUsersSuffix: ', across all users',
+      passwordsDontMatch: "The passwords don't match.",
+      passwordChangedToast: 'Password changed successfully.',
+      couldNotDownloadUpdate: 'Could not download the update.',
+      updateAvailablePrefix: 'Version ',
+      updateAvailableMiddle: ' is available (current: ',
+      updateAvailableSuffix: ').',
+      fullscreenEnterLabel: 'Fullscreen',
+      fullscreenExitLabel: 'Window',
+      yourUsersPrefix: 'Your users (',
+      usersPrefix: 'Users (',
+      questionDetailDefaultTitle: 'Question',
+      savedQuestionDetailTitle: 'Saved Question'
+    }
+  };
+
+  function t(key) {
+    return (STRINGS[currentLang] && STRINGS[currentLang][key]) || STRINGS.el[key] || key;
+  }
+
+  function pluralQuestion(n) {
+    if (currentLang === 'en') return n === 1 ? t('questionSingular') : t('questionPlural');
+    return n === 1 ? t('questionSingular') : t('questionPlural');
+  }
+
+  function pluralTest(n) {
+    return n === 1 ? t('testWordSingular') : t('testWordPlural');
+  }
+
+  function qField(q, field) {
+    if (!q) return '';
+    if (currentLang === 'en') {
+      var enVal = q[field + 'En'];
+      if (enVal) return enVal;
+    }
+    return q[field];
+  }
+
+  function qAnswers(q) {
+    if (!q) return [];
+    if (currentLang === 'en' && Array.isArray(q.answersEn) && q.answersEn.length === q.answers.length) {
+      return q.answersEn;
+    }
+    return q.answers;
+  }
+
+  function sectionLabel(section) {
+    if (!section) return '';
+    if (currentLang === 'en' && section.labelEn) return section.labelEn;
+    return section.label;
+  }
+
+  var categoryLabelMap = {};
+
+  function categoryLabel(category) {
+    if (currentLang === 'en' && categoryLabelMap[category]) return categoryLabelMap[category];
+    return category;
+  }
 
   var HERO_ANIM_EPOCH = performance.now();
   var HERO_BASE_DELAYS = { car: 0, bike: -6, motorbike: -11, bus: -3 };
@@ -40,6 +370,19 @@
     bus: 'Λεωφορείο',
     peiforthgo: 'ΠΕΙ Φορτηγό'
   };
+
+  var VEHICLE_LABELS_EN = {
+    auto: 'Car',
+    moto: 'Motorcycle',
+    truck: 'Truck',
+    bus: 'Bus',
+    peiforthgo: 'PEI Truck'
+  };
+
+  function vehicleLabel(vehicleId) {
+    if (currentLang === 'en' && VEHICLE_LABELS_EN[vehicleId]) return VEHICLE_LABELS_EN[vehicleId];
+    return VEHICLE_LABELS[vehicleId] || vehicleId;
+  }
 
   var FALLBACK_SECTIONS_AUTO = [
     { id: 'all', label: 'Προσομοίωση Εξέτασης', count: 60, icon: null },
@@ -166,6 +509,7 @@
   var PAGE_SIZE = 10;
 
   var el = {
+    langSegmented: document.getElementById('langSegmented'),
     screenLogin: document.getElementById('screen-login'),
     authForm: document.getElementById('authForm'),
     authUsername: document.getElementById('authUsername'),
@@ -328,17 +672,23 @@
     vehicle: null,
     sectionId: '',
     sectionLabel: '',
+    sectionLabelEn: '',
     questions: [],
     selected: [],
     index: 0,
     categorySections: [],
+    allSection: null,
     page: 0,
     pendingSimSection: null,
     simSettings: null,
     timerHandle: null,
     timerSecondsLeft: 0,
     wrongCount: 0,
-    savedIds: new Set()
+    savedIds: new Set(),
+    lastResults: null,
+    lastUnanswered: null,
+    lastUpdateInfo: null,
+    lastDetail: null
   };
 
   var toastTimer = null;
@@ -446,15 +796,15 @@
       el.authSubmitBtn.disabled = false;
       if (!res.ok) {
         el.authError.textContent = res.error === 'invalid_credentials'
-          ? 'Λάθος όνομα χρήστη ή κωδικός. Αν το πρόβλημα συνεχίζεται, επικοινώνησε με τον εκπαιδευτή σου.'
-          : (res.error || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.');
+          ? t('authErrorInvalidCredentials')
+          : (res.error || t('genericError'));
         el.authError.hidden = false;
         return;
       }
       onAuthSuccess(res.username || username, res.role || 'user', remember);
     }).catch(function () {
       el.authSubmitBtn.disabled = false;
-      el.authError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
+      el.authError.textContent = t('noConnectionError');
       el.authError.hidden = false;
     });
   }
@@ -504,8 +854,8 @@
     editingUserId = null;
     el.createUserForm.reset();
     el.createUserError.hidden = true;
-    el.userFormTitle.textContent = 'Νέος χρήστης';
-    el.newUserPasswordLabel.textContent = 'Κωδικός';
+    el.userFormTitle.textContent = t('newUserTitle');
+    el.newUserPasswordLabel.textContent = t('passwordLabel');
     el.newUserPassword.required = true;
 
     var isAdmin = state.role === 'admin';
@@ -514,7 +864,7 @@
     el.newUserRoleSupervisor.checked = false;
     el.newUserSupervisorField.hidden = !isAdmin;
 
-    el.createUserSubmitBtn.textContent = 'Δημιουργία χρήστη';
+    el.createUserSubmitBtn.textContent = t('createUserBtn');
     el.usersListView.hidden = true;
     el.createUserForm.hidden = false;
     el.newUserUsername.focus();
@@ -525,18 +875,31 @@
     editingUserId = u.id;
     el.createUserForm.reset();
     el.createUserError.hidden = true;
-    el.userFormTitle.textContent = 'Επεξεργασία χρήστη';
-    el.newUserPasswordLabel.textContent = 'Νέος κωδικός (προαιρετικό)';
+    el.userFormTitle.textContent = t('editUserTitle');
+    el.newUserPasswordLabel.textContent = t('newPasswordOptionalLabel');
     el.newUserPassword.required = false;
     el.newUserUsername.value = u.username;
 
     el.newUserRoleRow.hidden = true;
     el.newUserSupervisorField.hidden = true;
 
-    el.createUserSubmitBtn.textContent = 'Αποθήκευση';
+    el.createUserSubmitBtn.textContent = t('saveBtn');
     el.usersListView.hidden = true;
     el.createUserForm.hidden = false;
     el.newUserUsername.focus();
+  }
+
+  function syncUserFormLabels() {
+    if (el.createUserForm.hidden) return;
+    if (userFormMode === 'edit') {
+      el.userFormTitle.textContent = t('editUserTitle');
+      el.newUserPasswordLabel.textContent = t('newPasswordOptionalLabel');
+      el.createUserSubmitBtn.textContent = t('saveBtn');
+    } else {
+      el.userFormTitle.textContent = t('newUserTitle');
+      el.newUserPasswordLabel.textContent = t('passwordLabel');
+      el.createUserSubmitBtn.textContent = t('createUserBtn');
+    }
   }
 
   function loadUsersList() {
@@ -554,7 +917,7 @@
     el.newUserSupervisor.innerHTML = '';
     var noneOpt = document.createElement('option');
     noneOpt.value = '';
-    noneOpt.textContent = 'Απευθείας υπό Admin';
+    noneOpt.textContent = t('directlyUnderAdmin');
     el.newUserSupervisor.appendChild(noneOpt);
     supervisors.forEach(function (s) {
       var opt = document.createElement('option');
@@ -566,7 +929,7 @@
   }
 
   function roleLabel(role) {
-    return role === 'admin' ? 'Admin' : role === 'supervisor' ? 'Επόπτης' : 'Χρήστης';
+    return role === 'admin' ? t('roleAdminWord') : role === 'supervisor' ? t('roleSupervisorWord') : t('roleUserWord');
   }
 
   function buildUserRow(u, indented) {
@@ -580,7 +943,7 @@
     name.textContent = u.username;
     var meta = document.createElement('p');
     meta.className = 'user-row-meta';
-    meta.textContent = u.supervisorUsername ? ('Υπό: ' + u.supervisorUsername) : (u.role === 'user' ? 'Απευθείας υπό Admin' : '—');
+    meta.textContent = u.supervisorUsername ? (t('underPrefix') + u.supervisorUsername) : (u.role === 'user' ? t('directlyUnderAdmin') : '—');
     info.appendChild(name);
     info.appendChild(meta);
 
@@ -596,7 +959,7 @@
       var editBtn = document.createElement('button');
       editBtn.type = 'button';
       editBtn.className = 'icon-btn user-row-edit';
-      editBtn.setAttribute('aria-label', 'Επεξεργασία χρήστη');
+      editBtn.setAttribute('aria-label', t('editUserAria'));
       editBtn.innerHTML = ICON_EDIT;
       editBtn.addEventListener('click', function () { openEditUserForm(u); });
       row.appendChild(editBtn);
@@ -608,7 +971,7 @@
       var removeBtn = document.createElement('button');
       removeBtn.type = 'button';
       removeBtn.className = 'icon-btn user-row-remove';
-      removeBtn.setAttribute('aria-label', 'Διαγραφή χρήστη');
+      removeBtn.setAttribute('aria-label', t('deleteUserAria'));
       removeBtn.innerHTML = ICON_TRASH;
       removeBtn.addEventListener('click', function () { openDeleteUserConfirm(u); });
       row.appendChild(removeBtn);
@@ -629,12 +992,12 @@
 
     if (state.role !== 'admin') {
       // Supervisors only ever see their own team anyway (RLS-scoped), flat is fine.
-      el.usersListLabel.textContent = 'Οι χρήστες σου (' + others.length + '/10)';
+      el.usersListLabel.textContent = t('yourUsersPrefix') + others.length + '/10)';
       others.forEach(function (u) { el.usersList.appendChild(buildUserRow(u)); });
       return;
     }
 
-    el.usersListLabel.textContent = 'Χρήστες (' + others.length + ')';
+    el.usersListLabel.textContent = t('usersPrefix') + others.length + ')';
     var supervisors = others.filter(function (u) { return u.role === 'supervisor'; });
     var directUsers = others.filter(function (u) { return u.role === 'user' && !u.supervisorId; });
 
@@ -642,13 +1005,13 @@
       var team = others.filter(function (u) { return u.supervisorId === sup.id; });
       var headerRow = buildUserRow(sup);
       var headerMeta = headerRow.querySelector('.user-row-meta');
-      headerMeta.textContent = team.length + '/10 χρήστες';
+      headerMeta.textContent = team.length + '/10 ' + t('usersLabel');
       el.usersList.appendChild(headerRow);
       team.forEach(function (u) { el.usersList.appendChild(buildUserRow(u, true)); });
     });
 
     if (directUsers.length > 0) {
-      el.usersList.appendChild(buildGroupHeader('Απευθείας υπό Admin'));
+      el.usersList.appendChild(buildGroupHeader(t('directlyUnderAdmin')));
       directUsers.forEach(function (u) { el.usersList.appendChild(buildUserRow(u, true)); });
     }
   }
@@ -673,10 +1036,10 @@
       if (res && res.ok) {
         loadUsersList();
       } else {
-        showToast((res && res.error) || 'Δεν ήταν δυνατή η διαγραφή.');
+        showToast((res && res.error) || t('couldNotDelete'));
       }
     }).catch(function () {
-      showToast('Δεν ήταν δυνατή η διαγραφή.');
+      showToast(t('couldNotDelete'));
     });
   }
 
@@ -700,7 +1063,7 @@
     function onDone(res) {
       el.createUserSubmitBtn.disabled = false;
       if (!res || !res.ok) {
-        el.createUserError.textContent = (res && res.error) || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+        el.createUserError.textContent = (res && res.error) || t('genericError');
         el.createUserError.hidden = false;
         return;
       }
@@ -709,7 +1072,7 @@
     }
     function onFail() {
       el.createUserSubmitBtn.disabled = false;
-      el.createUserError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
+      el.createUserError.textContent = t('noConnectionError');
       el.createUserError.hidden = false;
     }
 
@@ -784,10 +1147,10 @@
     text.className = 'menu-text';
     var label = document.createElement('p');
     label.className = 'menu-label';
-    label.textContent = section.label;
+    label.textContent = sectionLabel(section);
     var count = document.createElement('p');
     count.className = 'menu-count';
-    count.textContent = section.count + (section.count === 1 ? ' ερώτηση' : ' ερωτήσεις');
+    count.textContent = section.count + ' ' + pluralQuestion(section.count);
     text.appendChild(label);
     text.appendChild(count);
 
@@ -808,18 +1171,27 @@
     return item;
   }
 
-  function renderSections(sections) {
+  function renderSections(sections, keepPage) {
+    state.lastSections = sections;
     var allSection = sections.filter(function (s) { return s.id === 'all'; })[0];
     var categorySections = sections.filter(function (s) { return s.id !== 'all'; });
 
+    categoryLabelMap = {};
+    categorySections.forEach(function (s) {
+      if (s.labelEn) categoryLabelMap[s.id] = s.labelEn;
+    });
+    if (allSection && allSection.labelEn) categoryLabelMap[allSection.label] = allSection.labelEn;
+    categoryLabelMap[STRINGS.el.mistakesPracticeLabel] = STRINGS.en.mistakesPracticeLabel;
+
     el.menuPinned.innerHTML = '';
+    state.allSection = allSection;
     if (allSection) {
       el.menuPinned.appendChild(buildMenuItem(allSection));
     }
     renderMistakesTile();
 
     state.categorySections = categorySections;
-    state.page = 0;
+    if (!keepPage) state.page = 0;
     renderMenuPage();
   }
 
@@ -840,12 +1212,12 @@
     text.className = 'menu-text';
     var label = document.createElement('p');
     label.className = 'menu-label';
-    label.textContent = 'Εξάσκηση σε Λάθη';
+    label.textContent = t('mistakesPracticeLabel');
     var sub = document.createElement('p');
     sub.className = 'menu-count';
     sub.textContent = unlocked
-      ? (count + (count === 1 ? ' ερώτηση' : ' ερωτήσεις'))
-      : ('Χρειάζεσαι τουλάχιστον ' + MISTAKES_THRESHOLD + ' λάθη (έχεις ' + count + ')');
+      ? (count + ' ' + pluralQuestion(count))
+      : (t('mistakesNeedPrefix') + MISTAKES_THRESHOLD + t('mistakesNeedMiddle') + count + t('mistakesNeedSuffix'));
     text.appendChild(label);
     text.appendChild(sub);
 
@@ -859,7 +1231,7 @@
 
     if (unlocked) {
       item.addEventListener('click', function () {
-        startQuiz({ id: 'wrong', label: 'Εξάσκηση σε Λάθη' });
+        startQuiz({ id: 'wrong', label: STRINGS.el.mistakesPracticeLabel, labelEn: STRINGS.en.mistakesPracticeLabel });
       });
     } else {
       item.disabled = true;
@@ -1041,7 +1413,7 @@
       callApi('get_wrong_questions', state.vehicle).then(function (questions) {
         beginQuiz(section, questions);
       }).catch(function () {
-        showToast('Δεν ήταν δυνατή η φόρτωση των λαθών.');
+        showToast(t('couldNotLoadMistakes'));
       });
       return;
     }
@@ -1057,18 +1429,18 @@
 
   function beginQuiz(section, questions) {
     if (!questions || questions.length === 0) {
-      showToast('Δεν υπάρχουν ερωτήσεις σε αυτή την ενότητα ακόμα.');
+      showToast(t('noQuestionsInSection'));
       return;
     }
     state.sectionId = section.id;
     state.sectionLabel = section.label;
+    state.sectionLabelEn = section.labelEn || '';
     state.questions = questions;
     state.selected = new Array(questions.length).fill(null);
     state.index = 0;
     state.savedIds = new Set();
     refreshSavedIds();
-    var vehicleLabel = VEHICLE_LABELS[state.vehicle];
-    el.sectionBannerLabel.textContent = vehicleLabel ? (vehicleLabel + ' - ' + section.label) : section.label;
+    renderSectionBanner();
     showScreen('quiz');
     stopTimer();
     var settings = state.simSettings;
@@ -1080,6 +1452,12 @@
       el.quizTimer.hidden = true;
     }
     renderQuizQuestion();
+  }
+
+  function renderSectionBanner() {
+    var vLabel = vehicleLabel(state.vehicle);
+    var sLabel = (currentLang === 'en' && state.sectionLabelEn) ? state.sectionLabelEn : state.sectionLabel;
+    el.sectionBannerLabel.textContent = vLabel ? (vLabel + ' - ' + sLabel) : sLabel;
   }
 
   function refreshSavedIds() {
@@ -1149,7 +1527,7 @@
       el.quizImageFrame.style.display = 'none';
       el.quizImage.removeAttribute('src');
     }
-    el.quizQuestionText.textContent = q.question;
+    el.quizQuestionText.textContent = qField(q, 'question');
     updateFlagButton();
 
     renderAnswers(q);
@@ -1191,7 +1569,7 @@
     var selected = state.selected[state.index];
     var hideFeedback = !!(state.simSettings && state.simSettings.feedbackMode === 'hidden');
 
-    q.answers.forEach(function (text, idx) {
+    qAnswers(q).forEach(function (text, idx) {
       var btn = document.createElement('button');
       btn.className = 'quiz-answer';
       btn.type = 'button';
@@ -1221,10 +1599,11 @@
 
   function showAnswerFeedback(q, selected) {
     var verdict = selected === q.correctIndex
-      ? { cls: 'ok', label: 'Σωστά.' }
-      : { cls: 'no', label: 'Λάθος.' };
+      ? { cls: 'ok', label: t('correctLabel') }
+      : { cls: 'no', label: t('wrongLabel') };
+    var explanation = qField(q, 'explanation');
     el.quizFeedback.className = 'quiz-feedback show ' + verdict.cls;
-    el.quizFeedback.innerHTML = '<b>' + verdict.label + '</b>' + (q.explanation ? ' ' + q.explanation : '');
+    el.quizFeedback.innerHTML = '<b>' + verdict.label + '</b>' + (explanation ? ' ' + explanation : '');
   }
 
   function selectAnswer(idx) {
@@ -1263,10 +1642,10 @@
   }
 
   function showIncompleteWarning(unanswered) {
-    var word = unanswered.length === 1 ? 'ερώτηση' : 'ερωτήσεις';
+    state.lastUnanswered = unanswered;
+    var word = pluralQuestion(unanswered.length);
     el.incompleteMessage.textContent =
-      'Δεν έχεις απαντήσει στις ' + word + ': ' + unanswered.join(', ') +
-      '. Γύρνα πίσω και συμπλήρωσέ τις πριν την υποβολή.';
+      t('unansweredPrefix') + word + ': ' + unanswered.join(', ') + t('unansweredSuffix');
     el.incompleteOverlay.classList.add('show');
   }
   function closeIncompleteWarning() {
@@ -1284,15 +1663,9 @@
       results.push({ id: q.id, category: q.category, correct: isCorrect });
     });
     var pct = Math.round((correct / total) * 100);
+    state.lastResults = { correct: correct, total: total, pct: pct };
 
-    el.resultsPercent.textContent = pct + '%';
-    el.resultsFraction.textContent = correct + ' από ' + total + ' σωστές';
-    el.resultsMessage.textContent =
-      pct === 100 ? 'Άριστα! Καθαρό μηδέν λαθών.' :
-      pct >= 70 ? 'Πολύ καλή προσπάθεια! Λίγη ακόμα εξάσκηση και είσαι έτοιμος/η.' :
-      pct >= 40 ? 'Καλή αρχή — χρειάζεσαι λίγη ακόμα εξάσκηση σε αυτή την ενότητα.' :
-      'Χρειάζεσαι περισσότερη εξάσκηση σε αυτή την ενότητα πριν το τεστ.';
-
+    renderResultsSummary();
     renderResultsReview();
     showScreen('results');
 
@@ -1302,6 +1675,18 @@
     if (window.pywebview && window.pywebview.api && window.pywebview.api.record_quiz_results) {
       window.pywebview.api.record_quiz_results(state.vehicle, results);
     }
+  }
+
+  function renderResultsSummary() {
+    var r = state.lastResults;
+    if (!r) return;
+    el.resultsPercent.textContent = r.pct + '%';
+    el.resultsFraction.textContent = r.correct + ' ' + t('ofWord') + ' ' + r.total + ' ' + t('resultsCorrectSuffix');
+    el.resultsMessage.textContent =
+      r.pct === 100 ? t('resultsMsgPerfect') :
+      r.pct >= 70 ? t('resultsMsgGood') :
+      r.pct >= 40 ? t('resultsMsgOk') :
+      t('resultsMsgPoor');
   }
 
   var categoryPositionCache = {};
@@ -1325,13 +1710,17 @@
   function applyQuestionDetailMeta(q, categoryQuestions) {
     var pos = categoryQuestions.findIndex(function (cq) { return cq.id === q.id; });
     if (pos === -1) return;
-    el.questionDetailMeta.textContent = q.category + ' - ' + (pos + 1);
+    el.questionDetailMeta.textContent = categoryLabel(q.category) + ' - ' + (pos + 1);
   }
 
   function showQuestionDetail(q, options) {
     options = options || {};
+    state.lastDetail = { q: q, options: options };
 
-    el.questionDetailTitle.textContent = options.title || 'Ερώτηση';
+    var title = options.isIndexed
+      ? (t('questionWord') + ' ' + (options.index + 1))
+      : (options.saved ? t('savedQuestionDetailTitle') : t('questionDetailDefaultTitle'));
+    el.questionDetailTitle.textContent = title;
 
     if (q.image) {
       el.questionDetailImageFrame.hidden = false;
@@ -1341,12 +1730,12 @@
       el.questionDetailImage.removeAttribute('src');
     }
 
-    el.questionDetailText.textContent = q.question;
-    el.questionDetailMeta.textContent = q.category;
+    el.questionDetailText.textContent = qField(q, 'question');
+    el.questionDetailMeta.textContent = categoryLabel(q.category);
     loadQuestionDetailMeta(q);
 
     el.questionDetailAnswers.innerHTML = '';
-    q.answers.forEach(function (text, idx) {
+    qAnswers(q).forEach(function (text, idx) {
       var btn = document.createElement('button');
       btn.className = 'quiz-answer';
       btn.type = 'button';
@@ -1360,8 +1749,9 @@
       el.questionDetailAnswers.appendChild(btn);
     });
 
-    if (q.explanation) {
-      el.questionDetailExplanationText.textContent = q.explanation;
+    var explanation = qField(q, 'explanation');
+    if (explanation) {
+      el.questionDetailExplanationText.textContent = explanation;
       el.questionDetailExplanation.hidden = false;
     } else {
       el.questionDetailExplanation.hidden = true;
@@ -1372,11 +1762,11 @@
 
   function openQuestionDetail(index) {
     var q = state.questions[index];
-    showQuestionDetail(q, { title: 'Ερώτηση ' + (index + 1), selected: state.selected[index] });
+    showQuestionDetail(q, { selected: state.selected[index], isIndexed: true, index: index });
   }
 
   function openSavedQuestionDetail(q) {
-    showQuestionDetail(q, { title: 'Αποθηκευμένη Ερώτηση' });
+    showQuestionDetail(q, { saved: true });
   }
 
   function closeQuestionDetail() {
@@ -1417,10 +1807,10 @@
       text.className = 'saved-item-text';
       var qText = document.createElement('p');
       qText.className = 'saved-item-question';
-      qText.textContent = q.question;
+      qText.textContent = qField(q, 'question');
       var qMeta = document.createElement('p');
       qMeta.className = 'saved-item-meta';
-      qMeta.textContent = q.category;
+      qMeta.textContent = categoryLabel(q.category);
       text.appendChild(qText);
       text.appendChild(qMeta);
       text.addEventListener('click', function () { openSavedQuestionDetail(q); });
@@ -1428,7 +1818,7 @@
       var removeBtn = document.createElement('button');
       removeBtn.type = 'button';
       removeBtn.className = 'icon-btn saved-item-remove';
-      removeBtn.setAttribute('aria-label', 'Αφαίρεση από τις αποθηκευμένες');
+      removeBtn.setAttribute('aria-label', t('removeFromSavedAria'));
       removeBtn.innerHTML = ICON_TRASH;
       removeBtn.addEventListener('click', function (e) {
         e.stopPropagation();
@@ -1466,21 +1856,22 @@
       item.type = 'button';
       item.className = 'review-item ' + (isCorrect ? 'correct' : 'wrong');
 
+      var answers = qAnswers(q);
       var qText = document.createElement('p');
       qText.className = 'review-q';
-      qText.textContent = (i + 1) + '. ' + q.question;
+      qText.textContent = (i + 1) + '. ' + qField(q, 'question');
       item.appendChild(qText);
 
       if (!isCorrect) {
         var yourAnswer = document.createElement('p');
         yourAnswer.className = 'review-answer your-wrong';
-        yourAnswer.textContent = '✗ ' + (sel !== null ? q.answers[sel] : 'Δεν απαντήθηκε');
+        yourAnswer.textContent = '✗ ' + (sel !== null ? answers[sel] : t('notAnswered'));
         item.appendChild(yourAnswer);
       }
 
       var correctAnswer = document.createElement('p');
       correctAnswer.className = 'review-answer correct-answer';
-      correctAnswer.textContent = '✓ ' + q.answers[q.correctIndex];
+      correctAnswer.textContent = '✓ ' + answers[q.correctIndex];
       item.appendChild(correctAnswer);
 
       item.addEventListener('click', function () { openQuestionDetail(i); });
@@ -1579,7 +1970,8 @@
 
   function formatAttemptDate(iso) {
     var d = new Date(iso);
-    return d.toLocaleString('el-GR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    var locale = currentLang === 'en' ? 'en-GB' : 'el-GR';
+    return d.toLocaleString(locale, { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
   }
 
   function openProgress() {
@@ -1593,7 +1985,7 @@
   function loadProgress() {
     callApi('get_stats').then(renderProgressSummary).catch(function () {
       el.progressSummaryPercent.textContent = '—';
-      el.progressSummarySub.textContent = 'Διαθέσιμο μόνο μέσα στην εφαρμογή.';
+      el.progressSummarySub.textContent = t('notAvailableInApp');
       el.progressByVehicle.innerHTML = '';
     });
     callApi('get_history', 20).then(renderProgressHistory).catch(function () {
@@ -1606,23 +1998,21 @@
     el.progressByVehicle.innerHTML = '';
     if (!stats.attemptCount) {
       el.progressSummaryPercent.textContent = '—';
-      el.progressSummarySub.textContent = 'Δεν έχεις κάνει ακόμα κανένα τεστ.';
+      el.progressSummarySub.textContent = t('noTestsYet');
       return;
     }
-    var word = stats.attemptCount === 1 ? 'τεστ' : 'τεστ';
     el.progressSummaryPercent.textContent = stats.avgPercent + '%';
-    el.progressSummarySub.textContent = 'Μέσος όρος σε ' + stats.attemptCount + ' ' + word;
+    el.progressSummarySub.textContent = t('avgOverPrefix') + stats.attemptCount + ' ' + pluralTest(stats.attemptCount);
 
     stats.perVehicle.forEach(function (v) {
       var row = document.createElement('div');
       row.className = 'progress-vehicle-row';
       var label = document.createElement('span');
       label.className = 'progress-vehicle-label';
-      label.textContent = VEHICLE_LABELS[v.vehicle] || v.vehicle;
+      label.textContent = vehicleLabel(v.vehicle);
       var value = document.createElement('span');
       value.className = 'progress-vehicle-value';
-      var vWord = v.attemptCount === 1 ? 'τεστ' : 'τεστ';
-      value.textContent = (v.avgPercent !== null ? v.avgPercent + '%' : '—') + ' · ' + v.attemptCount + ' ' + vWord;
+      value.textContent = (v.avgPercent !== null ? v.avgPercent + '%' : '—') + ' · ' + v.attemptCount + ' ' + pluralTest(v.attemptCount);
       row.appendChild(label);
       row.appendChild(value);
       el.progressByVehicle.appendChild(row);
@@ -1642,7 +2032,7 @@
       top.className = 'history-item-top';
       var label = document.createElement('span');
       label.className = 'history-item-label';
-      label.textContent = (VEHICLE_LABELS[h.vehicle] || h.vehicle) + ' - ' + h.sectionLabel;
+      label.textContent = vehicleLabel(h.vehicle) + ' - ' + categoryLabel(h.sectionLabel);
       var pctEl = document.createElement('span');
       pctEl.className = 'history-item-pct ' + (pct >= 70 ? 'good' : pct >= 40 ? 'mid' : 'low');
       pctEl.textContent = pct + '%';
@@ -1693,7 +2083,7 @@
   function loadAnalytics() {
     callApi('get_admin_analytics').then(renderAnalytics).catch(function () {
       el.analyticsOverallPercent.textContent = '—';
-      el.analyticsOverallSub.textContent = 'Δεν ήταν δυνατή η φόρτωση.';
+      el.analyticsOverallSub.textContent = t('couldNotLoadAnalytics');
       el.analyticsUserCounts.textContent = '—';
       el.analyticsByVehicle.innerHTML = '';
       el.analyticsVehicleLabel.hidden = true;
@@ -1712,29 +2102,30 @@
     labelEl.textContent = label;
     var valueEl = document.createElement('span');
     valueEl.className = 'progress-vehicle-value';
-    valueEl.textContent = (stats.avgPercent !== null ? stats.avgPercent + '%' : '—') + ' · ' + stats.attemptCount + ' τεστ';
+    valueEl.textContent = (stats.avgPercent !== null ? stats.avgPercent + '%' : '—') + ' · ' + stats.attemptCount + ' ' + pluralTest(stats.attemptCount);
     row.appendChild(labelEl);
     row.appendChild(valueEl);
     return row;
   }
 
   function renderAnalytics(data) {
+    state.lastAnalytics = data;
     if (!data.attemptCount) {
       el.analyticsOverallPercent.textContent = '—';
-      el.analyticsOverallSub.textContent = 'Δεν υπάρχουν ακόμα τεστ.';
+      el.analyticsOverallSub.textContent = t('noTestsYetAlt');
     } else {
       el.analyticsOverallPercent.textContent = data.overallPercent + '%';
-      el.analyticsOverallSub.textContent = 'Μέσος όρος σε ' + data.attemptCount + ' τεστ, όλων των χρηστών';
+      el.analyticsOverallSub.textContent = t('avgOverPrefix') + data.attemptCount + ' ' + pluralTest(data.attemptCount) + t('allUsersSuffix');
     }
 
     var counts = data.userCounts;
     el.analyticsUserCounts.textContent =
-      (counts.admin || 0) + ' admin, ' + (counts.supervisor || 0) + ' επόπτες, ' + (counts.user || 0) + ' χρήστες';
+      (counts.admin || 0) + ' ' + t('adminsLabel') + ', ' + (counts.supervisor || 0) + ' ' + t('supervisorsLabel') + ', ' + (counts.user || 0) + ' ' + t('usersLabel');
 
     el.analyticsByVehicle.innerHTML = '';
     el.analyticsVehicleLabel.hidden = data.byVehicle.length === 0;
     data.byVehicle.forEach(function (v) {
-      el.analyticsByVehicle.appendChild(buildStatRow(v.label, v));
+      el.analyticsByVehicle.appendChild(buildStatRow(vehicleLabel(v.vehicle) || v.label, v));
     });
 
     el.analyticsBySupervisor.innerHTML = '';
@@ -1743,7 +2134,7 @@
       el.analyticsBySupervisor.appendChild(buildStatRow(sup.username + ' (' + sup.userCount + '/10)', sup));
     });
     if (data.directUsers.userCount > 0) {
-      el.analyticsBySupervisor.appendChild(buildStatRow('Απευθείας υπό Admin (' + data.directUsers.userCount + ')', data.directUsers));
+      el.analyticsBySupervisor.appendChild(buildStatRow(t('directlyUnderAdmin') + ' (' + data.directUsers.userCount + ')', data.directUsers));
     }
 
     el.analyticsRecentList.innerHTML = '';
@@ -1811,7 +2202,7 @@
     if (!newPassword) return;
 
     if (newPassword !== confirmPassword) {
-      el.changePasswordError.textContent = 'Οι κωδικοί δεν ταιριάζουν.';
+      el.changePasswordError.textContent = t('passwordsDontMatch');
       el.changePasswordError.hidden = false;
       return;
     }
@@ -1820,15 +2211,15 @@
     callApi('change_password', newPassword).then(function (res) {
       el.changePasswordSubmitBtn.disabled = false;
       if (!res || !res.ok) {
-        el.changePasswordError.textContent = (res && res.error) || 'Κάτι πήγε στραβά. Δοκίμασε ξανά.';
+        el.changePasswordError.textContent = (res && res.error) || t('genericError');
         el.changePasswordError.hidden = false;
         return;
       }
       hideChangePasswordForm();
-      showToast('Ο κωδικός άλλαξε επιτυχώς.');
+      showToast(t('passwordChangedToast'));
     }).catch(function () {
       el.changePasswordSubmitBtn.disabled = false;
-      el.changePasswordError.textContent = 'Δεν υπάρχει σύνδεση με τον διακομιστή αυτή τη στιγμή.';
+      el.changePasswordError.textContent = t('noConnectionError');
       el.changePasswordError.hidden = false;
     });
   }
@@ -1848,7 +2239,7 @@
 
   function renderFullscreenBtn() {
     el.fullscreenBtn.innerHTML = (isFullscreen ? ICON_EXIT_FULLSCREEN : ICON_ENTER_FULLSCREEN) +
-      (isFullscreen ? 'Παράθυρο' : 'Πλήρης οθόνη');
+      (isFullscreen ? t('fullscreenExitLabel') : t('fullscreenEnterLabel'));
   }
 
   function toggleFullscreen() {
@@ -1946,11 +2337,18 @@
       if (!res || !res.ok) return;
       if (compareVersions(res.latestVersion, res.currentVersion) > 0) {
         pendingUpdateUrl = res.downloadUrl;
-        el.updateVersionText.textContent =
-          'Η έκδοση ' + res.latestVersion + ' είναι διαθέσιμη (τρέχουσα: ' + res.currentVersion + ').';
+        state.lastUpdateInfo = { latestVersion: res.latestVersion, currentVersion: res.currentVersion };
+        renderUpdateVersionText();
         el.updateOverlay.classList.add('show');
       }
     }).catch(function () {});
+  }
+
+  function renderUpdateVersionText() {
+    var info = state.lastUpdateInfo;
+    if (!info) return;
+    el.updateVersionText.textContent =
+      t('updateAvailablePrefix') + info.latestVersion + t('updateAvailableMiddle') + info.currentVersion + t('updateAvailableSuffix');
   }
 
   el.updateLaterBtn.addEventListener('click', closeUpdateOverlay);
@@ -1963,17 +2361,89 @@
     callApi('start_update', pendingUpdateUrl).then(function (res) {
       el.updateNowBtn.disabled = false;
       if (!res || !res.ok) {
-        showToast('Δεν ήταν δυνατή η λήψη της ενημέρωσης.');
+        showToast(t('couldNotDownloadUpdate'));
       }
       // On success the app quits itself from the backend — nothing left to do here.
     }).catch(function () {
       el.updateNowBtn.disabled = false;
-      showToast('Δεν ήταν δυνατή η λήψη της ενημέρωσης.');
+      showToast(t('couldNotDownloadUpdate'));
     });
+  });
+
+  // ---- Language (Greek / English) ----
+
+  function applyStaticTranslations() {
+    document.documentElement.setAttribute('lang', currentLang);
+    document.querySelectorAll('[data-i18n]').forEach(function (node) {
+      var key = node.getAttribute('data-i18n');
+      var val = STRINGS[currentLang] && STRINGS[currentLang][key];
+      if (val !== undefined) node.textContent = val;
+    });
+    document.querySelectorAll('[data-i18n-attr-alt]').forEach(function (node) {
+      var key = node.getAttribute('data-i18n-attr-alt');
+      var val = STRINGS[currentLang] && STRINGS[currentLang][key];
+      if (val !== undefined) node.setAttribute('alt', val);
+    });
+  }
+
+  function applyLang(lang) {
+    if (lang !== 'el' && lang !== 'en') lang = 'el';
+    currentLang = lang;
+    try {
+      localStorage.setItem(LANG_KEY, lang);
+    } catch (e) {}
+
+    el.langSegmented.querySelectorAll('.segment').forEach(function (seg) {
+      seg.classList.toggle('active', seg.getAttribute('data-lang') === lang);
+    });
+
+    applyStaticTranslations();
+    renderFullscreenBtn();
+
+    if (state.screen === 'home' && state.lastSections) {
+      renderSections(state.lastSections, true);
+    }
+    if (state.screen === 'quiz' && state.questions.length) {
+      renderSectionBanner();
+      renderQuizQuestion();
+    }
+    if (state.screen === 'results' && state.lastResults) {
+      renderResultsSummary();
+      renderResultsReview();
+    }
+    if (el.progressOverlay.classList.contains('show')) loadProgress();
+    if (el.analyticsOverlay.classList.contains('show')) loadAnalytics();
+    if (el.savedQuestionsOverlay.classList.contains('show')) loadSavedQuestionsList();
+    if (el.manageUsersOverlay.classList.contains('show')) {
+      loadUsersList();
+      syncUserFormLabels();
+    }
+    if (el.questionDetailOverlay.classList.contains('show') && state.lastDetail) {
+      showQuestionDetail(state.lastDetail.q, state.lastDetail.options);
+    }
+    if (el.incompleteOverlay.classList.contains('show') && state.lastUnanswered) {
+      showIncompleteWarning(state.lastUnanswered);
+    }
+    if (el.updateOverlay.classList.contains('show')) renderUpdateVersionText();
+  }
+
+  function initLang() {
+    var saved = 'el';
+    try {
+      saved = localStorage.getItem(LANG_KEY) || 'el';
+    } catch (e) {}
+    applyLang(saved);
+  }
+
+  el.langSegmented.addEventListener('click', function (e) {
+    var target = e.target.closest('.segment');
+    if (!target) return;
+    applyLang(target.getAttribute('data-lang'));
   });
 
   initTheme();
   initZoom();
+  initLang();
   prefillRememberedUsername();
   showScreen('login');
 
