@@ -280,7 +280,14 @@
     <div class="screen" id="screen-results">
       <div class="results-wrap">
         <div class="results-content">
-          <p class="results-percent" id="resultsPercent">0%</p>
+          <div class="results-ring">
+            <svg viewBox="0 0 220 220" aria-hidden="true">
+              <circle class="results-ring-track" cx="110" cy="110" r="90"/>
+              <circle class="results-ring-arm" id="resultsRingL" cx="110" cy="110" r="90" transform="rotate(90 110 110)"/>
+              <circle class="results-ring-arm" id="resultsRingR" cx="110" cy="110" r="90" transform="translate(220 0) scale(-1 1) rotate(90 110 110)"/>
+            </svg>
+            <p class="results-percent" id="resultsPercent">0%</p>
+          </div>
           <p class="results-fraction" id="resultsFraction"></p>
           <p class="results-message" id="resultsMessage"></p>
           <button class="btn primary" id="resultsHomeBtn" type="button" data-i18n="resultsHomeBtn">Επιστροφή στην αρχική</button>

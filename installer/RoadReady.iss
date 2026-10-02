@@ -10,7 +10,7 @@
 ; new release.
 
 #define MyAppName "RoadReady"
-#define MyAppVersion "1.0.3"
+#define MyAppVersion "1.0.4"
 #define MyAppPublisher "George Varatis"
 #define MyAppExeName "RoadReady.exe"
 

@@ -729,11 +729,35 @@ body {
 .review-answer.correct-answer { color: var(--go-ink); font-weight: 600; }
 .review-answer + .review-answer { margin-top: 4px; }
 
+.results-ring {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 14px;
+}
+.results-ring svg { width: 100%; height: 100%; display: block; }
+.results-ring-track {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 14;
+}
+.results-ring-arm {
+  fill: none;
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-dasharray: 0 600;
+  visibility: hidden;
+}
 .results-percent {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 58px;
-  margin: 0 0 6px;
+  font-size: 48px;
+  margin: 0;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .results-fraction {

@@ -644,6 +644,8 @@
     quizFeedback: document.getElementById('quizFeedback'),
     screenResults: document.getElementById('screen-results'),
     resultsPercent: document.getElementById('resultsPercent'),
+    resultsRingL: document.getElementById('resultsRingL'),
+    resultsRingR: document.getElementById('resultsRingR'),
     resultsFraction: document.getElementById('resultsFraction'),
     resultsMessage: document.getElementById('resultsMessage'),
     resultsReview: document.getElementById('resultsReview'),
@@ -1665,7 +1667,7 @@
     var pct = Math.round((correct / total) * 100);
     state.lastResults = { correct: correct, total: total, pct: pct };
 
-    renderResultsSummary();
+    renderResultsSummary(true);
     renderResultsReview();
     showScreen('results');
 
@@ -1677,10 +1679,43 @@
     }
   }
 
-  function renderResultsSummary() {
+  var RING_HALF = Math.PI * 90;
+  var ringRaf = null;
+
+  function paintResultsRing(p) {
+    var color = 'hsl(' + Math.round(120 * Math.pow(p / 100, 2.6)) + ',78%,45%)';
+    var len = RING_HALF * p / 100;
+    [el.resultsRingL, el.resultsRingR].forEach(function (arm) {
+      arm.style.stroke = color;
+      arm.style.strokeDasharray = len + ' 600';
+      arm.style.visibility = p < 0.5 ? 'hidden' : 'visible';
+    });
+    el.resultsPercent.textContent = Math.round(p) + '%';
+  }
+
+  function animateResultsRing(pct, animate) {
+    cancelAnimationFrame(ringRaf);
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!animate || reduceMotion || pct === 0) {
+      paintResultsRing(pct);
+      return;
+    }
+    var start = null;
+    var duration = 1800;
+    paintResultsRing(0);
+    function step(now) {
+      if (start === null) start = now;
+      var k = Math.min(1, (now - start) / duration);
+      paintResultsRing(pct * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) ringRaf = requestAnimationFrame(step);
+    }
+    ringRaf = requestAnimationFrame(step);
+  }
+
+  function renderResultsSummary(animate) {
     var r = state.lastResults;
     if (!r) return;
-    el.resultsPercent.textContent = r.pct + '%';
+    animateResultsRing(r.pct, animate);
     el.resultsFraction.textContent = r.correct + ' ' + t('ofWord') + ' ' + r.total + ' ' + t('resultsCorrectSuffix');
     el.resultsMessage.textContent =
       r.pct === 100 ? t('resultsMsgPerfect') :
