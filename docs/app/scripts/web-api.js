@@ -30,6 +30,47 @@
   });
   if (window.visualViewport) window.visualViewport.addEventListener('resize', setAppHeight);
 
+  // Diagnostic panel for device-specific layout problems: open the app with ?debug=1.
+  if (/[?&]debug=1\b/.test(location.search)) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var probe = document.createElement('div');
+      probe.style.cssText = 'position:fixed;top:0;left:0;visibility:hidden;pointer-events:none;' +
+        'padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)';
+      document.body.appendChild(probe);
+
+      var panel = document.createElement('pre');
+      panel.style.cssText = 'position:fixed;left:4px;bottom:34px;z-index:99999;margin:0;padding:6px 8px;' +
+        'font:11px/1.35 monospace;color:#0f0;background:rgba(0,0,0,.82);border-radius:6px;' +
+        'pointer-events:none;white-space:pre-wrap;max-width:96vw';
+      document.body.appendChild(panel);
+
+      function box(sel) {
+        var e = document.querySelector(sel);
+        if (!e) return '-';
+        var b = e.getBoundingClientRect();
+        return Math.round(b.left) + ',' + Math.round(b.top) + ' ' + Math.round(b.width) + 'x' + Math.round(b.height);
+      }
+      function update() {
+        var vv = window.visualViewport;
+        var cs = getComputedStyle(probe);
+        var input = document.querySelector('input.auth-input');
+        panel.textContent = [
+          'ua: ' + navigator.userAgent.replace(/^Mozilla\/5\.0 /, '').slice(0, 90),
+          'inner: ' + innerWidth + 'x' + innerHeight + '  screen: ' + screen.width + 'x' + screen.height + '  dpr: ' + devicePixelRatio,
+          'visualViewport: ' + (vv ? Math.round(vv.width) + 'x' + Math.round(vv.height) + ' scale=' + vv.scale.toFixed(2) + ' off=' + Math.round(vv.offsetLeft) + ',' + Math.round(vv.offsetTop) : 'n/a'),
+          'safe-area t/r/b/l: ' + cs.paddingTop + ' ' + cs.paddingRight + ' ' + cs.paddingBottom + ' ' + cs.paddingLeft,
+          '--app-h: ' + document.documentElement.style.getPropertyValue('--app-h') + '  --ui-scale: ' + (getComputedStyle(document.documentElement).getPropertyValue('--ui-scale') || '-'),
+          'page scroll: ' + scrollX + ',' + scrollY + '  doc: ' + document.documentElement.scrollWidth + 'x' + document.documentElement.scrollHeight,
+          'app: ' + box('.app') + '  topbar: ' + box('.topbar'),
+          'footer: ' + box('.app-footer') + '  banner: ' + box('#sectionBanner'),
+          'input font: ' + (input ? getComputedStyle(input).fontSize : '-') + '  standalone: ' + (navigator.standalone === true)
+        ].join('\n');
+      }
+      update();
+      setInterval(update, 500);
+    });
+  }
+
   // A saved session means app.js is about to sign the user in again, so keep
   // the login form hidden meanwhile instead of flashing it.
   var SESSION_STORAGE_KEY = 'sb-nzuobxttcvdqqzsmcgmv-auth-token';
