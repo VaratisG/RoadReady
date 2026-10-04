@@ -1691,20 +1691,38 @@
     requestAnimationFrame(step);
   }
 
-  // Brings the Next/Submit row into view after answering, but never at the cost
-  // of the explanation: if explanation + buttons don't both fit on screen, the
-  // explanation's first line wins and the user scrolls for the rest.
+  // Brings the result of an answer into view, but never at the cost of the
+  // explanation's first line: if explanation + buttons don't both fit, the
+  // explanation start wins and the user scrolls for the rest.
+  // Where the Next/Submit row is sticky (phones, see web.css) it is always on
+  // screen by itself, so only the explanation needs revealing, down to just
+  // above that pinned row.
   function revealAnswerResult(smooth) {
     var topLimit = el.sectionBanner.getBoundingClientRect().bottom + 8;
-    var bottomLimit = document.querySelector('.app-footer').getBoundingClientRect().top - 12;
+    var footerTop = document.querySelector('.app-footer').getBoundingClientRect().top;
     var nav = el.quizNavRow.getBoundingClientRect();
     var fb = el.quizFeedback.getBoundingClientRect();
     var hasFeedback = el.quizFeedback.classList.contains('show') && fb.height > 0;
+    var navIsSticky = getComputedStyle(el.quizNavRow).position === 'sticky';
+
+    var bottomEdge = nav.bottom;
+    var bottomLimit = footerTop - 12;
+    if (navIsSticky) {
+      if (!hasFeedback) return;
+      // Where the pinned row's top edge sits once stuck: the screen's bottom,
+      // minus its bottom padding and the row's own "bottom" offset.
+      var screenStyle = getComputedStyle(el.screenQuiz);
+      var stuckBottom = el.screenQuiz.getBoundingClientRect().bottom
+        - parseFloat(screenStyle.paddingBottom)
+        - parseFloat(getComputedStyle(el.quizNavRow).bottom);
+      bottomEdge = fb.bottom;
+      bottomLimit = stuckBottom - nav.height - 8;
+    }
 
     var startHidden = hasFeedback && fb.top < topLimit - 1;
     var delta = startHidden
       ? fb.top - topLimit
-      : Math.min(nav.bottom - bottomLimit, hasFeedback ? fb.top - topLimit : Infinity);
+      : Math.min(bottomEdge - bottomLimit, hasFeedback ? fb.top - topLimit : Infinity);
     if (Math.abs(delta) < 2 || (delta < 0 && !startHidden)) return;
     animateScrollBy(delta, smooth);
   }

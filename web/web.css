@@ -80,6 +80,27 @@ html.web .quiz-answers {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
 }
 
+/* On phones the Previous/Next row stays pinned just above the footer, so the
+   buttons are always fully visible whatever the explanation's length. app.js
+   notices the sticky row and only scrolls to reveal the explanation. */
+@media (max-width: 700px), (max-height: 480px) {
+  html.web #screen-quiz {
+    padding-bottom: calc(var(--footer-h) + 8px);
+  }
+  html.web #quizNavRow {
+    position: sticky;
+    bottom: 8px;
+    z-index: 5;
+    margin-top: 16px;
+    padding: 8px 0;
+    border-radius: 14px;
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
 /* The desktop layout assumes a 960px+ window; make it usable on phones. */
 @media (max-width: 700px) {
   html.web .topbar {
