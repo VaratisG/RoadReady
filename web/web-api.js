@@ -15,21 +15,6 @@
   var root = document.documentElement;
   root.classList.add('web');
 
-  // Phones report 100vh as the height with the address bar collapsed, which
-  // pushes the footer off-screen. window.innerHeight is the truly visible height.
-  function setAppHeight() {
-    root.style.setProperty('--app-h', Math.round(window.innerHeight) + 'px');
-  }
-  setAppHeight();
-  window.addEventListener('resize', setAppHeight);
-  // iOS reports the old height for a moment after rotating, so measure again once it settles.
-  window.addEventListener('orientationchange', function () {
-    setAppHeight();
-    setTimeout(setAppHeight, 150);
-    setTimeout(setAppHeight, 500);
-  });
-  if (window.visualViewport) window.visualViewport.addEventListener('resize', setAppHeight);
-
   // Diagnostic panel for device-specific layout problems: open the app with ?debug=1.
   if (/[?&]debug=1\b/.test(location.search)) {
     window.addEventListener('DOMContentLoaded', function () {
@@ -37,6 +22,15 @@
       probe.style.cssText = 'position:fixed;top:0;left:0;visibility:hidden;pointer-events:none;' +
         'padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)';
       document.body.appendChild(probe);
+
+      function heightProbe(unit) {
+        var d = document.createElement('div');
+        d.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:100' + unit + ';visibility:hidden;pointer-events:none';
+        document.body.appendChild(d);
+        return d;
+      }
+      var probe100dvh = heightProbe('dvh');
+      var probe100vh = heightProbe('vh');
 
       var panel = document.createElement('pre');
       panel.style.cssText = 'position:fixed;left:4px;bottom:34px;z-index:99999;margin:0;padding:6px 8px;' +
@@ -59,7 +53,7 @@
           'inner: ' + innerWidth + 'x' + innerHeight + '  screen: ' + screen.width + 'x' + screen.height + '  dpr: ' + devicePixelRatio,
           'visualViewport: ' + (vv ? Math.round(vv.width) + 'x' + Math.round(vv.height) + ' scale=' + vv.scale.toFixed(2) + ' off=' + Math.round(vv.offsetLeft) + ',' + Math.round(vv.offsetTop) : 'n/a'),
           'safe-area t/r/b/l: ' + cs.paddingTop + ' ' + cs.paddingRight + ' ' + cs.paddingBottom + ' ' + cs.paddingLeft,
-          '--app-h: ' + document.documentElement.style.getPropertyValue('--app-h') + '  --ui-scale: ' + (getComputedStyle(document.documentElement).getPropertyValue('--ui-scale') || '-'),
+          '100dvh: ' + Math.round(probe100dvh.getBoundingClientRect().height) + '  100vh: ' + Math.round(probe100vh.getBoundingClientRect().height) + '  --ui-scale: ' + (getComputedStyle(document.documentElement).getPropertyValue('--ui-scale') || '-'),
           'page scroll: ' + scrollX + ',' + scrollY + '  doc: ' + document.documentElement.scrollWidth + 'x' + document.documentElement.scrollHeight,
           'app: ' + box('.app') + '  topbar: ' + box('.topbar'),
           'footer: ' + box('.app-footer') + '  banner: ' + box('#sectionBanner'),

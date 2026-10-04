@@ -9,9 +9,6 @@ html.restoring #screen-login {
   visibility: hidden;
 }
 
-/* 100vh on phones includes the area behind the browser's address bar, which
-   pushes the footer off-screen. --app-h is set from window.innerHeight in
-   web-api.js; 100dvh is the fallback. */
 html.web,
 html.web body {
   overflow: hidden;
@@ -21,22 +18,24 @@ html.web body {
 /* iOS Safari ignores overflow:hidden on the page and still scrolls or bounces
    it (e.g. when a field is focused), which pushes the header out of view.
    Pinning the body stops the page itself from ever moving; only the screens
-   inside the app scroll. */
+   inside the app scroll.
+   The size comes from pinning all four edges, not from vh/dvh or measuring
+   window.innerHeight: iOS reports those wrongly at load, after rotating and
+   while its toolbars move, whereas a fixed box always matches what is visible. */
 html.web body {
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  height: var(--app-h, 100dvh);
   touch-action: manipulation;
 }
 html.web .app {
-  height: 100vh;
-  height: 100dvh;
-  height: var(--app-h, 100dvh);
-  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   /* Keep the header and footer clear of the notch and home indicator
      (needs viewport-fit=cover, added by build_web.py). */
   --topbar-h: calc(64px + env(safe-area-inset-top, 0px));
