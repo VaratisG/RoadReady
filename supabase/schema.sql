@@ -62,7 +62,7 @@ create table profiles (
   created_at timestamptz not null default now()
 );
 
--- A supervisor can only ever have up to 10 users under them. Enforced here as
+-- A supervisor can only ever have up to 5 users under them. Enforced here as
 -- a safety net in addition to the count check in the Edge Function.
 create or replace function public.enforce_supervisor_capacity()
 returns trigger language plpgsql as $$
@@ -71,8 +71,8 @@ declare
 begin
   if new.supervisor_id is not null then
     select count(*) into current_count from profiles where supervisor_id = new.supervisor_id;
-    if current_count >= 10 then
-      raise exception 'Ο επόπτης έχει ήδη 10 χρήστες.';
+    if current_count >= 5 then
+      raise exception 'Ο επόπτης έχει ήδη 5 χρήστες.';
     end if;
   end if;
   return new;
@@ -107,6 +107,24 @@ create policy "user sees self" on profiles
 -- on top of the "own rows only" policy every user already has on attempts.
 create policy "admin sees all attempts" on attempts
   for select using (public.current_role() = 'admin');
+
+-- Lets a supervisor read the quiz history and the "still wrong" questions of
+-- the users under them, and nobody else's. security definer so the lookup
+-- doesn't depend on the caller's own RLS on profiles.
+create or replace function public.is_my_student(target uuid)
+returns boolean language sql security definer stable as $$
+  select exists (
+    select 1 from profiles where id = target and supervisor_id = auth.uid()
+  );
+$$;
+
+create policy "supervisor sees team attempts" on attempts
+  for select using (public.current_role() = 'supervisor' and public.is_my_student(user_id));
+
+create policy "admin sees all wrong questions" on wrong_questions
+  for select using (public.current_role() = 'admin');
+create policy "supervisor sees team wrong questions" on wrong_questions
+  for select using (public.current_role() = 'supervisor' and public.is_my_student(user_id));
 
 -- ---------------------------------------------------------------------------
 -- Data retention: keep only the last month of quiz history. Accounts

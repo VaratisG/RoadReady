@@ -418,9 +418,8 @@ class Api:
         ]
 
     def get_admin_analytics(self):
-        # RLS-gated: only an admin caller actually gets everyone's rows here
-        # (profiles + the extra "admin sees all attempts" policy); anyone
-        # else just gets their own, same as list_users.
+        # RLS-gated: an admin gets everyone's rows, a supervisor gets their own
+        # users' attempts (plus their own), anyone else just their own.
         profiles = supabase.table("profiles").select("id, username, role, supervisor_id").execute().data
         attempts = (
             supabase.table("attempts")
@@ -429,6 +428,28 @@ class Api:
             .execute()
             .data
         )
+
+        me = _fetch_own_profile()
+        caller_role = me["role"] if me else "user"
+        student_ids = {p["id"] for p in profiles if p["role"] == "user"}
+        if caller_role == "supervisor":
+            # A supervisor's statistics are about their users, not their own practice.
+            attempts = [a for a in attempts if a["user_id"] in student_ids]
+
+        students = []
+        for p in profiles:
+            if p["role"] != "user":
+                continue
+            own = [a for a in attempts if a["user_id"] == p["id"]]
+            correct = sum(a["correct"] for a in own)
+            total = sum(a["total"] for a in own)
+            students.append({
+                "id": p["id"],
+                "username": p["username"],
+                "attemptCount": len(own),
+                "avgPercent": round((correct / total) * 100) if total else None,
+                "lastActivity": own[0]["completed_at"] if own else None,
+            })
 
         profile_by_id = {p["id"]: p for p in profiles}
         role_counts = {"admin": 0, "supervisor": 0, "user": 0}
@@ -488,6 +509,8 @@ class Api:
             })
 
         return {
+            "role": caller_role,
+            "students": students,
             "userCounts": role_counts,
             "attemptCount": len(attempts),
             "overallPercent": overall_percent,
@@ -618,6 +641,49 @@ class Api:
             "correct": correct,
             "total": total,
         }).execute()
+
+    def get_user_history(self, user_id, limit=200):
+        # RLS decides who may read this: a supervisor only gets their own
+        # users' attempts, an admin anyone's, everyone else only their own.
+        res = (
+            supabase.table("attempts")
+            .select("id, vehicle, section_id, section_label, correct, total, completed_at")
+            .eq("user_id", user_id)
+            .order("completed_at", desc=True)
+            .limit(limit)
+            .execute()
+        )
+        return [
+            {
+                "id": r["id"],
+                "vehicle": r["vehicle"],
+                "sectionLabel": r["section_label"],
+                "correct": r["correct"],
+                "total": r["total"],
+                "completedAt": r["completed_at"],
+            }
+            for r in res.data
+        ]
+
+    def get_user_wrong_questions(self, user_id):
+        # The questions this user is currently still getting wrong (same RLS
+        # rules as get_user_history), resolved to full question objects.
+        res = (
+            supabase.table("wrong_questions")
+            .select("vehicle, question_id, created_at")
+            .eq("user_id", user_id)
+            .order("created_at", desc=True)
+            .execute()
+        )
+        banks = {}
+        result = []
+        for r in res.data:
+            if r["vehicle"] not in banks:
+                banks[r["vehicle"]] = {q["id"]: q for q in self._load_questions(r["vehicle"])}
+            q = banks[r["vehicle"]].get(r["question_id"])
+            if q:
+                result.append({"vehicle": r["vehicle"], "since": r["created_at"], "question": q})
+        return result
 
     def get_history(self, limit=20):
         res = (

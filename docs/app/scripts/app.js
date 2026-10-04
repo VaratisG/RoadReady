@@ -5,6 +5,10 @@
   var LANG_KEY = 'drivequiz.lang';
   var currentLang = 'el';
 
+  // Must match MAX_USERS_PER_SUPERVISOR in supabase/functions/manage-users and
+  // the trigger in supabase/schema.sql.
+  var MAX_USERS_PER_SUPERVISOR = 5;
+
   var STRINGS = {
     el: {
       pageTitle: 'RoadReady',
@@ -145,7 +149,17 @@
       yourUsersPrefix: 'Οι χρήστες σου (',
       usersPrefix: 'Χρήστες (',
       questionDetailDefaultTitle: 'Ερώτηση',
-      savedQuestionDetailTitle: 'Αποθηκευμένη Ερώτηση'
+      savedQuestionDetailTitle: 'Αποθηκευμένη Ερώτηση',
+      studentsLabel: 'Μαθητές',
+      backBtn: 'Πίσω',
+      studentHistoryLabel: 'Ιστορικό τεστ',
+      studentsNone: 'Δεν έχεις μαθητές ακόμα.',
+      studentNoHistory: 'Δεν έχει κάνει ακόμα κανένα τεστ.',
+      studentWrongPrefix: 'Ερωτήσεις που απαντά ακόμα λάθος',
+      studentNoWrong: 'Καμία ερώτηση λάθος αυτή τη στιγμή.',
+      lastActivityPrefix: 'Τελευταία δραστηριότητα: ',
+      neverActive: 'Καμία δραστηριότητα',
+      yourUsersSuffix: ', των μαθητών σου'
     },
     en: {
       pageTitle: 'RoadReady',
@@ -286,7 +300,17 @@
       yourUsersPrefix: 'Your users (',
       usersPrefix: 'Users (',
       questionDetailDefaultTitle: 'Question',
-      savedQuestionDetailTitle: 'Saved Question'
+      savedQuestionDetailTitle: 'Saved Question',
+      studentsLabel: 'Students',
+      backBtn: 'Back',
+      studentHistoryLabel: 'Quiz history',
+      studentsNone: "You don't have any students yet.",
+      studentNoHistory: "They haven't taken any quizzes yet.",
+      studentWrongPrefix: 'Questions still answered wrong',
+      studentNoWrong: 'No wrong questions right now.',
+      lastActivityPrefix: 'Last activity: ',
+      neverActive: 'No activity yet',
+      yourUsersSuffix: ', across your students'
     }
   };
 
@@ -549,6 +573,19 @@
     analyticsByVehicle: document.getElementById('analyticsByVehicle'),
     analyticsSupervisorLabel: document.getElementById('analyticsSupervisorLabel'),
     analyticsBySupervisor: document.getElementById('analyticsBySupervisor'),
+    analyticsMainView: document.getElementById('analyticsMainView'),
+    analyticsUserCountsRow: document.getElementById('analyticsUserCountsRow'),
+    analyticsStudentsLabel: document.getElementById('analyticsStudentsLabel'),
+    analyticsStudents: document.getElementById('analyticsStudents'),
+    studentDetailView: document.getElementById('studentDetailView'),
+    studentBackBtn: document.getElementById('studentBackBtn'),
+    studentDetailName: document.getElementById('studentDetailName'),
+    studentSummaryPercent: document.getElementById('studentSummaryPercent'),
+    studentSummarySub: document.getElementById('studentSummarySub'),
+    studentHistoryLabel: document.getElementById('studentHistoryLabel'),
+    studentHistoryList: document.getElementById('studentHistoryList'),
+    studentWrongLabel: document.getElementById('studentWrongLabel'),
+    studentWrongList: document.getElementById('studentWrongList'),
     analyticsRecentLabel: document.getElementById('analyticsRecentLabel'),
     analyticsRecentList: document.getElementById('analyticsRecentList'),
     manageUsersBtn: document.getElementById('manageUsersBtn'),
@@ -758,7 +795,7 @@
 
   function updateManageUsersAccess() {
     el.manageUsersBtn.hidden = !(state.role === 'admin' || state.role === 'supervisor');
-    el.analyticsBtn.hidden = state.role !== 'admin';
+    el.analyticsBtn.hidden = !(state.role === 'admin' || state.role === 'supervisor');
   }
 
   function prefillRememberedUsername() {
@@ -1012,7 +1049,7 @@
 
     if (state.role !== 'admin') {
       // Supervisors only ever see their own team anyway (RLS-scoped), flat is fine.
-      el.usersListLabel.textContent = t('yourUsersPrefix') + others.length + '/10)';
+      el.usersListLabel.textContent = t('yourUsersPrefix') + others.length + '/' + MAX_USERS_PER_SUPERVISOR + ')';
       others.forEach(function (u) { el.usersList.appendChild(buildUserRow(u)); });
       return;
     }
@@ -1025,7 +1062,7 @@
       var team = others.filter(function (u) { return u.supervisorId === sup.id; });
       var headerRow = buildUserRow(sup);
       var headerMeta = headerRow.querySelector('.user-row-meta');
-      headerMeta.textContent = team.length + '/10 ' + t('usersLabel');
+      headerMeta.textContent = team.length + '/' + MAX_USERS_PER_SUPERVISOR + ' ' + t('usersLabel');
       el.usersList.appendChild(headerRow);
       team.forEach(function (u) { el.usersList.appendChild(buildUserRow(u, true)); });
     });
@@ -2219,12 +2256,20 @@
 
   // ---- Admin analytics ----
 
+  function showAnalyticsMainView() {
+    state.currentStudent = null;
+    el.studentDetailView.hidden = true;
+    el.analyticsMainView.hidden = false;
+  }
+
   function openAnalytics() {
     el.analyticsOverlay.classList.add('show');
+    showAnalyticsMainView();
     loadAnalytics();
   }
   function closeAnalytics() {
     el.analyticsOverlay.classList.remove('show');
+    showAnalyticsMainView();
   }
 
   function loadAnalytics() {
@@ -2232,6 +2277,8 @@
       el.analyticsOverallPercent.textContent = '—';
       el.analyticsOverallSub.textContent = t('couldNotLoadAnalytics');
       el.analyticsUserCounts.textContent = '—';
+      el.analyticsStudents.innerHTML = '';
+      el.analyticsStudentsLabel.hidden = true;
       el.analyticsByVehicle.innerHTML = '';
       el.analyticsVehicleLabel.hidden = true;
       el.analyticsBySupervisor.innerHTML = '';
@@ -2255,19 +2302,77 @@
     return row;
   }
 
+  function buildStudentRow(student) {
+    var row = document.createElement('button');
+    row.type = 'button';
+    row.className = 'student-row';
+
+    var main = document.createElement('span');
+    main.className = 'student-row-main';
+    var name = document.createElement('span');
+    name.className = 'student-row-name';
+    name.textContent = student.username;
+    var meta = document.createElement('span');
+    meta.className = 'student-row-meta';
+    meta.textContent = student.lastActivity
+      ? t('lastActivityPrefix') + formatAttemptDate(student.lastActivity)
+      : t('neverActive');
+    main.appendChild(name);
+    main.appendChild(meta);
+
+    var stats = document.createElement('span');
+    stats.className = 'student-row-stats';
+    stats.textContent = (student.avgPercent !== null ? student.avgPercent + '%' : '—') + ' · ' + student.attemptCount + ' ' + pluralTest(student.attemptCount);
+
+    var chev = document.createElement('span');
+    chev.className = 'menu-chev';
+    chev.innerHTML = CHEV;
+
+    row.appendChild(main);
+    row.appendChild(stats);
+    row.appendChild(chev);
+    row.addEventListener('click', function () { openStudentDetail(student); });
+    return row;
+  }
+
+  function renderStudentsList(students) {
+    el.analyticsStudents.innerHTML = '';
+    // Most recently active first; students who never took a quiz go last.
+    var sorted = students.slice().sort(function (a, b) {
+      if (a.lastActivity && b.lastActivity) return a.lastActivity < b.lastActivity ? 1 : -1;
+      if (a.lastActivity) return -1;
+      if (b.lastActivity) return 1;
+      return a.username.localeCompare(b.username);
+    });
+    el.analyticsStudentsLabel.hidden = false;
+    if (!sorted.length) {
+      var empty = document.createElement('p');
+      empty.className = 'setting-value';
+      empty.textContent = t('studentsNone');
+      el.analyticsStudents.appendChild(empty);
+      return;
+    }
+    sorted.forEach(function (s) { el.analyticsStudents.appendChild(buildStudentRow(s)); });
+  }
+
   function renderAnalytics(data) {
     state.lastAnalytics = data;
+    var isAdmin = data.role === 'admin';
     if (!data.attemptCount) {
       el.analyticsOverallPercent.textContent = '—';
       el.analyticsOverallSub.textContent = t('noTestsYetAlt');
     } else {
       el.analyticsOverallPercent.textContent = data.overallPercent + '%';
-      el.analyticsOverallSub.textContent = t('avgOverPrefix') + data.attemptCount + ' ' + pluralTest(data.attemptCount) + t('allUsersSuffix');
+      el.analyticsOverallSub.textContent = t('avgOverPrefix') + data.attemptCount + ' ' + pluralTest(data.attemptCount) + (isAdmin ? t('allUsersSuffix') : t('yourUsersSuffix'));
     }
 
+    // The role breakdown and per-supervisor teams only make sense for the admin.
+    el.analyticsUserCountsRow.hidden = !isAdmin;
     var counts = data.userCounts;
     el.analyticsUserCounts.textContent =
       (counts.admin || 0) + ' ' + t('adminsLabel') + ', ' + (counts.supervisor || 0) + ' ' + t('supervisorsLabel') + ', ' + (counts.user || 0) + ' ' + t('usersLabel');
+
+    renderStudentsList(data.students || []);
 
     el.analyticsByVehicle.innerHTML = '';
     el.analyticsVehicleLabel.hidden = data.byVehicle.length === 0;
@@ -2276,12 +2381,14 @@
     });
 
     el.analyticsBySupervisor.innerHTML = '';
-    el.analyticsSupervisorLabel.hidden = data.bySupervisor.length === 0 && data.directUsers.userCount === 0;
-    data.bySupervisor.forEach(function (sup) {
-      el.analyticsBySupervisor.appendChild(buildStatRow(sup.username + ' (' + sup.userCount + '/10)', sup));
-    });
-    if (data.directUsers.userCount > 0) {
-      el.analyticsBySupervisor.appendChild(buildStatRow(t('directlyUnderAdmin') + ' (' + data.directUsers.userCount + ')', data.directUsers));
+    el.analyticsSupervisorLabel.hidden = !isAdmin || (data.bySupervisor.length === 0 && data.directUsers.userCount === 0);
+    if (isAdmin) {
+      data.bySupervisor.forEach(function (sup) {
+        el.analyticsBySupervisor.appendChild(buildStatRow(sup.username + ' (' + sup.userCount + '/' + MAX_USERS_PER_SUPERVISOR + ')', sup));
+      });
+      if (data.directUsers.userCount > 0) {
+        el.analyticsBySupervisor.appendChild(buildStatRow(t('directlyUnderAdmin') + ' (' + data.directUsers.userCount + ')', data.directUsers));
+      }
     }
 
     el.analyticsRecentList.innerHTML = '';
@@ -2311,6 +2418,115 @@
       el.analyticsRecentList.appendChild(item);
     });
   }
+
+  // ---- Student detail (supervisor / admin) ----
+
+  function setStudentMessage(container, text) {
+    container.innerHTML = '';
+    var p = document.createElement('p');
+    p.className = 'setting-value';
+    p.textContent = text;
+    container.appendChild(p);
+  }
+
+  function openStudentDetail(student) {
+    state.currentStudent = student;
+    el.analyticsMainView.hidden = true;
+    el.studentDetailView.hidden = false;
+    el.analyticsOverlay.querySelector('.overlay-panel').scrollTop = 0;
+
+    el.studentDetailName.textContent = student.username;
+    el.studentSummaryPercent.textContent = '—';
+    el.studentSummarySub.textContent = '';
+    el.studentHistoryList.innerHTML = '';
+    el.studentWrongList.innerHTML = '';
+    el.studentWrongLabel.textContent = t('studentWrongPrefix');
+
+    callApi('get_user_history', student.id, 200).then(function (history) {
+      if (state.currentStudent !== student) return;
+      renderStudentHistory(history);
+    }).catch(function () {
+      el.studentSummarySub.textContent = t('couldNotLoadAnalytics');
+    });
+    callApi('get_user_wrong_questions', student.id).then(function (list) {
+      if (state.currentStudent !== student) return;
+      renderStudentWrongQuestions(list);
+    }).catch(function () {
+      setStudentMessage(el.studentWrongList, t('couldNotLoadAnalytics'));
+    });
+  }
+
+  function renderStudentHistory(history) {
+    el.studentHistoryList.innerHTML = '';
+    if (!history.length) {
+      el.studentSummaryPercent.textContent = '—';
+      el.studentSummarySub.textContent = t('studentNoHistory');
+      setStudentMessage(el.studentHistoryList, t('studentNoHistory'));
+      return;
+    }
+
+    var correctSum = 0, totalSum = 0;
+    history.forEach(function (h) { correctSum += h.correct; totalSum += h.total; });
+    el.studentSummaryPercent.textContent = Math.round((correctSum / totalSum) * 100) + '%';
+    el.studentSummarySub.textContent = t('avgOverPrefix') + history.length + ' ' + pluralTest(history.length);
+
+    history.forEach(function (h) {
+      var pct = Math.round((h.correct / h.total) * 100);
+      var item = document.createElement('div');
+      item.className = 'history-item';
+
+      var top = document.createElement('div');
+      top.className = 'history-item-top';
+      var label = document.createElement('span');
+      label.className = 'history-item-label';
+      label.textContent = vehicleLabel(h.vehicle) + ' - ' + categoryLabel(h.sectionLabel);
+      var pctEl = document.createElement('span');
+      pctEl.className = 'history-item-pct ' + (pct >= 70 ? 'good' : pct >= 40 ? 'mid' : 'low');
+      pctEl.textContent = pct + '%';
+      top.appendChild(label);
+      top.appendChild(pctEl);
+
+      var bottom = document.createElement('div');
+      bottom.className = 'history-item-bottom';
+      bottom.textContent = h.correct + '/' + h.total + ' · ' + formatAttemptDate(h.completedAt);
+
+      item.appendChild(top);
+      item.appendChild(bottom);
+      el.studentHistoryList.appendChild(item);
+    });
+  }
+
+  function renderStudentWrongQuestions(list) {
+    el.studentWrongLabel.textContent = t('studentWrongPrefix') + ' (' + list.length + ')';
+    el.studentWrongList.innerHTML = '';
+    if (!list.length) {
+      setStudentMessage(el.studentWrongList, t('studentNoWrong'));
+      return;
+    }
+    list.forEach(function (entry) {
+      var q = entry.question;
+      var item = document.createElement('div');
+      item.className = 'saved-item';
+
+      var text = document.createElement('button');
+      text.type = 'button';
+      text.className = 'saved-item-text';
+      var qText = document.createElement('p');
+      qText.className = 'saved-item-question';
+      qText.textContent = qField(q, 'question');
+      var qMeta = document.createElement('p');
+      qMeta.className = 'saved-item-meta';
+      qMeta.textContent = vehicleLabel(entry.vehicle) + ' · ' + categoryLabel(q.category);
+      text.appendChild(qText);
+      text.appendChild(qMeta);
+      text.addEventListener('click', function () { showQuestionDetail(q, {}); });
+
+      item.appendChild(text);
+      el.studentWrongList.appendChild(item);
+    });
+  }
+
+  el.studentBackBtn.addEventListener('click', showAnalyticsMainView);
 
   el.analyticsBtn.addEventListener('click', openAnalytics);
   el.closeAnalyticsBtn.addEventListener('click', closeAnalytics);
@@ -2559,7 +2775,10 @@
       renderResultsReview();
     }
     if (el.progressOverlay.classList.contains('show')) loadProgress();
-    if (el.analyticsOverlay.classList.contains('show')) loadAnalytics();
+    if (el.analyticsOverlay.classList.contains('show')) {
+      loadAnalytics();
+      if (state.currentStudent) openStudentDetail(state.currentStudent);
+    }
     if (el.savedQuestionsOverlay.classList.contains('show')) loadSavedQuestionsList();
     if (el.manageUsersOverlay.classList.contains('show')) {
       loadUsersList();

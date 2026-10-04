@@ -22,9 +22,11 @@ or use it directly in the browser from the same page.
   (each username maps to a synthetic, never-emailed address under the hood).
   There's no self-signup: accounts are created by an admin or supervisor from
   the in-app "Χρήστες" (Users) screen. Three roles: **admin** (sees and manages
-  everyone), **supervisor** (driving school — manages up to 10 of their own
-  users), and **user** (regular quiz-taker, under a supervisor or directly
-  under the admin). Each account's data is isolated with Row Level Security.
+  everyone), **supervisor** (driving school — manages up to 5 of their own
+  users and can open each one's full quiz history and the questions they
+  are still getting wrong), and **user** (regular quiz-taker,
+  under a supervisor or directly under the admin). Each account's data is
+  isolated with Row Level Security.
 - **Progress tracking** — every completed quiz is saved to your account, with
   a summary screen showing your overall average, per-vehicle breakdown, and
   recent attempt history. Syncs across installs/machines under the same login.

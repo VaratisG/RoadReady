@@ -435,24 +435,45 @@
           </button>
         </div>
 
-        <div class="setting-row">
-          <p class="progress-summary-percent" id="analyticsOverallPercent">—</p>
-          <p class="progress-summary-sub" id="analyticsOverallSub" data-i18n="noTestsYetAlt">Δεν υπάρχουν ακόμα τεστ.</p>
+        <div id="analyticsMainView">
+          <div class="setting-row">
+            <p class="progress-summary-percent" id="analyticsOverallPercent">—</p>
+            <p class="progress-summary-sub" id="analyticsOverallSub" data-i18n="noTestsYetAlt">Δεν υπάρχουν ακόμα τεστ.</p>
+          </div>
+
+          <div class="setting-row" id="analyticsUserCountsRow">
+            <p class="setting-label" data-i18n="navUsers">Χρήστες</p>
+            <p class="setting-value" id="analyticsUserCounts">—</p>
+          </div>
+
+          <p class="setting-label" id="analyticsStudentsLabel" hidden data-i18n="studentsLabel">Μαθητές</p>
+          <div id="analyticsStudents"></div>
+
+          <p class="setting-label" id="analyticsVehicleLabel" hidden data-i18n="byVehicleLabel">Ανά κατηγορία</p>
+          <div id="analyticsByVehicle"></div>
+
+          <p class="setting-label" id="analyticsSupervisorLabel" hidden data-i18n="bySupervisorLabel">Ανά επόπτη</p>
+          <div id="analyticsBySupervisor"></div>
+
+          <p class="setting-label" id="analyticsRecentLabel" hidden data-i18n="recentActivityLabel">Πρόσφατη δραστηριότητα</p>
+          <div id="analyticsRecentList"></div>
         </div>
 
-        <div class="setting-row">
-          <p class="setting-label" data-i18n="navUsers">Χρήστες</p>
-          <p class="setting-value" id="analyticsUserCounts">—</p>
+        <div id="studentDetailView" hidden>
+          <button class="btn ghost student-back" id="studentBackBtn" type="button" data-i18n="backBtn">Πίσω</button>
+          <p class="student-detail-name" id="studentDetailName"></p>
+
+          <div class="setting-row">
+            <p class="progress-summary-percent" id="studentSummaryPercent">—</p>
+            <p class="progress-summary-sub" id="studentSummarySub"></p>
+          </div>
+
+          <p class="setting-label" id="studentHistoryLabel" data-i18n="studentHistoryLabel">Ιστορικό τεστ</p>
+          <div id="studentHistoryList"></div>
+
+          <p class="setting-label" id="studentWrongLabel"></p>
+          <div id="studentWrongList"></div>
         </div>
-
-        <p class="setting-label" id="analyticsVehicleLabel" hidden data-i18n="byVehicleLabel">Ανά κατηγορία</p>
-        <div id="analyticsByVehicle"></div>
-
-        <p class="setting-label" id="analyticsSupervisorLabel" hidden data-i18n="bySupervisorLabel">Ανά επόπτη</p>
-        <div id="analyticsBySupervisor"></div>
-
-        <p class="setting-label" id="analyticsRecentLabel" hidden data-i18n="recentActivityLabel">Πρόσφατη δραστηριότητα</p>
-        <div id="analyticsRecentList"></div>
       </div>
     </div>
 

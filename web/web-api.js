@@ -210,14 +210,37 @@
         var sb = r[0], meta = r[1];
         return Promise.all([
           sb.from('profiles').select('id, username, role, supervisor_id'),
-          sb.from('attempts').select('user_id, vehicle, correct, total, completed_at').order('completed_at', { ascending: false })
+          sb.from('attempts').select('user_id, vehicle, correct, total, completed_at').order('completed_at', { ascending: false }),
+          sb.auth.getSession()
         ]).then(function (res) {
           var profiles = unwrap(res[0]);
           var attempts = unwrap(res[1]);
+          var myId = res[2].data.session && res[2].data.session.user.id;
           var vLabel = function (v) { return meta.vehicleLabels[v] || v; };
 
           var profileById = {};
           profiles.forEach(function (p) { profileById[p.id] = p; });
+
+          // RLS: an admin gets everyone's rows, a supervisor their users' rows (plus their own).
+          var callerRole = profileById[myId] ? profileById[myId].role : 'user';
+          var studentIds = new Set(profiles.filter(function (p) { return p.role === 'user'; }).map(function (p) { return p.id; }));
+          if (callerRole === 'supervisor') {
+            // A supervisor's statistics are about their users, not their own practice.
+            attempts = attempts.filter(function (a) { return studentIds.has(a.user_id); });
+          }
+
+          var students = profiles.filter(function (p) { return p.role === 'user'; }).map(function (p) {
+            var own = attempts.filter(function (a) { return a.user_id === p.id; });
+            var c = 0, t = 0;
+            own.forEach(function (a) { c += a.correct; t += a.total; });
+            return {
+              id: p.id,
+              username: p.username,
+              attemptCount: own.length,
+              avgPercent: pct(c, t),
+              lastActivity: own.length ? own[0].completed_at : null
+            };
+          });
           var roleCounts = { admin: 0, supervisor: 0, user: 0 };
           profiles.forEach(function (p) { roleCounts[p.role] = (roleCounts[p.role] || 0) + 1; });
 
@@ -248,6 +271,8 @@
           var directIds = new Set(profiles.filter(function (p) { return p.role === 'user' && !p.supervisor_id; }).map(function (p) { return p.id; }));
 
           return {
+            role: callerRole,
+            students: students,
             userCounts: roleCounts,
             attemptCount: attempts.length,
             overallPercent: pct(totalCorrect, totalQuestions),
@@ -336,6 +361,48 @@
           total: total
         });
       }).then(unwrap);
+    },
+
+    // RLS decides who may read these: a supervisor only gets their own users',
+    // an admin anyone's, everyone else only their own.
+    get_user_history: function (userId, limit) {
+      return getClient().then(function (sb) {
+        return sb.from('attempts')
+          .select('id, vehicle, section_id, section_label, correct, total, completed_at')
+          .eq('user_id', userId)
+          .order('completed_at', { ascending: false })
+          .limit(limit || 200);
+      }).then(function (res) {
+        return unwrap(res).map(function (r) {
+          return {
+            id: r.id,
+            vehicle: r.vehicle,
+            sectionLabel: r.section_label,
+            correct: r.correct,
+            total: r.total,
+            completedAt: r.completed_at
+          };
+        });
+      });
+    },
+
+    get_user_wrong_questions: function (userId) {
+      return getClient().then(function (sb) {
+        return sb.from('wrong_questions')
+          .select('vehicle, question_id, created_at')
+          .eq('user_id', userId)
+          .order('created_at', { ascending: false });
+      }).then(function (res) {
+        var rows = unwrap(res);
+        var vehicles = Array.from(new Set(rows.map(function (r) { return r.vehicle; })));
+        return Promise.all(vehicles.map(function (v) { return questionsById(v); })).then(function (banks) {
+          var byVehicle = {};
+          vehicles.forEach(function (v, i) { byVehicle[v] = banks[i]; });
+          return rows.filter(function (r) { return byVehicle[r.vehicle][r.question_id]; }).map(function (r) {
+            return { vehicle: r.vehicle, since: r.created_at, question: byVehicle[r.vehicle][r.question_id] };
+          });
+        });
+      });
     },
 
     get_history: function (limit) {

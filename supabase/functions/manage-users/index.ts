@@ -13,7 +13,7 @@
 
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
-const MAX_USERS_PER_SUPERVISOR = 10;
+const MAX_USERS_PER_SUPERVISOR = 5;
 
 // Needed so the browser version of the app (served from another origin) can
 // call this function. Access is still gated by the caller's JWT below.
