@@ -10,7 +10,7 @@ from pathlib import Path
 import webview
 from supabase import AuthApiError, create_client
 
-APP_VERSION = "1.0.5"
+APP_VERSION = "1.0.6"
 
 SUPABASE_URL = "https://nzuobxttcvdqqzsmcgmv.supabase.co"
 SUPABASE_ANON_KEY = (
