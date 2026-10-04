@@ -265,6 +265,17 @@ body {
   max-width: 360px;
   margin: 0 auto;
 }
+/* Login form: fields and button grouped in a card. */
+#authForm {
+  max-width: 380px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+#authForm .auth-input { background: var(--bg); }
+
 .auth-field[hidden] { display: none; }
 .auth-field {
   display: flex;
