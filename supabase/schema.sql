@@ -1,6 +1,6 @@
 -- RoadReady Supabase schema.
 -- Run this once in the target project's SQL Editor (Dashboard -> SQL Editor)
--- before pointing app/main.py's SUPABASE_URL / SUPABASE_ANON_KEY at it.
+-- before pointing desktop/main.py's SUPABASE_URL / SUPABASE_ANON_KEY at it.
 
 create table attempts (
   id bigint generated always as identity primary key,

@@ -2,10 +2,10 @@
 ; Builds a per-user installer (no admin rights needed) wrapping dist\RoadReady.exe.
 ;
 ; Build with the Inno Setup Compiler:
-;   ISCC.exe installer\RoadReady.iss
-; Output: installer\Output\RoadReadySetup.exe
+;   ISCC.exe desktop\installer\RoadReady.iss
+; Output: desktop\installer\Output\RoadReadySetup.exe
 ;
-; Keep MyAppVersion in sync with APP_VERSION in app/main.py and the
+; Keep MyAppVersion in sync with APP_VERSION in desktop/main.py and the
 ; `app_version` row in Supabase (see supabase/schema.sql) whenever you cut a
 ; new release.
 
@@ -31,7 +31,7 @@ OutputDir=Output
 OutputBaseFilename=RoadReadySetup
 Compression=lzma2
 SolidCompression=yes
-SetupIconFile=..\design\app-icon.ico
+SetupIconFile=..\..\design\app-icon.ico
 UninstallDisplayIcon={app}\{#MyAppExeName}
 WizardStyle=modern
 
@@ -39,7 +39,7 @@ WizardStyle=modern
 Name: "desktopicon"; Description: "Δημιουργία εικονιδίου στην Επιφάνεια εργασίας"; GroupDescription: "Πρόσθετες συντομεύσεις:"
 
 [Files]
-Source: "..\dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\dist\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

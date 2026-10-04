@@ -4,20 +4,23 @@ Run from the repo root with the project venv:
     .venv\\Scripts\\python.exe web\\build_web.py
 
 docs/app/ is generated: it is a copy of frontend/ plus the question data, a
-meta.json derived from app/main.py, and the browser API adapter in web/.
-Re-run it whenever frontend/, app/data/ or the category tables in app/main.py change.
+meta.json derived from desktop/main.py, and the browser API adapter in web/.
+Re-run it whenever frontend/, data/ or the category tables in desktop/main.py change.
 """
+import importlib.util
 import json
 import re
 import shutil
-import sys
 import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
 
-from app import main as backend  # noqa: E402
+# Loaded by path (not `import desktop.main`) so the category tables and
+# question-file list stay defined in one place, the desktop backend.
+_spec = importlib.util.spec_from_file_location("roadready_backend", ROOT / "desktop" / "main.py")
+backend = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(backend)
 
 OUT = ROOT / "docs" / "app"
 

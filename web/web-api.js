@@ -1,4 +1,4 @@
-/* Browser stand-in for the desktop app's Python backend (app/main.py).
+/* Browser stand-in for the desktop app's Python backend (desktop/main.py).
  * The frontend calls window.pywebview.api.*; here the same methods are
  * implemented on top of supabase-js plus static JSON files, so app.js runs
  * unchanged. Included only in the web build (see web/build_web.py). */

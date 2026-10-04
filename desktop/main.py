@@ -87,7 +87,7 @@ else:
     ROOT_DIR = Path(__file__).resolve().parent.parent
 
 FRONTEND_DIR = ROOT_DIR / "frontend"
-DATA_DIR = ROOT_DIR / "app" / "data"
+DATA_DIR = ROOT_DIR / "data"
 
 SIMULATION_SIZE = 30
 

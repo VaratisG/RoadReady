@@ -7,6 +7,7 @@ internet connection and a signed-in account, since progress, mistakes, and
 saved questions sync to a Supabase backend.
 
 **[Download the latest version](https://varatisg.github.io/RoadReady/)**
+or use it directly in the browser from the same page.
 
 ## Features
 
@@ -50,19 +51,33 @@ saved questions sync to a Supabase backend.
 ## Project structure
 
 ```
-app/                  Python backend (pywebview entry point + Api class)
-  main.py             Window setup, question/history API, title-bar theming
-  data/                *.seed.json question banks, one per vehicle
-frontend/             The web UI loaded into the pywebview window
+frontend/              The UI, shared by the Windows app and the browser version
   index.html
-  scripts/app.js       All UI logic (screens, quiz flow, settings, progress)
-  styles/              app.css, tokens.css (design tokens / theme variables)
-  assets/              icons, sign images, background art, brand logo
-design/                Source design assets (app icon, background pattern
-                       originals) before they were processed into frontend/
-docs/                  Project planning notes and an early static HTML mockup
-RoadReady.spec         PyInstaller build spec
-run-dev.bat            Launches the app from source (no build step)
+  scripts/app.js        All UI logic (screens, quiz flow, settings, progress)
+  styles/               app.css, tokens.css (design tokens / theme variables)
+  assets/               icons, sign images, background art, brand logo
+data/                  *.seed.json question banks (Greek + English), one per
+                       vehicle; used by both the desktop and the web build
+desktop/               The Windows app
+  main.py              pywebview window + Python backend (talks to Supabase)
+  RoadReady.spec       PyInstaller build spec
+  installer/           Inno Setup script for the installer
+  run-dev.bat          Launches the app from source (no build step)
+  requirements*.txt    Runtime and build dependencies
+web/                   The browser version
+  web-api.js           Browser stand-in for the Python backend (Supabase JS)
+  web.css              Phone layout and other web-only tweaks
+  build_web.py         Generates docs/app/ from frontend/ + data/
+supabase/              Database schema and the manage-users Edge Function
+docs/                  GitHub Pages site: landing page + generated docs/app/
+design/                Source design assets (icon, splash, artwork)
+```
+
+`docs/app/` is generated — don't edit it by hand. After changing `frontend/`,
+`data/` or the category tables in `desktop/main.py`, regenerate it:
+
+```bash
+.venv\Scripts\python web\build_web.py
 ```
 
 ## Running it
@@ -71,20 +86,20 @@ Requires Python 3 and a virtual environment with the dependencies installed:
 
 ```bash
 python -m venv .venv
-.venv\Scripts\pip install -r requirements.txt
+.venv\Scripts\pip install -r desktop\requirements.txt
 ```
 
-Then either double-click `run-dev.bat`, or:
+Then either double-click `desktop\run-dev.bat`, or:
 
 ```bash
-.venv\Scripts\python app\main.py
+.venv\Scripts\python desktop\main.py
 ```
 
 ## Building the `.exe`
 
 ```bash
-.venv\Scripts\pip install -r requirements-build.txt
-.venv\Scripts\pyinstaller RoadReady.spec
+.venv\Scripts\pip install -r desktop\requirements-build.txt
+.venv\Scripts\pyinstaller desktop\RoadReady.spec
 ```
 
 The finished executable is written to `dist/RoadReady.exe` — a single file,
@@ -98,13 +113,13 @@ checks Supabase on launch to see if a newer version is available. To cut a
 new release:
 
 1. Bump the version in two places, kept in sync by hand:
-   - `APP_VERSION` near the top of `app/main.py`
-   - `MyAppVersion` near the top of `installer/RoadReady.iss`
+   - `APP_VERSION` near the top of `desktop/main.py`
+   - `MyAppVersion` near the top of `desktop/installer/RoadReady.iss`
 2. Rebuild the exe (see above), then compile the installer:
    ```bash
-   "C:\Users\<you>\AppData\Local\Programs\Inno Setup 6\ISCC.exe" installer\RoadReady.iss
+   "C:\Users\<you>\AppData\Local\Programs\Inno Setup 6\ISCC.exe" desktop\installer\RoadReady.iss
    ```
-   This produces `installer/Output/RoadReadySetup.exe` (per-user install, no
+   This produces `desktop/installer/Output/RoadReadySetup.exe` (per-user install, no
    admin rights needed — installs to `%LocalAppData%\Programs\RoadReady`).
 3. Commit and push, then tag the release (e.g. `git tag v1.0.1 && git push --tags`)
    and create a [GitHub Release](https://github.com/VaratisG/RoadReady/releases/new)
@@ -126,7 +141,7 @@ new release:
 
 Question content, sign images, and category icons were originally sourced
 from a Greek driving-theory practice website. The tooling used to gather that
-content isn't part of this repo — only the resulting `app/data/*.seed.json`
+content isn't part of this repo — only the resulting `data/*.seed.json`
 question banks are included.
 
 ## Backend setup
@@ -140,7 +155,8 @@ this against your own project:
    Row Level Security policies.
 3. Copy the project's URL and `anon` public key (Settings -> API) into the
    `SUPABASE_URL` / `SUPABASE_ANON_KEY` constants near the top of
-   `app/main.py`. Never use the `service_role` key here — RLS is what makes
+   `desktop/main.py` (and `web/web-api.js` for the browser version). Never use
+   the `service_role` key here — RLS is what makes
    the anon key safe to embed in a distributed `.exe`.
 4. **Disable "Confirm email"** under Authentication -> Providers -> Email.
    This is required, not optional: usernames map to synthetic addresses at

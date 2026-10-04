@@ -1,11 +1,19 @@
 # -*- mode: python ; coding: utf-8 -*-
+# Build from the repo root:  pyinstaller desktop\RoadReady.spec
+import os
+
+ROOT = os.path.dirname(SPECPATH)  # repo root; SPECPATH is this file's folder
+
+
+def p(*parts):
+    return os.path.join(ROOT, *parts)
 
 
 a = Analysis(
-    ['app/main.py'],
+    [p('desktop', 'main.py')],
     pathex=[],
     binaries=[],
-    datas=[('frontend', 'frontend'), ('app/data', 'app/data')],
+    datas=[(p('frontend'), 'frontend'), (p('data'), 'data')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -17,7 +25,7 @@ a = Analysis(
 pyz = PYZ(a.pure)
 
 splash = Splash(
-    'design/splash.png',
+    p('design', 'splash.png'),
     binaries=a.binaries,
     datas=a.datas,
     text_pos=None,
@@ -47,5 +55,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='design/app-icon.ico',
+    icon=p('design', 'app-icon.ico'),
 )

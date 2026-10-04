@@ -3,7 +3,7 @@ __pycache__/
 *.pyc
 build/
 dist/
-installer/Output/
+desktop/installer/Output/
 scraper/
 .claude/
 RELEASE_WORKFLOW.md
