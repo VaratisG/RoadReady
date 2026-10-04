@@ -506,13 +506,13 @@
   var ICON_TRASH = '<svg viewBox="0 0 16 16" fill="none"><path d="M3 4.5H13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 4.5V3.2C6 2.6 6.5 2 7.2 2H8.8C9.5 2 10 2.6 10 3.2V4.5" stroke="currentColor" stroke-width="1.4"/><path d="M4.5 4.5L5 13C5 13.6 5.5 14 6 14H10C10.5 14 11 13.6 11 13L11.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>';
   var ICON_EDIT = '<svg viewBox="0 0 16 16" fill="none"><path d="M11.3 2.3a1.6 1.6 0 0 1 2.4 2.4L5.4 13 2 14l1-3.4 8.3-8.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/></svg>';
 
-  var PAGE_SIZE = 10;
-  var PAGE_SIZE_NARROW = 5;
-  var narrowMql = window.matchMedia ? window.matchMedia('(max-width: 700px)') : null;
+  // Each menu page shows PAGE_ROWS rows; how many columns actually fit depends
+  // on the screen (measured after rendering), so narrow screens get more pages.
+  var PAGE_ROWS = 5;
+  var menuColumns = 2;
 
-  // Narrow screens get a single column, so each page holds fewer items.
   function pageSize() {
-    return narrowMql && narrowMql.matches ? PAGE_SIZE_NARROW : PAGE_SIZE;
+    return menuColumns * PAGE_ROWS;
   }
 
   var el = {
@@ -1310,16 +1310,34 @@
     el.pagePrevBtn.disabled = state.page === 0;
     el.pageNextBtn.disabled = state.page >= totalPages - 1;
     el.menuPagination.style.display = totalPages > 1 ? 'flex' : 'none';
+
+    syncMenuColumns();
   }
 
-  var renderedPageSize = pageSize();
-  if (narrowMql && narrowMql.addEventListener) {
-    narrowMql.addEventListener('change', function () {
-      var newSize = pageSize();
-      state.page = Math.floor((state.page * renderedPageSize) / newSize);
-      renderedPageSize = newSize;
-      if (state.categorySections.length) renderMenuPage();
-    });
+  function measureMenuColumns() {
+    var items = el.menuList.children;
+    if (items.length < 2 || !el.menuList.clientWidth) return menuColumns;
+    var firstTop = items[0].offsetTop;
+    var n = 0;
+    while (n < items.length && items[n].offsetTop === firstTop) n++;
+    return n;
+  }
+
+  // Returns true (after re-rendering) if the number of columns that fit changed.
+  function syncMenuColumns() {
+    var measured = measureMenuColumns();
+    if (measured === menuColumns) return false;
+    var oldSize = pageSize();
+    menuColumns = measured;
+    state.page = Math.floor((state.page * oldSize) / pageSize());
+    renderMenuPage();
+    return true;
+  }
+
+  if (window.ResizeObserver) {
+    new ResizeObserver(function () {
+      if (state.categorySections.length) syncMenuColumns();
+    }).observe(el.menuList);
   }
 
   el.pagePrevBtn.addEventListener('click', function () {
@@ -1534,6 +1552,7 @@
   }
 
   function renderQuizQuestion() {
+    cancelScrollAnimation();
     el.screenQuiz.scrollTop = 0;
 
     var total = state.questions.length;
@@ -1636,11 +1655,76 @@
     el.quizFeedback.innerHTML = '<b>' + verdict.label + '</b>' + (explanation ? ' ' + explanation : '');
   }
 
+  var lastUserScrollAt = 0;
+  ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (evt) {
+    el.screenQuiz.addEventListener(evt, function () {
+      lastUserScrollAt = Date.now();
+      cancelScrollAnimation();
+    }, { passive: true });
+  });
+
+  // The browser's own smooth scroll can't be cancelled reliably (it keeps
+  // running after a later scrollTop reset and drags the next question down),
+  // so the quiz screen is animated by hand and can be stopped at any time.
+  var scrollAnimId = 0;
+  function cancelScrollAnimation() {
+    scrollAnimId++;
+  }
+  function animateScrollBy(delta, smooth) {
+    var id = ++scrollAnimId;
+    var scroller = el.screenQuiz;
+    var start = scroller.scrollTop;
+    var target = Math.max(0, Math.min(start + delta, scroller.scrollHeight - scroller.clientHeight));
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!smooth || reduceMotion) {
+      scroller.scrollTop = target;
+      return;
+    }
+    var startedAt = null;
+    function step(now) {
+      if (id !== scrollAnimId) return;
+      if (startedAt === null) startedAt = now;
+      var k = Math.min(1, (now - startedAt) / 300);
+      scroller.scrollTop = start + (target - start) * (1 - Math.pow(1 - k, 3));
+      if (k < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Brings the Next/Submit row into view after answering, but never at the cost
+  // of the explanation: if explanation + buttons don't both fit on screen, the
+  // explanation's first line wins and the user scrolls for the rest.
+  function revealAnswerResult(smooth) {
+    var topLimit = el.sectionBanner.getBoundingClientRect().bottom + 8;
+    var bottomLimit = document.querySelector('.app-footer').getBoundingClientRect().top - 12;
+    var nav = el.quizNavRow.getBoundingClientRect();
+    var fb = el.quizFeedback.getBoundingClientRect();
+    var hasFeedback = el.quizFeedback.classList.contains('show') && fb.height > 0;
+
+    var startHidden = hasFeedback && fb.top < topLimit - 1;
+    var delta = startHidden
+      ? fb.top - topLimit
+      : Math.min(nav.bottom - bottomLimit, hasFeedback ? fb.top - topLimit : Infinity);
+    if (Math.abs(delta) < 2 || (delta < 0 && !startHidden)) return;
+    animateScrollBy(delta, smooth);
+  }
+
   function selectAnswer(idx) {
-    state.selected[state.index] = idx;
-    renderAnswers(state.questions[state.index]);
-    requestAnimationFrame(function () {
-      el.quizNavRow.scrollIntoView({ block: 'end', behavior: 'smooth' });
+    var questionIndex = state.index;
+    var answeredAt = Date.now();
+    state.selected[questionIndex] = idx;
+    renderAnswers(state.questions[questionIndex]);
+
+    requestAnimationFrame(function () { revealAnswerResult(true); });
+
+    // Layout can still shift after the first scroll (late fonts, a browser
+    // toolbar resizing the page); re-check unless the user has taken over.
+    [450, 1100].forEach(function (delay) {
+      setTimeout(function () {
+        if (state.screen !== 'quiz' || state.index !== questionIndex) return;
+        if (lastUserScrollAt > answeredAt) return;
+        revealAnswerResult(false);
+      }, delay);
     });
   }
 

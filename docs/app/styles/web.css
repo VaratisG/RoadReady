@@ -23,6 +23,16 @@ html.web .app {
   width: 100%;
 }
 
+/* Columns collapse by available width, not by device: two columns only when
+   each can be at least this wide, otherwise one. app.js measures the result
+   and shows 5 rows per page, so fewer columns means more pages. */
+html.web .menu-list {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+}
+html.web .quiz-answers {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+}
+
 /* The desktop layout assumes a 960px+ window; make it usable on phones. */
 @media (max-width: 700px) {
   html.web .topbar { padding: 0 12px; gap: 6px; }
@@ -44,12 +54,6 @@ html.web .app {
   html.web #screen-home {
     padding-left: 16px;
     padding-right: 16px;
-  }
-
-  /* One column on narrow screens; app.js shows fewer items per page to match. */
-  html.web .menu-list,
-  html.web .quiz-answers {
-    grid-template-columns: 1fr;
   }
   html.web .quiz-card { padding-left: 18px; padding-right: 18px; }
 }
