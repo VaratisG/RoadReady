@@ -20,6 +20,9 @@ create table wrong_questions (
   question_id text not null,
   category text not null,
   created_at timestamptz not null default now(),
+  -- Index of the answer the user most recently picked wrongly (null for rows
+  -- recorded before this column existed). Lets a supervisor see what they chose.
+  selected_index int,
   unique (user_id, vehicle, question_id)
 );
 

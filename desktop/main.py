@@ -668,13 +668,22 @@ class Api:
     def get_user_wrong_questions(self, user_id):
         # The questions this user is currently still getting wrong (same RLS
         # rules as get_user_history), resolved to full question objects.
-        res = (
-            supabase.table("wrong_questions")
-            .select("vehicle, question_id, created_at")
-            .eq("user_id", user_id)
-            .order("created_at", desc=True)
-            .execute()
-        )
+        def fetch(columns):
+            return (
+                supabase.table("wrong_questions")
+                .select(columns)
+                .eq("user_id", user_id)
+                .order("created_at", desc=True)
+                .execute()
+            )
+
+        try:
+            res = fetch("vehicle, question_id, created_at, selected_index")
+        except Exception as e:
+            if "selected_index" not in str(e):
+                raise
+            res = fetch("vehicle, question_id, created_at")  # column not added yet
+
         banks = {}
         result = []
         for r in res.data:
@@ -682,7 +691,12 @@ class Api:
                 banks[r["vehicle"]] = {q["id"]: q for q in self._load_questions(r["vehicle"])}
             q = banks[r["vehicle"]].get(r["question_id"])
             if q:
-                result.append({"vehicle": r["vehicle"], "since": r["created_at"], "question": q})
+                result.append({
+                    "vehicle": r["vehicle"],
+                    "since": r["created_at"],
+                    "selected": r.get("selected_index"),
+                    "question": q,
+                })
         return result
 
     def get_history(self, limit=20):
@@ -747,11 +761,25 @@ class Api:
                     .execute()
                 )
             else:
-                supabase.table("wrong_questions").upsert(
-                    {"vehicle": vehicle, "question_id": r["id"], "category": r.get("category", "")},
-                    on_conflict="user_id,vehicle,question_id",
-                    ignore_duplicates=True,
-                ).execute()
+                row = {
+                    "vehicle": vehicle,
+                    "question_id": r["id"],
+                    "category": r.get("category", ""),
+                    "selected_index": r.get("selected"),
+                }
+                try:
+                    # Updates an existing row too, so it always holds the latest wrong answer.
+                    supabase.table("wrong_questions").upsert(
+                        row, on_conflict="user_id,vehicle,question_id"
+                    ).execute()
+                except Exception as e:
+                    if "selected_index" not in str(e):
+                        raise
+                    # The selected_index column hasn't been added to the database yet.
+                    row.pop("selected_index")
+                    supabase.table("wrong_questions").upsert(
+                        row, on_conflict="user_id,vehicle,question_id", ignore_duplicates=True
+                    ).execute()
 
     def get_wrong_count(self, vehicle):
         res = supabase.table("wrong_questions").select("id", count="exact").eq("vehicle", vehicle).execute()

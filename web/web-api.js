@@ -388,10 +388,16 @@
 
     get_user_wrong_questions: function (userId) {
       return getClient().then(function (sb) {
-        return sb.from('wrong_questions')
-          .select('vehicle, question_id, created_at')
-          .eq('user_id', userId)
-          .order('created_at', { ascending: false });
+        function fetchRows(columns) {
+          return sb.from('wrong_questions').select(columns).eq('user_id', userId).order('created_at', { ascending: false });
+        }
+        return fetchRows('vehicle, question_id, created_at, selected_index').then(function (res) {
+          // The selected_index column hasn't been added to the database yet.
+          if (res.error && String(res.error.message).indexOf('selected_index') !== -1) {
+            return fetchRows('vehicle, question_id, created_at');
+          }
+          return res;
+        });
       }).then(function (res) {
         var rows = unwrap(res);
         var vehicles = Array.from(new Set(rows.map(function (r) { return r.vehicle; })));
@@ -399,7 +405,12 @@
           var byVehicle = {};
           vehicles.forEach(function (v, i) { byVehicle[v] = banks[i]; });
           return rows.filter(function (r) { return byVehicle[r.vehicle][r.question_id]; }).map(function (r) {
-            return { vehicle: r.vehicle, since: r.created_at, question: byVehicle[r.vehicle][r.question_id] };
+            return {
+              vehicle: r.vehicle,
+              since: r.created_at,
+              selected: r.selected_index === undefined ? null : r.selected_index,
+              question: byVehicle[r.vehicle][r.question_id]
+            };
           });
         });
       });
@@ -447,14 +458,26 @@
       return getClient().then(function (sb) {
         var right = results.filter(function (r) { return r.correct; }).map(function (r) { return r.id; });
         var wrong = results.filter(function (r) { return !r.correct; }).map(function (r) {
-          return { vehicle: vehicle, question_id: r.id, category: r.category || '' };
+          return {
+            vehicle: vehicle,
+            question_id: r.id,
+            category: r.category || '',
+            selected_index: r.selected === undefined ? null : r.selected
+          };
         });
+        var conflict = 'user_id,vehicle,question_id';
         var jobs = [];
         if (right.length) {
           jobs.push(sb.from('wrong_questions').delete().eq('vehicle', vehicle).in('question_id', right));
         }
         if (wrong.length) {
-          jobs.push(sb.from('wrong_questions').upsert(wrong, { onConflict: 'user_id,vehicle,question_id', ignoreDuplicates: true }));
+          // Updates existing rows too, so each one holds the latest wrong answer.
+          jobs.push(sb.from('wrong_questions').upsert(wrong, { onConflict: conflict }).then(function (res) {
+            if (!res.error || String(res.error.message).indexOf('selected_index') === -1) return res;
+            // The selected_index column hasn't been added to the database yet.
+            var plain = wrong.map(function (w) { return { vehicle: w.vehicle, question_id: w.question_id, category: w.category }; });
+            return sb.from('wrong_questions').upsert(plain, { onConflict: conflict, ignoreDuplicates: true });
+          }));
         }
         return Promise.all(jobs);
       }).then(function (all) { all.forEach(unwrap); });

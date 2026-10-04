@@ -1024,6 +1024,15 @@ body {
 .progress-vehicle-label { font-weight: 600; }
 .progress-vehicle-value { color: var(--ink-soft); }
 
+/* Statistics: a divider line above every section heading. Direct children
+   only, so the labels inside the summary cards are left alone. */
+#analyticsMainView > .setting-label,
+#studentDetailView > .setting-label {
+  margin: 24px 0 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
 .student-row {
   display: flex;
   align-items: center;

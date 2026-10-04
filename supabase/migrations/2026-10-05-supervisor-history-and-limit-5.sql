@@ -2,12 +2,18 @@
 -- gets all of this from schema.sql). Safe to run more than once.
 --
 -- 1. Lets supervisors read the quiz history and the "still wrong" questions of
---    the users under them (admins can already read all attempts; they now get
---    the wrong questions too).
+--    the users under them, and admins read everyone's (re-creating the admin
+--    attempts policy in case an older project never had it).
 -- 2. Lowers the per-supervisor user limit from 10 to 5.
 --
 -- No tables or columns change, so it is safe to run before or after
 -- publishing the new app/web version.
+
+-- Already part of schema.sql; repeated here so a project that missed it still works.
+create or replace function public.current_role()
+returns text language sql security definer stable as $$
+  select role from profiles where id = auth.uid();
+$$;
 
 create or replace function public.is_my_student(target uuid)
 returns boolean language sql security definer stable as $$
@@ -15,6 +21,11 @@ returns boolean language sql security definer stable as $$
     select 1 from profiles where id = target and supervisor_id = auth.uid()
   );
 $$;
+
+-- Also from schema.sql: lets the admin Statistics screen see everyone's quizzes.
+drop policy if exists "admin sees all attempts" on attempts;
+create policy "admin sees all attempts" on attempts
+  for select using (public.current_role() = 'admin');
 
 drop policy if exists "supervisor sees team attempts" on attempts;
 create policy "supervisor sees team attempts" on attempts

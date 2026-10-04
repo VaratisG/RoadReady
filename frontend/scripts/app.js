@@ -157,6 +157,8 @@
       studentNoHistory: 'Δεν έχει κάνει ακόμα κανένα τεστ.',
       studentWrongPrefix: 'Ερωτήσεις που απαντά ακόμα λάθος',
       studentNoWrong: 'Καμία ερώτηση λάθος αυτή τη στιγμή.',
+      studentAnsweredPrefix: 'Απάντησε: ',
+      studentCorrectPrefix: 'Σωστή: ',
       lastActivityPrefix: 'Τελευταία δραστηριότητα: ',
       neverActive: 'Καμία δραστηριότητα',
       yourUsersSuffix: ', των μαθητών σου'
@@ -308,6 +310,8 @@
       studentNoHistory: "They haven't taken any quizzes yet.",
       studentWrongPrefix: 'Questions still answered wrong',
       studentNoWrong: 'No wrong questions right now.',
+      studentAnsweredPrefix: 'Answered: ',
+      studentCorrectPrefix: 'Correct: ',
       lastActivityPrefix: 'Last activity: ',
       neverActive: 'No activity yet',
       yourUsersSuffix: ', across your students'
@@ -1811,7 +1815,7 @@
     state.questions.forEach(function (q, i) {
       var isCorrect = state.selected[i] === q.correctIndex;
       if (isCorrect) correct += 1;
-      results.push({ id: q.id, category: q.category, correct: isCorrect });
+      results.push({ id: q.id, category: q.category, correct: isCorrect, selected: state.selected[i] });
     });
     var pct = Math.round((correct / total) * 100);
     state.lastResults = { correct: correct, total: total, pct: pct };
@@ -2519,7 +2523,25 @@
       qMeta.textContent = vehicleLabel(entry.vehicle) + ' · ' + categoryLabel(q.category);
       text.appendChild(qText);
       text.appendChild(qMeta);
-      text.addEventListener('click', function () { showQuestionDetail(q, {}); });
+
+      // What the student picked (when it was recorded) next to the right answer.
+      var answers = qAnswers(q);
+      var picked = entry.selected;
+      var hasPicked = picked !== null && picked !== undefined && answers[picked] !== undefined;
+      if (hasPicked) {
+        var wrongLine = document.createElement('p');
+        wrongLine.className = 'review-answer your-wrong';
+        wrongLine.textContent = '✗ ' + t('studentAnsweredPrefix') + answers[picked];
+        text.appendChild(wrongLine);
+      }
+      var rightLine = document.createElement('p');
+      rightLine.className = 'review-answer correct-answer';
+      rightLine.textContent = '✓ ' + t('studentCorrectPrefix') + answers[q.correctIndex];
+      text.appendChild(rightLine);
+
+      text.addEventListener('click', function () {
+        showQuestionDetail(q, hasPicked ? { selected: picked } : {});
+      });
 
       item.appendChild(text);
       el.studentWrongList.appendChild(item);
