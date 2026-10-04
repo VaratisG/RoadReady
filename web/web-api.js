@@ -22,7 +22,13 @@
   }
   setAppHeight();
   window.addEventListener('resize', setAppHeight);
-  window.addEventListener('orientationchange', setAppHeight);
+  // iOS reports the old height for a moment after rotating, so measure again once it settles.
+  window.addEventListener('orientationchange', function () {
+    setAppHeight();
+    setTimeout(setAppHeight, 150);
+    setTimeout(setAppHeight, 500);
+  });
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', setAppHeight);
 
   // A saved session means app.js is about to sign the user in again, so keep
   // the login form hidden meanwhile instead of flashing it.

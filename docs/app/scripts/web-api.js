@@ -1,4 +1,4 @@
-/* Browser stand-in for the desktop app's Python backend (app/main.py).
+/* Browser stand-in for the desktop app's Python backend (desktop/main.py).
  * The frontend calls window.pywebview.api.*; here the same methods are
  * implemented on top of supabase-js plus static JSON files, so app.js runs
  * unchanged. Included only in the web build (see web/build_web.py). */
@@ -22,7 +22,13 @@
   }
   setAppHeight();
   window.addEventListener('resize', setAppHeight);
-  window.addEventListener('orientationchange', setAppHeight);
+  // iOS reports the old height for a moment after rotating, so measure again once it settles.
+  window.addEventListener('orientationchange', function () {
+    setAppHeight();
+    setTimeout(setAppHeight, 150);
+    setTimeout(setAppHeight, 500);
+  });
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', setAppHeight);
 
   // A saved session means app.js is about to sign the user in again, so keep
   // the login form hidden meanwhile instead of flashing it.

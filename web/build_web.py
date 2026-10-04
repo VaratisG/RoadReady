@@ -65,6 +65,8 @@ def main():
                  '<link rel="icon" href="assets/favicon.ico">\n'
                  '<link rel="stylesheet" href="styles/app.css">\n'
                  '<link rel="stylesheet" href="styles/web.css">')
+    html = patch(html, '<meta name="viewport" content="width=device-width, initial-scale=1">',
+                 '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">')
     html = patch(html, '<script src="scripts/app.js"></script>',
                  '<script src="scripts/web-api.js"></script>\n<script src="scripts/app.js"></script>')
     # GitHub Pages caches assets for ~10 minutes; a fresh query string makes
