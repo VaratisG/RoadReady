@@ -4,11 +4,22 @@ html.web .setting-row:has(#fullscreenBtn) {
   display: none;
 }
 
+/* While a saved session is being restored, don't flash the login form. */
+html.restoring #screen-login {
+  visibility: hidden;
+}
+
 /* 100vh on phones includes the area behind the browser's address bar, which
-   pushes the footer off-screen; 100dvh tracks the actually visible height. */
+   pushes the footer off-screen. --app-h is set from window.innerHeight in
+   web-api.js; 100dvh is the fallback. */
+html.web,
+html.web body {
+  overflow: hidden;
+}
 html.web .app {
   height: 100vh;
   height: 100dvh;
+  height: var(--app-h, 100dvh);
   width: 100%;
 }
 
@@ -27,4 +38,18 @@ html.web .app {
     white-space: nowrap;
   }
   html.web .lang-segmented .segment { padding: 6px 8px; }
+
+  html.web #screen-login,
+  html.web #screen-vehicles,
+  html.web #screen-home {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* One column on narrow screens; app.js shows fewer items per page to match. */
+  html.web .menu-list,
+  html.web .quiz-answers {
+    grid-template-columns: 1fr;
+  }
+  html.web .quiz-card { padding-left: 18px; padding-right: 18px; }
 }

@@ -8,8 +8,10 @@ meta.json derived from app/main.py, and the browser API adapter in web/.
 Re-run it whenever frontend/, app/data/ or the category tables in app/main.py change.
 """
 import json
+import re
 import shutil
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -62,6 +64,10 @@ def main():
                  '<link rel="stylesheet" href="styles/web.css">')
     html = patch(html, '<script src="scripts/app.js"></script>',
                  '<script src="scripts/web-api.js"></script>\n<script src="scripts/app.js"></script>')
+    # GitHub Pages caches assets for ~10 minutes; a fresh query string makes
+    # browsers (especially phones) pick up each rebuild immediately.
+    build_id = str(int(time.time()))
+    html = re.sub(r'((?:href|src)="(?:styles|scripts)/[^"?]+)"', rf'\1?v={build_id}"', html)
     index.write_text(html, encoding="utf-8")
 
     size_mb = sum(f.stat().st_size for f in OUT.rglob("*") if f.is_file()) / 1e6

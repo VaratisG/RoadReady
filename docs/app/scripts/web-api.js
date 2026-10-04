@@ -12,7 +12,27 @@
   var SUPABASE_JS_URL = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js';
   var USERNAME_EMAIL_DOMAIN = 'roadready.local';
 
-  document.documentElement.classList.add('web');
+  var root = document.documentElement;
+  root.classList.add('web');
+
+  // Phones report 100vh as the height with the address bar collapsed, which
+  // pushes the footer off-screen. window.innerHeight is the truly visible height.
+  function setAppHeight() {
+    root.style.setProperty('--app-h', Math.round(window.innerHeight) + 'px');
+  }
+  setAppHeight();
+  window.addEventListener('resize', setAppHeight);
+  window.addEventListener('orientationchange', setAppHeight);
+
+  // A saved session means app.js is about to sign the user in again, so keep
+  // the login form hidden meanwhile instead of flashing it.
+  var SESSION_STORAGE_KEY = 'sb-nzuobxttcvdqqzsmcgmv-auth-token';
+  try {
+    if (localStorage.getItem(SESSION_STORAGE_KEY)) {
+      root.classList.add('restoring');
+      setTimeout(function () { root.classList.remove('restoring'); }, 8000);
+    }
+  } catch (e) {}
 
   var clientPromise = null;
   function getClient() {
@@ -20,7 +40,7 @@
     clientPromise = new Promise(function (resolve, reject) {
       function make() {
         resolve(window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-          auth: { persistSession: false, autoRefreshToken: true, detectSessionInUrl: false }
+          auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false, storageKey: SESSION_STORAGE_KEY }
         }));
       }
       if (window.supabase && window.supabase.createClient) return make();
@@ -126,6 +146,30 @@
       }).catch(function (e) {
         return { ok: false, error: String((e && e.message) || e) };
       });
+    },
+
+    restore_session: function () {
+      function done(result) {
+        root.classList.remove('restoring');
+        return result;
+      }
+      return getClient().then(function (sb) {
+        return sb.auth.getSession().then(function (s) {
+          if (!s.data.session) return { ok: false };
+          return sb.auth.getUser().then(function (u) {
+            if (u.error || !u.data.user) {
+              return sb.auth.signOut().catch(function () {}).then(function () { return { ok: false }; });
+            }
+            return sb.from('profiles').select('*').eq('id', u.data.user.id).single().then(function (p) {
+              return {
+                ok: true,
+                username: (u.data.user.user_metadata && u.data.user.user_metadata.username) || (p.data && p.data.username) || '',
+                role: p.data ? p.data.role : 'user'
+              };
+            });
+          });
+        });
+      }).then(done, function () { return done({ ok: false }); });
     },
 
     sign_out: function () {

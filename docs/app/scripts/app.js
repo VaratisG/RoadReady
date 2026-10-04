@@ -507,6 +507,13 @@
   var ICON_EDIT = '<svg viewBox="0 0 16 16" fill="none"><path d="M11.3 2.3a1.6 1.6 0 0 1 2.4 2.4L5.4 13 2 14l1-3.4 8.3-8.3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/></svg>';
 
   var PAGE_SIZE = 10;
+  var PAGE_SIZE_NARROW = 5;
+  var narrowMql = window.matchMedia ? window.matchMedia('(max-width: 700px)') : null;
+
+  // Narrow screens get a single column, so each page holds fewer items.
+  function pageSize() {
+    return narrowMql && narrowMql.matches ? PAGE_SIZE_NARROW : PAGE_SIZE;
+  }
 
   var el = {
     langSegmented: document.getElementById('langSegmented'),
@@ -767,20 +774,31 @@
     }
   }
 
-  function onAuthSuccess(username, role, remember) {
+  function onAuthSuccess(username, role, remember, restored) {
     state.username = username;
     state.role = role;
     el.accountUsername.textContent = username;
     updateManageUsersAccess();
     el.authForm.reset();
-    try {
-      if (remember) {
-        localStorage.setItem(REMEMBER_USERNAME_KEY, username);
-      } else {
-        localStorage.removeItem(REMEMBER_USERNAME_KEY);
-      }
-    } catch (e) {}
+    if (!restored) {
+      try {
+        if (remember) {
+          localStorage.setItem(REMEMBER_USERNAME_KEY, username);
+        } else {
+          localStorage.removeItem(REMEMBER_USERNAME_KEY);
+        }
+      } catch (e) {}
+    }
     showScreen('vehicles');
+  }
+
+  function restoreSession() {
+    if (!(window.pywebview && window.pywebview.api && window.pywebview.api.restore_session)) return;
+    callApi('restore_session').then(function (res) {
+      if (res && res.ok && state.screen === 'login') {
+        onAuthSuccess(res.username, res.role || 'user', false, true);
+      }
+    }).catch(function () {});
   }
 
   function handleAuthSubmit(e) {
@@ -1276,12 +1294,12 @@
 
   function renderMenuPage() {
     var total = state.categorySections.length;
-    var totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    var totalPages = Math.max(1, Math.ceil(total / pageSize()));
     if (state.page >= totalPages) state.page = totalPages - 1;
     if (state.page < 0) state.page = 0;
 
-    var start = state.page * PAGE_SIZE;
-    var pageItems = state.categorySections.slice(start, start + PAGE_SIZE);
+    var start = state.page * pageSize();
+    var pageItems = state.categorySections.slice(start, start + pageSize());
 
     el.menuList.innerHTML = '';
     pageItems.forEach(function (section) {
@@ -1294,6 +1312,16 @@
     el.menuPagination.style.display = totalPages > 1 ? 'flex' : 'none';
   }
 
+  var renderedPageSize = pageSize();
+  if (narrowMql && narrowMql.addEventListener) {
+    narrowMql.addEventListener('change', function () {
+      var newSize = pageSize();
+      state.page = Math.floor((state.page * renderedPageSize) / newSize);
+      renderedPageSize = newSize;
+      if (state.categorySections.length) renderMenuPage();
+    });
+  }
+
   el.pagePrevBtn.addEventListener('click', function () {
     if (state.page > 0) {
       state.page -= 1;
@@ -1301,7 +1329,7 @@
     }
   });
   el.pageNextBtn.addEventListener('click', function () {
-    var totalPages = Math.max(1, Math.ceil(state.categorySections.length / PAGE_SIZE));
+    var totalPages = Math.max(1, Math.ceil(state.categorySections.length / pageSize()));
     if (state.page < totalPages - 1) {
       state.page += 1;
       renderMenuPage();
@@ -2485,5 +2513,6 @@
   window.addEventListener('pywebviewready', function () {
     syncTitlebarTheme();
     checkForUpdate();
+    restoreSession();
   });
 })();
