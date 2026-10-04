@@ -4,6 +4,14 @@ html.web .setting-row:has(#fullscreenBtn) {
   display: none;
 }
 
+/* 100vh on phones includes the area behind the browser's address bar, which
+   pushes the footer off-screen; 100dvh tracks the actually visible height. */
+html.web .app {
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+}
+
 /* The desktop layout assumes a 960px+ window; make it usable on phones. */
 @media (max-width: 700px) {
   html.web .topbar { padding: 0 12px; gap: 6px; }
