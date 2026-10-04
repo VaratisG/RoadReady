@@ -9,65 +9,18 @@ html.restoring #screen-login {
   visibility: hidden;
 }
 
+/* 100vh on phones includes the area behind the browser's address bar, which
+   pushes the footer off-screen. --app-h is set from window.innerHeight in
+   web-api.js; 100dvh is the fallback. */
 html.web,
 html.web body {
   overflow: hidden;
-  overscroll-behavior: none;
-  -webkit-text-size-adjust: 100%;
-}
-/* iOS Safari ignores overflow:hidden on the page and still scrolls or bounces
-   it (e.g. when a field is focused), which pushes the header out of view.
-   Pinning the body stops the page itself from ever moving; only the screens
-   inside the app scroll.
-   The size comes from pinning all four edges, not from vh/dvh or measuring
-   window.innerHeight: iOS reports those wrongly at load, after rotating and
-   while its toolbars move, whereas a fixed box always matches what is visible. */
-html.web body {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  touch-action: manipulation;
 }
 html.web .app {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  /* Keep the header and footer clear of the notch and home indicator
-     (needs viewport-fit=cover, added by build_web.py). */
-  --topbar-h: calc(64px + env(safe-area-inset-top, 0px));
-  --footer-h: calc(26px + env(safe-area-inset-bottom, 0px));
-}
-html.web .topbar {
-  padding-top: env(safe-area-inset-top, 0px);
-  padding-left: max(36px, env(safe-area-inset-left, 0px));
-  padding-right: max(36px, env(safe-area-inset-right, 0px));
-}
-html.web .app-footer {
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-html.web .screen {
-  overscroll-behavior-y: contain;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* iOS zooms the whole page in when a field with text under 16px is focused,
-   and usually doesn't zoom back out. */
-html.web input:not([type="checkbox"]):not([type="range"]),
-html.web select,
-html.web textarea {
-  font-size: 16px;
-}
-
-/* color-mix() needs iOS 16.2+; give older browsers a plain header/banner. */
-@supports not (background: color-mix(in srgb, red 50%, blue)) {
-  html.web .topbar,
-  html.web .section-banner {
-    background: var(--bg);
-  }
+  height: 100vh;
+  height: 100dvh;
+  height: var(--app-h, 100dvh);
+  width: 100%;
 }
 
 /* Columns collapse by available width, not by device: two columns only when
@@ -80,34 +33,9 @@ html.web .quiz-answers {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
 }
 
-/* On phones the Previous/Next row stays pinned just above the footer, so the
-   buttons are always fully visible whatever the explanation's length. app.js
-   notices the sticky row and only scrolls to reveal the explanation. */
-@media (max-width: 700px), (max-height: 480px) {
-  html.web #screen-quiz {
-    padding-bottom: calc(var(--footer-h) + 8px);
-  }
-  html.web #quizNavRow {
-    position: sticky;
-    bottom: 8px;
-    z-index: 5;
-    margin-top: 16px;
-    padding: 8px 0;
-    border-radius: 14px;
-    background: var(--bg);
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-  }
-}
-
 /* The desktop layout assumes a 960px+ window; make it usable on phones. */
 @media (max-width: 700px) {
-  html.web .topbar {
-    padding-left: max(12px, env(safe-area-inset-left, 0px));
-    padding-right: max(12px, env(safe-area-inset-right, 0px));
-    gap: 6px;
-  }
+  html.web .topbar { padding: 0 12px; gap: 6px; }
   html.web .brand-logo { height: 32px; }
   html.web .topbar-actions { gap: 6px; }
   html.web .topbar-actions .pill-btn { padding: 8px; }

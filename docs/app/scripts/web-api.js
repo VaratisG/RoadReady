@@ -1,4 +1,4 @@
-/* Browser stand-in for the desktop app's Python backend (desktop/main.py).
+/* Browser stand-in for the desktop app's Python backend (app/main.py).
  * The frontend calls window.pywebview.api.*; here the same methods are
  * implemented on top of supabase-js plus static JSON files, so app.js runs
  * unchanged. Included only in the web build (see web/build_web.py). */
@@ -15,55 +15,14 @@
   var root = document.documentElement;
   root.classList.add('web');
 
-  // Diagnostic panel for device-specific layout problems: open the app with ?debug=1.
-  if (/[?&]debug=1\b/.test(location.search)) {
-    window.addEventListener('DOMContentLoaded', function () {
-      var probe = document.createElement('div');
-      probe.style.cssText = 'position:fixed;top:0;left:0;visibility:hidden;pointer-events:none;' +
-        'padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)';
-      document.body.appendChild(probe);
-
-      function heightProbe(unit) {
-        var d = document.createElement('div');
-        d.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:100' + unit + ';visibility:hidden;pointer-events:none';
-        document.body.appendChild(d);
-        return d;
-      }
-      var probe100dvh = heightProbe('dvh');
-      var probe100vh = heightProbe('vh');
-
-      var panel = document.createElement('pre');
-      panel.style.cssText = 'position:fixed;left:4px;bottom:34px;z-index:99999;margin:0;padding:6px 8px;' +
-        'font:11px/1.35 monospace;color:#0f0;background:rgba(0,0,0,.82);border-radius:6px;' +
-        'pointer-events:none;white-space:pre-wrap;max-width:96vw';
-      document.body.appendChild(panel);
-
-      function box(sel) {
-        var e = document.querySelector(sel);
-        if (!e) return '-';
-        var b = e.getBoundingClientRect();
-        return Math.round(b.left) + ',' + Math.round(b.top) + ' ' + Math.round(b.width) + 'x' + Math.round(b.height);
-      }
-      function update() {
-        var vv = window.visualViewport;
-        var cs = getComputedStyle(probe);
-        var input = document.querySelector('input.auth-input');
-        panel.textContent = [
-          'ua: ' + navigator.userAgent.replace(/^Mozilla\/5\.0 /, '').slice(0, 90),
-          'inner: ' + innerWidth + 'x' + innerHeight + '  screen: ' + screen.width + 'x' + screen.height + '  dpr: ' + devicePixelRatio,
-          'visualViewport: ' + (vv ? Math.round(vv.width) + 'x' + Math.round(vv.height) + ' scale=' + vv.scale.toFixed(2) + ' off=' + Math.round(vv.offsetLeft) + ',' + Math.round(vv.offsetTop) : 'n/a'),
-          'safe-area t/r/b/l: ' + cs.paddingTop + ' ' + cs.paddingRight + ' ' + cs.paddingBottom + ' ' + cs.paddingLeft,
-          '100dvh: ' + Math.round(probe100dvh.getBoundingClientRect().height) + '  100vh: ' + Math.round(probe100vh.getBoundingClientRect().height) + '  --ui-scale: ' + (getComputedStyle(document.documentElement).getPropertyValue('--ui-scale') || '-'),
-          'page scroll: ' + scrollX + ',' + scrollY + '  doc: ' + document.documentElement.scrollWidth + 'x' + document.documentElement.scrollHeight,
-          'app: ' + box('.app') + '  topbar: ' + box('.topbar'),
-          'footer: ' + box('.app-footer') + '  banner: ' + box('#sectionBanner'),
-          'input font: ' + (input ? getComputedStyle(input).fontSize : '-') + '  standalone: ' + (navigator.standalone === true)
-        ].join('\n');
-      }
-      update();
-      setInterval(update, 500);
-    });
+  // Phones report 100vh as the height with the address bar collapsed, which
+  // pushes the footer off-screen. window.innerHeight is the truly visible height.
+  function setAppHeight() {
+    root.style.setProperty('--app-h', Math.round(window.innerHeight) + 'px');
   }
+  setAppHeight();
+  window.addEventListener('resize', setAppHeight);
+  window.addEventListener('orientationchange', setAppHeight);
 
   // A saved session means app.js is about to sign the user in again, so keep
   // the login form hidden meanwhile instead of flashing it.
