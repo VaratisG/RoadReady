@@ -1,0 +1,22 @@
+/* Web-build overrides: controls that only make sense in the desktop window. */
+html.web #closeAppFromProfileBtn,
+html.web .setting-row:has(#fullscreenBtn) {
+  display: none;
+}
+
+/* The desktop layout assumes a 960px+ window; make it usable on phones. */
+@media (max-width: 700px) {
+  html.web .topbar { padding: 0 12px; gap: 6px; }
+  html.web .brand-logo { height: 32px; }
+  html.web .topbar-actions { gap: 6px; }
+  html.web .topbar-actions .pill-btn { padding: 8px; }
+  html.web .topbar-actions .pill-btn span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  html.web .lang-segmented .segment { padding: 6px 8px; }
+}

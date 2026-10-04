@@ -15,14 +15,23 @@ import { createClient } from "jsr:@supabase/supabase-js@2";
 
 const MAX_USERS_PER_SUPERVISOR = 10;
 
+// Needed so the browser version of the app (served from another origin) can
+// call this function. Access is still gated by the caller's JWT below.
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+};
+
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
-    headers: { "Content-Type": "application/json" },
+    headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
 }
 
 Deno.serve(async (req) => {
+  if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
   try {
     const authHeader = req.headers.get("Authorization");
     if (!authHeader) return json({ ok: false, error: "Λείπει η σύνδεση." }, 401);

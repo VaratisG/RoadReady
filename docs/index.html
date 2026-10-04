@@ -184,6 +184,12 @@
     transition: transform 0.15s ease;
   }
   .btn:active { transform: scale(0.98); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    box-shadow: inset 0 0 0 2px var(--lane);
+    margin-left: 8px;
+  }
   .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
 
   .hero-sub {
@@ -324,6 +330,10 @@
       <svg viewBox="0 0 24 24" fill="none"><path d="M12 3V15M12 15L7 10M12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 18V19C4 20.1 4.9 21 6 21H18C19.1 21 20 20.1 20 19V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       <span data-i18n="downloadBtn"></span>
     </a>
+    <a class="btn btn-secondary" href="app/">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12H21M12 3C14.5 5.7 15.8 8.7 15.8 12C15.8 15.3 14.5 18.3 12 21C9.5 18.3 8.2 15.3 8.2 12C8.2 8.7 9.5 5.7 12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span data-i18n="browserBtn"></span>
+    </a>
     <p class="hero-sub">
       Windows 10/11 ·
       <a href="https://github.com/VaratisG/RoadReady" data-i18n="sourceLink"></a>
@@ -407,6 +417,7 @@
       heroTitle: 'Εξασκήσου για τη θεωρία<br>του διπλώματος οδήγησης',
       heroLead: 'Αυτοκίνητο, μοτοσικλέτα, φορτηγό, λεωφορείο και ΠΕΙ φορτηγό. Πάνω από 1.800 πραγματικές ερωτήσεις θεωρίας, με προσομοίωση εξέτασης και παρακολούθηση της προόδου σου.',
       downloadBtn: 'Λήψη για Windows',
+      browserBtn: 'Χρήση από τον browser',
       sourceLink: 'Πηγαίος κώδικας στο GitHub',
       featuresTitle: 'Τι περιλαμβάνει',
       feat1Title: 'Προσομοίωση εξέτασης',
@@ -429,6 +440,7 @@
       heroTitle: 'Practice for your<br>driving theory test',
       heroLead: 'Car, motorcycle, truck, bus, and professional truck-driver certificate. Over 1,800 real theory questions, with exam simulation and progress tracking.',
       downloadBtn: 'Download for Windows',
+      browserBtn: 'Use in your browser',
       sourceLink: 'Source code on GitHub',
       featuresTitle: "What's included",
       feat1Title: 'Exam simulation',
